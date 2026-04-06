@@ -9,3 +9,4 @@
 - [feedback_save_tokens.md](feedback_save_tokens.md) — 核心原則：永遠用最省 token 的方法，執行前先評估消耗，超過 5000 tokens 要先告知
 - [feedback_conversation_management.md](feedback_conversation_management.md) — 一任務一對話框；完成重要任務後立即寫記憶，不能留到最後才補
 - [feedback_lessons_learned.md](feedback_lessons_learned.md) — 歷次對話教訓總結：錯誤、繞彎、修正、原則（每次對話用 /session-wrap 更新）
+- [project_notebooklm_workflow.md](project_notebooklm_workflow.md) — NotebookLM 自動化工作流：神級指令、錄音→簡報全流程、帳號設定

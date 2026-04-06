@@ -80,6 +80,33 @@ type: project
 
 ---
 
+## GitHub Pages 網站清單（從 Netlify 遷移，共 21 個）
+
+本機備份：`E:\Claude-Data\netlify-backup\`
+更新方式：修改本機檔案 → git push → 1分鐘後自動生效
+
+| 網站名稱 | GitHub Pages 網址 |
+|----------|------------------|
+| peipeievent-411 | https://coach1973.github.io/peipeievent-411/ |
+| jiesheng-leadership | https://coach1973.github.io/jiesheng-leadership/ |
+| bni-traffic | https://coach1973.github.io/bni-traffic/ |
+| northern411 | https://coach1973.github.io/northern411/ |
+| tainan-calender | https://coach1973.github.io/tainan-calender/ |
+| tree-coach-book | https://coach1973.github.io/tree-coach-book/ |
+| bniheroway | https://coach1973.github.io/bniheroway/ |
+| bni-top10 | https://coach1973.github.io/bni-top10/ |
+| bni-happy | https://coach1973.github.io/bni-happy/ |
+| bni-88888 | https://coach1973.github.io/bni-88888/ |
+| bni-99999 | https://coach1973.github.io/bni-99999/ |
+| goeasy-ai | https://coach1973.github.io/goeasy-ai/ |
+| goeasy-ai88 | https://coach1973.github.io/goeasy-ai88/ |
+| worklucky-2026 | https://coach1973.github.io/worklucky-2026/ |
+| everyday7 | https://coach1973.github.io/everyday7/ |
+| courageous-scanstart | https://coach1973.github.io/courageous-scanstart/ |
+| 其餘6個 | https://coach1973.github.io/{名稱}/ |
+
+---
+
 ## C 槽還原後的復原步驟
 
 1. 執行 `E:\Claude-Data\restore\restore_junctions.ps1`

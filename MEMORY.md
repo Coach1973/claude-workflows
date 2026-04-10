@@ -19,3 +19,4 @@
 - [4/8-4/11 重要決策與成功經驗](project_key_decisions.md) — NotebookLM帳號分工、FB私訊方案、模型策略、雙向同步機制
 - [DeepSeek 接入 + Session Lock 永久修復](project_deepseek_session_fix_20260411.md) — API 設定、Live Session Lock 根因與自動修復 LaunchAgent (2026-04-11)
 - [4/8-4/11 小龍蝦對話完整分析](project_session_analysis_0408_0411.md) — 9項完成任務、DOM模式突破、待辦事項、未記錄守則（YouTube監測、Obsidian、知識過濾哲學）
+- [2/25-2/27 小龍蝦開機第一週](project_session_analysis_0225_0227.md) — Mac新手入門、嘸蝦米、GCP帳單轉移、Chrome擴充安裝、Ollama踩坑、模型選擇決策

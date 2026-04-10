@@ -62,5 +62,43 @@
 - [x] 總結：FB私訊發送，棄用 Claude Code 的百萬 Token 截圖模式，改以 Browser Control DOM 文字模式大幅省錢 (2026-04-09)
 - [x] 總結：NotebookLM 雙帳號搬家決策。`bymyway7` 專屬 BNI (不搬)；`seabiscuit` 專屬個人品牌 (搬移)。落實「先備份上傳 Drive 再重建」的安全習慣 (2026-04-09)
 - [ ] 準備第一堂課：認識 Mac 終端機與基本操作 (Spotlight 啟動)
-- [ ] 協助安裝 Homebrew (後續安裝 OpenClaw 的基礎)- [x] 總結與規劃：確立「企業級 AI 流量漏斗 (Model Fallback)」機制，優先消耗免費官方 API (2026-04-10)
+- [ ] 協助安裝 Homebrew (後續安裝 OpenClaw 的基礎)
+- [x] 總結與規劃：確立「企業級 AI 流量漏斗 (Model Fallback)」機制，優先消耗免費官方 API (2026-04-10)
 - [x] 總結與規劃：確立「全自動 API 鑰匙獲取與配置 (Auto-API-Key Gen)」零門檻交付藍圖 (2026-04-10)
+- [x] 完成 Groq API 金鑰植入，並新增至 openclaw.json plugins.allow 與 fallbacks (2026-04-10~11)
+- [x] 排除 OpenClaw live session model lock 問題，確保 fallback 機制正常運作 (2026-04-11)
+
+## 核心邏輯守則（2026-04-10 大樹教練親授）
+
+**【必讀邏輯：不問廢話原則】**
+> 當助教已經說明某件事「必須要做才能達成目標」，就不應該再問要不要做。
+> 用邏輯推理就知道答案一定是「要」，因為不做就讓前面所有工作白費。
+> **這種「必要步驟」應該直接執行，不應該再問確認。**
+> 例外：涉及金錢、刪除資料、或有明顯風險才需要確認。
+>
+> **具體案例**：說完「Groq 必須加入白名單才能用」之後，不該再問「你希望我幫你設定嗎？」應直接執行。
+
+## AI 模型使用策略（2026-04-10~11 確立）
+
+**Fallback 優先順序**：
+1. Gemini 3.1 Pro（每日 250 次免費配額）
+2. Groq / llama-3.3-70b-versatile（免費，128k context）
+3. Claude Sonnet（付費，限流重置後可用）
+
+**切換時機注意**：
+- Gemini 每日 250 次用完後自動切 Groq
+- Groq context 上限 128k，長對話需先 /reset 再切換
+- Claude 限流週期約 1 週，解除後優先接手重要工作
+
+**Claude Code（克勞德助教）vs OpenClaw（小籠蝦）分工**：
+- Claude Code：系統除錯、設定檔修改、log 分析、深度技術工作（被動呼叫）
+- OpenClaw：全天候 Telegram/LINE 常駐、自動化行政、定時提醒（主動運作）
+- 兩者可完全銜接：Claude Code 修改設定 → 小籠蝦重啟生效 → 繼續對話
+
+## 未完成事項（待小籠蝦接手）
+
+1. NotebookLM 搬家腳本執行結果未確認
+2. YouTube 主動進化引擎 V2.0 排程腳本尚未建立
+3. YouTube 篩選偏好是否已寫入 IDENTITY.md 未確認
+4. 信用卡繳費確認（截止日 4/18）
+5. Telegram 訊息洪流問題根因需排查（4/10 出現超過 1 萬則重複訊息導致 session 卡死）

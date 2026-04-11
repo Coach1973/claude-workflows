@@ -16,3 +16,5 @@
 - [project_mac_key_decisions.md](project_mac_key_decisions.md) — Mac 端重要決策：雙向同步機制/NotebookLM帳號分工/Claude Code vs 小龍蝦分工/DOM模式突破/Mac待辦事項
 - [project_auto_api_key_blueprint.md](project_auto_api_key_blueprint.md) — 零門檻 API 接入藍圖：老闆只要複製貼上，AI 全自動完成；Groq/DeepSeek/Gemini 已驗證
 - [feedback_deepseek_session_lock.md](feedback_deepseek_session_lock.md) — OpenClaw Session Lock 根本解：把 Primary 改成 DeepSeek，不要繞路試其他方法
+- [project_top_assistant_blueprint.md](project_top_assistant_blueprint.md) — 頂級助教計畫：三套餐商業模式/護城河哲學/雙引擎分工/執行紀律
+- [project_sea_biscuit_club.md](project_sea_biscuit_club.md) — 海餅乾俱樂部：2007創辦，三大信念+十大守則，是頂級特助的靈魂底色

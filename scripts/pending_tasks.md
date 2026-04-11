@@ -6,7 +6,10 @@
 
 ## 待執行 (TODO)
 
-（目前無）
+- [ ] [RECURRING] NotebookLM 自動化：掃描 Downloads 新檔案 → 建筆記本 → 生成簡報 → 下載 PDF
+  - 提示詞：E:\Claude-Data\scripts\notebooklm_auto_prompt.txt
+  - 已處理清單：E:\Claude-Data\scripts\notebooklm_processed.txt
+  - 輸出資料夾：D:\Users\Downloads\NotebookLM簡報檔\
 
 ---
 

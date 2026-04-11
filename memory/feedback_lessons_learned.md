@@ -60,4 +60,66 @@ type: feedback
 
 ---
 
+## 2026-04-06｜Plaud.ai 評估 + HiNotes vs Plaud 比較
+
+### 犯過的錯
+
+| 錯誤 | 正確做法 |
+|------|----------|
+| 建議用「日期」決定 Plaud 轉錄策略（前20天下載、後10天用配額） | 應依**錄音長度**決定：短錄音用配額、長錄音下載；且應先用配額再改下載，不是反過來 |
+| 以為 Plaud 分享連結可以當 NotebookLM URL 來源 | 分享頁面是 JS 渲染的音頻播放器，NotebookLM 爬蟲讀不到文字內容，不可用 |
+| 點擊「生成連結」按鈕被教學遮罩擋住，多次點擊無效 | 遇到遮罩用 JavaScript 直接 click 目標按鈕，繞過 DOM 層疊問題 |
+
+### 繞過的彎
+
+- **Plaud 分享連結測試：** 以為分享連結可以解決「不需下載」的問題，實際導航後發現頁面只有音頻播放器，沒有可讀文字，NotebookLM 無法使用
+- **Plaud vs HiNotes 比較：** 一開始只評估 Plaud 的使用方式，後來進入 HiNotes 才發現用戶有大量已轉錄完成的筆記，直接顛覆了原本的策略方向
+
+### 確立的原則
+
+1. **錄音工具評估先問用量**：用戶每月 60～90 筆錄音，Plaud 300分鐘只夠 5～10 筆，必須先確認量才能給策略
+2. **HiNotes 是主力錄音工具**：自動轉錄、無限制、已有摘要。不穩定是 3.0 過渡期問題
+3. **Plaud 分享連結不能當 NotebookLM URL 來源**：記住這個限制，未來不要重複評估
+4. **JS 遮罩擋按鈕時**：用 `Array.from(document.querySelectorAll('button')).find(b => b.textContent.includes('xxx')).click()` 直接執行
+
+---
+
+## 2026-04-07｜HiNotes 逐字稿 → NotebookLM 帳號切換全流程
+
+### 犯過的錯
+
+| 錯誤 | 正確做法 |
+|------|----------|
+| 在 seabiscuitclub 帳號下直接建立新 notebook（如 64f722e1、900a5f2f、2ff30833） | 先確認目標帳號與現有 notebook，**加入現有 cumulative notebook**，不要每次新建 |
+| 以為 `nlm login switch` 完全失敗（因為顯示 UnicodeEncodeError） | switch 邏輯在 save_config() 完成後才 crash（顯示確認訊息時），**帳號其實已切換成功** |
+| 誤判 `nlm login switch bymyway7` 為有效 profile 名稱 | profile 名稱是 `default`（bymyway7@gmail.com）和 `public`（seabiscuitclub@gmail.com）|
+
+### 繞過的彎
+
+- **Unicode bug 卡了很久**：Windows cp950 無法顯示 `✓`（U+2713），`rich` library 在 legacy Windows console 模式下崩潰。最終修法：編輯 `notebooklm_tools/cli/main.py` lines 539 & 544，將 `✓` 換成 `[OK]`
+- **re-auth 順序**：切換 profile 後必須執行 `nlm login -p default` 重新驗證 token，再執行 `mcp__notebooklm-mcp__refresh_auth` 讓 MCP 載入新 token
+
+### 確立的原則
+
+1. **帳號切換 SOP**：`nlm login switch <profile>` → `nlm login -p <profile>`（若 token 過期）→ `refresh_auth` → `notebook_list` 驗證
+2. **Unicode bug 已修**：`notebooklm_tools/cli/main.py` 的 `✓` 已改為 `[OK]`，往後 `switch` 指令可正常顯示
+3. **兩帳號 profile 對應**：`default` = bymyway7@gmail.com、`public` = seabiscuitclub@gmail.com
+4. **window._copiedText 跨對話存活**：只要 HiNotes 分頁未重新載入，`window._copiedText` 在下一個 Claude 對話仍然存在，可直接讀取不必重新複製
+5. **逐字稿存檔再上傳**：用 JS 把 `window._copiedText` 寫回剪貼簿（`navigator.clipboard.writeText`），再用 PowerShell `Get-Clipboard | Set-Content` 存為 .txt，用 `source_add(source_type=file)` 上傳
+6. **累積型 notebook 不要新建**：每週戰報、曜董指導、嬿婷有約、咖啡會議都是長期累積，每次只 add source，不 create notebook
+
+### 已知未完成的事項（等 4/11 額度重置後再繼續）
+
+> 2026-04-07：HiNotes/NotebookLM 流量與額度已用完，所有操作型任務暫停至 4/11。
+
+| 任務 | notebook ID | 帳號 |
+|------|-------------|------|
+| Rec81 董事諮詢逐字稿 → 加入來源 + 生成簡報 | e825fe7e（曜董指導-資料匯整） | bymyway7 (default) |
+| Rec82 每週戰報逐字稿 → 加入來源 + 生成簡報 | ece171f9（每週戰報資料匯整） | bymyway7 (default) |
+| Rec83 咖啡會議 → 轉錄後加入來源 | 1b99339b（咖啡會議） | seabiscuitclub (public) |
+| 刪除錯誤建立的 notebook | 64f722e1、2ff30833（seabiscuitclub 帳號） | seabiscuitclub (public) |
+| Rec81 逐字稿（17906 chars）目前還在 HiNotes 分頁的 `window._copiedText` | — | — |
+
+---
+
 *每次對話結束請執行 `/session-wrap` 補充此檔*

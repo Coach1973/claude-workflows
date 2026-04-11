@@ -14,6 +14,8 @@ type: project
 | `E:\Claude-Data\restore\` | 還原腳本（C 槽還原後用） |
 | `E:\Claude-Data\.claude\` | .claude 遷移目標（執行後才生效） |
 | `C:\Users\bymyw\.claude\` | 目前仍在 C 槽，待遷移到 E 槽 |
+| `E:\Claude-Data\session-logs\` | 每次對話工作總結 + 對話產出的重要檔案 |
+| `E:\Claude-Data\memory-backup\` | memory\ 資料夾的鏡像備份（技能與經驗） |
 
 **Why:** C 和 D 是同一顆硬碟的不同分割，E 槽才能真正防硬碟故障。
 

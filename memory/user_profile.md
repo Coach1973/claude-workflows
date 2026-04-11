@@ -17,8 +17,15 @@ type: user
 - 已安裝「小龍蝦系統」（Open Claw）—— 語音驅動電腦執行任務的系統
 - 透過 FB 社群了解 Claude 功能
 
-## 已安裝的 Claude Skills（2026-04-04）
-brand-guidelines, canvas-design, skill-creator, web-artifacts-builder, algorithmic-art, doc-coauthoring, internal-comms, mcp-builder, slack-gif-creator, theme-factory
+## 已安裝的 Claude Skills（共 20 個，最後更新 2026-04-10）
+
+### 官方技能（17個）
+algorithmic-art, brand-guidelines, canvas-design, claude-api, doc-coauthoring, docx, frontend-design, internal-comms, mcp-builder, pdf, pptx, skill-creator, slack-gif-creator, theme-factory, web-artifacts-builder, webapp-testing, xlsx
+
+### 自訂技能（3個）
+- **notebooklm-setup**：連接 Claude Code 與 NotebookLM 的懶人包安裝技能
+- **session-wrap**：對話結束自動整理、寫入記憶系統
+- **youtube-daily-digest**：31頻道每日摘要管理，含新增頻道SOP、手動觸發、排查問題
 
 ## 主要痛點（最耗時的重複性工作）
 1. 開會、記錄並整理數據
@@ -35,11 +42,16 @@ brand-guidelines, canvas-design, skill-creator, web-artifacts-builder, algorithm
 - 服務對象：大樹教練（CoachWu）
 - 核心目標：「動嘴就可以了」，助教負責其他所有能做的事
 
-## 三台電腦資訊
-1. **Mac mini M4**：記憶體 16GB，硬碟 256GB SSD
-2. **聯想 Gaming 3-16IAH7**（主力Windows）：i7-12650H，40GB RAM，Windows 11 專業工作站版 25H2，序號 MP2BRZSW
-3. **宏碁 Aspire AL14-71M**：i7-12650H，24GB RAM，Windows 11 專業工作站版 24H2，裝置名 PC5C925ED70E46
+## 三台電腦資訊與助教分工
+1. **Mac mini M4**（16GB/256GB）→ 主控 **OpenClaw「小龍蝦助教」🦞**（全天候常駐、Telegram/LINE 操作、自動化行政）
+2. **聯想 Gaming 3-16IAH7**（Windows 主力，i7-12650H，40GB RAM，RTX 3050 Ti Laptop GPU，序號 MP2BRZSW）→ **「克勞德助教」🎓**（Claude Code，深度技術、設定修改、log 分析）
+3. **宏碁 Aspire AL14-71M**（i7-12650H，24GB RAM，裝置名 PC5C925ED70E46）→ 備用
 - 三台都已安裝：Claude、Cowork、Code
+
+## 語音輸入辨識糾偏（重要）
+- 「雲端 / Cloud / OpenCloud」= **OpenClaw（小龍蝦助教）**
+- 「Claude / 克勞德」= **Claude Code（克勞德助教，Windows 端）**
+- 遇到語意不通順 → **先問清楚，絕對不腦補**
 
 ## 助教守則
 1. 用最白話中文，專業名詞**一定要加中英文對照**（用戶自述電腦程度不好，理解七八成但希望完整對照）

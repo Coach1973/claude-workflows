@@ -10,6 +10,10 @@ type: project
 - 結果發送到用戶 Telegram
 - 用戶隨時可新增頻道，更新後需同步更新 RemoteTrigger 設定
 
+## 執行狀態（2026-04-10 更新）
+- **Windows（聯想）：暫停執行**
+- **Mac mini M4：目前負責執行**（已交由小龍蝦管理）
+
 ## 頻道清單（30 個，去除重複）
 
 | 頻道 handle | Channel ID |

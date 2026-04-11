@@ -63,11 +63,13 @@ type: project
 | `claude-workflows` | 所有自動化腳本正式備份 | `E:\Claude-Data\claude-workflows\` |
 
 **claude-workflows 內容：**
-- `scripts/`：心跳腳本、提示詞、待辦佇列
+- `scripts/`：心跳腳本、提示詞、待辦佇列、sync_memory_to_github.ps1
 - `restore/`：C槽還原腳本、E槽遷移腳本
 - `youtube/`：YouTube摘要腳本、31個頻道清單
+- `memory/`：所有 .md 記憶檔鏡像（每 30 分鐘自動同步）
+- `skills/`：所有技能鏡像（每 30 分鐘自動同步）
 
-**更新方式：** 腳本有變動時，助教直接執行 git add / commit / push 同步。
+**更新方式：** Task Scheduler `ClaudeMemorySync` 每 30 分鐘自動執行 `sync_memory_to_github.ps1`，完成任務後也可立即手動執行。
 
 ---
 
@@ -106,6 +108,25 @@ type: project
 | everyday7 | https://coach1973.github.io/everyday7/ |
 | courageous-scanstart | https://coach1973.github.io/courageous-scanstart/ |
 | 其餘6個 | https://coach1973.github.io/{名稱}/ |
+
+---
+
+## 全域 CLAUDE.md（新增 2026-04-12）
+
+- **位置：** `C:\Users\bymyw\.claude\CLAUDE.md`
+- **作用：** Claude Code 每次啟動自動讀取，定義全域行為規則
+- **核心指令：** 新對話開始時自動 git pull `E:\Claude-Data\claude-workflows`，讀取最新記憶
+- **GitHub 備份：** `E:\Claude-Data\claude-workflows\CLAUDE.md.windows`
+
+---
+
+## 記憶自動同步（ClaudeMemorySync，新增 2026-04-12）
+
+- **腳本：** `E:\Claude-Data\scripts\sync_memory_to_github.ps1`
+- **排程：** Windows Task Scheduler `ClaudeMemorySync`，每 30 分鐘
+- **動作：** memory\ + skills\ → 複製進 claude-workflows\ → git add / commit / push
+- **日誌：** `E:\Claude-Data\scripts\sync_memory_log.txt`
+- **原則：** 完成重要任務、除錯成功、新方法確立後，立即手動觸發一次；不要等 30 分鐘
 
 ---
 

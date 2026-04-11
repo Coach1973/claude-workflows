@@ -59,12 +59,17 @@ triggers:
 - 新增：xxx.md
 ```
 
-### Step 5：備份記憶與技能到 E 槽
-執行備份腳本，確保記憶和技能在 C 槽還原後仍然存在：
+### Step 5：確認自動同步已在跑（不需手動）
+記憶與技能每 **30 分鐘自動同步到 GitHub**（Task Scheduler 任務 `ClaudeMemorySync`）。
+只需確認任務狀態正常即可：
 ```
-powershell -ExecutionPolicy Bypass -File "E:\Claude-Data\scripts\backup_memory.ps1"
+schtasks /Query /TN "ClaudeMemorySync" /FO LIST
 ```
-這會將 memory\ 和 skills\ 同步到 `E:\Claude-Data\memory-backup\` 和 `E:\Claude-Data\skills-backup\`。
+若需要立即手動同步（例如剛完成重要任務），可執行：
+```
+powershell -ExecutionPolicy Bypass -File "E:\Claude-Data\scripts\sync_memory_to_github.ps1"
+```
+同步會將 memory\ + skills\ 複製到 `E:\Claude-Data\claude-workflows\`，並 `git push` 到 GitHub（Coach1973/claude-workflows）。
 
 ### Step 6：提醒用戶
 告知可以關閉此對話框，新對話框說「開始工作囉」即可繼續。

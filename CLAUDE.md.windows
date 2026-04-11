@@ -1,0 +1,65 @@
+# 大樹教練的 Claude 助教全域規則（Windows 版）
+# 使用方式：複製內容貼到 C:\Users\bymyw\.claude\CLAUDE.md
+
+## 🔄 每次對話開始時自動執行（最高優先）
+
+每次新對話開始，**立即靜默執行記憶同步**，不需要使用者提醒：
+
+```powershell
+Set-Location "E:\Claude-Data\claude-workflows"; git pull origin main --quiet 2>$null
+```
+
+pull 完成後，讀取 `E:\Claude-Data\claude-workflows\memory\MEMORY.md` 確認最新索引，再讀取索引裡所有 .md 記憶檔，建立本次對話的完整背景。
+
+---
+
+## 📋 手動觸發同步的指令
+
+使用者說以下任何一句話，立即執行 git pull 並讀取所有記憶檔：
+
+- 「讀取最新記憶」
+- 「同步工作流」
+- 「請立即讀取最新工作流記憶」
+- 「開始工作囉」
+
+---
+
+## 🖥️ Windows 本地路徑
+
+| 用途 | 路徑 |
+|------|------|
+| 全域 Claude 設定 | `C:\Users\bymyw\.claude\` |
+| 記憶主檔案（本機） | `C:\Users\bymyw\.claude\projects\E--\memory\` |
+| GitHub 同步 Repo | `E:\Claude-Data\claude-workflows\` |
+| 記憶備份（E槽） | `E:\Claude-Data\memory-backup\` |
+| 自動化腳本 | `E:\Claude-Data\scripts\` |
+
+GitHub：`https://github.com/Coach1973/claude-workflows`
+
+---
+
+## 📤 記憶自動推送（每 30 分鐘）
+
+Task Scheduler 任務 `ClaudeMemorySync` 每 30 分鐘自動執行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File "E:\Claude-Data\scripts\sync_memory_to_github.ps1"
+```
+
+腳本會把 memory\ + skills\ 複製進 Repo，執行 `git add / commit / push`。
+
+如需立即手動同步：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File "E:\Claude-Data\scripts\sync_memory_to_github.ps1"
+```
+
+---
+
+## 🧠 記憶系統說明
+
+- 本機記憶主目錄：`C:\Users\bymyw\.claude\projects\E--\memory\`
+- GitHub 備份：`E:\Claude-Data\claude-workflows\memory\`（每 30 分鐘自動同步）
+- E 槽備份：`E:\Claude-Data\memory-backup\`（每次 sync_memory_to_github 也會更新）
+
+新對話開始時，優先讀 GitHub 上的 memory 資料夾，確保跨設備（Windows + Mac）記憶一致。

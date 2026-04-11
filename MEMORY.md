@@ -2,6 +2,7 @@
 
 ## 🎯 最高優先級：偉大任務
 - [大樹教練的偉大任務與最終願景](user_grand_mission.md) — **所有工作的最高指導方針**：讓中小企業主只要動嘴，AI 全自動處理
+- [頂級特助系統完整藍圖](project_top_assistant_blueprint.md) — 命名由來、三套餐商業模式、海餅乾俱樂部十大守則、護城河哲學（2026-04-11）
 
 ## User（教練個人檔案）
 - [大樹教練個人檔案](user_profile.md) — 身份/目標/設備分工/語音辨識糾偏/內容偏好
@@ -21,3 +22,4 @@
 - [DeepSeek 接入 + Session Lock 永久修復](project_deepseek_session_fix_20260411.md) — API 設定、Live Session Lock 根因與自動修復 LaunchAgent (2026-04-11)
 - [4/8-4/11 小龍蝦對話完整分析](project_session_analysis_0408_0411.md) — 9項完成任務、DOM模式突破、待辦事項、未記錄守則（YouTube監測、Obsidian、知識過濾哲學）
 - [2/25-2/27 小龍蝦開機第一週](project_session_analysis_0225_0227.md) — Mac新手入門、嘸蝦米、GCP帳單轉移、Chrome擴充安裝、Ollama踩坑、模型選擇決策
+- [Gemini 空白回應問題永久修復](feedback_gemini_empty_response_fix.md) — memory 檔超過 50KB 導致 Gemini 輸出 0 token，根治方法：HEARTBEAT 禁止讀大型 memory 檔

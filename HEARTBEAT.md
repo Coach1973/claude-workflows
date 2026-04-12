@@ -1,8 +1,8 @@
 # HEARTBEAT 熱上下文（每次心跳必讀）
 
 > ✅ 系統正常運行中
-> 最後更新：2026-04-13 03:10
-> 本次重大更新：Live Session Model Switch 壓力測試 + Kimi k2.5 接入完成
+> 最後更新：2026-04-13 03:50
+> 本次重大更新：全自動模型備援系統（MiniMax / Gemini / Kimi 三路循環）
 
 ## ⚡ 系統狀態
 - Primary 模型：google/gemini-3.1-pro-preview
@@ -37,7 +37,13 @@
 - ⚠️ 不要讀大型 memory 檔（會造成 Gemini 空白回應）
 - 非 Pro 不用，Flash 是最後手段
 
+## 🔄 全自動模型備援系統（2026-04-13 新增）
+- **腳本**：`~/.openclaw/scripts/auto-switch-model.sh`
+- **Cron**：每 2 分鐘自動檢查一次
+- **支援模型**：MiniMax-M2.7 → Gemini 3.1 Pro → Kimi 2.5
+- **觸發條件**：偵測到 rate limit / quota exceeded
+- **自動流程**：偵測限流來源 → 找下一個可用模型 → 清除 sessions → 重啟 gateway → 通知教練
+
 ## 📋 待辦事項
 - [ ] 讀取海餅乾逐字稿（~/Desktop/海餅乾知識庫/海餅乾文化_核心逐字稿.txt）並寫入記憶庫
 - [ ] 「做對的事 vs 把事情做對」哲學寫入 workspace memory
-- [ ] 每日自動復原 primary 模型的 cron 任務（Google 配額重置後自動切回 3.1-pro-preview）

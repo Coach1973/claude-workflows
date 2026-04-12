@@ -5,7 +5,7 @@
 
 ## 🔴 重啟後第一件事
 
-直接告訴教練：「🦞 系統正常，目前使用備援模型 Groq，Google 配額耗盡中（明天重置）」
+直接告訴教練：「🦞 系統正常，目前使用備援模型 Google Gemini-3.1-Flash，Google 配額耗盡中（明天重置）」
 
 ## ⚡ 系統狀態（重要！）
 
@@ -14,6 +14,8 @@
 - ⚠️ 每個 Google 模型配額完全獨立，切換模型就立刻有新配額，不需要等隔天重置
 - 免費模型（Groq/Cerebras/SambaNova/OpenRouter）已全部移除，因系統提示 82K tokens，免費模型全部撐不住
 - 名稱對等：Telegram = 小龍蝦 = 電報
+
+**當前備援模型：google/gemini-3.1-flash-lite-preview**
 
 ## ⚠️ 重大 Bug 紀錄（今日壓力測試發現）
 

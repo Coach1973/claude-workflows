@@ -9,9 +9,10 @@
 
 ## ⚡ 系統狀態（重要！）
 
-- **現在 Primary 模型：groq/llama-3.3-70b-versatile**（備援模式）
-- Google 配額已耗盡，暫時停用 Google 系列模型當 primary
-- Google 配額重置後，把 primary 改回 google/gemini-3.1-pro-preview
+- **現在 Primary 模型：google/gemini-3-pro-preview**
+- Fallback 順序（全部 Google，獨立配額）：gemini-2.5-flash → gemini-2.5-pro → gemini-3-flash-preview → gemini-3.1-flash-lite-preview → gemini-3.1-pro-preview → gemini-3.1-pro-preview-customtools
+- ⚠️ 每個 Google 模型配額完全獨立，切換模型就立刻有新配額，不需要等隔天重置
+- 免費模型（Groq/Cerebras/SambaNova/OpenRouter）已全部移除，因系統提示 82K tokens，免費模型全部撐不住
 - 名稱對等：Telegram = 小龍蝦 = 電報
 
 ## ⚠️ 重大 Bug 紀錄（今日壓力測試發現）

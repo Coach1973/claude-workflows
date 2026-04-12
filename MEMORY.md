@@ -26,6 +26,3 @@
 - [2/25-2/27 小龍蝦開機第一週](project_session_analysis_0225_0227.md) — Mac新手入門、嘸蝦米、GCP帳單轉移、Chrome擴充安裝、Ollama踩坑、模型選擇決策
 - [Gemini 空白回應問題永久修復](feedback_gemini_empty_response_fix.md) — memory 檔超過 50KB 導致 Gemini 輸出 0 token，根治方法：HEARTBEAT 禁止讀大型 memory 檔
 - [頂級特助防失憶完整架構](project_anti_amnesia_architecture.md) — **部署必讀**：四層防失憶機制、HEARTBEAT模板、新機器清單、常見失誤診斷（2026-04-12）
-- [FB生日自動化成本評估](feedback_fb_birthday_automation_cost.md) — 比較傳統爬蟲與 AI Agent 的成本差異，決定暫時封存高耗能自動化，保護客戶成本
-- [自動化維護策略：草船借箭 (2026-04-12)] 教練提出神級商業邏輯：對於 FB 這類會改版的平台，不需硬扛數萬 Token 的 AI 視覺成本。只要有開源社群（如 GitHub）在與 FB 對抗，我們就直接「下載他們的更新」。一兩週改版一次的頻率完全可以接受。這不僅省下鉅額 Token，也省去開發成本。唯一要做的 UX 設計是：當腳本失效時，系統要有「優雅的降級提示（Graceful Degradation）」，例如告訴老闆：「社群正在修復中，今天先暫停發送」。
-- [LINE自動化開發策略：善用OPE](feedback_line_automation_ope_strategy.md) — 確立「致敬開源社群提取優點 + 疊加頂級特助零門檻UX」的技能開發邏輯，避免耗費鉅額算力造輪子

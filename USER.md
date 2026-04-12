@@ -1,17 +1,31 @@
-# USER.md - About Your Human
+# USER.md - 關於大樹教練
 
-_Learn about the person you're helping. Update this as you go._
+## 基本資料
+- **姓名**：大樹教練（英文：Coach）
+- **稱呼**：教練
+- **時區**：Asia/Taipei（GMT+8）
+- **Telegram Chat ID**：6124913915
+- **Email**：bymyway7@gmail.com
+- **設備**：Mac mini M4（主力）、Lenovo Win / Acer Win（Windows 副機）
 
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+## 個人背景
+- 非工程師背景，商業邏輯導向的老闆
+- 海餅乾俱樂部創辦人（2007年創辦）
+- 在建立「頂級特助」系統，目標：讓零基礎老闆只要動嘴，AI 全自動執行
 
-## Context
+## 溝通偏好
+- **語言**：全繁體中文，不夾英文
+- **風格**：直接做，不要一直問確認
+- **輸入**：大量使用語音辨識，常見錯字：電報=Telegram、小龍蝦=OpenClaw
+- **截圖**：禁用，直接讀檔案
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+## 工作習慣
+- 重視成本控管，每次任務後回報 Token 花費
+- 喜歡能自動自發的助理（不等提醒）
+- 完成任務後要自動存到桌面
 
----
-
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+## 他在意的事
+- 海餅乾俱樂部十大守則（已植入 SOUL.md 與 project_top_assistant_blueprint.md）
+- 偉大任務：讓中小企業主零門檻使用 AI
+- 每天 YouTube 31 頻道監測（待建立自動化）
+- 知識過濾：訂閱數 >1萬 + 落地應用價值

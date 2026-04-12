@@ -1,7 +1,7 @@
 # HEARTBEAT.md — 熱上下文（每次重啟必讀）
 
 ## ⚡ 系統狀態
-- Primary 模型：google/gemini-2.5-flash
+- Primary 模型：google/gemini-2.5-pro
 - 備援順序：gemini-2.5-pro → gemini-3.1-pro-preview → gemini-3.1-flash → gemini-3.1-flash-lite → sambanova → cerebras → openrouter → anthropic
 - 名稱對等：Telegram = 電報 = 小龍蝦 = OpenClaw
 

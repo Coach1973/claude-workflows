@@ -14,7 +14,8 @@
 - [LINE webhook route loss fix](feedback_line_webhook_route_loss_fix.md) — patch for openclaw LINE webhook only responding to first message
 - [遇到 debug 要用 Claude Code](feedback_use_claude_code_not_cowork.md) — 提醒使用者用對工具，不要在 cowork 複製貼上
 - [讀取 Telegram 回應不截圖](feedback_session_read_no_screenshot.md) — 直接讀 JSONL session 檔，截圖耗 Token 100 倍
-- [優先用指令，不要用截圖](feedback_use_cli_not_screenshot.md) — 能 CLI 做的事絕對不截圖；computer use 只用在真正需要視覺操作的場合
+- [優先用指令，不要用截圖](feedback_use_cli_not_screenshot.md)
+- [頂級特助 UX 黃金標準](feedback_top_assistant_ux_standard.md) — **客戶不能踩坑**：所有技術設定部署前完成，群組功能必做清單，「只要動嘴」不是口號是底線 — 能 CLI 做的事絕對不截圖；computer use 只用在真正需要視覺操作的場合
 
 ## Project（重要技術記錄與決策）
 - [模型切換大戰實戰紀錄 4/11](project_model_failover_lessons_20260411.md) — OpenRouter/SambaNova/Cerebras 接入成功，Session Lock 修復步驟，各模型真實限制與 5 條備援線路

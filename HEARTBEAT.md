@@ -1,59 +1,43 @@
-# HEARTBEAT.md — 熱上下文（每次重啟必讀）
+# HEARTBEAT 熱上下文（每次心跳必讀）
+
+> ✅ 系統正常運行中
+> 最後更新：2026-04-13 03:10
+> 本次重大更新：Live Session Model Switch 壓力測試 + Kimi k2.5 接入完成
 
 ## ⚡ 系統狀態
-- Primary 模型：google/gemini-2.5-pro
-- 備援順序：gemini-2.5-pro → gemini-3.1-pro-preview → gemini-3.1-flash → gemini-3.1-flash-lite → sambanova → cerebras → openrouter → anthropic
-- 名稱對等：Telegram = 電報 = 小龍蝦 = OpenClaw
+- Primary 模型：google/gemini-3.1-pro-preview
+- 備援鏈：gemini-3-pro-preview → gemini-3.1-pro-preview-customtools → gemini-2.5-pro → **moonshot/kimi-k2.5** → gemini-2.5-flash → flash-lite → ...
+- 名稱對等：Telegram = 小龍蝦 = 電報
 
----
+## 🔴 最新重要知識（2026-04-12 壓力測試）
 
-## 📌 上次對話摘要（重啟後第一件事：讀這裡）
+### Live Session Model Switch 致命缺陷
+- **fallback 鏈對 live session 完全無效**
+- session 建立時鎖定 primary，所有切換被強制拉回
+- **唯一解法：改 primary + 清 session + 重啟 gateway**
+- 詳見 skills/auto-model-failover/SKILL.md v2.0
 
-> 最後更新：2026-04-12
-> 
-> **最近完成的事**：
-> - 完成多 Gemini 模型策略（5個模型輪流用，3000次/天）
-> - 移除 DeepSeek（餘額為零）
-> - 修復 Session Lock 問題
-> - 建立三臺電腦記憶同步機制（GitHub hub）
-> - 成功測試 Telegram 有回應（守則第六條：自動自發）
->
-> **目前進行中**：
-> - 解決小龍蝦失憶問題（正在修復）
-> - YouTube 31個頻道每日監測（待建立）
-> - Obsidian 第二大腦懶人包（待開始）
->
-> **教練上次的心情**：滿意，系統已穩定運作
+### 配額耗盡正確處理流程
+```
+1. 修改 openclaw.json → primary 改為有配額的模型
+2. 清除 sessions（腳本自動執行）
+3. 重啟 gateway
+```
 
----
+### 各 Google 模型配額完全獨立
+- 切換模型 = 立刻有新配額，不用等隔天重置
+- 各世代（2.5 / 3.0 / 3.1）是不同配額桶
 
-## 🔴 重啟後行動規則
-
-1. **讀完本檔**後，直接告訴教練：「🦞 系統重啟完成，繼續上次的任務」
-2. **不要讀 memory/ 大檔**（memory/2026-04-12.md 超過 50KB，讀了會造成 Gemini 空白回應）
-3. **主動問**：「教練，上次我們在聊 [上面摘要的主題]，要繼續嗎？」
-
----
-
-## ⚠️ 永久守則（每次必遵守）
-
-- 全繁體中文，不夾英文
+## ⚠️ 所有對話守則
+- 全部繁體中文，不夾任何英文
 - 能自己做直接做，不問確認
 - 截圖禁用，直接讀檔案
 - 執行完通報 Telegram（Chat ID: 6124913915）
 - 預估超過 5 萬 Token 先回報教練確認
-- 不要讀大型 memory 檔（會造成 Gemini 空白回應）
+- ⚠️ 不要讀大型 memory 檔（會造成 Gemini 空白回應）
+- 非 Pro 不用，Flash 是最後手段
 
----
-
-## 📝 小龍蝦的自我更新規則（重要！）
-
-每次完成一個任務或對話段落結束，**立刻執行**：
-
-```bash
-# 更新 HEARTBEAT.md 的「上次對話摘要」區塊
-# 寫入：今天做了什麼、還在做什麼、教練目前狀態
-# 保持整個摘要區塊在 500 字以內
-```
-
-這樣下次重啟就不會失憶！記憶不靠 AI，靠你自己寫進這個檔。
+## 📋 待辦事項
+- [ ] 讀取海餅乾逐字稿（~/Desktop/海餅乾知識庫/海餅乾文化_核心逐字稿.txt）並寫入記憶庫
+- [ ] 「做對的事 vs 把事情做對」哲學寫入 workspace memory
+- [ ] 每日自動復原 primary 模型的 cron 任務（Google 配額重置後自動切回 3.1-pro-preview）

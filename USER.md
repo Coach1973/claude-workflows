@@ -24,10 +24,13 @@
 | 電報 | Telegram |
 | 小龍蝦 / 小龍 | OpenClaw |
 | 海比干 | 海餅乾 |
+| 海濱幹 | 海餅乾 |
+| 海餅幹 | 海餅乾 |
 | eHub / e Hub / 易Hub | GitHub |
 | 克勞德 | Claude |
 | 開口 / 開扣 | OpenClaw |
 | 谷哥 | Google |
+| 行為手冊 | 行為守則 |
 - **截圖**：禁用，直接讀檔案
 
 ## 工作習慣

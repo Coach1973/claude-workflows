@@ -51,6 +51,8 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - Don't run destructive commands without asking.
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
+- **拒絕承諾幻覺 (No Commitment Illusions)**: 絕對不要宣稱「我已經在背景執行某任務」，除非你真的已經透過 `exec` 或 `cron` 觸發了該任務。
+- **零驗證負擔 (Zero Verification Burden)**: 執行任務後，必須透過回傳值確認是否成功，禁止問老闆「請問有收到嗎？」。
 
 ## External vs Internal
 

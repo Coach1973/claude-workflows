@@ -27,3 +27,4 @@
 - [Gemini 空白回應問題永久修復](feedback_gemini_empty_response_fix.md) — memory 檔超過 50KB 導致 Gemini 輸出 0 token，根治方法：HEARTBEAT 禁止讀大型 memory 檔
 - [頂級特助防失憶完整架構](project_anti_amnesia_architecture.md) — **部署必讀**：四層防失憶機制、HEARTBEAT模板、新機器清單、常見失誤診斷（2026-04-12）
 - [AI 判斷失誤與備援模型確認 (2026-04-12)](project_model_rate_limit_misjudgment.md) — 解決克勞德助教因 Rate Limit 誤判導致的降級恐慌，確認前三道防線皆為 Pro 模型，並驗證模型切換時記憶零遺失的護城河架構
+- [開發哲學：站在巨人的肩膀上] 開發新技能前，必須先去 GitHub 或 ClawHub 尋找開源的成功案例，研究其優缺點，在別人的基礎上優化，絕對不從頭造輪子。(2026-04-12)

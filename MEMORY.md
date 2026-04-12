@@ -23,3 +23,4 @@
 - [4/8-4/11 小龍蝦對話完整分析](project_session_analysis_0408_0411.md) — 9項完成任務、DOM模式突破、待辦事項、未記錄守則（YouTube監測、Obsidian、知識過濾哲學）
 - [2/25-2/27 小龍蝦開機第一週](project_session_analysis_0225_0227.md) — Mac新手入門、嘸蝦米、GCP帳單轉移、Chrome擴充安裝、Ollama踩坑、模型選擇決策
 - [Gemini 空白回應問題永久修復](feedback_gemini_empty_response_fix.md) — memory 檔超過 50KB 導致 Gemini 輸出 0 token，根治方法：HEARTBEAT 禁止讀大型 memory 檔
+- [頂級特助防失憶完整架構](project_anti_amnesia_architecture.md) — **部署必讀**：四層防失憶機制、HEARTBEAT模板、新機器清單、常見失誤診斷（2026-04-12）

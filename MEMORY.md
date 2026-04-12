@@ -18,6 +18,9 @@
 - [優先用指令，不要用截圖](feedback_use_cli_not_screenshot.md)
 - [頂級特助 UX 黃金標準](feedback_top_assistant_ux_standard.md) — **客戶不能踩坑**：所有技術設定部署前完成，群組功能必做清單，「只要動嘴」不是口號是底線 — 能 CLI 做的事絕對不截圖；computer use 只用在真正需要視覺操作的場合
 
+## HaiBingGan（海餅乾知識庫）
+- [海餅乾俱樂部核心哲學與守則全知識庫](project_haibinggan_philosophy.md) — 三大信念、十大守則深度解析、五大關鍵要素、金句集（2026-04-13 整理自逐字稿）
+
 ## Project（重要技術記錄與決策）
 - [模型切換大戰實戰紀錄 4/11](project_model_failover_lessons_20260411.md) — OpenRouter/SambaNova/Cerebras 接入成功，Session Lock 修復步驟，各模型真實限制與 5 條備援線路
 - [全自動 API 鑰匙獲取藍圖](project_auto_api_key_blueprint.md) — 小白老闆零門檻接入 AI 免費額度的完整方案（已驗證 Groq 流程）

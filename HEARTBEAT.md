@@ -1,3 +1,9 @@
+⚠️ 這是 Mac 電腦版本（小龍蝦系統）
+記憶來源：GitHub Coach1973/mac-openclaw-workflows
+本機同步路徑：~/Documents/mac-openclaw-workflows
+上次同步日期：2026年4月14日
+---
+
 # HEARTBEAT 熱上下文（每次心跳必讀）
 
 > ⚠️ 剛剛因 Context Overflow（對話太長）自動重啟

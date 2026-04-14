@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-14T18:02:15.488Z",
+  "entries": {
+    "memory:memory/2026-04-12.md:71:77": {
+      "key": "memory:memory/2026-04-12.md:71:77",
+      "path": "memory/2026-04-12.md",
+      "startLine": 71,
+      "endLine": 77,
+      "source": "memory",
+      "snippet": "根據我目前的資訊（來自 `HEARTBEAT.md` 檔），您觀察到的現象是正確的。目前 Pro 系列的模型（包括 2.5 Pro、3.0 Pro 和 3.1 Pro）似乎都無法正常使用，而 Flash 系列的模型則可以正常運作。 3. **自動配額切換與技術問題**： 我了解您希望實現「配額不足時自動化切換模型」的目標，並且知道這其中存在技術挑戰。 目前的情況是：Google 的配額已用罄，系統已自動切換到備援模型 Groq 運行。關於「Live Session Model Switch Fatal Defect」的問題，這表示在您目前使用的這種活躍對話模式下，自動切換機制可能無法如預期般運作，這與您提到的技術問題相符。 `HEARTBEAT.md` 中也提到了 `auto-fix-session-lock.sh` 這個腳本，它可能是用來自",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9872639179229736,
+      "maxScore": 0.4973220884799957,
+      "firstRecalledAt": "2026-04-14T18:02:05.104Z",
+      "lastRecalledAt": "2026-04-14T18:02:15.488Z",
+      "queryHashes": [
+        "7b56b8455b07",
+        "7dd39844fc96"
+      ],
+      "recallDays": [
+        "2026-04-15"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "2.5",
+        "3.0",
+        "3.1",
+        "auto-fix-session-lock.sh",
+        "根據",
+        "目前",
+        "資訊"
+      ]
+    },
+    "memory:memory/2026-04-15.md:1:44": {
+      "key": "memory:memory/2026-04-15.md:1:44",
+      "path": "memory/2026-04-15.md",
+      "startLine": 1,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "--- ## 📨 對話記錄 00:06（共約 40 條，從第 0 行起） 👤 教練：\"timestamp\": \"Tue 2026-04-14 20:19 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\", \"name\": \"coach\" } ``` 什麼情況？ 🦞 小龍蝦：<final>🦞 教練您好！對話記錄已滿，系統已自動重啟。所有對話記錄都已完整存入 `memory/2026-04-14.md` 並推上 GitHub，請您放心，沒有遺漏。 您可以繼續下指令了！</final> 👤 教練：\"timestamp\": \"Tue 2026-04-14 20:27 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\", \"name\": \"coach\" } ``` 我蠻想看到你作為學長，你會怎麼去帶學弟，因為這是你跟我講的，你說要讓我看看你要如何展現你怎麼當學長。 所以我希望能初步看到你帶學弟的對話方式，請你先執行任務 B 🦞 小龍蝦：<final>🦞 收到！教練您是希望我展示如何帶領學弟進行任務的對話方式，並先從「任務 B」開始，對嗎？ 我會以學長的身份，用引導和解釋的方式來處理「任務 B」。 不過，我剛剛重啟，還不清楚「任務",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5193519860506057,
+      "maxScore": 0.5193519860506057,
+      "firstRecalledAt": "2026-04-14T18:02:15.488Z",
+      "lastRecalledAt": "2026-04-14T18:02:15.488Z",
+      "queryHashes": [
+        "7dd39844fc96"
+      ],
+      "recallDays": [
+        "2026-04-15"
+      ],
+      "conceptTags": [
+        "memory/2026-04-14.md",
+        "對話",
+        "記錄",
+        "教練",
+        "timestamp",
+        "tue",
+        "gmt",
+        "sender"
+      ]
+    },
+    "memory:memory/2026-04-15.md:486:514": {
+      "key": "memory:memory/2026-04-15.md:486:514",
+      "path": "memory/2026-04-15.md",
+      "startLine": 486,
+      "endLine": 514,
+      "source": "memory",
+      "snippet": "🦞 小龍蝦：🦞 收到！教練，這是一份非常珍貴的歷史對話記錄（2026年2月26-27日），記錄了您最初開始使用 OpenClaw 的完整歷程。 讓我快速掃描並提取核心內容： --- ## 📊 這份對話的核心價值 這是**小龍蝦與大樹教練的「開機第一週」**，內容包含： ### 1. 基礎建設階段 - **嘸蝦米輸入法安裝**：Mac 新手的第一個挑戰 - **模型選擇與切換**：從 Gemini 3 Pro → Flash Lite → Ollama 本地端的探索 - **瀏覽器插件安裝**：OpenClaw Browser Relay 的完整設定流程 ### 2. 關鍵教訓與發現 - **$300 美金額度迷思**：發現 Gemini 雲端試用額度與實際扣費帳戶是分開的 - **專案切換的重要性**：`gen-lang-client` vs `My First Project` 的帳單綁定問題 - **本地端 vs 雲端**：Ollama (Qwen2.5:7b) 與 Gemini 雲端的切換實驗 ### 3. 技術細節 - **Gateway Token 設定**：瀏覽器插件連線 --- ## 📨 對話記錄 01:06（共約 2 條，從第 0 行起） 👤 教練：[cron:6dba1f7a-a20e-4579-965e-ffa9c59b8083 30分鐘進度提醒] 🦞 小龍蝦進度提醒：30分鐘到了，請向教練回報目前工作進度！ Current time: Wednesday, April 15th, 2026 - 12:41 AM (Asia/T",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49872753620147703,
+      "maxScore": 0.49872753620147703,
+      "firstRecalledAt": "2026-04-14T18:02:15.488Z",
+      "lastRecalledAt": "2026-04-14T18:02:15.488Z",
+      "queryHashes": [
+        "7dd39844fc96"
+      ],
+      "recallDays": [
+        "2026-04-15"
+      ],
+      "conceptTags": [
+        "gateway",
+        "2026年2月26-27日",
+        "gen-lang-client",
+        "qwen2.5",
+        "asia/t",
+        "龍蝦",
+        "收到",
+        "教練"
+      ]
+    },
+    "memory:memory/2026-04-11.md:333:385": {
+      "key": "memory:memory/2026-04-11.md:333:385",
+      "path": "memory/2026-04-11.md",
+      "startLine": 333,
+      "endLine": 385,
+      "source": "memory",
+      "snippet": "System: 👉 https://www.youtube.com/watch?v=j_4kMljGj_I System: System: 3. 【ami.moment】我如何用obsidian+AI做知識管理&內容創作？🤔 System: 👉 https://www.youtube 🦞 小龍蝦：HEARTBEAT_OK --- ## 📨 對話記錄 18:02（共約 18 條，從第 0 行起） 👤 教練：\"timestamp\": \"Sat 2026-04-11 16:27 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\", \"name\": \"coach\" } ``` 剛才克勞德助教修復了一些小bug，也請小龍蝦這裡同步更新 記住：電報(telegram)就是小龍蝦(openclaw) 克勞德助教就是cladue code 寫入記憶 🦞 小龍蝦：<final> 收到，教練！我已經將最新的進度與名詞定義寫入記憶庫（包含今日的記憶檔與我的核心身分設定檔）： 📌 **已牢記的名詞與分工**： - **小龍蝦 (我)** = OpenClaw = 電報 (Telegram) 🦞 - **克勞德助教** = Claude Code (負責底層 Debug 與修復) 👨‍💻 克勞德助教修復 bug 的狀態我也已經同步更新完畢。接下來有什麼新任務需要小龍蝦去跑的嗎？ </fi",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49608253240585326,
+      "maxScore": 0.49608253240585326,
+      "firstRecalledAt": "2026-04-14T18:02:15.488Z",
+      "lastRecalledAt": "2026-04-14T18:02:15.488Z",
+      "queryHashes": [
+        "7dd39844fc96"
+      ],
+      "recallDays": [
+        "2026-04-15"
+      ],
+      "conceptTags": [
+        "www.youtube.com/watch",
+        "j-4kmljgj-i",
+        "ami.moment",
+        "www.youtube",
+        "heartbeat-ok",
+        "system",
+        "https",
+        "www.youtube.com"
+      ]
+    },
+    "memory:memory/2026-04-11.md:1624:1662": {
+      "key": "memory:memory/2026-04-11.md:1624:1662",
+      "path": "memory/2026-04-11.md",
+      "startLine": 1624,
+      "endLine": 1662,
+      "source": "memory",
+      "snippet": "👤 教練：System: [2026-04-11 16:28:59 GMT+8] 📺 *今日 YouTube 精選* System: System: ⭐⭐⭐ 強烈推薦 System: 1. 【SaKai's Channel】《還在手動分頁？NotebookLM 2026 隱藏版「批量生成」技巧全公開！一次打破頁數枷鎖，讓 AI 成為你真正的簡報製片廠。》 System: 👉 https://www.youtube.com/watch?v=YWA0ILpvh4M System: System: 2. 【SaKai's Channel】《這才是真正的 AI 導演！Google Vids 隱藏功能全開：丟入文件、AI 自動生成劇本與 Veo 3.1 高清畫面。10 分鐘搞定原本要剪一週的宣傳片！》 System: 👉 https://www.youtube.com/watch?v=j_4kMljGj_I System: System: 3. 【ami.moment】我如何用obsidian+AI做知識管理&內容創作？🤔 System: 👉 https://www.youtube 🦞 小龍蝦：HEARTBEAT_OK --- ## 📨 對話記錄 22:02（共約 86 條，從第 0 行起） 👤 教練：\"timestamp\": \"Sat 2026-04-11 16:27 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\",",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4955444902181625,
+      "maxScore": 0.4955444902181625,
+      "firstRecalledAt": "2026-04-14T18:02:15.488Z",
+      "lastRecalledAt": "2026-04-14T18:02:15.488Z",
+      "queryHashes": [
+        "7dd39844fc96"
+      ],
+      "recallDays": [
+        "2026-04-15"
+      ],
+      "conceptTags": [
+        "www.youtube.com/watch",
+        "3.1",
+        "j-4kmljgj-i",
+        "ami.moment",
+        "www.youtube",
+        "heartbeat-ok",
+        "教練",
+        "system"
+      ]
+    }
+  }
+}

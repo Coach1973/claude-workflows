@@ -1,5 +1,8 @@
 # Project Memory Index
 
+## 🤝 雙機協作系統
+- [分工群組共享記憶體](SHARED_GROUP_MEMORY.md) — **群組 Session 必讀**：學長/學弟身份定義、協作 SOP、衝突防護規則（2026-04-15）
+
 ## 🎯 最高優先級：偉大任務
 - [大樹教練的偉大任務與最終願景](user_grand_mission.md) — **所有工作的最高指導方針**：讓中小企業主只要動嘴，AI 全自動處理
 - [頂級特助系統完整藍圖](project_top_assistant_blueprint.md) — 命名由來、三套餐商業模式、海餅乾俱樂部十大守則、護城河哲學（2026-04-11）

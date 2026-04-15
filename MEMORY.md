@@ -11,6 +11,7 @@
 - [大樹教練個人檔案](user_profile.md) — 身份/目標/設備分工/語音辨識糾偏/內容偏好
 
 ## Feedback（行為守則）
+- [AI 資訊壁壘突破守則：拒絕被單一模型的「不可能」綁架](project_ai_cross_validation_principle.md) — **防坑必讀**：破解 AI 先入為主與保守防禦的交叉驗證法則（2026-04-16）
 - [🚨 Live Session Model Switch 致命缺陷](feedback_live_session_model_switch_bug.md) — **壓力測試發現（2026-04-12）**：fallback 鏈在 live session 中完全無效，治本方案：配額耗盡時必須改 primary + 清 session + 重啟
 - [與大樹教練合作的核心工作守則](feedback_working_rules.md) — 執行策略、Token 管理、安全守則、互動風格、偉大任務
 - [DeepSeek Session Lock 試錯總結](feedback_deepseek_session_lock_lessons.md) — 花 2 小時的失敗記錄，根本解是改 Primary 模型，不要繞路

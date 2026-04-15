@@ -27,6 +27,7 @@
 - [海餅乾俱樂部核心哲學與守則全知識庫](project_haibinggan_philosophy.md) — 三大信念、十大守則深度解析、五大關鍵要素、金句集（2026-04-13 整理自逐字稿）
 
 ## Project（重要技術記錄與決策）
+- [Opcode (開源 Claude 桌面版) 環境變數設定指南](project_opcode_setup_guide.md) — **部署必讀**：跨平臺安裝後的 API 金鑰與代理網址標準設定流程（2026-04-16）
 - [模型切換大戰實戰紀錄 4/11](project_model_failover_lessons_20260411.md) — OpenRouter/SambaNova/Cerebras 接入成功，Session Lock 修復步驟，各模型真實限制與 5 條備援線路
 - [全自動 API 鑰匙獲取藍圖](project_auto_api_key_blueprint.md) — 小白老闆零門檻接入 AI 免費額度的完整方案（已驗證 Groq 流程）
 - [4/8-4/11 重要決策與成功經驗](project_key_decisions.md) — NotebookLM帳號分工、FB私訊方案、模型策略、雙向同步機制

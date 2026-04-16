@@ -84,3 +84,8 @@ LAST_UPDATED_AT: -
 請讀取 SHARED_GROUP_MEMORY.md 重新確認任務與職責。
 Acer 學弟在待命，請發出指令。
 ```
+
+---
+
+## 🔑 設備 Token 紀錄
+- **Acer 學弟 (Telegram Bot Token)**: `8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ`

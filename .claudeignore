@@ -1,0 +1,3 @@
+# 讓 Opcode / Claude 相關圖形介面忽略龐大的記憶庫，避免啟動卡頓
+memory/
+MEMORY.md

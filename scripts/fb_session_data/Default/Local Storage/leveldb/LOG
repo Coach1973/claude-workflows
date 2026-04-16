@@ -1,0 +1,5 @@
+2026/04/16-11:23:28.293 22ea6dc Reusing MANIFEST /Users/bymyway/.openclaw/workspace/scripts/fb_session_data/Default/Local Storage/leveldb/MANIFEST-000001
+2026/04/16-11:23:28.295 22ea6dc Recovering log #4
+2026/04/16-11:23:28.295 22ea6dc Level-0 table #7: started
+2026/04/16-11:23:28.298 22ea6dc Level-0 table #7: 23433 bytes OK
+2026/04/16-11:23:28.301 22ea6dc Delete type=0 #4

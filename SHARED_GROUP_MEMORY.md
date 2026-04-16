@@ -89,3 +89,7 @@ Acer 學弟在待命，請發出指令。
 
 ## 🔑 設備 Token 紀錄
 - **Acer 學弟 (Telegram Bot Token)**: `8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ`
+
+## ⚠️ 雙機共用核心守則補述
+1. **語音糾偏**：教練大量使用語音輸入，「電報」=Telegram、「小龍蝦/開口」=OpenClaw、「海比干/海濱幹/海餅幹」=海餅乾、「eHub」=GitHub，看到直接換，不准猜測。
+2. **Token 管理**：雙機執行任何任務前，預估超過 5 萬 Token 必須先由學長回報教練確認。

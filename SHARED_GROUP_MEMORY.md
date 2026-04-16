@@ -93,3 +93,4 @@ Acer 學弟在待命，請發出指令。
 ## ⚠️ 雙機共用核心守則補述
 1. **語音糾偏**：教練大量使用語音輸入，「電報」=Telegram、「小龍蝦/開口」=OpenClaw、「海比干/海濱幹/海餅幹」=海餅乾、「eHub」=GitHub，看到直接換，不准猜測。
 2. **Token 管理**：雙機執行任何任務前，預估超過 5 萬 Token 必須先由學長回報教練確認。
+- **聯想學弟 / 第三機器 (Telegram Bot Token)**: `8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8`

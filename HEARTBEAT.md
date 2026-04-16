@@ -16,4 +16,5 @@
 - 截圖禁用，直接讀檔案
 - 執行完通報 Telegram（Chat ID: 6124913915）
 - 預估超過 5 萬 Token 先回報教練確認
-- ⚠️ 不要讀大型 memory 檔（會造成 Gemini 空白回應）
+- ⚠️ 不要讀大型 memory 檔（會造成 Gemini 空白回應或 Context Overflow 當機）
+- ⚠️ 大任務配速：預估大於 3 萬 Token 或大量檔案處理時，必須主動提議分批，並改用背景子任務 (subagents/cron) 處理，做完再叫教練。

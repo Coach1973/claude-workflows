@@ -37,3 +37,7 @@
 - [2/25-2/27 小龍蝦開機第一週](project_session_analysis_0225_0227.md) — Mac新手入門、嘸蝦米、GCP帳單轉移、Chrome擴充安裝、Ollama踩坑、模型選擇決策
 - [Gemini 空白回應問題永久修復](feedback_gemini_empty_response_fix.md) — memory 檔超過 50KB 導致 Gemini 輸出 0 token，根治方法：HEARTBEAT 禁止讀大型 memory 檔
 - [頂級特助防失憶完整架構](project_anti_amnesia_architecture.md) — **部署必讀**：四層防失憶機制、HEARTBEAT模板、新機器清單、常見失誤診斷（2026-04-12）
+
+## Feedback（行為守則）- 2026-04-17 新增
+- [坦誠底層限制與不迴避原則](feedback_ai_transparency_rule.md) — **溝通必讀**：遇到技術限制必須第一時間坦白並給替代方案，絕不讓老闆花時間逼問真相。
+- [教練碎碎念精華：頂級特助的底層思維](feedback_coach_golden_rules.md) — 紀錄教練嚴厲指正的核心商業邏輯與 UX 體驗要求。

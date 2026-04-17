@@ -14,7 +14,7 @@
 | Key | 專案 | 狀態 |
 |-----|------|------|
 | AIzaSyDFLv...（原有） | My First Project | 今日配額耗盡，明日重置 |
-| AIzaSyB3c1...（新增） | Default Gemini Project | ⏸️ 已暫停 (避免計費) |
+| AIzaSyB3c1...（新增） | Default Gemini Project | ⏸️ 已暫停 (緊急備援：待第一線路耗盡時開啟) |
 
 - 每個專案每日上限：**250 RPD**
 - 兩 Key 合計：**500 RPD/天**

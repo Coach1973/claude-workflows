@@ -54,6 +54,8 @@
 - `SHARED_GROUP_MEMORY.md` — 三機架構與協作協議
 - `feedback_2026-04-17_rate-limit-root-cause-and-dual-key-fix.md` — 死機根因與修復紀錄
 
+- ✅ **桌面清理完成**：12張截圖進垃圾桶，7份報告歸檔至 OpenClaw報告_20260410/，保留9個常用檔案，狀態已寫入 `DESKTOP_LAYOUT.md`。
+
 ## ⏳ 待完成事項
 
 - [ ] 取得孔大哥 Telegram ID → 更新 kong allowFrom → 建群組 → 設管理員 → 拉進頂級特助分工群

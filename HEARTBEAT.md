@@ -7,14 +7,14 @@
 
 - **Primary 模型：** litellm/gemini-3.1-pro-preview（via localhost:4100）
 - **Fallback：** google/gemini-3.1-pro-preview
-- **litellm 雙 Key 輪替：已啟用**（見下方說明）
+- **litellm 單 Key 模式：已切回第一組免費額度線路**（暫停計費的第二線路）
 
 ## 🔑 Gemini API 雙 Key 設定（2026-04-17 新增）
 
 | Key | 專案 | 狀態 |
 |-----|------|------|
 | AIzaSyDFLv...（原有） | My First Project | 今日配額耗盡，明日重置 |
-| AIzaSyB3c1...（新增） | Default Gemini Project | ✅ 健康可用 |
+| AIzaSyB3c1...（新增） | Default Gemini Project | ⏸️ 已暫停 (避免計費) |
 
 - 每個專案每日上限：**250 RPD**
 - 兩 Key 合計：**500 RPD/天**

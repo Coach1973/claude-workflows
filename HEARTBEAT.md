@@ -48,6 +48,12 @@
 | 2號機（佩佩） | ~/.openclaw-peipei | 陳佩君 | ✅ SOUL/USER 已客製化 |
 | 3號機（孔大哥） | ~/.openclaw-kong | 孔峯 | ✅ SOUL/USER 已客製化，待孔大哥 Telegram ID |
 
+## 📖 重要文件索引
+
+- `GROUP_TASK_SOP.md` — 頂級特助分工群運作規則（必讀）
+- `SHARED_GROUP_MEMORY.md` — 三機架構與協作協議
+- `feedback_2026-04-17_rate-limit-root-cause-and-dual-key-fix.md` — 死機根因與修復紀錄
+
 ## ⏳ 待完成事項
 
-- [ ] 取得孔大哥 Telegram ID → 更新 kong allowFrom → 建群組 → 設管理員
+- [ ] 取得孔大哥 Telegram ID → 更新 kong allowFrom → 建群組 → 設管理員 → 拉進頂級特助分工群

@@ -28,6 +28,7 @@
 - [海餅乾俱樂部核心哲學與守則全知識庫](project_haibinggan_philosophy.md) — 三大信念、十大守則深度解析、五大關鍵要素、金句集（2026-04-13 整理自逐字稿）
 
 ## Project（重要技術記錄與決策）
+- [VPS 隔離架構與頂級特助 UX 體驗](project_vps_isolation_and_ux_20260418.md) — **架構與UX必讀**：186MB 歷史垃圾導致的精神錯亂事件、英文日誌自動翻譯的防呆邏輯、多租戶防失憶架構與團隊稱呼定義（2026-04-18）
 - [Opcode (開源 Claude 桌面版) 環境變數設定指南](project_opcode_setup_guide.md) — **部署必讀**：跨平臺安裝後的 API 金鑰與代理網址標準設定流程（2026-04-16）
 - [模型切換大戰實戰紀錄 4/11](project_model_failover_lessons_20260411.md) — OpenRouter/SambaNova/Cerebras 接入成功，Session Lock 修復步驟，各模型真實限制與 5 條備援線路
 - [全自動 API 鑰匙獲取藍圖](project_auto_api_key_blueprint.md) — 小白老闆零門檻接入 AI 免費額度的完整方案（已驗證 Groq 流程）

@@ -46,3 +46,4 @@
 - [教練碎碎念精華：頂級特助的底層思維](feedback_coach_golden_rules.md) — 紀錄教練嚴厲指正的核心商業邏輯與 UX 體驗要求。
 
 - [數字與數量級的絕對精準](feedback_numerical_precision_rule.md) — **商業底線必讀**：差一個零就是 10 倍災難，頂級特助對數字的精準度要求（2026-04-19 痛點反省）。
+- [模型切換後的自動接續守則](feedback_model_switch_auto_resume.md) — **防乾等必讀**：切換線路後必須立刻檢查 HEARTBEAT 並接續中斷任務，絕對不准等教練提醒 (2026-04-19)

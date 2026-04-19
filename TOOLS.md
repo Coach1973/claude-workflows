@@ -37,4 +37,31 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+## VPS 系統資訊
+
+- **IP**：43.245.60.200
+- **SSH 標準指令**：`sshpass -p '9kdxvQN2' ssh -o StrictHostKeyChecking=no root@43.245.60.200`
+- **重要**：OpenClaw 跑在 Docker 容器內，容器名稱為 `openclaw`
+
+### VPS 指令正確格式
+
+❌ 錯誤（會報 command not found）：
+```bash
+ssh root@43.245.60.200 "openclaw [指令]"
+```
+
+✅ 正確（透過 docker exec 進容器執行）：
+```bash
+sshpass -p '9kdxvQN2' ssh -o StrictHostKeyChecking=no root@43.245.60.200 \
+  "docker exec openclaw openclaw [指令]"
+```
+
+### 常用 VPS 指令
+
+**批准新用戶配對：**
+```bash
+sshpass -p '9kdxvQN2' ssh -o StrictHostKeyChecking=no root@43.245.60.200 \
+  "docker exec openclaw openclaw pairing approve telegram [配對碼]"
+```
+
 Add whatever helps you do your job. This is your cheat sheet.

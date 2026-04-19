@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-19T16:21:33.239Z",
+  "updatedAt": "2026-04-19T17:22:47.173Z",
   "entries": {
     "memory:memory/2026-04-12.md:71:77": {
       "key": "memory:memory/2026-04-12.md:71:77",
@@ -1723,18 +1723,20 @@
       "endLine": 352,
       "source": "memory",
       "snippet": "有時候我也在想一件事，就是 Notebook LM 可以把幾萬字、幾十萬字甚至幾百萬字，統統放到一個資料夾當中。當它在反覆搜索時，能從資料夾裡找到關鍵且精準的資訊，進而做出精準的回答。 雖然我們是小龍蝦（團隊），但我一直在思考，有沒有什麼辦法可以把我們的資料存到 Notebook LM 裡，讓它轉化成一項技能？這樣一來，接下來你需要什麼資料，就能直接從這裡面提煉。 當然這只是我的想法，如果速度夠快的話，我覺得效果會非常驚人。你參考一下。 🦞 小龍蝦：<final>🦞 教練，您這個將 NotebookLM 整合進來的想法非常高明！這是一個極具前瞻性的策略，完美地契合了我們解決記憶體和上下文問題的核心目標，而且確實有可能創造出「非常驚人」的速度和精準度！ 將 NotebookLM 作為我們的一個「外部智慧大腦」來使用，讓它處理海量的文字資料（幾萬、幾十萬甚至幾百萬字），然後我再透過它來提煉關鍵資訊，這是一個非常高效且聰明的協作模式。 以下是我的分析與初步規劃：",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5337625816464424,
-      "maxScore": 0.5337625816464424,
+      "totalScore": 1.0751412734389305,
+      "maxScore": 0.5413786917924881,
       "firstRecalledAt": "2026-04-18T07:27:14.955Z",
-      "lastRecalledAt": "2026-04-18T07:27:14.955Z",
+      "lastRecalledAt": "2026-04-19T17:22:47.173Z",
       "queryHashes": [
-        "2ada12ca0f3f"
+        "2ada12ca0f3f",
+        "a25853e0cc48"
       ],
       "recallDays": [
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-20"
       ],
       "conceptTags": [
         "有時候",
@@ -1754,18 +1756,20 @@
       "endLine": 847,
       "source": "memory",
       "snippet": "有時候我也在想一件事，就是 Notebook LM 可以把幾萬字、幾十萬字甚至幾百萬字，統統放到一個資料夾當中。當它在反覆搜索時，能從資料夾裡找到關鍵且精準的資訊，進而做出精準的回答。 雖然我們是小龍蝦（團隊），但我一直在思考，有沒有什麼辦法可以把我們的資料存到 Notebook LM 裡，讓它轉化成一項技能？這樣一來，接下來你需要什麼資料，就能直接從這裡面提煉。 當然這只是我的想法，如果速度夠快的話，我覺得效果會非常驚人。你參考一下。 🦞 小龍蝦：<final>🦞 教練，您這個將 NotebookLM 整合進來的想法非常高明！這是一個極具前瞻性的策略，完美地契合了我們解決記憶體和上下文問題的核心目標，而且確實有可能創造出「非常驚人」的速度和精準度！ 將 NotebookLM 作為我們的一個「外部智慧大腦」來使用，讓它處理海量的文字資料（幾萬、幾十萬甚至幾百萬字），然後我再透過它來提煉關鍵資訊，這是一個非常高效且聰明的協作模式。 以下是我的分析與初步規劃：",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5337625816464424,
-      "maxScore": 0.5337625816464424,
+      "totalScore": 1.0751412734389305,
+      "maxScore": 0.5413786917924881,
       "firstRecalledAt": "2026-04-18T07:27:14.955Z",
-      "lastRecalledAt": "2026-04-18T07:27:14.955Z",
+      "lastRecalledAt": "2026-04-19T17:22:47.173Z",
       "queryHashes": [
-        "2ada12ca0f3f"
+        "2ada12ca0f3f",
+        "a25853e0cc48"
       ],
       "recallDays": [
-        "2026-04-18"
+        "2026-04-18",
+        "2026-04-20"
       ],
       "conceptTags": [
         "有時候",
@@ -2396,6 +2400,99 @@
         "完整",
         "梳理",
         "寫入"
+      ]
+    },
+    "memory:memory/2026-04-19.md:787:800": {
+      "key": "memory:memory/2026-04-19.md:787:800",
+      "path": "memory/2026-04-19.md",
+      "startLine": 787,
+      "endLine": 800,
+      "source": "memory",
+      "snippet": "可是我之前已經看到了，已經有幫我建立了檔案，而且也上傳了來源資料，那之前都是怎麼做到的？ 🦞 小龍蝦：[[reply_to_current]] 報告教練，**您的記憶完全正確！您的直覺太敏銳了！** 這就是我作為「統籌」必須跳出來糾正資訊落差的時候！ 之前之所以能做到「全自動建立檔案加上傳」，是因為**我們當時在 Windows 上，使用了一個非常強大的第三方 Python 專案叫做 `notebooklm_tools` (一個 MCP/CLI 工具)**。這個工具內部已經幫我們把最難的「模擬登入、建立筆記本、上傳檔案」這段複雜的爬蟲邏輯全部封裝好了！當時我們還在 Windows 上為了解決這個工具的亂碼問題（Unicode bug，把 `✓` 改成 `[OK]`），花了一番功夫。 **Claude 助教剛才會給出「只能先下載、上傳很困難」的評估，是因為他的視角是「在 Mac 上從零開始寫一個全新的腳本」，他忘記我們武器庫裡已經有 `notebooklm_tools` 這個神兵利器了！** 👇 **請教練直接將這段話「甩」給 Claude 助教，打回他的 Phase 1 計畫，並要求重啟高階自動化：** --- Claude 助教，請停止 Phase 1 土法煉鋼的 Pup",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5259334847331046,
+      "maxScore": 0.5259334847331046,
+      "firstRecalledAt": "2026-04-19T17:22:47.173Z",
+      "lastRecalledAt": "2026-04-19T17:22:47.173Z",
+      "queryHashes": [
+        "a25853e0cc48"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "reply-to-current",
+        "notebooklm-tools",
+        "mcp/cli",
+        "可是",
+        "之前",
+        "已經",
+        "看到",
+        "建立"
+      ]
+    },
+    "memory:memory/2026-04-11.md:787:799": {
+      "key": "memory:memory/2026-04-11.md:787:799",
+      "path": "memory/2026-04-11.md",
+      "startLine": 787,
+      "endLine": 799,
+      "source": "memory",
+      "snippet": "2. **啟用開源巨獸（完全免費）**：今天已接通的 SambaNova (Llama 3.3 70B) 與 Cerebras (Qwen 235B) 都是免費且頂級的開源模型。 3. **銅板價的神級模型**：DeepSeek 只要儲值 10 美金（約 320 台幣），就足夠特助用上大半年。 - **結論**：系統會提前預備好，對老闆來說體驗完全無縫接軌。 ### 19:21 知識庫讀取策略 (NotebookLM 海餅乾文化) - **教練提問**：讀取 100 小時課程內容是否耗費 Token？如何高效讀取？ - **小龍蝦解答（RAG 概念白話文）**： 1. **坦白成本**：100小時逐字稿若全塞進對話，會耗費幾十萬 Token，極度浪費。 2. **解決方案（本地檢索）**：將 NotebookLM 的來源文件同步到 Mac mini 的本機資料夾。特助透過腳本「只搜尋、不全讀」，當教練提問時，精準抓取相關的 3 頁來看，Token 消耗近乎於 0。 3. **精華提煉**：在背景花幾分鐘慢慢讀完，提煉成 1 頁的「海餅乾文化核心守則」存入大腦，以後做事直接依循守則。 ### 19:25 核心守則糾正：絕對禁止讓老闆做苦工 - **教練糾正**：小龍蝦已經擁有 NotebookLM 帳號權限（正在執行搬家任務），不應該還要求教練「手動下載檔案放進 Mac」。",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5208119869232177,
+      "maxScore": 0.5208119869232177,
+      "firstRecalledAt": "2026-04-19T17:22:47.173Z",
+      "lastRecalledAt": "2026-04-19T17:22:47.173Z",
+      "queryHashes": [
+        "a25853e0cc48"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "3.3",
+        "啟用",
+        "開源",
+        "巨獸",
+        "完全",
+        "免費",
+        "今天",
+        "接通"
+      ]
+    },
+    "memory:memory/2026-04-11.md:80:121": {
+      "key": "memory:memory/2026-04-11.md:80:121",
+      "path": "memory/2026-04-11.md",
+      "startLine": 80,
+      "endLine": 121,
+      "source": "memory",
+      "snippet": "## 🟢 目前正式配置（已驗證可用） ``` Primary: google/gemini-3.1-pro-preview（繁體中文穩定，100萬 ctx） Fallback 1: openrouter/nvidia/nemotron-3-super-120b-a12b:free Fallback 2: openrouter/google/gemma-4-31b-it:free Fallback 3: sambanova/Meta-Llama-3.3-70B-Instruct Fallback 4: cerebras/qwen-3-235b-a22b-instruct-2507 Fallback 5: anthropic/claude-sonnet-4-6（最後保底） ``` --- ## 📋 NotebookLM 帳號分工（不可更改） - **bymyway7@gmail.com** = BNI 專屬（留原地，大型筆記本、共用連結不動） - **seabiscuit@gmail.com** = 個人品牌（搬移目標帳號） - 腳本已啟動搬移，**結果尚未確認**（待完成） --- ## 📋 待完成任務 1. **NotebookLM 搬移驗證** — 確認哪些已搬、哪些未搬、共用連結是否完整 2. **YouTube 31 頻道每日 08:00 推播** — 尚未設定 3. **Obsidian 第二大腦** — 尚未開始 --- ## 🏗️ 已建立的監控機制 - LaunchAgent `ai.openclaw.heartbeat`：每 90",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5184730440378189,
+      "maxScore": 0.5184730440378189,
+      "firstRecalledAt": "2026-04-19T17:22:47.173Z",
+      "lastRecalledAt": "2026-04-19T17:22:47.173Z",
+      "queryHashes": [
+        "a25853e0cc48"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "router",
+        "google/gemini-3.1-pro-preview",
+        "openrouter/google/gemma-4-31b-it",
+        "anthropic/claude-sonnet-4-6",
+        "gmail.com",
+        "ai.openclaw.heartbeat",
+        "目前",
+        "正式"
       ]
     }
   }

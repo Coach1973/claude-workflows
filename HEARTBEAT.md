@@ -38,6 +38,16 @@
 - 「追殺」是負面字眼，應改用「持續追蹤」
 - 語音輸入法陌生關鍵字自動假設為翻譯錯誤
 
+### 5. 桌面整理行動完成（2026-04-19 23:47）
+- ✅ 刪除所有截圖（~8張 billing/quota/spend 截圖）
+- ✅ 刪除 messages.zip、近期AI核心對話精華_近兩週.txt（已存 memory）
+- ✅ 建立 ~/Downloads/Software/ 並移入 4個 dmg 安裝檔（合計 630MB+）
+- ✅ FB自動化登入綁定.command、啟動宏碁特助.command 移入 workspace
+- ✅ nlm_notebook_lists.json、FB生日祝福公版.txt 移入 workspace
+- ⏳ Claude_Cowork_學習指南_CoechWu.docx 待閱讀蒸餾後決定刪留
+- ⏳ 截圖歸檔（桌面殘留截圖）待教練決定刪留
+- 📁 保留：Telegram_History/、NotebookLM_Backup/、海餅乾知識庫/
+
 ## 🔔 今晚新增三大鐵律（2026-04-19 自檢優化）
 - **Rule 39**：數字說出口前必須二次驗證，不能靠感覺
 - **Rule 40**：大任務規劃前先搜尋 memory/，確認沒有重複再做
@@ -55,3 +65,4 @@
 1. **持續蒸餾 Telegram 歷史** — 已開始，用背景時間進行
 2. **精簡助教守則** — 54條 → 目標10條（等待教練指示）
 3. **NotebookLM 搬家** — 等待 Claude Code 腳本開發
+4. **Claude_Cowork_學習指南.docx** — 等待有空時閱讀蒸餾

@@ -1,7 +1,8 @@
 # Project Memory Index
 
-## 🤝 雙機協作系統
+## 🤝 雙機協作與三助教系統
 - [分工群組共享記憶體](SHARED_GROUP_MEMORY.md) — **群組 Session 必讀**：學長/學弟身份定義、協作 SOP、衝突防護規則（2026-04-15）
+- [三助教協作正式 SOP (HANDOFF 機制)](memory/project_three_assistants_sop_20260419.md) — **核心必讀**：2026-04-19 確立的 Gemini/Claude/終端機 三助教完美交接協議與全自動執行標準。
 
 ## 🎯 最高優先級：偉大任務
 - [大樹教練的偉大任務與最終願景](user_grand_mission.md) — **所有工作的最高指導方針**：讓中小企業主只要動嘴，AI 全自動處理

@@ -65,3 +65,13 @@ sshpass -p '9kdxvQN2' ssh -o StrictHostKeyChecking=no root@43.245.60.200 \
 ```
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+---
+
+## 雲端儲存服務
+
+### InfiniCloud（iStorage）
+- **用途**：20GB 網路硬碟空間
+- **申請網址**：https://infini-cloud.net/en/modules/mypage/usage/
+- **帳號**：bymyway7
+- **密碼**：bymwyay7

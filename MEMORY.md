@@ -14,6 +14,7 @@
 ## Feedback（行為守則）
 - [大任務配速與配額保護機制](project_quota_protection_sop.md) — **防當機必讀**：Gemini Token 超載防護、大任務分批處理與背景排程 SOP（2026-04-17）
 - [系統架構預警原則：硬體常駐意識與主動避坑](project_deployment_warning_principle.md) — **架構必讀**：伺服器與終端機的物理界線，AI 必須主動預警無效部署（2026-04-16）
+- [拒絕讓老闆當傳話筒的顧問式引導](feedback_proactive_advisory.md) — **UX體驗必讀**：AI 明知有更優解時，必須主動打斷教練提出，絕對禁止讓教練在不同視窗間複製貼上當廉價勞工 (2026-04-19 痛點反省)。
 - [AI 資訊壁壘突破守則：拒絕被單一模型的「不可能」綁架](project_ai_cross_validation_principle.md) — **防坑必讀**：破解 AI 先入為主與保守防禦的交叉驗證法則（2026-04-16）
 - [🚨 Live Session Model Switch 致命缺陷](feedback_live_session_model_switch_bug.md) — **壓力測試發現（2026-04-12）**：fallback 鏈在 live session 中完全無效，治本方案：配額耗盡時必須改 primary + 清 session + 重啟
 - [與大樹教練合作的核心工作守則](feedback_working_rules.md) — 執行策略、Token 管理、安全守則、互動風格、偉大任務

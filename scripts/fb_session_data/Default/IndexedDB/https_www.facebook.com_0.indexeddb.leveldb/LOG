@@ -1,0 +1,4 @@
+2026/04/19-06:00:09.250 260fdf1 Reusing MANIFEST /Users/bymyway/.openclaw/workspace/scripts/fb_session_data/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/19-06:00:09.250 260fdf1 Recovering log #7
+2026/04/19-06:00:09.255 260fdf1 Reusing old log /Users/bymyway/.openclaw/workspace/scripts/fb_session_data/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/000007.log 
+2026/04/19-06:00:09.255 260fdf1 Delete type=2 #5

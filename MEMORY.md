@@ -8,8 +8,10 @@
 - [大樹教練的偉大任務與最終願景](user_grand_mission.md) — **所有工作的最高指導方針**：讓中小企業主只要動嘴，AI 全自動處理
 - [頂級特助系統完整藍圖](project_top_assistant_blueprint.md) — 命名由來、三套餐商業模式、海餅乾俱樂部十大守則、護城河哲學（2026-04-11）
 
-## User（教練個人檔案）
-- [大樹教練個人檔案](user_profile.md) — 身份/目標/設備分工/語音辨識糾偏/內容偏好
+## 🎯 最高優先級：偉大任務
+- [大樹教練的偉大使命與最終願景](user_grand_mission.md) — **所有工作的最高指導方針**：讓中小企業主只要動嘴，AI 全自動處理
+- [頂級特助系統完整藍圖](project_top_assistant_blueprint.md) — 命名由來、三套餐商業模式、海餅乾俱樂部十大守則、護城河哲學（2026-04-11）
+- [【專案】VPS 輕量版對外測試計畫](memory/project_vps_lightweight_trial_plan.md) — **2026-04-20 新增**：免費 VPS 體驗引流 → Mac 升級的完整漏斗策略
 
 ## Feedback（行為守則）
 - [大任務配速與配額保護機制](project_quota_protection_sop.md) — **防當機必讀**：Gemini Token 超載防護、大任務分批處理與背景排程 SOP（2026-04-17）

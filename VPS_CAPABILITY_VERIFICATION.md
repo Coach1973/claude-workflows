@@ -73,12 +73,23 @@ VPS 資訊：
     "docker exec openclaw openclaw [指令]"
   ```
 
-**待驗證項目：**
-1. VPS 上的 `messages.tts.enabled` 是否為 `true`？
-2. VPS 上的圖片 generation provider 是否已設定？
+**VPS 上的 TTS 和圖片功能狀態：未知（待完整驗證）**
+
+但發現重要線索：
+- VPS 設定檔中**完全沒有 `messages.tts` 區塊**
+- 這意味著 TTS 預設是關閉的（`enabled: false`）
+- VPS 的 `auth.mode: token`，需要 gateway token 才能執行 `capability tts status`
+
+**懷疑 VPS 的 TTS 功能同樣處於關閉狀態**，需要設定 `messages.tts.enabled: true`
 
 ---
 
+## ✅ 建議行動
+
+1. [x] ~~SSH 到 VPS，檢查 `messages.tts.enabled` 狀態~~ — 確認無 `messages.tts` 區塊
+2. [ ] 在 VPS 上設定 `messages.tts.enabled: true` 並重啟 gateway
+3. [ ] 檢查 VPS 上的圖片 generation provider 設定
+4. [ ] 用戶提供 MiniMax Direct API Key，測試是否能在本機成功設定
 ## 📋 交叉驗證聲明
 
 本報告為**雙重驗證**：
@@ -89,7 +100,8 @@ VPS 資訊：
 
 2. **本驗證（MiniMax-M2.7）驗證**（本次）：
    - 本機 Mac 已成功啟用 TTS 和圖片生成
-   - 結論：MiniMax Pro 帳戶完全支援這些功能，問題在於**還沒找到啟動方法**
+   - VPS 設定檔中完全沒有 `messages.tts` 區塊
+   - 結論：MiniMax Pro 帳戶完全支援這些功能，**問題在於 VPS 上尚未開啟這些設定開關**
 
 **用戶的邏輯是對的**：
 > 「這是 MiniMax 官方網站上直接註明的功能。只要升級到 200 美金的 Pro 帳戶，就應該擁有這個功能。所以不能說它沒有這個功能，只能說我們還找不到啟動方法。」

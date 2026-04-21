@@ -11,25 +11,20 @@
 
 ---
 
-## 🎯 當前主要任務（2026-04-22 更新）
+## ✅ 已完成任務（2026-04-22）
 
-### 結論：VPS 的 TTS 和圖片生成 API 都通 ✅
+### TTS 和圖片生成都已接上，測試通過
 
-| 功能 | API 狀態 | 問題所在 |
+| 功能 | 狀態 | 修復方式 |
 |---|---|---|
-| TTS | ✅ success | VPS OpenClaw 的 `messages.tts` 設定是空的，**沒接上** |
-| 圖片生成 | ✅ success | 同左，OpenClaw 沒對接 |
+| TTS 語音 | ✅ 已接上，測試成功 | 補上 `messages.tts.providers.minimax`（apiKey + voiceId）+ `settings/tts.json` |
+| 圖片生成 | ✅ 已接上，有回應 | 補上 `tools.profile: "full"`，讓 AI 知道自己有圖片生成工具 |
 
-### ⚠️ 重要認知
-- **不是 VPS 的問題**，VPS 那邊 API 完全正常
-- **問題在我們這邊**：OpenClaw 的設定沒有對接上這兩個功能
-- **你現在的工作**：想辦法把 TTS 和圖片生成接進 OpenClaw
-
-### 下一步行動
-1. 找到 OpenClaw 的 TTS 設定位置（`messages.tts` 相關設定）
-2. 填入正確的 VPS API 端點與參數
-3. 同樣處理圖片生成的對接
-4. 測試確認兩個功能都能正常運作
+### 修改的設定（VPS `/root/openclaw/data/openclaw.json`）
+- `messages.tts.providers.minimax.apiKey` = MiniMax API Key
+- `messages.tts.providers.minimax.voiceId` = `male-qn-jingying`
+- `tools.profile` = `"full"`
+- 新增 `settings/tts.json` → `{"tts":{"auto":"always"}}`
 
 ---
 

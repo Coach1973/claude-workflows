@@ -63,8 +63,20 @@
 - VPS 小龍蝦：DuckDuckGo 正常運作，無瀏覽器插件，不需額外調整
 - MiniMax 免費額度（1,500次呼叫/天）對2/3號機用量足夠
 
+### ✅ 今日完成（下午段）
+
+- [x] **共享智慧同步**：SOUL.md、AGENTS.md、WISDOM_CORES.md、教練碎碎念等核心檔案同步到 2/3 號機
+- [x] **同步腳本建立**：`~/.openclaw/workspace/scripts/sync-shared-wisdom.sh`，下次說「同步助教智慧」即可執行
+- [x] **MiniMax 升級 $200/年**：教練已完成升級，4,500次/5小時，新增圖像/語音功能
+- [x] **VPS 圖像/語音能力調查完成**
+
 ### ⚠️ 待處理
 
+- [ ] **VPS 啟用圖像/語音功能**（半完成）
+  - 根因：VPS 用 `minimax`（直接API），Mac 用 `minimax-portal`（OAuth）
+  - 解法：更新 VPS `/home/node/.openclaw/agents/main/agent/auth-profiles.json` 加入 `minimax-portal` 項目
+  - 並將 VPS `openclaw.json` 的 model 改為 `minimax-portal/MiniMax-M2.7`
+  - VPS API Key：`sk-cp-0_iW72rvuoBmDucQXmRaSAUmcrjXTzZCpIxQt7xgKX_ImdeMkhGmgEV9QBzMNwH87jP-VLIXDNC8VqdgJmntnj5M9gJfTJFiveu9fWuXyQHnW9Z8EQnvlC8`
 - [ ] 海餅乾19週年慶（5月14日）行銷規劃
 - [ ] 6場新書發表會（5月份）進度追蹤
 - [ ] YouTube 頻道 handle 待確認：`@greentrainTW`（綠色火車）、`@aaron-1215` 是否正確

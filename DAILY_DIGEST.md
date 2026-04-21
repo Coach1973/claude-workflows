@@ -207,5 +207,6 @@ ANTHROPIC_AUTH_TOKEN=（同 API_KEY，填在 settings.json 裡）
 
 ### 📌 任務執行中
 
-- **TASK_BOT_RELAY.md**：正在由終端機執行中（三機 Bot 訊息 relay 解決方案）
-- 教練出門講課（新營 AI 課程），終端機自行判斷執行中
+- **TASK_BOT_RELAY.md**：⏸️ 擱置中，額度用完未完成，明天繼續
+  - 明天終端機開工後，直接讀取 TASK_BOT_RELAY.md 繼續執行
+  - 記得第一步先搜尋（OPE 原則），不要自己摸索

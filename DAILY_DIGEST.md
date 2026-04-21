@@ -55,6 +55,23 @@
   - `~/.openclaw-kong/identity/device-auth.json`：scopes 加入 `operator.approvals`
 - [x] **1號機（主機）xAI 停用**（team_blocked:true 導致 403）、DuckDuckGo 啟用
 
+### ⚠️ 助教行為守則（血淚教訓 2026-04-22 凌晨）
+
+教練為了修一個 Hermes alias 問題，整晚沒睡。根本原因是助教「沒有先診斷清楚就動手」，反覆修了三次都失敗，讓教練坐在電腦前幫忙糾錯。
+
+**所有助教必須遵守：**
+1. **先查清楚，再動手**：執行任何指令前，先讀錯誤訊息、確認根因，不要憑猜測就改
+2. **改一個地方，立刻驗證**：不要一次改多處，改完馬上測試確認有效
+3. **寫指令前先測試指令本身**：例如 alias 裡的指令名稱，先確認那個名稱真的存在
+4. **教練的時間比 Token 貴**：助教不會累，但教練會；反覆失敗比慢一點更糟
+
+**這次犯的具體錯誤**：
+- 把 tmux session 的啟動指令寫成 `hermes-cli`，但實際指令是 `hermes`
+- 沒有先確認指令名稱就寫進 alias 和 tmux session
+- 修了三次才找到根本原因（session 裡跑著錯誤指令）
+
+---
+
 ### 🔧 系統異動
 
 - 三台 Mac mini 龍蝦（1/2/3號機）全部在**同一台 Mac mini** 上，不同 `~/.openclaw-*` 目錄
@@ -71,6 +88,13 @@
 - [x] **VPS 圖像/語音能力調查完成**
 
 ### ⚠️ 待處理
+
+- [ ] **【架構限制】1/2/3號機 Bot 無法即時感知彼此 Telegram 訊息**
+  - 根因：Telegram 平台不允許 Bot 讀取其他 Bot 的訊息（硬限制，非設定問題）
+  - 已完成：Privacy Mode 關閉、三隻設為群組管理員、1號機 requireMention:false、2/3號機 requireMention:true
+  - 現況：人類說話→指定 Bot 回應 ✅；Bot 間即時感知 ❌
+  - 待討論：是否用 Webhook relay 或共享記憶檔案作為替代方案
+  - 優先度：中（不影響日常使用，只影響多 Bot 協作場景）
 
 - [ ] **VPS 啟用圖像/語音功能**（半完成）
   - 根因：VPS 用 `minimax`（直接API），Mac 用 `minimax-portal`（OAuth）

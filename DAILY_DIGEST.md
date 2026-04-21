@@ -116,7 +116,18 @@
 
 ### ✅ 今日完成
 
-- [x] **Claude Code 終端機正式啟動** — 使用 aiprime.store 代理 + 新 API Key 成功運作
+- [x] **Claude Code 終端機正式啟動** — Mac + 聯想兩台都正常運作
+- [x] **代理速度問題修復** — 從 aiprime.store（慢）換成 api.easyclaude.com（快）
+- [x] **舊 Key 衝突清除** — settings.json 的 ANTHROPIC_AUTH_TOKEN 更新為新 Key
+
+### 📌 Claude Code 正確設定（2026-04-22 確認）
+
+| 項目 | 值 |
+|------|-----|
+| API Key | sk-XdJhSUk1W49askZnrr4sDxqzfDNyBGBYlKq0VIsWbERQbprV |
+| BASE_URL | https://api.easyclaude.com |
+| 設定檔1 | ~/.claude/settings.json → ANTHROPIC_AUTH_TOKEN + ANTHROPIC_BASE_URL |
+| 設定檔2 | ~/.zshrc → ANTHROPIC_API_KEY + ANTHROPIC_BASE_URL |
 
 ### 🔑 血淚教訓：Claude Code 換 Key 標準程序
 
@@ -140,5 +151,28 @@
 - `settings.json` 裡有舊 Key `sk-f411350d...`（沒餘額）
 - `.zshrc` 有 `ANTHROPIC_API_TOKEN=""`（空字串干擾）
 - `.zshrc` 有重複的 `ANTHROPIC_API_KEY` 和格式錯誤的 `CC_ATTRIBUTION_HEADER`
+
+### 🔑 血淚教訓：Claude Code 跑很慢 → 先查 BASE_URL
+
+**症狀**：Claude Code 一直 retry（7/10、8/10），每次回應要 1-2 分鐘
+
+**根本原因**：Mac 和聯想用同一把 Key，但 BASE_URL 不同：
+- 聯想 → `https://api.easyclaude.com` ✅ 快
+- Mac → `https://aiprime.store` ❌ 慢、不穩定
+
+**正確的代理是 `https://api.easyclaude.com`**
+
+**下次遇到 Claude Code 跑很慢，立刻做這兩件事：**
+1. 在聯想問：`env | grep -i anthropic` → 看 BASE_URL 是什麼
+2. 把 Mac 的兩個地方改成一樣：
+   - `~/.claude/settings.json` → `ANTHROPIC_BASE_URL`
+   - `~/.zshrc` → `ANTHROPIC_BASE_URL`
+
+**完整正確設定（2026-04-22 確認）：**
+```
+ANTHROPIC_API_KEY=sk-XdJhSUk1W49askZnrr4sDxqzfDNyBGBYlKq0VIsWbERQbprV
+ANTHROPIC_BASE_URL=https://api.easyclaude.com
+ANTHROPIC_AUTH_TOKEN=（同 API_KEY，填在 settings.json 裡）
+```
 
 ---

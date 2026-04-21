@@ -37,6 +37,21 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+## 💻 終端機家族（2026-04-22 更新）
+
+| 代號 | 位置 | 狀態 | API 額度 |
+|------|------|------|---------|
+| **終端機 1 號** | Mac mini | 🟢 使用中 | MiniMax 年度合約流量（Hermes） |
+| **終端機 2 號** | 宏碁 Acer（行動專機） | ⏸️ 暫停使用 | 無（外出專用） |
+
+### Hermes（MiniMax CLI）
+- **位置**：~/.local/bin/hermes
+- **版本**：v0.10.0
+- **額度**：MiniMax 年度合約，充沛可用
+- **配置文件**：~/.hermes/hermes-agent
+
+---
+
 ## VPS 系統資訊
 
 - **IP**：43.245.60.200

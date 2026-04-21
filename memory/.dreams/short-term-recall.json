@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-21T18:35:12.874Z",
+  "updatedAt": "2026-04-21T21:15:15.169Z",
   "entries": {
     "memory:memory/2026-04-12.md:71:77": {
       "key": "memory:memory/2026-04-12.md:71:77",
@@ -4399,6 +4399,99 @@
         "如何",
         "部署",
         "龍蝦"
+      ]
+    },
+    "memory:memory/2026-04-21.md:965:1002": {
+      "key": "memory:memory/2026-04-21.md:965:1002",
+      "path": "memory/2026-04-21.md",
+      "startLine": 965,
+      "endLine": 1002,
+      "source": "memory",
+      "snippet": "教練，距離5月14日還有 **23天**，兩件事進度如下： --- **📌 《結繩領導學》六場新書發表會** | 日期 | 地點 | 狀態 | |------|------|------| | 5/02（五） | 台北場 | 🔲 待確認 | | 5/03（六） | 新竹場 | 🔲 待確認（4/30提醒住房） | | 5/09（五） | 台中市區場 | 🔲 待確認 | | 5/10（六） | 嘉義場 | 🔲 待確認 | | 5/14（四） | 台南場（與19週年慶整合） | 🔲 待確認 | | 5/27（三） | 台中南區場 | 🔲 待確認 | --- **📌 海餅乾19週年慶（5/14，臺南）** - 與新書發表會台南場整合舉辦 - 下午4:00-6:00 - 🔶 等待教練提供材料 --- **🎯 今日待辦提醒** - 12:45 小人提補助分享會（Google Meet） 材料齊備後隨時告訴我，我立刻建置進度表。 --- ## 📨 對話記錄 05:46（共約 50 條，從第 0 行起） 👤 教練：Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /Use",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5227399140596389,
+      "maxScore": 0.5227399140596389,
+      "firstRecalledAt": "2026-04-21T21:15:15.169Z",
+      "lastRecalledAt": "2026-04-21T21:15:15.169Z",
+      "queryHashes": [
+        "4f9f7c4dce21"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "5/02",
+        "5/03",
+        "4/30提醒住房",
+        "5/09",
+        "5/10",
+        "5/14",
+        "5/27",
+        "00-6"
+      ]
+    },
+    "memory:memory/2026-04-21.md:801:857": {
+      "key": "memory:memory/2026-04-21.md:801:857",
+      "path": "memory/2026-04-21.md",
+      "startLine": 801,
+      "endLine": 857,
+      "source": "memory",
+      "snippet": "| 日期 | 時間 | 地點 | |------|------|------| | 5/02（五） | 14:00-16:00 | 台北場 | | 5/03（六） | 14:00-16:00 | 新竹場 | | 5/09（五） | 14:00-17:00 | 台中市區場 | | 5/10（六） | 14:00-16:00 | 嘉義場 | | 5/14（四） | 16:00-18:00 | 台南場 | | 5/27（三） | 18:00-21:30 | 台中南區場 | **注意到：** 5/14台南場（19週年慶）與新書發表會台南場時間完全重疊。是否要整合成同一場？還是分開？請教練確認。 👤 教練：\"chat_id\": \"telegram:6124913915\", \"message_id\": \"4475\", \"sender_id\": \"6124913915\", \"sender\": \"coach\", \"timestamp\": \"Tue 2026-04-21 01:18 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\", \"name\": \"coach\" } ``` 《 結 繩 領 導 學 》 新 書 發 布 會 🦞 小龍蝦：已更新。 **Commit Hash：`6b5a0d`** 新書名稱確認：**《結繩領導學》** 六場發布會全部更新完畢。距離首場（5/2台北）還有11天。 👤 教練",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5198798686265945,
+      "maxScore": 0.5198798686265945,
+      "firstRecalledAt": "2026-04-21T21:15:15.169Z",
+      "lastRecalledAt": "2026-04-21T21:15:15.169Z",
+      "queryHashes": [
+        "4f9f7c4dce21"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "5/02",
+        "00-16",
+        "5/03",
+        "5/09",
+        "00-17",
+        "5/10",
+        "5/14",
+        "00-18"
+      ]
+    },
+    "memory:memory/2026-04-21.md:2053:2109": {
+      "key": "memory:memory/2026-04-21.md:2053:2109",
+      "path": "memory/2026-04-21.md",
+      "startLine": 2053,
+      "endLine": 2109,
+      "source": "memory",
+      "snippet": "| 日期 | 時間 | 地點 | |------|------|------| | 5/02（五） | 14:00-16:00 | 台北場 | | 5/03（六） | 14:00-16:00 | 新竹場 | | 5/09（五） | 14:00-17:00 | 台中市區場 | | 5/10（六） | 14:00-16:00 | 嘉義場 | | 5/14（四） | 16:00-18:00 | 台南場 | | 5/27（三） | 18:00-21:30 | 台中南區場 | **注意到：** 5/14台南場（19週年慶）與新書發表會台南場時間完全重疊。是否要整合成同一場？還是分開？請教練確認。 👤 教練：\"chat_id\": \"telegram:6124913915\", \"message_id\": \"4475\", \"sender_id\": \"6124913915\", \"sender\": \"coach\", \"timestamp\": \"Tue 2026-04-21 01:18 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\", \"name\": \"coach\" } ``` 《 結 繩 領 導 學 》 新 書 發 布 會 🦞 小龍蝦：已更新。 **Commit Hash：`6b5a0d`** 新書名稱確認：**《結繩領導學》** 六場發布會全部更新完畢。距離首場（5/2台北）還有11天。 👤 教練",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5198798686265945,
+      "maxScore": 0.5198798686265945,
+      "firstRecalledAt": "2026-04-21T21:15:15.169Z",
+      "lastRecalledAt": "2026-04-21T21:15:15.169Z",
+      "queryHashes": [
+        "4f9f7c4dce21"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "5/02",
+        "00-16",
+        "5/03",
+        "5/09",
+        "00-17",
+        "5/10",
+        "5/14",
+        "00-18"
       ]
     }
   }

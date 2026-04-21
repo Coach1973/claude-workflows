@@ -38,6 +38,21 @@
 
 ## 📋 請你做的事（請按順序）
 
+### ⚠️ 執行前必讀：兩條鐵則
+1. **先搜尋，不要自己摸索** — 用 Tavily 或 DuckDuckGo 搜尋別人解決過的方案，直接套用，不要重新發明輪子
+2. **先確認原生功能** — 動手前先確認 OpenClaw 有沒有內建支援（`/help` 或查 commands-registry）
+
+### Step 0：先上網搜尋（必做！）
+```
+搜尋關鍵字：
+- "telegram bot relay messages between bots"
+- "telegram bot cannot read other bot messages workaround"  
+- "openclaw webhook relay"
+- "telegram group bot to bot communication"
+
+目標：找到別人已經實作過的方案，直接套用，不要自己從零開始。
+```
+
 ### Step 1：先查清楚現有架構
 ```bash
 # 查看3號機的 port 和 bot token

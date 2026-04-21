@@ -1,91 +1,90 @@
 #!/usr/bin/env python3
 """
 fetch-youtube-rss.py — 抓 31 個 YouTube 頻道最新影片
-不需要 API Key，用公開 RSS，零 AI Token
+使用 yt-dlp @handle，不需要 API Key，零 AI Token
+每天執行，自動抓各頻道最新 2 支影片
 """
-import urllib.request, re, sys
+import subprocess, sys
 from datetime import datetime, timezone, timedelta
 
 CHANNELS = [
-    ("孔老師AI研習社",    "UCpnBpREMjMNFvLTLnc2iLPQ"),
-    ("inspiredcanvas",    "UC17zrOCuDUXmtREyx9G2tCQ"),
-    ("LuluTechnology",    "UCPwCUeMO9EB-kFno2zKsm9w"),
-    ("綠色火車",          "UCJhUtNsR5pvU_gWWkxxUXUQ"),
-    ("applefans520",      "UCCC_m0Lw7Z4IT6IjoPb0ZLg"),
-    ("KOCPC",             "UCcQA-MzQxCvET1S-BekQdAA"),
-    ("PanSci科學新聞",    "UCATnB3v_NkTTd9iD_4W2A-g"),
-    ("apple-dad",         "UCIpZAGl9xHcuzmHW0AAJs7g"),
-    ("rickhau99",         "UCKMtbQbyhpBgyKaNX5vJUsw"),
-    ("MeticsMedia中文",   "UC7Qp52WIwke2P3l1Xh6k74Q"),
-    ("AlanChen",          "UCfB2JYduVCYdHcoxlEWGw4w"),
-    ("PH-WorkFlow",       "UCpXOvRzWW0lJhYrUeWBlNmA"),
-    ("TuTu",              "UCuhAUKCdKrjYoMiJQc74ZkQ"),
-    ("lichangzhanglaile", "UC0v9b0Z00wWED_vGy-Q6ibg"),
-    ("Macro_Alpha_cn",    "UC9oosAco7nIVZwuGhnC0FKg"),
-    ("AIPractitioners",   "UCfMXQ45Ch5EnT2jokiHuysw"),
-    ("SFReality",         "UCCzf5FvUaAurIuY-YGmWJyQ"),
-    ("mage291",           "UCG_qhxmgI1E0wO4x11TiI5w"),
-    ("ami.moment",        "UCGs_cktFPCgN8ggJJVon84g"),
-    ("TackyTechy",        "UC3YHFDbkHcqVxg4w20YYC7A"),
-    ("martinz2025",       "UC1HhvtQd_yTBJAGYNYffmSQ"),
-    ("BizofFame",         "UCQT2N6N_Jay8nWS_0h7muyw"),
-    ("Petersunreview",    "UCl9BPXjyEmA0q6IrQvsEazA"),
-    ("techbang3c",        "UC9IyDJ6vlG50iYjXGQpwwOQ"),
-    ("aaron-1215",        "UCKHHtxWYOg15Gsrsa9ZDfrA"),
-    ("talkspg",           "UCUa8Meh6_eFq7v1h_CCa9fQ"),
-    ("AI-Short-Taipei",   "UC1Ld3B4Y1NBam9BTk9tMThR"),
-    ("digitalxu",         "UCGQPLvp98hRrzTG14AiTfUQ"),
-    ("austinchou888",     "UC3hsgc8SHJs1RDMEZBCAccA"),
-    ("HarryLee",          "UCEA4ZfPzWDHp72mlq7IvUcw"),
-    ("sensebar",          "UCI2YklLazU9tB_Kh_9nMpKA"),
+    ("孔老師AI研習社",   "@inspiredcanvas"),
+    ("LuluTechnology",   "@LuluTechnology"),
+    ("KOCPC",            "@KOCPC"),
+    ("PanSci科學新聞",   "@panscischool"),
+    ("apple-dad",        "@apple-dad"),
+    ("rickhau99",        "@rickhau99"),
+    ("MeticsMedia中文",  "@MeticsMedia"),
+    ("AlanChen",         "@AlanChen"),
+    ("PH-WorkFlow",      "@PH-WorkFlow"),
+    ("TuTu",             "@TuTu"),
+    ("Macro_Alpha_cn",   "@Macro_Alpha_cn"),
+    ("AIPractitioners",  "@AIPractitioners"),
+    ("SFReality",        "@SFReality"),
+    ("mage291",          "@mage291"),
+    ("ami.moment",       "@ami.moment"),
+    ("TackyTechy",       "@TackyTechy"),
+    ("martinz2025",      "@martinz2025"),
+    ("BizofFame",        "@BizofFame"),
+    ("Petersunreview",   "@Petersunreview"),
+    ("techbang3c",       "@techbang3c"),
+    ("talkspg",          "@talkspg"),
+    ("AI-Short-Taipei",  "@AI-Short-Taipei"),
+    ("digitalxu",        "@digitalxu"),
+    ("austinchou888",    "@austinchou888"),
+    ("HarryLee",         "@HarryLee"),
+    ("sensebar",         "@sensebar"),
+    ("applefans520",     "@applefans520"),
+    ("lichangzhanglaile","@lichangzhanglaile"),
+    ("aaron-1215",       "@aaron-1215"),
+    ("綠色火車",          "@greentrainTW"),
+    ("BizofFame",        "@BizofFame"),
 ]
 
-days = 2
-if "--days" in sys.argv:
-    try: days = int(sys.argv[sys.argv.index("--days")+1])
-    except: pass
+# 移除重複
+seen = set()
+CHANNELS = [(n,h) for n,h in CHANNELS if not (h in seen or seen.add(h))]
 
-CUTOFF = datetime.now(timezone.utc) - timedelta(days=days)
+items = int(sys.argv[1]) if len(sys.argv) > 1 else 2
+YTDLP = "/opt/homebrew/bin/yt-dlp"
 TZ8 = timezone(timedelta(hours=8))
+today = datetime.now(TZ8).strftime("%Y/%m/%d")
+
 results, errors = [], []
 
-for name, cid in CHANNELS:
-    url = f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}"
+for name, handle in CHANNELS:
+    url = f"https://www.youtube.com/{handle}/videos"
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=12) as resp:
-            xml = resp.read().decode("utf-8")
-
-        # 頻道名稱（第一個 <title> 標籤）
-        titles_in_xml = re.findall(r"<title[^>]*>(.*?)</title>", xml, re.DOTALL)
-        channel_name = titles_in_xml[0].strip() if titles_in_xml else name
-
-        # 解析每個 entry
-        entries = re.findall(r"<entry>(.*?)</entry>", xml, re.DOTALL)
-        for entry in entries[:3]:
-            t = re.search(r"<title[^>]*>(.*?)</title>", entry, re.DOTALL)
-            l = re.search(r'<link[^>]*href="([^"]+)"', entry)
-            p = re.search(r"<published>(.*?)</published>", entry)
-            if not (t and l and p): continue
-            try:
-                pub = datetime.fromisoformat(p.group(1).replace("Z","+00:00"))
-            except: continue
-            if pub >= CUTOFF:
-                results.append({
-                    "ch": channel_name,
-                    "title": t.group(1).strip(),
-                    "url": l.group(1),
-                    "pub": pub.astimezone(TZ8).strftime("%m/%d %H:%M"),
-                })
+        cmd = [
+            YTDLP,
+            "--flat-playlist",
+            "--playlist-items", f"1-{items}",
+            "--print", "%(title)s\t%(url)s",
+            "--no-warnings",
+            "--quiet",
+            url
+        ]
+        out = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
+        if out.returncode != 0 or not out.stdout.strip():
+            err = out.stderr.strip()[:80] if out.stderr.strip() else "no output"
+            errors.append(f"❌ {name}: {err}")
+            continue
+        for line in out.stdout.strip().splitlines():
+            parts = line.split("\t")
+            if len(parts) >= 2:
+                results.append({"ch": handle, "title": parts[0], "url": parts[1]})
+    except subprocess.TimeoutExpired:
+        errors.append(f"❌ {name}: timeout")
     except Exception as e:
         errors.append(f"❌ {name}: {e}")
 
-print(f"=== 過去 {days} 天新影片（共 {len(results)} 部）===\n")
-for i, r in enumerate(results, 1):
-    print(f"{i}. 【{r['ch']}】{r['title']}")
-    print(f"   🔗 {r['url']}  ({r['pub']} 台北)")
-    print()
+print(f"YouTube {today}\n")
+print("AI/")
+for r in results:
+    print(f"• [{r['ch']}] {r['title']}")
+    print(f"  {r['url']}")
+print()
 
 if errors:
-    print(f"\n=== 無法讀取（{len(errors)} 個）===")
+    print(f"=== 無法讀取（{len(errors)} 個）===")
     for e in errors: print(f"  {e}")

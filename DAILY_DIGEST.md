@@ -111,3 +111,34 @@
 計畫改用終端機 Claude Code（API 計費）分擔聊天額度壓力。
 
 ---
+
+## 📅 2026-04-22
+
+### ✅ 今日完成
+
+- [x] **Claude Code 終端機正式啟動** — 使用 aiprime.store 代理 + 新 API Key 成功運作
+
+### 🔑 血淚教訓：Claude Code 換 Key 標準程序
+
+> **背景**：為了換一個 API Key，搞了半天，根本原因是漏掉了 `settings.json` 裡的舊 Key。
+
+**Claude Code 的 API Key 存在三個地方，缺一不可：**
+
+| 檔案 | 欄位名稱 | 說明 |
+|------|----------|------|
+| `~/.zshrc` | `ANTHROPIC_API_KEY` | Shell 環境變數，啟動時載入 |
+| `~/.claude/settings.json` | `env.ANTHROPIC_AUTH_TOKEN` | **優先級最高**，會蓋過 .zshrc |
+| `~/.zshrc` | `ANTHROPIC_API_TOKEN` | ⚠️ 若設為空字串會干擾認證，必須刪除 |
+
+**換 Key 的正確 SOP：**
+1. 更新 `~/.claude/settings.json` → `env.ANTHROPIC_AUTH_TOKEN`（最重要）
+2. 更新 `~/.zshrc` → `ANTHROPIC_API_KEY`（移除重複行）
+3. 確認 `~/.zshrc` 裡沒有 `ANTHROPIC_API_TOKEN=""`（空字串會干擾）
+4. `ANTHROPIC_BASE_URL` 也要在 `settings.json` 和 `.zshrc` 都設好
+
+**這次犯的具體錯誤：**
+- `settings.json` 裡有舊 Key `sk-f411350d...`（沒餘額）
+- `.zshrc` 有 `ANTHROPIC_API_TOKEN=""`（空字串干擾）
+- `.zshrc` 有重複的 `ANTHROPIC_API_KEY` 和格式錯誤的 `CC_ATTRIBUTION_HEADER`
+
+---

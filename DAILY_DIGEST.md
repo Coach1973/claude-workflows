@@ -38,3 +38,40 @@
 教練今日主要討論了 Context Overflow 問題的根因與解決方案。確認了 VPS 版小龍蝦的智慧庫內容已完成，無需進一步處理。
 
 ---
+
+## 📅 2026-04-21
+
+### ✅ 今日完成
+
+- [x] **Tavily 搜尋 API 金鑰接通**（tvly-dev-3hp3Hz...）— API 測試回傳正常，0.74秒
+- [x] **2號機（佩佩）網路搜尋開通**
+  - `~/.openclaw-peipei/openclaw.json`：tavily enabled: true、duckduckgo enabled: true、xai disabled
+  - `~/.openclaw-peipei/agents/main/agent/auth-profiles.json`：加入 tavily:default 金鑰
+  - Gateway 已重啟（PID 6199）
+- [x] **3號機（孔大哥）網路搜尋開通**
+  - `~/.openclaw-kong/openclaw.json`：tavily enabled: true、duckduckgo enabled: true、xai disabled
+  - `~/.openclaw-kong/agents/main/agent/auth-profiles.json`：加入 tavily:default 金鑰
+- [x] **3號機每次重啟需重新配對問題修正**
+  - `~/.openclaw-kong/identity/device-auth.json`：scopes 加入 `operator.approvals`
+- [x] **1號機（主機）xAI 停用**（team_blocked:true 導致 403）、DuckDuckGo 啟用
+
+### 🔧 系統異動
+
+- 三台 Mac mini 龍蝦（1/2/3號機）全部在**同一台 Mac mini** 上，不同 `~/.openclaw-*` 目錄
+- 搜尋架構確認：瀏覽器插件（Browser Control）= 導向特定網址；Tavily = 關鍵字搜尋 API
+- 目前行為：2/3號機模型傾向用瀏覽器控制搜尋（非 Tavily），因為兩者同時啟用，AI 自行選擇
+- VPS 小龍蝦：DuckDuckGo 正常運作，無瀏覽器插件，不需額外調整
+- MiniMax 免費額度（1,500次呼叫/天）對2/3號機用量足夠
+
+### ⚠️ 待處理
+
+- [ ] 海餅乾19週年慶（5月14日）行銷規劃
+- [ ] 6場新書發表會（5月份）進度追蹤
+- [ ] YouTube 頻道 handle 待確認：`@greentrainTW`（綠色火車）、`@aaron-1215` 是否正確
+
+### 📝 教練狀態
+
+教練今日關注額度消耗問題：Claude.ai Pro（$20/月）已用60%、API 額度剩約$30。
+計畫改用終端機 Claude Code（API 計費）分擔聊天額度壓力。
+
+---

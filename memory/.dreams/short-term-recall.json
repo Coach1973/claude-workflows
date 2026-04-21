@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-20T09:00:47.061Z",
+  "updatedAt": "2026-04-21T09:54:32.168Z",
   "entries": {
     "memory:memory/2026-04-12.md:71:77": {
       "key": "memory:memory/2026-04-12.md:71:77",
@@ -4089,6 +4089,130 @@
         "2/6",
         "memory/2026-04-11.md",
         "memory/2026-04-10.md"
+      ]
+    },
+    "memory:memory/2026-04-20.md:5621:5666": {
+      "key": "memory:memory/2026-04-20.md:5621:5666",
+      "path": "memory/2026-04-20.md",
+      "startLine": 5621,
+      "endLine": 5666,
+      "source": "memory",
+      "snippet": "Current time: Monday, April 20th, 2026 - 2:00 PM (Asia/Taipei) 🦞 小龍蝦：NO_REPLY 👤 教練：\"chat_id\": \"telegram:6124913915\", \"message_id\": \"4407\", \"sender_id\": \"6124913915\", \"sender\": \"coach\", \"timestamp\": \"Mon 2026-04-20 14:42 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\", \"name\": \"coach\" } ``` Hello，可不可以幫我列出過去曾經申請過的各家免費 API Key，把 Key 發一下給我 🦞 小龍蝦：根據記憶庫的記錄，我找到以下已申請過的免費 API Key： --- ## 📋 API Key 清單 | 服務 | 狀態 | Key 片段 | |------|------|---------| | **Groq** | ✅ 已完成 | `gsk_ROTNPnqDTpnRCUqV...` | | **DeepSeek** | ✅ 已完成 | `sk-d1cc076253d3403e...` | | **Google Gemini** | ✅ 已完成 | `AIzaSyDFLv-ec9nOBCl7...` | | **Kimi (Moonshot)**",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7626198753322724,
+      "maxScore": 0.7626198753322724,
+      "firstRecalledAt": "2026-04-21T09:54:32.168Z",
+      "lastRecalledAt": "2026-04-21T09:54:32.168Z",
+      "queryHashes": [
+        "b420646670b5"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "asia/taipei",
+        "no-reply",
+        "chat-id",
+        "message-id",
+        "sender-id",
+        "gsk-rotnpnqdtpnrcuqv",
+        "sk-d1cc076253d3403e",
+        "aizasydflv-ec9nobcl7"
+      ]
+    },
+    "memory:memory/2026-04-14.md:3086:3122": {
+      "key": "memory:memory/2026-04-14.md:3086:3122",
+      "path": "memory/2026-04-14.md",
+      "startLine": 3086,
+      "endLine": 3122,
+      "source": "memory",
+      "snippet": "請問現在我們接入的 API 是哪一個模型？是 Gemini 還是 Kimi K2.5？ 🦞 小龍蝦：<final>🦞 教練，根據最新的狀態報告，**目前接入的 API 是 `moonshot/kimi-k2.5`（Kimi K2.5）**，不是 Gemini。 **【目前模型狀態確認】** * **Primary 模型**：`moonshot/kimi-k2.5` * **Fallbacks 備援**：包含 `google/gemini-3-pro-preview`、`google/gemini-3.1-pro-preview`、`google/gemini-2.5-flash-lite` 等 **這再次證實了系統自動切換的問題**——即使您已開啟帳單功能，Primary 模型仍然從我們期望的 `Gemini 3.1 Pro` 自動切換到了 `Kimi K2.5`。 **【關鍵發現】** 這個自動切換可能發生在： 1. 某次對話重啟後 2. 系統內部的負載平衡或故障轉移機制 3. 配置中的 `primary` 設定未被硬性鎖定 **【立即建議】** 教練，如果您希望立即使用 `Gemini 3.1 Pro`，您可以直接在 Telegram 下指令切換，例如 👤 教練：\"timestamp\": \"Tue 2026-04-14 04:09 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\"",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49377559125423426,
+      "maxScore": 0.49377559125423426,
+      "firstRecalledAt": "2026-04-21T09:54:32.168Z",
+      "lastRecalledAt": "2026-04-21T09:54:32.168Z",
+      "queryHashes": [
+        "b420646670b5"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "k2.5",
+        "moonshot/kimi-k2.5",
+        "google/gemini-3-pro-preview",
+        "google/gemini-3.1-pro-preview",
+        "google/gemini-2.5-flash-lite",
+        "3.1",
+        "請問",
+        "現在"
+      ]
+    },
+    "memory:memory/2026-04-14.md:5198:5234": {
+      "key": "memory:memory/2026-04-14.md:5198:5234",
+      "path": "memory/2026-04-14.md",
+      "startLine": 5198,
+      "endLine": 5234,
+      "source": "memory",
+      "snippet": "請問現在我們接入的 API 是哪一個模型？是 Gemini 還是 Kimi K2.5？ 🦞 小龍蝦：<final>🦞 教練，根據最新的狀態報告，**目前接入的 API 是 `moonshot/kimi-k2.5`（Kimi K2.5）**，不是 Gemini。 **【目前模型狀態確認】** * **Primary 模型**：`moonshot/kimi-k2.5` * **Fallbacks 備援**：包含 `google/gemini-3-pro-preview`、`google/gemini-3.1-pro-preview`、`google/gemini-2.5-flash-lite` 等 **這再次證實了系統自動切換的問題**——即使您已開啟帳單功能，Primary 模型仍然從我們期望的 `Gemini 3.1 Pro` 自動切換到了 `Kimi K2.5`。 **【關鍵發現】** 這個自動切換可能發生在： 1. 某次對話重啟後 2. 系統內部的負載平衡或故障轉移機制 3. 配置中的 `primary` 設定未被硬性鎖定 **【立即建議】** 教練，如果您希望立即使用 `Gemini 3.1 Pro`，您可以直接在 Telegram 下指令切換，例如 👤 教練：\"timestamp\": \"Tue 2026-04-14 04:09 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\"",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49377559125423426,
+      "maxScore": 0.49377559125423426,
+      "firstRecalledAt": "2026-04-21T09:54:32.168Z",
+      "lastRecalledAt": "2026-04-21T09:54:32.168Z",
+      "queryHashes": [
+        "b420646670b5"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "k2.5",
+        "moonshot/kimi-k2.5",
+        "google/gemini-3-pro-preview",
+        "google/gemini-3.1-pro-preview",
+        "google/gemini-2.5-flash-lite",
+        "3.1",
+        "請問",
+        "現在"
+      ]
+    },
+    "memory:memory/2026-04-14.md:7468:7504": {
+      "key": "memory:memory/2026-04-14.md:7468:7504",
+      "path": "memory/2026-04-14.md",
+      "startLine": 7468,
+      "endLine": 7504,
+      "source": "memory",
+      "snippet": "請問現在我們接入的 API 是哪一個模型？是 Gemini 還是 Kimi K2.5？ 🦞 小龍蝦：<final>🦞 教練，根據最新的狀態報告，**目前接入的 API 是 `moonshot/kimi-k2.5`（Kimi K2.5）**，不是 Gemini。 **【目前模型狀態確認】** * **Primary 模型**：`moonshot/kimi-k2.5` * **Fallbacks 備援**：包含 `google/gemini-3-pro-preview`、`google/gemini-3.1-pro-preview`、`google/gemini-2.5-flash-lite` 等 **這再次證實了系統自動切換的問題**——即使您已開啟帳單功能，Primary 模型仍然從我們期望的 `Gemini 3.1 Pro` 自動切換到了 `Kimi K2.5`。 **【關鍵發現】** 這個自動切換可能發生在： 1. 某次對話重啟後 2. 系統內部的負載平衡或故障轉移機制 3. 配置中的 `primary` 設定未被硬性鎖定 **【立即建議】** 教練，如果您希望立即使用 `Gemini 3.1 Pro`，您可以直接在 Telegram 下指令切換，例如 👤 教練：\"timestamp\": \"Tue 2026-04-14 04:09 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\"",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49377559125423426,
+      "maxScore": 0.49377559125423426,
+      "firstRecalledAt": "2026-04-21T09:54:32.168Z",
+      "lastRecalledAt": "2026-04-21T09:54:32.168Z",
+      "queryHashes": [
+        "b420646670b5"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "k2.5",
+        "moonshot/kimi-k2.5",
+        "google/gemini-3-pro-preview",
+        "google/gemini-3.1-pro-preview",
+        "google/gemini-2.5-flash-lite",
+        "3.1",
+        "請問",
+        "現在"
       ]
     }
   }

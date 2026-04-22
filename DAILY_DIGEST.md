@@ -207,6 +207,43 @@ ANTHROPIC_AUTH_TOKEN=（同 API_KEY，填在 settings.json 裡）
 
 ### 📌 任務執行中
 
-- **TASK_BOT_RELAY.md**：⏸️ 擱置中，額度用完未完成，明天繼續
-  - 明天終端機開工後，直接讀取 TASK_BOT_RELAY.md 繼續執行
-  - 記得第一步先搜尋（OPE 原則），不要自己摸索
+- **TASK_BOT_RELAY.md**：✅ **完成！三機 Bot Relay 已修復上線**
+  - 發現：系統早已實作完成（方案 A：共享訊息日誌），但 peipei/kong 的 BOT_ID 設定錯置
+  - 修復：`.openclaw-peipei/` 的 BOT_ID `'3号機-孔大哥'` → `'2号機-佩佩'`
+  - 修復：`.openclaw-kong/` 的 BOT_ID `'2号機-佩佩'` → `'3号機-孔大哥'`
+  - 三個 Gateway 都重啟驗證，hook 正確啟用
+
+---
+
+## 📅 2026-04-22（下午）
+
+### ✅ Bot Relay 修復完成
+
+**問題根因**：peipei 和 kong 的 `BOT_ID` 互相錯置
+- `.openclaw-peipei/` → 錯誤：`'3号機-孔大哥'` → 已修正：`'2号機-佩佩'`
+- `.openclaw-kong/` → 錯誤：`'2号機-佩佩'` → 已修正：`'3号機-孔大哥'`
+
+**系統現況**：
+| Bot | 目錄 | Port | BOT_ID（已修正）| bot-relay 狀態 |
+|-----|------|------|----------------|----------------|
+| 1號機 | `~/.openclaw/` | 18789 | `'1号機'` | ✅ 正常 |
+| 2號機 | `~/.openclaw-peipei/` | 18793 | `'2号機-佩佩'` | ✅ 正常 |
+| 3號機 | `~/.openclaw-kong/` | 18790 | `'3号機-孔大哥'` | ✅ 正常 |
+
+**實作方案**：方案 A（共享訊息日誌）
+- 共享檔案：`~/.openclaw/workspace/BOT_MESSAGES.md`（JSONL 格式）
+- `bot-relay` hook：每次 Bot 發言 → append 到日誌
+- `bot-relay-inbound` hook：每次人類發言 → 注入其他 Bot 最近 20 筆發言到上下文
+- 三個 Bot 的 hook 都已啟用並運行
+
+**已重啟**：peipei 和 kong 的 LaunchAgent（kickstart + reload）
+
+**參考搜尋**：
+- GitHub: `mimicmobile/flask-telegram-relay-bot`（Flask-based relay 參考）
+- Latenode community: 確認 Telegram Bot 無法讀取其他 Bot 訊息（平台限制）
+
+### ⚠️ 待觀察
+
+- [ ] 觀察 1號機發言後，2/3號機是否能正確感知（下次群組對話時驗證）
+- [ ] 確認 inject 文字塊有正確出現在 Bot 回應的上下文裡
+

@@ -54,4 +54,4 @@
 
 **底線**：遇到生成問題，直接找串接方案，不要再回頭懷疑 API Key 是否支援。
 
-**最新 Commit Hash**：013e882141dbfa6ab91d0130078a4c18af7a3b45
+**最新 Commit Hash**：7d208c56af82c19c7c98cc0065b2c6fe6284144a

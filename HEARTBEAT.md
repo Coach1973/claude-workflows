@@ -54,4 +54,4 @@
 
 **底線**：遇到生成問題，直接找串接方案，不要再回頭懷疑 API Key 是否支援。
 
-**Commit Hash**：83b5a4f4912dbaa1b6f7aad9a036fa5b41bd6c67（與對話警戒機制同一軌）
+**Commit Hash（與對話警戒機制同一軌）**：e4bc36627a9a75bfebae6d1f7eb6941373dcb086

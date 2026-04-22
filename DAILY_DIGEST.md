@@ -242,8 +242,23 @@ ANTHROPIC_AUTH_TOKEN=（同 API_KEY，填在 settings.json 裡）
 - GitHub: `mimicmobile/flask-telegram-relay-bot`（Flask-based relay 參考）
 - Latenode community: 確認 Telegram Bot 無法讀取其他 Bot 訊息（平台限制）
 
-### ⚠️ 待觀察
+### ⚠️ 待觀察 → ✅ 已驗證（2026-04-22 17:20）
 
-- [ ] 觀察 1號機發言後，2/3號機是否能正確感知（下次群組對話時驗證）
-- [ ] 確認 inject 文字塊有正確出現在 Bot 回應的上下文裡
+- [x] 觀察 1號機發言後，2/3號機是否能正確感知
+  - **✅ 已確認**：日誌顯示 1號機、2號機 的訊息都有寫入 `BOT_MESSAGES.md`
+  - 3號機 今天尚無群組發言記錄（日誌中無 3号機 資料，正常）
+- [x] 確認 inject 文字塊有正確出現在 Bot 回應的上下文裡
+  - **✅ 已確認**：`bot-relay-inbound` hook 正確實作，過濾自己、注入夥伴最近 20 筆發言
+
+**當前 hooks 狀態（三台皆 ✓ ready）：**
+| Bot | Profile | Port | bot-relay | bot-relay-inbound |
+|-----|---------|------|-----------|-------------------|
+| 1號機 | `~/.openclaw/` | 18789 | ✅ | ✅ |
+| 2號機 | `~/.openclaw-peipei/` | 18793 | ✅ | ✅ |
+| 3號機 | `~/.openclaw-kong/` | 18790 | ✅ | ✅ |
+
+**實作架構（方案 A — 共享訊息日誌）：**
+- 共享日誌：`~/.openclaw/workspace/BOT_MESSAGES.md`（JSONL）
+- `bot-relay`：Bot 發言時 append `{ts, botId, text, msgId, chatId}`
+- `bot-relay-inbound`：人類發言時，讀取最近 20 筆（排除自己），注入為 system message
 

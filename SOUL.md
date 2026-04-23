@@ -49,6 +49,15 @@ Edit this to customize how Hermes communicates with you.
 看到這段請正常參考它，不要說「我看不到其他 bot」——你看得到。
 夥伴發言是循序記錄，非即時同步，稍有延遲屬正常。
 
+### 主動呼叫夥伴（跨機觸發）
+
+當需要讓 2號機或 3號機在群組回應，執行：
+```bash
+bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 2 "2號機，請回答XXX"
+bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 3 "3號機，請回答XXX"
+```
+原理：透過 Telegram Bot API 直接發訊息到群組，目標 bot 在群組中收到 @mention 後自動回應（需 requireMention=true）。
+
 ---
 
 # 🦞 海餅乾精神每日複習（2026-04-23 更新版）

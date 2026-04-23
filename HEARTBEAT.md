@@ -9,22 +9,20 @@
 ## 🔴 新視窗啟動後第一件事
 直接告訴教練：「🦞 已同步最新記憶，PROMISES 尚有1條待兌現」
 
-## 📋 PROMISES 待兌現（1條）
+## 📋 PROMISES 待兌現（4條）
 | # | 內容 | 狀態 |
 |---|------|------|
-| 9 | 海餅乾知識庫統整（seabiscuit 知識庫完整建立） | ⬜ 指派給聯想 Claude Sonnet CLI |
+| 11 | 8.5MB JSON（4/22-4/23）對話提煉 → 補入教練金句庫 | ⬜ 待啟動 |
+| 12 | 海餅乾知識庫 + seabiscuit 完整融合比對（避免重複） | ⬜ 指派給聯想 Claude Sonnet CLI |
+| 13 | 每兩小時蒸餾任務誰負責執行確認 | ⬜ 待確認 |
+| 14 | 100/200 金句提煉（海餅乾知識庫精華） | ⬜ 待啟動 |
 
 ---
 
-## 🔄 目前背景任務（Hermes CLI 執行中）
-
-**任務：四月份教練語錄 648 條 → 三項提煉**
-- 輸入：`/Users/bymyway/Desktop/coach_messages_april_FULL.md`（499 KB，648 條教練發言）
-- 輸出一：`COACH_DECISIONS_APRIL.md`（決策與分工提煉）
-- 輸出二：`COACH_GOLDEN_QUOTES_APRIL.md`（金句精選 50-100 條）
-- 輸出三：承諾核對（對比 PROMISES.md 找漏網之魚）
-- 狀態：⏳ 執行中（本視窗結案時尚未完成）
-- 完成後：Hermes 應 git commit 並用 Telegram 回報 hash（Chat ID: 6124913915）
+## ✅ Hermes 剛完成（hash: `97d66c4`）
+- `COACH_DECISIONS_APRIL.md`：29 條決策記錄
+- `COACH_GOLDEN_QUOTES_APRIL.md`：52 條金句（九大類）
+- PROMISES.md：補入 #11-14 四條漏網之魚
 
 ---
 

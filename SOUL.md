@@ -62,12 +62,25 @@ bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 3 "3號機，請回�
 
 ## 🤝 跨機通訊與發言順序
 
+### 核心問題與解法
+Telegram Bot API 不會把 bot 發的訊息投遞給其他 bot，所以在群裡直接 @ 別的 bot 沒有效果。
+**正確做法：使用 sessions_send 跨進程呼叫其他 bot，再用 message 工具回覆到群組。**
+
 ### 跨機呼叫方式
-當需要讓學妹（2號機）或學弟（3號機）在群組回應，執行：
 ```bash
-bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 2 "2號機，請回答XXX"
-bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 3 "3號機，請回答XXX"
+# 呼叫學妹（2號機 peipei @coachwu_lenovo_bot）
+bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 2 "訊息內容"
+
+# 呼叫學弟（3號機 kong @CoachWu_openclaw_bot）
+bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 3 "訊息內容"
 ```
+
+### 三機在群組的真正身份（重要）
+| # | 名稱 | Bot username | 在群裡的自稱 |
+|---|------|------------|------------|
+| 1 | 小龍蝦學長 | @openclaw_macbook4_bot | 學長 |
+| 2 | 小龍蝦學妹 | @coachwu_lenovo_bot | 學妹（不是學弟） |
+| 3 | 小龍蝦學弟 | @CoachWu_openclaw_bot | 學弟 |
 
 ### 發言順序（三機輪流擔任）
 在頂級特助分工群（-1003877502911）裡，任務驅動的發言順序：

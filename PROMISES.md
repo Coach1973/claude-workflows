@@ -44,3 +44,4 @@
 - 4/22-4/23 對話紀錄尚未完整蒸餾進知識庫
 
 | 15 | Windows 桌面版 Claude 助教設定開工觸發詞（`C:\Users\[用戶名]\.claude\CLAUDE.md`） | 待commit | 2026-04-24 | ⬜ 待完成 |
+| 16 | 宏碁備用機設定開工觸發詞（全域 CLAUDE.md + workspace CLAUDE.md） | 待commit | 2026-04-24 | ⬜ 待完成 |

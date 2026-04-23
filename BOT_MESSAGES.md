@@ -187,3 +187,4 @@
 {"ts":"2026-04-23T20:37:05.842Z","botId":"1号機","text":"Token 交换完成 ✅ 现在更新设定：\n\n| 目录 | 服务对象 | Bot | Token | 位置 |\n|------|---------|-----|-------|------|\n| `.openclaw-kong` | 3號機 孔大哥 | @coachwu_openclaw_bot | `8705446823:AAHDA0wvj...` | Mac mini |\n| `.opencla","msgId":"272","chatId":"-1003877502911"}
 {"ts":"2026-04-23T20:37:06.783Z","botId":"1号機","text":"兩邊的被動模式（requireMention: true）已經對了 ✅\n\n現在更新共享文件：","msgId":"273","chatId":"-1003877502911"}
 {"ts":"2026-04-23T20:37:07.798Z","botId":"1号機","text":"Token 交換完成。現在更新 SUPERGROUP-MAP 和 SHARED_GROUP_MEMORY。\n\n兩台機器要重啟才能生效。教練，這兩台機器（Lenovo 和 Mac mini）要現在重啟嗎？還是我先 Commit 進度，等你確認？","msgId":"274","chatId":"-1003877502911"}
+{"ts":"2026-04-23T20:38:36.630Z","botId":"1号機","text":"收到！附屬終端機的 progress 都記錄到了。✅\n\n現在要重啟 2號機 和 3號機。請問教練要兩台一起重啟，還是先重啟一台測試？\n\n另外，關於 **Step 5**（call_bot.sh 需要真實 token）— 我剛才已經更新了 SUPERGROUP-MAP 和 SHARED_GROUP_MEMORY 並成功 git push了。call_bot.sh 已經有正確的 2/3號機 token","msgId":"277","chatId":"-1003877502911"}

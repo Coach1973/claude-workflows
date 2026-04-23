@@ -84,7 +84,7 @@ LAST_UPDATED_AT: -
 - **Telegram Bot Token：** `8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ`
 - **Bot 帳號：** `@CoachWu_lenovo_bot`
 - **允許的 Telegram ID：** `6124913915`（大樹教練）、`8786886419`（佩佩老師）
-- **位置：** Lenovo 聯想
+- **位置：** Mac mini（同一台機器，不同目錄）
 - **回應模式：** 被動（需 @ 才回）
 - **SOUL.md：** ✅ 已客製化（正向鼓勵、簡單易懂、法輪功、海餅乾）
 - **USER.md：** ✅ 已完整更新（陳佩君全檔）
@@ -94,7 +94,7 @@ LAST_UPDATED_AT: -
 - **Telegram Bot Token：** `8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8`
 - **Bot 帳號：** `@coachwu_openclaw_bot`
 - **允許的 Telegram ID：** `6124913915`（大樹教練）、待確認（孔大哥）
-- **位置：** Mac mini
+- **位置：** Mac mini（同一台機器，不同目錄）
 - **回應模式：** 被動（需 @ 才回）
 - **SOUL.md：** ✅ 已客製化（尊重大哥、直接有料、聖經/Maxwell、政治順著走）
 - **USER.md：** ✅ 已完整更新（孔峯全檔）

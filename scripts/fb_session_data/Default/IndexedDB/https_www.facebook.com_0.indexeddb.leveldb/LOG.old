@@ -1,21 +1,11 @@
-2026/04/20-06:01:58.373 2712343 Reusing MANIFEST /Users/bymyway/.openclaw/workspace/scripts/fb_session_data/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/04/20-06:01:58.373 2712343 Recovering log #7
-2026/04/20-06:01:58.394 2712343 Reusing old log /Users/bymyway/.openclaw/workspace/scripts/fb_session_data/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/000007.log 
-2026/04/20-06:02:00.288 2712347 Level-0 table #12: started
-2026/04/20-06:02:00.302 2712347 Level-0 table #12: 1617732 bytes OK
-2026/04/20-06:02:00.304 2712347 Delete type=0 #7
-2026/04/20-06:02:00.307 2712347 Compacting 1@1 + 1@2 files
-2026/04/20-06:02:00.326 2712347 Generated table #13@1: 17267 keys, 1120438 bytes
-2026/04/20-06:02:00.326 2712347 Compacted 1@1 + 1@2 files => 1120438 bytes
-2026/04/20-06:02:00.327 2712347 compacted to: files[ 0 0 1 0 0 0 0 ]
-2026/04/20-19:38:19.199 2712347 Level-0 table #15: started
-2026/04/20-19:38:19.218 2712347 Level-0 table #15: 1514124 bytes OK
-2026/04/20-19:38:19.220 2712347 Delete type=0 #11
-2026/04/20-19:38:19.220 2712347 Delete type=2 #12
-2026/04/20-19:38:19.220 2712347 Delete type=2 #9
-2026/04/20-19:38:20.145 2712347 Compacting 1@1 + 1@2 files
-2026/04/20-19:38:20.169 2712347 Generated table #16@1: 11057 keys, 1089952 bytes
-2026/04/20-19:38:20.169 2712347 Compacted 1@1 + 1@2 files => 1089952 bytes
-2026/04/20-19:38:20.170 2712347 compacted to: files[ 0 0 1 0 0 0 0 ]
-2026/04/20-19:38:20.171 2712347 Delete type=2 #15
-2026/04/20-19:38:20.171 2712347 Delete type=2 #13
+2026/04/22-06:03:14.654 29629e8 Reusing MANIFEST /Users/bymyway/.openclaw/workspace/scripts/fb_session_data/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/22-06:03:14.654 29629e8 Recovering log #14
+2026/04/22-06:03:14.664 29629e8 Reusing old log /Users/bymyway/.openclaw/workspace/scripts/fb_session_data/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/000014.log 
+2026/04/22-06:03:16.750 29629ec Level-0 table #19: started
+2026/04/22-06:03:16.761 29629ec Level-0 table #19: 1562118 bytes OK
+2026/04/22-06:03:16.762 29629ec Delete type=0 #14
+2026/04/22-06:03:16.772 29629ec Compacting 1@1 + 1@2 files
+2026/04/22-06:03:16.790 29629ec Generated table #20@1: 26718 keys, 1845934 bytes
+2026/04/22-06:03:16.790 29629ec Compacted 1@1 + 1@2 files => 1845934 bytes
+2026/04/22-06:03:16.791 29629ec compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/04/22-06:03:16.791 29629ec Delete type=2 #19

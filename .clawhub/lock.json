@@ -4,6 +4,14 @@
     "openclaw-model-switch-2": {
       "version": "0.1.3",
       "installedAt": 1775984662573
+    },
+    "tg-groupchat-setup": {
+      "version": "1.0.0",
+      "installedAt": 1776970669195
+    },
+    "telegram-bot-chat": {
+      "version": "1.0.0",
+      "installedAt": 1776970675948
     }
   }
 }

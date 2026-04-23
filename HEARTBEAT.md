@@ -44,6 +44,24 @@
 - 預估超過 5 萬 Token 先回報教練確認
 - 執行完通報 Telegram（Chat ID: 6124913915）
 
+## 🔜 下一步：sessions_send 接線（新視窗繼續）
+
+**語法已確認（聯想 CLI 研究結果）：**
+```
+sessions_send(agentId="peipei", message="HANDOFF\nfrom: orchestrator\nto: peipei\ntask_id: sync-001\n...")
+```
+**三個必填項目（還缺）：**
+- GROUP_ID：已知 `-1003877502911`
+- TOPIC_IDs：❌ 尚未取得（要從 Telegram 超級群組設定裡看）
+- 三個 botToken：在各台 openclaw.json 的 `channels.telegram.token`
+
+**接線規則：**
+- agentId 必須完全對應 agents.list 裡的 id
+- 每個 agent 的 agentDir 不能共用
+- 多 bot 共用同一 topic → 全部設 requireMention: true
+
+---
+
 ## 🔑 關鍵架構速查
 - shared-context 路徑：`/Users/bymyway/.openclaw/workspace/shared-context/`
 - 三機 bot：1號 @openclaw_macbook4_bot / 2號 @CoachWu_openclaw_bot / 3號 @coachwu_lenovo_bot

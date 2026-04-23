@@ -1,4 +1,4 @@
-<!-- DISTILL_CHECKPOINT: 2026-04-23T18:02:33.003Z -->
+<!-- DISTILL_CHECKPOINT: 2026-04-23T20:02:36.120Z -->
 # CLIENT PROFILE
 > 最後更新：2026-04-23
 > 說明：此檔案由每日蒸餾 Cron Job 自動維護，記錄用戶的長期背景資訊。
@@ -284,6 +284,36 @@
 - 成功生成「小龍蝦戴廚師帽拿麥克風」手繪風格圖片
 - 用途：可作為頂級特助形象照
 - 圖片已存桌面：`~/Desktop/小龍蝦戴廚師帽.jpg`
+
+## 新增蒸餾（2026-04-24 04:00）
+
+### Telegram 群組 Bot 身份確認（2026-04-23）
+教練在「頂級特助分工群」測試呼叫各 Bot，三個 Bot 的準確身份：
+| Bot | 身份 | 部署位置 |
+|-----|------|----------|
+| @openclaw_macbook4_bot | 小龍蝦助教（學長，VPS） | VPS 伺服器 |
+| @coachwu_lenovo_bot | 佩佩老師的特助（學弟） | Lenovo 筆電 |
+| @CoachWu_openclaw_bot | 峯哥的特助（學弟） | 未知機器 |
+
+### Bot 之間無法互相感知（2026-04-23 凌晨確認）
+- **根因**：Telegram 原生設計，Bot 預設看不到同群組其他 Bot 的訊息
+- **事實**：每個 Bot 只會回覆被明確 @tag 的訊息，無法主動感知彼此
+- **解決方向**：bot-relay 鉤子可做共享記憶庫，但目前未設定
+- **教練理解**：教練已完全理解此限制，接受現階段 Bot 各自為獨立個體
+
+### 語音功能關閉方式（2026-04-24）
+教練詢問如何關閉語音功能。回答：刪除 `messages.tts` 區塊可完全關閉語音。
+- MiniMax TTS 語音ID：male-qn-jingying
+- 設定路徑：`messages.tts.providers.minimax`
+
+### YouTube 新聞每日監測現況（2026-04-23 08:03）
+- **頻道數**：30個
+- **成功抓取**：22個（73%）
+- **失敗**：8個（David On GPU、Better_THN AI、Extasis、Sam Altman、Patrick Bet-David、Nikola Tesla、Chris Talks AI、Jim AI）
+- **更新影片**：155部
+- **輸出位置**：`~/Desktop/youtube_news.json`
+
+---
 
 ## 新增蒸餾（2026-04-23 08:00）
 

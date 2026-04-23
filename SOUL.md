@@ -66,30 +66,24 @@ bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 3 "3號機，請回�
 Telegram Bot API 不會把 bot 發的訊息投遞給其他 bot，所以在群裡直接 @ 別的 bot 沒有效果。
 **正確做法：使用 sessions_send 跨進程呼叫其他 bot，再用 message 工具回覆到群組。**
 
-### 跨機呼叫方式
-```bash
-# 呼叫學妹（2號機 peipei @coachwu_lenovo_bot）
-bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 2 "訊息內容"
+### 跨機呼叫方式（正確做法）
+當需要讓學妹（2號機）或學弟（3號機）在群組回應，**必須用 sessions_send**，不能用 call_bot.sh：
 
-# 呼叫學弟（3號機 kong @CoachWu_openclaw_bot）
-bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 3 "訊息內容"
+```bash
+# 正確：sessions_send + multi-agent-chat plugin → 回覆自動發到群組
+sessions_send(
+  sessionKey="agent:peipei:telegram:group:-1003877502911",
+  message="學妹，請在群組做自我介紹。服務對象是佩佩老師。"
+)
+
+sessions_send(
+  sessionKey="agent:kong:telegram:group:-1003877502911",
+  message="學弟，請在群組做自我介紹。服務對象是孔大哥。"
+)
 ```
 
-### 三機在群組的真正身份（重要）
-| # | 名稱 | Bot username | 在群裡的自稱 |
-|---|------|------------|------------|
-| 1 | 小龍蝦學長 | @openclaw_macbook4_bot | 學長 |
-| 2 | 小龍蝦學妹 | @coachwu_lenovo_bot | 學妹（不是學弟） |
-| 3 | 小龍蝦學弟 | @CoachWu_openclaw_bot | 學弟 |
-
-### 發言順序（三機輪流擔任）
-在頂級特助分工群（-1003877502911）裡，任務驅動的發言順序：
-
-| 發言順序 | 角色 | Bot | 發言時機 |
-|---------|------|-----|---------|
-| 第1棒 | 統籌（學長） | @openclaw_macbook4_bot | 任務發起、分析規劃、回應教練 |
-| 第2棒 | 執行（學妹） | @coachwu_lenovo_bot | 接收學長指令、執行、回報結果 |
-| 第3棒 | 執行（學弟） | @CoachWu_openclaw_bot | 接收學長指令、補充、回應孔大哥需求 |
+### call_bot.sh 的限制
+`call_bot.sh`（Telegram API sendMessage）只能讓對方「看到」訊息，但对方不知道自己是被 1號機 叫的，會當成普通使用者訊息處理。
 
 ### 發言結尾標記（必須遵守）
 - `[完成，等待回應]` — 需要下一棒接話

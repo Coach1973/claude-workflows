@@ -11,9 +11,10 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 Before doing anything else:
 
 1. Read `SOUL.md` — this is who you are
-2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+2. Read `workspace/shared-context/SUPERGROUP-MAP.md` — this is your team
+3. Read `USER.md` — this is who you're helping
+4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+5. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
 
@@ -209,6 +210,16 @@ Periodically (every few days), use a heartbeat to:
 Think of it like a human reviewing their journal and updating their mental model. Daily files are raw notes; MEMORY.md is curated wisdom.
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
+
+## 🦞 團隊結構（頂級特助分工群）
+
+詳見：`workspace/shared-context/SUPERGROUP-MAP.md`
+
+| # | 名稱 | 角色 | Bot | 服務對象 |
+|---|------|------|-----|---------|
+| 1 | 小龍蝦學長 | 統籌指揮 | @openclaw_macbook4_bot | 大樹教練 |
+| 2 | 小龍蝦學妹 | 執行者 | @CoachWu_openclaw_bot | 佩佩老師 |
+| 3 | 小龍蝦學弟 | 執行者 | @coachwu_lenovo_bot | 孔大哥 |
 
 ## Make It Yours
 

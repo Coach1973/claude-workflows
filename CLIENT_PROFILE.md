@@ -1,6 +1,6 @@
-<!-- DISTILL_CHECKPOINT: 2026-04-23T20:02:36.120Z -->
+<!-- DISTILL_CHECKPOINT: 2026-04-23T22:03:08.368Z -->
 # CLIENT PROFILE
-> 最後更新：2026-04-23
+> 最後更新：2026-04-24
 > 說明：此檔案由每日蒸餾 Cron Job 自動維護，記錄用戶的長期背景資訊。
 
 ## 基本資訊
@@ -23,6 +23,36 @@
 | 5/10（六） | 14:00-16:00 | 嘉義場 | - |
 | 5/14（四） | 16:00-18:00 | 台南場 | 與19週年慶整合 |
 | 5/27（三） | 18:00-21:30 | 台中南區場 | - |
+
+## 新增蒸餾（2026-04-24 06:00）
+
+### 三助教系統實體位置確認（2026-04-24 凌晨）
+教練親自確認後，三個 Bot 的實體位置全部在 **Mac mini** 同一台機器：
+| 身份 | OpenClaw 目錄 | Bot | 服務對象 |
+|------|--------------|-----|---------|
+| 1號機 | `~/.openclaw/` | @openclaw_macbook4_bot | 大樹教練 |
+| 2號機 | `~/.openclaw-peipei/` | @CoachWu_lenovo_bot | 佩佩老師 |
+| 3號機 | `~/.openclaw-kong/` | @coachwu_openclaw_bot | 孔大哥 |
+
+**Bot Token 正確對照**（2026-04-24 修正）：
+- `8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ` → @coachwu_openclaw_bot（孔大哥）
+- `8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8` → @coachwu_lenovo_bot（佩佩老師）
+
+### 團隊稱呼更新（2026-04-24 確認版）
+- **學妹**：2號機，服務佩佩老師，Bot @CoachWu_lenovo_bot，部署在 Mac mini `.openclaw-peipei/`
+- **學弟**：3號機，服務孔大哥，Bot @coachwu_openclaw_bot，部署在 Mac mini `.openclaw-kong/`
+- **學長**：1號機，小龍蝦助教，Bot @openclaw_macbook4_bot，部署在 VPS
+
+### Bot 回應模式設定
+- 1號機（學長）：主動模式（requireMention: false）
+- 2號機（學妹）/ 3號機（學弟）：被動模式（requireMention: true），需 @ 才回應
+
+### Token 交換犯錯紀錄（2026-04-24 凌晨）
+- **觸發**：教練要求交換 Bot 對應目錄
+- **錯誤**：把 `@coachwu_openclaw_bot` 和 `@coachwu_lenovo_bot` 的 Token 搞混
+- **原因**：沒有第一時間用 `getMe` API 確認每個 Token 對應的真實 Bot 名稱
+- **教訓**：日後做任何 Token 相關操作，必須先 `getMe` 確認身份，不能假設或憑記憶
+- **預防 SOP**：交換 Bot Token 前，三步驟：(1) 對每個 Token 執行 getMe (2) 記錄結果 (3) 才開始交換
 
 ## 教練人格特質（2026-04-19 蒸餾）
 - 百分之百負責：凌晨親自完善系統，每個錯誤都說「這是我的責任」

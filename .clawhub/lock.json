@@ -28,6 +28,26 @@
     "mac-tts": {
       "version": "1.0.0",
       "installedAt": 1776975151682
+    },
+    "notify-bot": {
+      "version": "1.0.0",
+      "installedAt": 1776980988007
+    },
+    "cross-bot-communication": {
+      "version": "1.0.3",
+      "installedAt": 1776980988109
+    },
+    "openclaw-telegram-chat": {
+      "version": "0.1.0",
+      "installedAt": 1776981303592
+    },
+    "openclaw-p2p": {
+      "version": "0.3.0",
+      "installedAt": 1776981483659
+    },
+    "relay-to-agent": {
+      "version": "0.0.1",
+      "installedAt": 1776981483941
     }
   }
 }

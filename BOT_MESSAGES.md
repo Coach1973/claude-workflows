@@ -194,3 +194,4 @@
 {"ts":"2026-04-23T20:43:27.473Z","botId":"1号機","text":"兩個 gateway 已停止但還沒重啟。我來啟動它們：","msgId":"288","chatId":"-1003877502911"}
 {"ts":"2026-04-23T20:43:28.510Z","botId":"1号機","text":"兩個 gateway 都重啟成功了！\n\n| Port | 身份 | 狀態 |\n|------|------|------|\n| 18793 | 2號機（佩佩）@CoachWu_lenovo_bot | ✅ 重啟完成 |\n| 18790 | 3號機（孔大哥）@coachwu_openclaw_bot | ✅ 重啟完成 |\n\nToken 交換已生效。教練可以在群組測試 @mention 2號機和3號機","msgId":"289","chatId":"-1003877502911"}
 {"ts":"2026-04-23T20:43:37.886Z","botId":"1号機","text":"了解！教練說的是：**三個 Bot 的 OpenClaw 程序都跑在同一台 Mac mini 裡**，只是透過不同目錄分開：\n\n| 身份 | 目錄 | Bot |\n|------|------|-----|\n| 1號機 | `~/.openclaw/` | @openclaw_macbook4_bot |\n| 2號機 | `~/.openclaw-peipei/` | @CoachWu_lenov","msgId":"290","chatId":"-1003877502911"}
+{"ts":"2026-04-23T20:45:04.006Z","botId":"1号機","text":"已呼叫完畢！👋\n\n兩則訊息已發到群組：\n- ✅ 2號機（@CoachWu_lenovo_bot）已收到呼叫\n- ✅ 3號機（@coachwu_openclaw_bot）已收到呼叫\n\n等他們回應後就能一起進入討論了！","msgId":"294","chatId":"-1003877502911"}

@@ -7,6 +7,8 @@
 
 | # | 承諾內容 | 立案 Hash | 立案時間 | 完成 Hash |
 |---|---------|----------|---------|----------|
+| 8 | 整理 8.5MB Telegram JSON對話記錄（`/Users/bymyway/Desktop/Telegram_History/telegram_history_20260419_2315.json`）提煉出精華寫入知識庫 | 待commit | 2026-04-23 | ⬜ 待完成 |
+| 9 | 海餅乾知識庫統整（seabiscuit 知識庫完整建立） | 待commit | 2026-04-23 | ⬜ 待完成 |
 
 ---
 

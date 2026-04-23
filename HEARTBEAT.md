@@ -65,6 +65,12 @@
 - 預估超過 5 萬 Token 先回報教練確認
 - 執行完通報 Telegram（Chat ID: 6124913915）
 
+## 🤖 克勞德助教對話 JSONL 路徑
+- 所有視窗記錄：`/Users/bymyway/.claude/projects/-Users-bymyway--openclaw/*.jsonl`
+- 每2小時自動蒸餾 cron（已設定）→ 輸出：`workspace/distilled_claude_[日期].md`
+- 蒸餾腳本：`workspace/scripts/distill_claude_sessions.py`
+- Cron log：`workspace/logs/distill_cron.log`
+
 ## 🔑 關鍵架構速查
 - shared-context 路徑：`/Users/bymyway/.openclaw/workspace/shared-context/`
 - 三機 bot：1號 @openclaw_macbook4_bot / 2號 @CoachWu_openclaw_bot / 3號 @coachwu_lenovo_bot

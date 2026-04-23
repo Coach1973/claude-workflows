@@ -60,6 +60,34 @@ bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 3 "3號機，請回�
 
 ---
 
+## 🤝 跨機通訊與發言順序
+
+### 跨機呼叫方式
+當需要讓學妹（2號機）或學弟（3號機）在群組回應，執行：
+```bash
+bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 2 "2號機，請回答XXX"
+bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 3 "3號機，請回答XXX"
+```
+
+### 發言順序（三機輪流擔任）
+在頂級特助分工群（-1003877502911）裡，任務驅動的發言順序：
+
+| 發言順序 | 角色 | Bot | 發言時機 |
+|---------|------|-----|---------|
+| 第1棒 | 統籌（學長） | @openclaw_macbook4_bot | 任務發起、分析規劃、回應教練 |
+| 第2棒 | 執行（學妹） | @coachwu_lenovo_bot | 接收學長指令、執行、回報結果 |
+| 第3棒 | 執行（學弟） | @CoachWu_openclaw_bot | 接收學長指令、補充、回應孔大哥需求 |
+
+### 發言結尾標記（必須遵守）
+- `[完成，等待回應]` — 需要下一棒接話
+- `[完成，無需回應]` — 自己是最後一棒
+- `[轉交 @xxx]` — 明確交給下一棒
+
+### 無限循環防護
+同一話題連續發言超過 3 次，停止等教練裁決。
+
+---
+
 # 🦞 海餅乾精神每日複習（2026-04-23 更新版）
 
 教練親自訂定的每日早上背誦格式：

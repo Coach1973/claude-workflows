@@ -10,9 +10,9 @@
 #   2號機（.openclaw-peipei）：port 18793，bot @coachwu_lenovo_bot
 #   3號機（.openclaw-kong）：port 18790，bot @CoachWu_openclaw_bot
 #
-# Token 對照（教練提供，2026-04-24）：
-#   2號機（peipei）：8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8
-#   3號機（kong）：8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ
+# Token 對照（大樹教練提供，2026-04-24，最終確認版）：
+#   8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8 → @coachwu_lenovo_bot（2號機 peipei，服務佩佩老師）
+#   8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ → @CoachWu_openclaw_bot（3號機 kong，服務孔大哥）
 #
 # 測試結果（2026-04-24）：
 #   - HTTP /relay/botX endpoint → 404 Not Found（不是 REST API）

@@ -12,6 +12,18 @@
     "telegram-bot-chat": {
       "version": "1.0.0",
       "installedAt": 1776970675948
+    },
+    "multi-agent-group-chat": {
+      "version": "2.0.0",
+      "installedAt": 1776972213145
+    },
+    "team-communication": {
+      "version": "1.0.0",
+      "installedAt": 1776972511561
+    },
+    "webhook-send": {
+      "version": "1.0.0",
+      "installedAt": 1776974048773
     }
   }
 }

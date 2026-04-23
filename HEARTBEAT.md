@@ -78,3 +78,32 @@
 - ClawHub：`openclaw skills search "功能"` → `openclaw skills install <slug>`
 - CLI 分工地圖：`workspace/CLI_DIVISION.md`
 - 四月教練語錄：桌面 `coach_messages_april_FULL.md`（648 條）
+
+## ✅ 今日完成里程碑（2026-04-24）
+
+### 三機體系正式確立
+- Mac / 聯想 / 宏碁（備用）三機定義寫入 project_team_structure.md
+- 聯想 Claude CLI：CLAUDE.md 開工觸發詞設定完成（`d22a1a9`）
+- PROMISES #15、#16：Windows 桌面版 + 宏碁備用機觸發詞任務已立案
+
+### 知識庫建設
+- SEABISCUIT_KNOWLEDGE_BASE.md 產出（303行，Claude CLI 聯想執行，`89bb753`）
+- seabiscuit_case_studies.md 追加 7 條哲學語錄（Hermes CLI，`6af3510`）
+- 金句候選清單（138條）+ 互動篩選器 HTML 已存桌面，待教練審核
+
+### 自動化
+- 每2小時蒸餾 cron 建立（`7a52c34`），讀 JSONL → Claude API → distilled_claude_[日期].md → git push
+- CLAUDE.md 對話 JSONL 路徑寫入 HEARTBEAT.md
+
+### 開工流程修復
+- 全域 CLAUDE.md 啟動暗號已確認有效（含絕對路徑）
+- 聯想 Claude CLI CLAUDE.md 今日第一次真正建立（非只口頭說說）
+
+## 🔜 下一步
+
+| 優先 | 任務 | 執行者 |
+|------|------|--------|
+| 高 | 教練審核金句篩選器（桌面 HTML），確認精選清單 | 教練 |
+| 高 | 聯想 CLI 執行 CLAUDE_CLI_TASK_WIN_DESKTOP.md（#15） | Claude CLI 聯想 |
+| 中 | 宏碁備用機開工設定（#16） | 下次帶宏碁外出前 |
+| 低 | 31個 YouTube 頻道排程穩定化 | Hermes CLI |

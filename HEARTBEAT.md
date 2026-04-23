@@ -1,47 +1,65 @@
 # HEARTBEAT 熱上下文（每次心跳必讀）
 
-> 最後更新：2026-04-23（Claude Code 終端機對話）
+> 最後更新：2026-04-24（Claude 桌面版 UI，視窗結案交接）
 
 ## ⚡ 系統狀態
-- Primary 模型：google/gemini-3.1-pro-preview
+- Primary 模型：claude-sonnet-4-6（Claude 桌面版 UI）
 - 名稱對等：Telegram = 小龍蝦 = 電報
 
 ## 🔴 新視窗啟動後第一件事
-直接告訴教練：「🦞 已同步最新記憶，PROMISES 尚有2條待兌現」
+直接告訴教練：「🦞 已同步最新記憶，PROMISES 尚有1條待兌現」
 
-## 📋 PROMISES 待兌現（2條）
+## 📋 PROMISES 待兌現（1條）
 | # | 內容 | 狀態 |
 |---|------|------|
-| 8 | 整理 8.5MB Telegram JSON → 追加至 seabiscuit_case_studies.md | ⏳ Hermes CLI 執行中 |
-| 9 | 海餅乾知識庫統整（seabiscuit 知識庫完整建立） | ⬜ 待啟動 |
+| 9 | 海餅乾知識庫統整（seabiscuit 知識庫完整建立） | ⬜ 指派給聯想 Claude Sonnet CLI |
 
-階段一完成後：階段二 → 處理 `memory/` 和 `daily/` 四天記錄（4/20–4/23）
-階段三：教練人工精選 100/200 金句
+---
 
-## ✅ 今日完成里程碑（2026-04-23）
+## 🔄 目前背景任務（Hermes CLI 執行中）
 
-### 身份修復
-- 三台 SOUL.md 全部加入身份鐵律區塊（學長/學妹/學弟 + 正確 bot 帳號）
-- 1號機幻覺帳號 @OpenClaw MacBook 問題修正
+**任務：四月份教練語錄 648 條 → 三項提煉**
+- 輸入：`/Users/bymyway/Desktop/coach_messages_april_FULL.md`（499 KB，648 條教練發言）
+- 輸出一：`COACH_DECISIONS_APRIL.md`（決策與分工提煉）
+- 輸出二：`COACH_GOLDEN_QUOTES_APRIL.md`（金句精選 50-100 條）
+- 輸出三：承諾核對（對比 PROMISES.md 找漏網之魚）
+- 狀態：⏳ 執行中（本視窗結案時尚未完成）
+- 完成後：Hermes 應 git commit 並用 Telegram 回報 hash（Chat ID: 6124913915）
 
-### ClawHub 接入（重大）
-- 查明正確名稱：ClawHub（非 Cloudhub），13,000+ 技能，`openclaw skills search/install`
-- 第37條寫入三台 SOUL.md：遇到不會的事先查 ClawHub → OPE → 才自己做
-- 補上教練兩個月來一直強調的「先上網搜」，終於落地為具體工具和指令
+---
 
-### 多智能體協作架構（照搬 openclaw-multi-agent-kit 10-bot 生產驗證架構）
-- 建立 `workspace/shared-context/`：SUPERGROUP-MAP.md / THESIS.md / SIGNALS.md / FEEDBACK-LOG.md
-- SUPERGROUP-MAP.md：三機成員名冊 + Turn-Taking Protocol（防無限互ping）
-- bot-relay-inbound 補入2、3號機（之前只有發、沒有收，所以不知道彼此在說什麼）
-- 三台 AGENTS.md 加入團隊表格 + 啟動必讀 SUPERGROUP-MAP.md
-- 2、3號機推送到 remote（previously 無 remote）
+## ✅ 本視窗完成的里程碑（2026-04-24）
 
-### Cron 修正
-- 停用浮動「每4小時進度關懷」（與固定版重疊，47分鐘內發兩次「四小時到了」）
+### 補記 CLI 三助教分工（`CLI_DIVISION.md`，hash: `9c84f09`）
+| 助教 | 位置 | 強項 | 限制 |
+|------|------|------|------|
+| Claude 桌面版 UI | Mac GUI | 神經中樞、思考、寫指令書 | 不做量大重複 |
+| Hermes CLI（1號終端機） | Mac mini | 量大/長時間/定時，無限額度 | 不跨目錄，不做模糊任務 |
+| Claude Sonnet CLI（2號終端機） | 聯想 Windows | 理解力分析、提煉判斷 | 每天20元人民幣，不做定時任務 |
 
-### 執行鐵律（永久寫入）
-- SOUL.md + CLAUDE.md：邏輯唯一解直接做，不問
-- PROMISES.md：承諾帳本，commit hash 才算憑證
+### 防呆機制寫入（hash: `afc6425`）
+- 全域 CLAUDE.md + workspace CLAUDE.md 加入「結論即時落地鐵律」
+- 達成結論 = 立刻 commit，不等對話結束，不等教練提醒
+
+### PROMISES #8 結案（hash: `2bddd83`）
+- 8.5MB JSON → 提煉 12 條哲學語錄追加至 seabiscuit_case_studies.md
+- 立案 hash: c6f034f，完成 hash: a33f014
+
+### 四月份教練語錄提煉準備完成
+- 8 個對話視窗，648 條教練發言，已輸出為桌面 `coach_messages_april_FULL.md`
+- 交 Hermes CLI 執行三項提煉（進行中）
+
+---
+
+## 🔜 下個視窗待辦
+
+1. **接收 Hermes 回報**：四月語錄提煉的 commit hash，更新 PROMISES（若有新發現的未兌現承諾）
+2. **指派 PROMISES #9 給聯想 Claude Sonnet CLI**：
+   - 任務：讀取現有 seabiscuit 相關檔案，完整建立海餅乾知識庫
+   - 相關檔案：`seabiscuit_case_studies.md`、`seabiscuit_golden_quotes.md`、`seabiscuit_ideas_backlog.md`、`sea_biscuit_club.md`、`SEABISCUIT_TEN_COMMANDMENTS.md`
+3. **Hermes 任務範本更新**：以後每個任務指令結尾加 git commit + Telegram 回報 hash
+
+---
 
 ## ⚠️ 所有對話守則
 - 全部繁體中文，不夾任何英文
@@ -49,26 +67,10 @@
 - 預估超過 5 萬 Token 先回報教練確認
 - 執行完通報 Telegram（Chat ID: 6124913915）
 
-## 🔜 下一步：sessions_send 接線（新視窗繼續）
-
-**語法已確認（聯想 CLI 研究結果）：**
-```
-sessions_send(agentId="peipei", message="HANDOFF\nfrom: orchestrator\nto: peipei\ntask_id: sync-001\n...")
-```
-**三個必填項目（還缺）：**
-- GROUP_ID：已知 `-1003877502911`
-- TOPIC_IDs：❌ 尚未取得（要從 Telegram 超級群組設定裡看）
-- 三個 botToken：在各台 openclaw.json 的 `channels.telegram.token`
-
-**接線規則：**
-- agentId 必須完全對應 agents.list 裡的 id
-- 每個 agent 的 agentDir 不能共用
-- 多 bot 共用同一 topic → 全部設 requireMention: true
-
----
-
 ## 🔑 關鍵架構速查
 - shared-context 路徑：`/Users/bymyway/.openclaw/workspace/shared-context/`
 - 三機 bot：1號 @openclaw_macbook4_bot / 2號 @CoachWu_openclaw_bot / 3號 @coachwu_lenovo_bot
 - 群組 ID：-1003877502911（頂級特助分工群）
 - ClawHub：`openclaw skills search "功能"` → `openclaw skills install <slug>`
+- CLI 分工地圖：`workspace/CLI_DIVISION.md`
+- 四月教練語錄：桌面 `coach_messages_april_FULL.md`（648 條）

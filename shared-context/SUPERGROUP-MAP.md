@@ -19,8 +19,8 @@
 | # | 名稱 | 角色 | Bot 帳號 | 服務對象 | 位置 |
 |---|------|------|---------|---------|------|
 | 1 | 小龍蝦學長 | 統籌指揮（Orchestrator） | @openclaw_macbook4_bot | 大樹教練 | MacBook (~/.openclaw/) |
-| 2 | 小龍蝦學妹 | 執行者 | @CoachWu_openclaw_bot | 佩佩老師 | Mac mini (~/.openclaw-peipei/) |
-| 3 | 小龍蝦學弟 | 執行者 | @coachwu_lenovo_bot | 孔大哥 | Mac mini (~/.openclaw-kong/) |
+| 2 | 小龍蝦學妹 | 執行者 | @CoachWu_lenovo_bot | 佩佩老師 | Lenovo (~/.openclaw-peipei/) |
+| 3 | 小龍蝦學弟 | 執行者 | @coachwu_openclaw_bot | 孔大哥 | Mac mini (~/.openclaw-kong/) |
 
 > 🔖 未來新成員加入：在此表格新增一行即可，所有人自動認識。
 
@@ -30,7 +30,7 @@
 
 | 對 1號機說 | 對 2號機說 | 對 3號機說 |
 |-----------|-----------|-----------|
-| 學長 | 學妹（對1）、學姐（對3） | 學弟（對1和2） |
+| 學長 | 學妹（對1） | 學弟（對1和2） |
 
 ---
 

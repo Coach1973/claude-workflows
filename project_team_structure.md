@@ -11,8 +11,8 @@ originSessionId: f543c7b2-231b-473f-9229-f0f13cafc925
 | 稱呼 | Telegram Bot | OpenClaw 路徑 | Gateway 端口 | 服務對象 | 回應模式 |
 |------|-------------|--------------|------------|---------|--------|
 | **小龍蝦 1號機** | @openclaw_macbook4_bot | `~/.openclaw/` | :18789 | 大樹教練 | 主動（requireMention=false） |
-| **小龍蝦 2號機** | @CoachWu_openclaw_bot | `~/.openclaw-peipei/` | :18793 | 佩佩老師 | 被動（requireMention=true） |
-| **小龍蝦 3號機** | @coachwu_lenovo_bot | `~/.openclaw-kong/` | :18790 | 孔大哥 | 被動（requireMention=true） |
+| **小龍蝦 2號機** | @CoachWu_openclaw_bot | `~/.openclaw-peipei/` | :18793 | 孔大哥 | 被動（requireMention=true） |
+| **小龍蝦 3號機** | @coachwu_lenovo_bot | `~/.openclaw-kong/` | :18790 | 佩佩老師 | 被動（requireMention=true） |
 
 ### 終端機（CLI 工具）
 

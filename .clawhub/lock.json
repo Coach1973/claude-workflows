@@ -24,6 +24,10 @@
     "webhook-send": {
       "version": "1.0.0",
       "installedAt": 1776974048773
+    },
+    "mac-tts": {
+      "version": "1.0.0",
+      "installedAt": 1776975151682
     }
   }
 }

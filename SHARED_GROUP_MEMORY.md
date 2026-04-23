@@ -81,17 +81,21 @@ LAST_UPDATED_AT: -
 
 ### 2號機（佩佩老師助理）
 - **路徑：** `/Users/bymyway/.openclaw-peipei/`
-- **Telegram Bot Token：** `8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8`
+- **Telegram Bot Token：** `8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ`
+- **Bot 帳號：** `@CoachWu_lenovo_bot`
 - **允許的 Telegram ID：** `6124913915`（大樹教練）、`8786886419`（佩佩老師）
-- **群組設定：** groupPolicy open、requireMention false（需設為管理員才能收群組訊息）
+- **位置：** Lenovo 聯想
+- **回應模式：** 被動（需 @ 才回）
 - **SOUL.md：** ✅ 已客製化（正向鼓勵、簡單易懂、法輪功、海餅乾）
 - **USER.md：** ✅ 已完整更新（陳佩君全檔）
 
 ### 3號機（孔大哥助理）
 - **路徑：** `/Users/bymyway/.openclaw-kong/`
-- **Telegram Bot Token：** 待確認（需查 BotFather）
-- **允許的 Telegram ID：** 待補（孔大哥 ID 尚未取得）
-- **群組設定：** 待建群組，建好後立刻設為管理員
+- **Telegram Bot Token：** `8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8`
+- **Bot 帳號：** `@coachwu_openclaw_bot`
+- **允許的 Telegram ID：** `6124913915`（大樹教練）、待確認（孔大哥）
+- **位置：** Mac mini
+- **回應模式：** 被動（需 @ 才回）
 - **SOUL.md：** ✅ 已客製化（尊重大哥、直接有料、聖經/Maxwell、政治順著走）
 - **USER.md：** ✅ 已完整更新（孔峯全檔）
 
@@ -134,12 +138,8 @@ Acer 學弟在待命，請發出指令。
 ---
 
 ## 🔑 設備 Token 紀錄
-- **Acer 學弟 (Telegram Bot Token)**: `8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ`
-
-## ⚠️ 雙機共用核心守則補述
-1. **語音糾偏**：教練大量使用語音輸入，「電報」=Telegram、「小龍蝦/開口」=OpenClaw、「海比干/海濱幹/海餅幹」=海餅乾、「eHub」=GitHub，看到直接換，不准猜測。
-2. **Token 管理**：雙機執行任何任務前，預估超過 5 萬 Token 必須先由學長回報教練確認。
-- **聯想學弟 / 第三機器 (Telegram Bot Token)**: `8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8`
+- **2號機（佩佩老師，Lenovo）**: `8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ` (@CoachWu_lenovo_bot)
+- **3號機（孔大哥，Mac mini）**: `8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8` (@coachwu_openclaw_bot)
 
 ## 🧠 跨群組解法共享 SOP (2026-04-18 新增)
 1. **群組討論**：任何一台小龍蝦遇到問題，在「頂級特助分工群」提出討論。

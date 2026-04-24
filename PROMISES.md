@@ -11,6 +11,9 @@
 | 14 | 100/200 金句候選清單供教練人工篩選 | 待commit | 2026-04-24 | ⬜ 篩選器已建，待教練審核 |
 | 15 | Windows 桌面版 Claude 助教設定開工觸發詞 | `3cded84` | 2026-04-24 | ⬜ 待聯想 CLI 執行 |
 | 16 | 宏碁備用機設定開工觸發詞 | `17f31e9` | 2026-04-24 | ⬜ 待宏碁端執行 |
+| 17 | 確認 openrouter/nvidia/llama-3.3-nemotron-super-49b-v1 能否解決 3號機群組問題 | 待commit | 2026-04-24 | ⬜ 待測試 |
+| 18 | 三機互讀 BOT_RELAY：Qwen3 Thinking 推導方案 → Coder 480B 實作 → 部署 | 待commit | 2026-04-24 | ⬜ 待執行 |
+| 19 | DeepSeek 官方 API Key 申請後接入 OpenCode（需教練自行申請） | 待commit | 2026-04-24 | ⬜ 待教練操作 |
 
 ---
 

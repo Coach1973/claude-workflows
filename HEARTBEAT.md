@@ -9,9 +9,27 @@
 直接告訴教練：「🦞 對話記錄已滿，已自動重啟，請繼續下指令」
 ⚠️ **不要讀 memory 大檔**（memory/2026-04-24.md 可能超過 50KB，讀了會造成 Gemini 空白回應）
 
-## ⚡ 系統狀態
-- Primary 模型：google/gemini-3.1-pro-preview
-- 名稱對等：Telegram = 小龍蝦 = 電報
+## ⚡ 系統狀態（更新：2026-04-24 17:16）
+
+### OpenCode UI
+- NVIDIA + EasyClaude 已接入，共 9 個測試通過的模型
+- 詳見：`memory/2026-04-24-nvidia-opencode-integration.md`
+
+### 3號機（kong）模型
+- Primary 剛換為：`openrouter/nvidia/llama-3.3-nemotron-super-49b-v1`（尚未確認有效）
+- Fallback 保底：`openrouter/google/gemini-2.5-flash`
+- 核心問題：108K system prompt 需要 ≥128K 上下文模型
+
+### 未解決
+- ❌ 3號機群組無回應（等待上面模型測試結果）
+- ❌ 三機互讀 BOT_RELAY 方案尚未實作（任務書已備好）
+- ❌ EasyClaude 在 OpenCode 有 Invalid 報錯（低優先）
+
+### 名稱對等
+- Telegram = 小龍蝦 = 電報
+- 1號機 = openclaw_macbook4_bot
+- 2號機 = coachwu_lenovo_bot
+- 3號機 = CoachWu_openclaw_bot = kong
 
 ## ⚠️ 所有對話守則
 - 全部繁體中文，不夾任何英文

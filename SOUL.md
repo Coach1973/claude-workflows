@@ -71,13 +71,14 @@ Telegram Bot API 不會把 bot 發的訊息投遞給其他 bot，所以在群裡
 
 ```bash
 # 正確：sessions_send + multi-agent-chat plugin → 回覆自動發到群組
+# 重要：每個bot只有"main"這個agent，sessionKey要用"main"
 sessions_send(
-  sessionKey="agent:peipei:telegram:group:-1003877502911",
+  sessionKey="agent:main:telegram:group:-1003877502911",
   message="學妹，請在群組做自我介紹。服務對象是佩佩老師。"
 )
 
 sessions_send(
-  sessionKey="agent:kong:telegram:group:-1003877502911",
+  sessionKey="agent:main:telegram:group:-1003877502911",
   message="學弟，請在群組做自我介紹。服務對象是孔大哥。"
 )
 ```

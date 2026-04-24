@@ -411,3 +411,5 @@
 {"ts":"2026-04-24T19:47:14.933Z","botId":"3号機-孔大哥","text":"⚠️ Something went wrong while processing your request. Please try again, or use /new to start a fresh session.","msgId":"543","chatId":"-1003877502911"}
 {"ts":"2026-04-24T19:47:15.840Z","botId":"1号機","text":"在喔教練！🦞 凌晨好～學妹的 bot 在線，有什麼需要？","msgId":"544","chatId":"-1003877502911"}
 {"ts":"2026-04-24T19:47:16.608Z","botId":"2号機-佩佩","text":"學弟在這裡！至於學妹有没有在，要等學妹自己回應了～教練有什麼需要嗎？🦞","msgId":"545","chatId":"-1003877502911"}
+{"ts":"2026-04-24T20:29:12.036Z","botId":"2号機-佩佩","text":"小龍蝦在線 🦞\n\n測試成功，隨時候命！","msgId":"311","chatId":"-1003877502911"}
+{"ts":"2026-04-24T20:33:38.986Z","botId":"2号機-佩佩","text":"小龍蝦在線 🦞 隨時候命！","msgId":"313","chatId":"-1003877502911"}

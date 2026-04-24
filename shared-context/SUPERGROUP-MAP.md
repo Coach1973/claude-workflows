@@ -19,8 +19,8 @@
 | # | 名稱 | 角色 | Bot 帳號 | 服務對象 | 位置 |
 |---|------|------|---------|---------|------|
 | 1 | 小龍蝦學長 | 統籌指揮（Orchestrator） | @openclaw_macbook4_bot | 大樹教練 | MacBook (~/.openclaw/) |
-| 2 | 小龍蝦學妹 | 執行者 | @CoachWu_lenovo_bot | 佩佩老師 | Mac mini (~/.openclaw-peipei/) |
-| 3 | 小龍蝦學弟 | 執行者 | @coachwu_openclaw_bot | 孔大哥 | Mac mini (~/.openclaw-kong/) |
+| 2 | 小龍蝦學妹 | 執行者 | @coachwu_lenovo_bot | 佩佩老師 | Mac mini (~/.openclaw-peipei/) |
+| 3 | 小龍蝦學弟 | 執行者 | @CoachWu_openclaw_bot | 孔大哥 | Mac mini (~/.openclaw-kong/) |
 
 > 🔖 未來新成員加入：在此表格新增一行即可，所有人自動認識。
 
@@ -50,22 +50,15 @@
 
 ## Agent-to-Agent 觸發方式
 
-使用 `sessions_send` 傳遞任務：
+使用共享 Relay 檔案傳遞任務（參考 BOT_RELAY.json）。
 
-```
-sessions_send({
-  to: "agent:[bot_id]",
-  message: "任務說明",
-  task_id: "TASK-xxx",
-  from: "1號機",
-  done_when: "完成條件描述"
-})
-```
+**學長（1號機）呼叫學妹/學弟方式**：
+1. 寫入 `/Users/bymyway/.openclaw/workspace/shared-context/BOT_RELAY.json`
+2. 指定 `"bot": "2"`（學妹）或 `"bot": "3"`（學弟）
+3. 學妹/學弟的 cron job 每分鐘輪詢，發現新任務就回覆
 
-**任務交接格式（MANDATORY）：**
-- `ACK <task_id>` — 收到，確認接單
-- `DONE <task_id>` + 交付物 — 完成
-- `BLOCKED <task_id>` — 卡住超過15分鐘，需升級
+**學妹/學弟 任務完成回報**：
+- 直接在頂級特助分工群回覆教練即可
 
 ---
 
@@ -73,6 +66,7 @@ sessions_send({
 
 | 檔案 | 寫入者 | 讀取者 | 用途 |
 |------|--------|--------|------|
+| BOT_RELAY.json | 教練 / 1號機 | 學妹/學弟 | 任務排程 |
 | THESIS.md | 教練 / 1號機 | 全員 | 整體使命與方向 |
 | SIGNALS.md | 任何人 | 全員 | 情報共享（新發現、重要資訊） |
 | FEEDBACK-LOG.md | 任何人 | 全員 | 教練的糾正與偏好 |

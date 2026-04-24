@@ -357,3 +357,4 @@
 {"ts":"2026-04-24T05:04:10.638Z","botId":"3号機-孔大哥","text":"⚠️ Something went wrong while processing your request. Please try again, or use /new to start a fresh session.","msgId":"505","chatId":"-1003877502911"}
 {"ts":"2026-04-24T05:04:25.739Z","botId":"1号機","text":"嗨！學弟上線了 🙋‍♂️ 峯哥有什麼需要幫忙的嗎？","msgId":"506","chatId":"-1003877502911"}
 {"ts":"2026-04-24T05:04:28.591Z","botId":"1号機","text":"🦞 學長上線了！今天想聊什麼？","msgId":"507","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:02:01.664Z","botId":"1号機","text":"⚠️ Cron job \"每4小時主動關懷\" failed: cron: job execution timed out","msgId":"4775","chatId":"-1003877502911"}

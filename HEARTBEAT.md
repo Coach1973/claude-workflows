@@ -28,6 +28,10 @@
 - ❌ 三機互讀 BOT_RELAY 方案尚未實作（任務書已備好）
 - ❌ EasyClaude 在 OpenCode 有 Invalid 報錯（低優先）
 
+### 📋 背景工作清單（自動追蹤）
+- ⬜ **8.5MB Telegram 對話提煉**：每天挖一點，列為每週背景工作
+- ⬜ **海餅乾金句庫**：持續從對話中萃取，目標 200-300 條
+
 ### 名稱對等
 - Telegram = 小龍蝦 = 電報
 - 1號機 = openclaw_macbook4_bot

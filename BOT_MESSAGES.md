@@ -358,3 +358,14 @@
 {"ts":"2026-04-24T05:04:25.739Z","botId":"1号機","text":"嗨！學弟上線了 🙋‍♂️ 峯哥有什麼需要幫忙的嗎？","msgId":"506","chatId":"-1003877502911"}
 {"ts":"2026-04-24T05:04:28.591Z","botId":"1号機","text":"🦞 學長上線了！今天想聊什麼？","msgId":"507","chatId":"-1003877502911"}
 {"ts":"2026-04-24T06:02:01.664Z","botId":"1号機","text":"⚠️ Cron job \"每4小時主動關懷\" failed: cron: job execution timed out","msgId":"4775","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:32:33.010Z","botId":"3号機-孔大哥","text":"在！學弟上線 🦞 有什麼需要？","msgId":"347","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:32:53.761Z","botId":"3号機-孔大哥","text":"⚠️ Something went wrong while processing your request. Please try again, or use /new to start a fresh session.","msgId":"509","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:32:58.405Z","botId":"1号機","text":"在喔！學長在這裡 🥰 教練今天需要什麼服務？","msgId":"510","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:32:58.723Z","botId":"2号機-佩佩","text":"在的在的！學弟隨時待命 🙌 教練有什麼吩咐？","msgId":"511","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:36:58.211Z","botId":"3号機-孔大哥","text":"Current: minimax-portal/MiniMax-M2.7\nTap below to browse models, or use:\n/model <provider/model> to switch\n/model status for details","msgId":"349","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:44:14.748Z","botId":"3号機-孔大哥","text":"HTTP 401: authentication_error: invalid x-api-key","msgId":"351","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:45:47.738Z","botId":"3号機-孔大哥","text":"HTTP 401: authentication_error: invalid x-api-key","msgId":"353","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:49:34.737Z","botId":"3号機-孔大哥","text":"Current: litellm/claude-sonnet-easyclaude (selected)\nActive: anthropic/claude-sonnet-4-6 (runtime)\nTap below to browse models, or use:\n/model <provider/model> to switch\n/model status for details","msgId":"355","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:49:56.438Z","botId":"3号機-孔大哥","text":"⚠️ Something went wrong while processing your request. Please try again, or use /new to start a fresh session.","msgId":"357","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:50:08.533Z","botId":"3号機-孔大哥","text":"Current: litellm/claude-sonnet-easyclaude\nTap below to browse models, or use:\n/model <provider/model> to switch\n/model status for details","msgId":"359","chatId":"-1003877502911"}
+{"ts":"2026-04-24T06:50:35.786Z","botId":"3号機-孔大哥","text":"529 High traffic detected. For a more stable experience, upgrade to our Plus plan and use the highspeed model. https://platform.minimax.io/subscribe/token-plan (2064)","msgId":"361","chatId":"-1003877502911"}

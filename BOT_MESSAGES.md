@@ -752,3 +752,10 @@
 {"ts":"2026-04-25T14:50:59.443Z","botId":"1号機","text":"看不到喔教練！Telegram 的限制讓我們三個沒辦法直接看到彼此在群裡的訊息。\n\n所以我們是用 OpenClaw 內建的 agentToAgent 工具 + shared memory 來互相溝通，而不是靠這個群組。\n\n需要協作的話，會由我統一協調分配任務給 main 和 kong。","msgId":"845","chatId":"-1003877502911"}
 {"ts":"2026-04-25T14:51:11.852Z","botId":"1号機","text":"學長如實回報教練：\n\n**目前真實情況：**\n- 三個 bot 在 Telegram 群組裡，**無法直接聽到彼此的訊息**（Telegram API 不投遞 bot 訊息給其他 bot）\n- 但我們有兩個機制可以「聽到」：\n  1. **BOT_RELAY.json** — 學長寫入任務，另外兩機定時輪詢讀取\n  2. **bot-relay-inbound 鉤子** — 系統自動把其他 bot","msgId":"846","chatId":"-1003877502911"}
 {"ts":"2026-04-25T14:51:15.657Z","botId":"1号機","text":"學長回報完畢，等學弟和學妹透過 relay 回覆教練。🦞","msgId":"848","chatId":"-1003877502911"}
+{"ts":"2026-04-25T15:00:09.733Z","botId":"1号機","text":"⚠️ Cron job \"每4小時主動關懷\" failed: FailoverError: No API key found for provider \"openai\". You are authenticated with OpenAI Codex OAuth. Use openai-codex/gpt-5.4 (OAuth) or set OPENAI_API_KEY to use opena","msgId":0,"chatId":"-1003877502911"}
+{"ts":"2026-04-25T15:00:09.735Z","botId":"1号機","text":"⚠️ Cron job \"Self Improvement Agent 每晚自我優化\" failed: FailoverError: No API key found for provider \"openai\". You are authenticated with OpenAI Codex OAuth. Use openai-codex/gpt-5.4 (OAuth) or set OPENAI","msgId":0,"chatId":"-1003877502911"}
+{"ts":"2026-04-25T15:15:03.209Z","botId":"1号機","text":"在的，教練！🦞\n已過熄燈時間（23:00），有什麼事明天再說也沒關係喔。","msgId":"4835","chatId":"-1003877502911"}
+{"ts":"2026-04-25T15:15:56.443Z","botId":"1号機","text":"教練，語音功能本來就已經是**關閉**狀態了：\n\n```\ntts: enabled: false\n```\n\n不需要做任何更改。如果你是想要關閉別的功能，請告訴我具體是哪一個？","msgId":"4838","chatId":"-1003877502911"}
+{"ts":"2026-04-25T15:17:37.620Z","botId":"1号機","text":"教練，設定檔確認是 `tts.enabled: false`。\n\n但你看到播放符號，可能是因為：\n1. **其他助教（2號機、3號機）**之前有做過語音測試，殘留訊息有音頻\n2. **Telegram 本身的 UI** 會把任何音頻格式顯示為播放符號\n\n請問您看到播放符號的訊息是來自哪個助教？或者直接把那個訊息截圖給我，我幫您確認是哪個環節產生的音頻。","msgId":"4841","chatId":"-1003877502911"}
+{"ts":"2026-04-25T15:26:19.386Z","botId":"1号機","text":"Gateway 正在重啟中，稍微等一下...","msgId":"4848","chatId":"-1003877502911"}
+{"ts":"2026-04-25T15:26:20.613Z","botId":"1号機","text":"Gateway 正在重啟中，請稍候...\n\n貓爾摩斯正在重開機，等我一下。🦞","msgId":"4849","chatId":"-1003877502911"}

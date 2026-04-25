@@ -13,6 +13,15 @@
 - 3號機（孔大哥）狀態解除
 - 三機溝通機制已穩定
 
+### ✅ NVIDIA API Key 接入 OpenCode（2026-04-24 對話記錄提煉）
+- Key: `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`
+- OpenCode 設定檔：`~/.config/opencode/opencode.jsonc`（14 個可選模型）
+- macOS 終端機：`~/.zshrc` 已寫入 `nvidia` / `nvidia-code` / `nvidia-think` 指令
+- HTTP 200 可用模型：`meta/llama-3.3-70b-instruct`、`qwen/qwen3-next-80b-a3b-thinking`（推薦推理）、
+  `moonshotai/kimi-k2-thinking`、`deepseek-ai/deepseek-v3.2`、`qwen/qwen2.5-coder-32b-instruct`
+- 404 無法使用：Nemotron Ultra 253B（需特殊帳號授權）、Mistral Large 2
+- 注意：OpenCode 內 Kimi K2 Thinking 目前走 NVIDIA Key，非教練自費的 Kimi Key（兩者相同，無需額外付費）
+
 ### 📋 8.5MB 對話萃取進度
 
 **實際規模（2026-04-25 修正）：**

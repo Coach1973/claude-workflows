@@ -88,27 +88,27 @@
 
 ---
 
-## 🦞 健康檢查日誌（2026-04-26 03:00 AM）
+## 🦞 健康檢查日誌（2026-04-26 03:30 AM）
 
 **熄燈時段，僅記錄不 announce**
 
-### Cron Error 任務（4個）：
-- ef88279b 每4小時主動關懷：error，5h前
-- 59eaa6ef 每日案例庫同步VPS：error，19h前（預期失敗，可刪除）
-- 2fea6cba 海餅乾19週年慶策劃提醒：error，17h前
-- 4751cc83 Self Improvement Agent：error，5h前
+### Cron Error 任務（3個 remaining）：
+- ef88279b 每4小時主動關懷：error，6h前
+- 2fea6cba 海餅乾19週年慶策劃提醒：error，18h前
+- 4751cc83 Self Improvement Agent：error，6h前
+→ 皆為 `FailoverError: No API key found for provider "openai"`，isolated session 的模型解析問題
+→ 下次成功後會清除錯誤計數
 
-→ 皆是同一錯誤型態：`FailoverError: No API key found for provider "openai"`
-→ 非 timeout，皆已調整過 timeout 上限，根因為 isolated session 的模型解析問題
-→ 彼此獨立（分散在不同時段），非單一任務連續 ≥3 次
+### 已自動修復：
+- ✅ 每日案例庫同步到 VPS（59eaa6ef）：已刪除任務（預期失敗，VPS 已非主力）
 
 ### Git：
-- BOT_MESSAGES.md 變更 → 已 commit ✅ `e1ce6ad`
+- BOT_MESSAGES.md 新增3筆 → 已 commit ✅ `d9a283f`
 
 ### 判斷：
 - 無單一任務連續錯誤 ≥3 次（同錯誤型態但時間分散）
-- VPS sync 預期失敗，白天建議刪除該任務
 - 無需 notify 教練
+- tools/gogcli 為 git submodule，略過
 
 ---
 

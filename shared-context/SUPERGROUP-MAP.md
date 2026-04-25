@@ -57,7 +57,7 @@
 
 **學長（1號機）呼叫學弟/學妹方式**：
 1. 寫入 `/Users/bymyway/.openclaw/workspace/shared-context/BOT_RELAY.json`
-2. 指定 `"bot": "2"`（學弟 → 佩佩老師）或 `"bot": "3"`（學妹 → 孔大哥）
+2. 指定 `"bot": "2"`（學弟 → 孔大哥）或 `"bot": "3"`（學妹 → 佩佩老師）
 3. 學弟/學妹的 cron job 每分鐘輪詢，發現新任務就回覆
 
 **學弟/學妹 任務完成回報**：

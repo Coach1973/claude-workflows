@@ -7,12 +7,12 @@
 #
 # 全部都在 Mac 電腦裡（不同 port、不同 workspace）：
 #   1號機（.openclaw）：port 18789，bot @openclaw_macbook4_bot
-#   2號機（.openclaw-peipei）：port 18793，bot @coachwu_lenovo_bot
-#   3號機（.openclaw-kong）：port 18790，bot @CoachWu_openclaw_bot
+#   2號機（.openclaw-kong）：port 18790，bot @CoachWu_openclaw_bot（服務孔大哥）
+#   3號機（.openclaw-peipei）：port 18793，bot @coachwu_lenovo_bot（服務佩佩老師）
 #
-# Token 對照（大樹教練提供，2026-04-24，最終確認版）：
-#   8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8 → @coachwu_lenovo_bot（2號機 peipei，服務佩佩老師）
-#   8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ → @CoachWu_openclaw_bot（3號機 kong，服務孔大哥）
+# Token 對照（2026-04-25 最終版）：
+#   8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ → @CoachWu_openclaw_bot（2號機 kong，服務孔大哥）
+#   8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8 → @coachwu_lenovo_bot（3號機 peipei，服務佩佩老師）
 #
 # 測試結果（2026-04-24）：
 #   - HTTP /relay/botX endpoint → 404 Not Found（不是 REST API）
@@ -26,10 +26,10 @@ GROUP_ID="-1003877502911"
 case $BOT in
   1) echo "1號機使用本機 OpenClaw，請直接透過 Telegram 發送訊息至群組"
      exit 1 ;;
-  2) BOT_TOKEN="8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8"
-     MENTION="@coachwu_lenovo_bot" ;;
-  3) BOT_TOKEN="8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ"
-     MENTION="@CoachWu_openclaw_bot" ;;
+  2) BOT_TOKEN="8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ"
+     MENTION="@CoachWu_openclaw_bot" ;; # 2號機 = 孔大哥
+  3) BOT_TOKEN="8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8"
+     MENTION="@coachwu_lenovo_bot" ;; # 3號機 = 佩佩老師
   *) echo "未知 bot 號碼"; exit 1 ;;
 esac
 

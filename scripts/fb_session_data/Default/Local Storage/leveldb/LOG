@@ -1,3 +1,5 @@
-2026/04/24-06:00:12.504 2b69f3b Reusing MANIFEST /Users/bymyway/.openclaw/workspace/scripts/fb_session_data/Default/Local Storage/leveldb/MANIFEST-000001
-2026/04/24-06:00:12.506 2b69f3b Recovering log #44
-2026/04/24-06:00:12.507 2b69f3b Reusing old log /Users/bymyway/.openclaw/workspace/scripts/fb_session_data/Default/Local Storage/leveldb/000044.log 
+2026/04/25-06:02:16.030 2c7a337 Reusing MANIFEST /Users/bymyway/.openclaw/workspace/scripts/fb_session_data/Default/Local Storage/leveldb/MANIFEST-000001
+2026/04/25-06:02:16.033 2c7a337 Recovering log #44
+2026/04/25-06:02:16.033 2c7a337 Level-0 table #47: started
+2026/04/25-06:02:16.036 2c7a337 Level-0 table #47: 9180 bytes OK
+2026/04/25-06:02:16.037 2c7a337 Delete type=0 #44

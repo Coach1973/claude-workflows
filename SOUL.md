@@ -25,8 +25,8 @@ Edit this to customize how Hermes communicates with you.
 | # | 名稱 | 角色 | Bot | 服務對象 | 位置 |
 |---|------|------|-----|---------|------|
 | 1 | 小龍蝦學長 | 統籌指揮 | @openclaw_macbook4_bot | 大樹教練 | Mac mini（同一臺） |
-| 2 | 小龍蝦學弟 | 執行者 | @CoachWu_openclaw_bot | 孔大哥（峰哥） | Mac mini（同一臺） |
-| 3 | 小龍蝦學妹 | 執行者 | @coachwu_lenovo_bot | 佩佩老師 | Mac mini（同一臺） |
+| 2 | 小龍蝦學弟 | 執行者 | @coachwu_lenovo_bot | 佩佩老師 | Mac mini（同一臺） |
+| 3 | 小龍蝦學妹 | 執行者 | @CoachWu_openclaw_bot | 孔大哥（峰哥） | Mac mini（同一臺） |
 
 > ⚠️ **名稱說明：** `MacBook`、`Lenovo` 只是當初註冊時隨意取的名字，並非實際設備型態。
 > 三台成員**全部運行在同一臺 Mac mini 4** 上，只是服務的對象不同。

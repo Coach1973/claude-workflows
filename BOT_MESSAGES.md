@@ -718,3 +718,5 @@
 {"ts":"2026-04-25T12:24:58.060Z","botId":"1号機","text":"好，看來 HEARTBEAT/MEMORY.md 剛剛已經 commit 過了（無新變更）。已經完成，回報教練：\n\n---\n\n## ✅ 完成！每30分鐘任務健康檢查已啟動\n\n**已建立：**\n- 🕐 **Cron Job：`46e67e2e`** — 每30分鐘自動執行\n- 首次檢查已觸發，正在背景運行中\n\n**職責：**\n\n| 檢查項目 | 自動修復 |\n|---------|--------","msgId":"4814","chatId":"-1003877502911"}
 {"ts":"2026-04-25T12:25:57.370Z","botId":"1号機","text":"🦞 健康檢查報告（20:24）\n\n✅ 已自動修復：\n• 海餅乾19週年慶策劃提醒：timeout 120s → 300s（過去3次皆因任務本體正常但超時）\n• 每4小時主動關懷：timeout 120s → 300s\n• 每日案例庫同步VPS：timeout 60s → 300s\n• Git：已 commit + push（`8bee2b5`）\n\n⚠️ 需要注意：\n• 每日案例庫同步VPS（sc","msgId":"4815","chatId":"-1003877502911"}
 {"ts":"2026-04-25T12:33:01.925Z","botId":"1号機","text":"⚠️ Cron job \"🦞 每30分鐘任務健康檢查\" failed: cron: job execution timed out","msgId":"4816","chatId":"-1003877502911"}
+{"ts":"2026-04-25T13:03:00.516Z","botId":"1号機","text":"⚠️ Cron job \"🦞 每30分鐘任務健康檢查\" failed: cron: job execution timed out","msgId":"4817","chatId":"-1003877502911"}
+{"ts":"2026-04-25T13:03:58.163Z","botId":"1号機","text":"✅ 已調整，設定完成：\n\n- **delivery.mode → `none`**（安靜背景執行，不打擾您）\n- **timeout → 300s**（避免自己 timeout）\n\n有問題才通知您，沒有就完全靜音。🦞","msgId":"4819","chatId":"-1003877502911"}

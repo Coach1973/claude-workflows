@@ -1,1 +1,18 @@
-{"ts":"2026-04-24T06:20:00.000Z","messages":[],"last_processed":{"1":"330","2":"501","3":"328"}}
+{
+ "ts": "2026-04-25T16:48:00+08:00",
+ "messages": [
+   {
+     "id": "test-002",
+     "from": "學長",
+     "bot": "3",
+     "content": "學妹，這是 Relay 測試，請在頂級特助分工群回覆：『學妹收到 Relay 測試，運作正常』",
+     "timestamp": "2026-04-25T16:48:00+08:00",
+     "status": "pending"
+   }
+ ],
+ "last_processed": {
+    "1": "test-001",
+    "2": "test-001",
+    "3": "test-002-processed"
+  }
+}

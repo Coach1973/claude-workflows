@@ -2,6 +2,15 @@
 
 > 📌 2026-04-25 20:25 更新
 
+## 🔴 新視窗第一件事
+
+**教練已在桌面完成金句人工遴選，請立刻讀取並整理：**
+- 檔案：`/Users/bymyway/Desktop/金句候選清單_教練篩選.md`（143行）
+- 格式：表格，欄位含「教練判斷」（✅保留 / ❌刪除 / ⭐精華）
+- 任務：讀取 → 提煉出教練標記 ✅ 和 ⭐ 的金句 → 整合進 `COACH_GOLDEN_QUOTES_APRIL.md` → git commit
+
+---
+
 ## 🔴 當前狀態
 
 ### ✅ 模型鐵律確認（2026-04-25）
@@ -85,6 +94,36 @@
 - shared-context/PROGRESS-2026-04-25-FINAL.md（新）
 
 ⚠️ 白天需 commit
+
+---
+
+## 🦞 健康檢查日誌（2026-04-26 05:00 AM）
+
+**熄燈時段，僅記錄不 announce**
+
+### Cron Error 任務（2個 remaining）：
+- `2fea6cba` 海餅乾19週年慶策劃提醒：error，19h前
+- `4751cc83` Self Improvement Agent：error，7h前
+→ 皆為 `FailoverError: No API key found for provider "openai"`（isolated session 模型解析已知限制）
+→ 非 timeout 問題（timeout 已調整為 300s）
+→ 下次成功後會清除錯誤計數
+→ **無單一任務連續錯誤 ≥3 次，無需 notify 教練**
+
+### 已確認修復：
+- ✅ ef88279b 每4小時主動關懷：已恢復 ok（59m前成功）
+- ✅ 每日案例庫同步VPS：已刪除任務
+
+### Git：
+- tools/gogcli 為 git submodule，略過
+- .lessons_upload/ 為 untracked，略過
+- main repo 無變更
+
+### 背景工作停滯觀察：
+- ⬜ 8.5MB 對話提煉：已萃取三大文件（108KB+132KB+12KB），待建立自動化流程
+- ⬜ 海餅乾金句庫：持續萃取目標 200-300 條
+→ 兩項皆非 cron 可自動化的項目，需手動建立流程
+
+**判斷：無需 notify 教練，系統正常運行中**
 
 ---
 

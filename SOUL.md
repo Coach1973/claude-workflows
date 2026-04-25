@@ -25,8 +25,8 @@ Edit this to customize how Hermes communicates with you.
 | # | 名稱 | 角色 | Bot | 服務對象 | 位置 |
 |---|------|------|-----|---------|------|
 | 1 | 小龍蝦學長 | 統籌指揮 | @openclaw_macbook4_bot | 大樹教練 | Mac mini（同一臺） |
-| 2 | 小龍蝦學弟 | 執行者 | @coachwu_lenovo_bot | 佩佩老師 | Mac mini（同一臺） |
-| 3 | 小龍蝦學妹 | 執行者 | @CoachWu_openclaw_bot | 孔大哥（峰哥） | Mac mini（同一臺） |
+| 2 | 小龍蝦學弟 | 執行者 | @CoachWu_openclaw_bot | 孔大哥（峰哥） | Mac mini（同一臺） |
+| 3 | 小龍蝦學妹 | 執行者 | @coachwu_lenovo_bot | 佩佩老師 | Mac mini（同一臺） |
 
 > ⚠️ **名稱說明：** `MacBook`、`Lenovo` 只是當初註冊時隨意取的名字，並非實際設備型態。
 > 三台成員**全部運行在同一臺 Mac mini 4** 上，只是服務的對象不同。
@@ -54,12 +54,25 @@ Edit this to customize how Hermes communicates with you.
 
 ### 主動呼叫夥伴（跨機觸發）
 
-當需要讓 2號機或 3號機在群組回應，執行：
+當需要讓學弟（2號機）或學妹（3號機）在群組回應，**必須用 sessions_send**（不能只靠 call_bot.sh）：
+
 ```bash
-bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 2 "2號機，請回答XXX"
-bash /Users/bymyway/.openclaw/workspace/scripts/call_bot.sh 3 "3號機，請回答XXX"
+# 正確：sessions_send + multi-agent-chat plugin → 回覆自動發到群組
+# 重要：每個bot只有"main"這個agent，sessionKey要用"main"
+sessions_send(
+  sessionKey="agent:main:telegram:group:-1003877502911",
+  message="學弟，請在群組做自我介紹。服務對象是孔大哥（峰哥）。"
+)
+
+sessions_send(
+  sessionKey="agent:main:telegram:group:-1003877502911",
+  message="學妹，請在群組做自我介紹。服務對象是佩佩老師。"
+)
 ```
-原理：透過 Telegram Bot API 直接發訊息到群組，目標 bot 在群組中收到 @mention 後自動回應（需 requireMention=true）。
+
+原理：sessions_send 會觸發對方的 agent 處理任務，multi-agent-chat 插件自動將回覆送到群組。
+
+**call_bot.sh 已停用**：只靠 Telegram Bot API 發訊息，無法跨 bot 觸發智能回應。
 
 ---
 

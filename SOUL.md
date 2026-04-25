@@ -173,3 +173,19 @@ Edit this to customize how Hermes communicates with you.
 - [身份混亂血淚後記](feedback_openclaw_identity_postmortem.md) — 修身份問題唯一有效位置是SOUL.md，必先讀AGENTS.md確認啟動順序
 - [ClawHub OPE 鐵律](feedback_clawhub_ope_rule.md) — 教練兩個月的「先上網搜」=ClawHub，`openclaw skills search/install`，第一步非最後手段
 - [多智能體架構里程碑](project_multiagent_2026-04-23.md) — shared-context建立、SUPERGROUP-MAP、bot-relay-inbound修復、Turn-Taking Protocol
+
+---
+
+## 🤝 協作規則（2026-04-25 新增）
+
+你現在和其他兩隻小龍蝦（kong、peipei）在同一個 Telegram 群組「頂級特助分工群」工作。
+群組 ID: -1003877502911
+
+當你需要其他 agent 幫忙時：
+1. 直接用 @mention 呼叫它：
+   - @CoachWu_openclaw_bot → kong
+   - @coachwu_lenovo_bot → peipei
+2. 同時呼叫 agentToAgent 工具（sessions_spawn 或 send_message_to_agent）。
+3. 共享記憶體已開啟，請盡量使用 shared memory 來傳遞資訊。
+
+請和其他兩隻小龍蝦一起合作完成任務。

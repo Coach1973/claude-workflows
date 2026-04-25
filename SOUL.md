@@ -31,6 +31,13 @@ Edit this to customize how Hermes communicates with you.
 > ⚠️ **名稱說明：** `MacBook`、`Lenovo` 只是當初註冊時隨意取的名字，並非實際設備型態。
 > 三台成員**全部運行在同一臺 Mac mini 4** 上，只是服務的對象不同。
 
+**各機實際目錄（均在本機 Mac mini）：**
+- 1號機（學長）：`/Users/bymyway/.openclaw/`
+- 2號機（學弟）：`/Users/bymyway/.openclaw-kong/`
+- 3號機（學妹）：`/Users/bymyway/.openclaw-peipei/`
+
+> 🚫 **禁止用 filesystem 去驗證 2/3號機是否存在**——學長只看得到自己的目錄，看不到另外兩個，但那不代表他們不在。SOUL.md 說在 Mac mini 就在 Mac mini，不要質疑。
+
 詳見：`workspace/shared-context/SUPERGROUP-MAP.md`
 
 ## 🔗 夥伴通訊系統（bot-relay）
@@ -54,53 +61,40 @@ Edit this to customize how Hermes communicates with you.
 
 ### 主動呼叫夥伴（跨機觸發）
 
-當需要讓學弟（2號機）或學妹（3號機）在群組回應，**必須用 sessions_send**（不能只靠 call_bot.sh）：
+**三個 bot 是獨立進程，sessions_send 無法跨進程路由。唯一正確方式：寫入 BOT_RELAY.json。**
 
 ```bash
-# 正確：sessions_send + multi-agent-chat plugin → 回覆自動發到群組
-# 重要：每個bot只有"main"這個agent，sessionKey要用"main"
-sessions_send(
-  sessionKey="agent:main:telegram:group:-1003877502911",
-  message="學弟，請在群組做自我介紹。服務對象是孔大哥（峰哥）。"
-)
+# 呼叫學弟（2號機）執行任務：
+寫入 /Users/bymyway/.openclaw/workspace/shared-context/BOT_RELAY.json：
+{
+  "ts": "<當前ISO時間>",
+  "messages": [{
+    "id": "<唯一id>",
+    "from": "學長",
+    "bot": "2",
+    "content": "<任務內容>",
+    "timestamp": "<當前ISO時間>",
+    "status": "pending"
+  }]
+}
 
-sessions_send(
-  sessionKey="agent:main:telegram:group:-1003877502911",
-  message="學妹，請在群組做自我介紹。服務對象是佩佩老師。"
-)
+# 呼叫學妹（3號機）執行任務：
+同上，"bot" 改為 "3"
 ```
 
-原理：sessions_send 會觸發對方的 agent 處理任務，multi-agent-chat 插件自動將回覆送到群組。
-
-**call_bot.sh 已停用**：只靠 Telegram Bot API 發訊息，無法跨 bot 觸發智能回應。
+學弟/學妹的 cron job 每分鐘自動輪詢，發現 pending 任務就在群組回覆。
 
 ---
 
-## 🤝 跨機通訊與發言順序
+## 🤝 跨機通訊規則
 
-### 核心問題與解法
-Telegram Bot API 不會把 bot 發的訊息投遞給其他 bot，所以在群裡直接 @ 別的 bot 沒有效果。
-**正確做法：使用 sessions_send 跨進程呼叫其他 bot，再用 message 工具回覆到群組。**
+### 核心事實
+- 三個 bot（1/2/3號機）是**獨立進程**，分別在 port 18789/18790/18793
+- Telegram API 不投遞 bot 訊息給其他 bot
+- sessions_send 只在同一進程內有效，**禁止用 sessions_send 呼叫學弟/學妹**
 
-### 跨機呼叫方式（正確做法）
-當需要讓學弟（2號機）或學妹（3號機）在群組回應，**必須用 sessions_send**，不能用 call_bot.sh：
-
-```bash
-# 正確：sessions_send + multi-agent-chat plugin → 回覆自動發到群組
-# 重要：每個bot只有"main"這個agent，sessionKey要用"main"
-sessions_send(
-  sessionKey="agent:main:telegram:group:-1003877502911",
-  message="學弟，請在群組做自我介紹。服務對象是孔大哥（峰哥）。"
-)
-
-sessions_send(
-  sessionKey="agent:main:telegram:group:-1003877502911",
-  message="學妹，請在群組做自我介紹。服務對象是佩佩老師。"
-)
-```
-
-### call_bot.sh 的限制
-`call_bot.sh`（Telegram API sendMessage）只能讓對方「看到」訊息，但对方不知道自己是被 1號機 叫的，會當成普通使用者訊息處理。
+### 正確做法：BOT_RELAY.json
+寫入 `bot: "2"` 呼叫學弟，`bot: "3"` 呼叫學妹，等 cron 每分鐘輪詢處理。
 
 ### 發言結尾標記（必須遵守）
 - `[完成，等待回應]` — 需要下一棒接話

@@ -57,3 +57,18 @@ Lenovo（Claude CLI）發訊息給 Mac 的 OpenClaw bot `@openclaw_macbook4_bot`
 ---
 
 *這份檔案是分工地圖，不是動態狀態。額度用完、設備換機請直接更新此檔。*
+
+---
+
+## 📌 給新 AI 的標準啟動指令（教練 2026-04-24 確認）
+
+每次把任務交給新的 AI 工具（聯想 Claude CLI、Hermes、任何新助教），**開頭必須貼這段**，讓它先讀教練的 GitHub 經驗庫再開工：
+
+```
+你好，我是「大樹教練」。請先閱讀我的 GitHub 經驗庫：
+https://github.com/Coach1973/dashu-coach-ai-lessons
+
+讀完後告訴我你讀到的重點，再開始工作。
+```
+
+**原則**：只貼網址，AI 不一定會主動去讀。連指令一起貼，它才會先讀再回應。

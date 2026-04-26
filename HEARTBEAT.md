@@ -1,3 +1,18 @@
+🦞 健康檢查報告（19:30）
+
+## ⚠️ 發現系統問題（需教練裁決）
+
+**Telegram 傳送失敗（minimax-portal 模式）**
+- 受影響任務：FB 生日祝福、海餅乾精神複習、19週年倒數/策劃提醒、YouTube 頻道掃描
+- 錯誤訊息：`Telegram bot token missing for account "default"`
+- 分析：任務本身執行成功，但使用 minimax-portal provider 時，delivery 模組找不到 Telegram token（openclaw.json 已有 bot_main 設定，但 provider 卻找 "default" 帳號）
+- 前天這些任務用 litellm provider 正常，明天 06:00 可能又會成功
+- **需要裁決**：是否要將這些任務的 delivery 改回 litellm，或有其他修復方式？
+
+✅ Git：無需 commit（僅有 tools/gogcli 為外部repo，不加入）
+
+---
+
 🦞 健康檢查報告（18:36）
 
 ✅ Git：已 commit + push（75e6daf）

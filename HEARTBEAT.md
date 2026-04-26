@@ -28,7 +28,7 @@
 | 時間 | 做了什麼 |
 |------|---------|
 | 2026-04-26 13:03 | 🆕 建立 HB.md（心願驅動檔）+ 設定每15分鐘心跳任務 |
-| 2026-04-26 13:15 | 🔍 檢查 OpenClaw Skills 狀態（28/61 ready）<br>📡 搜尋 ClawHub「AI agent」無結果<br>✅ 分工群無待處理任務 |
+| 2026-04-26 13:36 | 🆕 安裝 ClawHub 技能：agent-group + agent-collab<br>📖 研究 agent-collab 三模式框架（Dispatch/Collaborate/Direct Chat）<br>🔗 更新 SUPERGROUP-MAP.md 整合協作框架參考
 
 ---
 

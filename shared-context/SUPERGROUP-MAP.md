@@ -18,3 +18,16 @@
 - requireMention 已關閉，三機都能看到所有群組訊息
 - 用 sessions_send / sessions_spawn 跨機溝通
 - 優先使用 shared memory 共享資訊
+
+## 協作框架參考（agent-collab Skill）
+已安裝 agent-collab 技能，提供三種協作模式：
+- **Dispatch 模式**：一次性任務，用 sessions_spawn + mode="run"
+- **Collaborate 模式**：多輪對話，用 sessions_spawn + mode="session" + sessions_send
+- **Direct Chat 模式**：用戶直接找對應 Bot 深入討論
+
+目前分工群採用 **Dispatch + Collaborate 混合模式**：
+- 教練下指令 → 學長統籌 → spawn 學弟/學妹執行 → 結果回到學長 → 統一回報教練
+
+## 安裝的新技能（2026-04-26）
+- ✅ agent-group（極簡多Agent群組）
+- ✅ agent-collab（跨部門協作框架）

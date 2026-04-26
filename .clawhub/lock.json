@@ -48,6 +48,14 @@
     "relay-to-agent": {
       "version": "0.0.1",
       "installedAt": 1776981483941
+    },
+    "agent-group": {
+      "version": "1.0.3",
+      "installedAt": 1777181825897
+    },
+    "agent-collab": {
+      "version": "1.0.0",
+      "installedAt": 1777181825905
     }
   }
 }

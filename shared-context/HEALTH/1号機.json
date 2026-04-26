@@ -1,0 +1,24 @@
+{
+  "machine": "1号機",
+  "bot": "@openclaw_macbook4_bot",
+  "owner": "大樹教練",
+  "last_updated": "2026-04-27T04:22:00+08:00",
+  "conversation": {
+    "turns": 3,
+    "estimated_tokens": 5000,
+    "refresh_threshold": 40,
+    "warning_threshold": 30,
+    "alert_threshold": 20
+  },
+  "status": "🟢 健康",
+  "flags": {
+    "needs_commit": false,
+    "needs_handoff": false,
+    "needs_new_window": false
+  },
+  "heartbeat": {
+    "count_since_start": 0,
+    "last_status_report": null,
+    "next_scheduled_report": null
+  }
+}

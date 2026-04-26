@@ -1,3 +1,18 @@
+🦞 健康檢查摘要（22:06）
+
+## Cron 狀態
+- 所有 jobs 的 `consecutiveErrors` 均為 0，無需自動修復
+- 4 個 error 狀態的 jobs（Telegram delivery）已知問題，已於 19:30 報告，等待教練裁決
+- 腳本本身正常，問題出在 delivery 層（minimax-portal token 找不到 default 帳號）
+
+## Git 狀態
+- ✅ BOT_MESSAGES.md 已 commit：`11c27ccc`
+
+## ⬜ 待追蹤
+- Telegram 傳送失敗（minimax-portal）：已於 19:30 報告，等待教練裁決
+
+---
+
 🦞 今晚自我優化摘要（22:00）
 
 ## 🔧 今晚改進項目

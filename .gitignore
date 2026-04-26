@@ -21,3 +21,4 @@ scripts/fb_session_data/
 # Compiled
 __pycache__/
 *.pyc
+scripts/fb_session_data/

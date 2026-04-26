@@ -13,6 +13,16 @@
 - Primary 模型：google/gemini-3.1-pro-preview
 - 名稱對等：Telegram = 小龍蝦 = 電報
 
+## 心跳執行摘要（17:40）
+
+- **任務**：頂級助教守則.md → 第二優先：Skills 建立
+- **動作**：盤點現有 Skills，發現缺少「頂級特助安裝 SOP」
+- **結果**：建立 `skills/onboarding_script/INSTALL_SOP.md` v0.1 草稿（2600字），涵蓋五階段安裝流程（OpenClaw安裝→Bot設定→身份設定→Git備份→多機連接）
+- **下一步**：補充截圖說明、測試 SOP 是否可行、補充 MiniMax API Key 申請步驟
+- **Commit Hash**：`48a7b72`
+
+---
+
 ## 心跳執行摘要（17:07）
 
 - **任務**：頂級助教守則.md 第二優先，第一章節

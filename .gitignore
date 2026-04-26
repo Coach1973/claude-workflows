@@ -1,0 +1,23 @@
+# Browser session data (auto-generated, never commit)
+scripts/fb_session_data/
+
+# Facebook/Meta browser data
+**/Cache/
+**/Code Cache/
+**/GPUCache/
+**/Local Storage/
+**/Session Storage/
+**/IndexedDB/
+**/DawnWebGPUCache/
+**/GraphiteDawnCache/
+
+# OS artifacts
+.DS_Store
+*.log
+
+# Uploads
+.lessons_upload/
+
+# Compiled
+__pycache__/
+*.pyc

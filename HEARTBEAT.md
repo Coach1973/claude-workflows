@@ -1,3 +1,19 @@
+🦞 健康檢查摘要（00:30）
+
+## Cron 狀態
+- ✅ 所有 jobs 正常運行，consecutiveErrors 均為 0
+- ⏸️ 4 個 error 狀態已知（Telegram minimax-portal delivery 問題，19:30 已報告教練，待裁決）
+- ✅ 無 timeout 需調整
+
+## Git 狀態
+- ✅ 已同步（tools/gogcli 為外部 repo 不需 commit）
+
+## ⬜ 待追蹤
+- Telegram 傳送失敗（minimax-portal）：19:30 已報告，等待教練裁決
+- Self Improvement Agent 隔離 session 正常 false alarm（忽略）
+
+---
+
 🦞 健康檢查摘要（00:02）
 
 ## 心跳執行摘要（00:02）

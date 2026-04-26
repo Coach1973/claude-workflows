@@ -66,6 +66,17 @@
 
 ---
 
+## 心跳執行摘要（20:09）
+
+- **任務**：HB.md 第三優先 → 學弟妹系統主動性檢查
+- **動作**：檢查 VPS 上學弟/學妹的 HB.md 現況
+- **發現**：學弟/學妹 VPS workspace（/root/.openclaw/workspace/）**沒有 HB.md**，缺乏主動心跳驅動機制
+- **結果**：建立 `skills/onboarding_script/HB_Member_Template.md` 草稿，提供學弟/學妹複製使用的 HB.md 範本（包含三大優先：USER.md 建立、每日主動簡報、記憶蒸餾）
+- **下一步**：需手動將範本部署到 VPS 學弟/學妹 workspace，或由教練授權後協助部署
+- **Commit Hash**：`8a20cb1`
+
+---
+
 ## 心跳執行摘要（19:38）
 
 - **任務**：HB.md 第一優先（頂級助教守則）→ 確認現況

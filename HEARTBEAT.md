@@ -1,3 +1,23 @@
+🦞 今晚自我優化摘要（22:00）
+
+## 🔧 今晚改進項目
+
+1. **AGENTS.md：新增 Subagent 派遣前強制檢查清單**（學妹幻覺事件後，2026-04-26）
+   - 每次 sessions_spawn 前必須：明確區分已知/未知事實、禁止 subagent 捏造未知背景
+   - 所有 subagent 回報的新資訊，須經教練轉述確認才能寫入記憶
+
+2. **AGENTS.md：修正團隊表格**
+   - 學弟（2號機）→ @coachwu_lenovo_bot → 孔大哥（峯哥）
+   - 學妹（3號機）→ @CoachWu_openclaw_bot → 佩佩老師
+   - （之前.bot 名字對調了，現在已修正）
+
+3. **AGENTS.md：新增已知 false alarm 說明**
+   - Self Improvement Agent cron（4751cc83）的 `FailoverError: No API key` 是隔離 session 正常行為，直接忽略
+
+4. **持續追蹤（未解決）**：Telegram 傳送失敗（minimax-portal），已記錄於 19:30 報告，等待教練裁決
+
+---
+
 🦞 健康檢查報告（21:34）
 
 ## 心跳執行摘要（21:34）

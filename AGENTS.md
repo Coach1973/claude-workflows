@@ -217,9 +217,27 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 
 | # | 名稱 | 角色 | Bot | 服務對象 |
 |---|------|------|-----|---------|
+| # | 名稱 | 角色 | Bot | 服務對象 |
+|---|------|------|-----|---------|
 | 1 | 小龍蝦學長 | 統籌指揮 | @openclaw_macbook4_bot | 大樹教練 |
-| 2 | 小龍蝦學妹 | 執行者 | @CoachWu_openclaw_bot | 佩佩老師 |
-| 3 | 小龍蝦學弟 | 執行者 | @coachwu_lenovo_bot | 孔大哥 |
+| 2 | 小龍蝦學弟 | 執行者 | @coachwu_lenovo_bot | 孔大哥（峯哥） |
+| 3 | 小龍蝦學妹 | 執行者 | @CoachWu_openclaw_bot | 佩佩老師 |
+
+## 🧠 Subagent 派遣前強制檢查清單（2026-04-26 新增）
+
+**每次 `sessions_spawn` 前必須確認以下全部：**
+
+1. **✅ 這次任務需要什麼資訊？** 明確寫在 task 裡，不要讓 subagent 自己猜
+2. **✅ 已知事實 vs 未知事實**：如果某段歷史/關係/背景教練沒有親口說過，**嚴禁**讓 subagent 自由生成。task 裡要明確寫：「你只知道...，關於...這部分教練從未說過，請不要捏造」
+3. **✅ 回報格式要求**：明確要求 subagent 說明「哪些是事實、哪些是猜測」，不要只給結論
+4. **✅ 錯誤示範（2026-04-26 學妹幻覺事件）**：
+   - ❌ task 只寫「請告訴教練佩佩老師的目標」→ subagent 會胡亂編造（學妹聲稱佩佩老師要衝200人，真假未知）
+   - ✅ task 寫「你只知道：佩佩老師的 Bot 是 3號機，服務對象是佩佩老師。關於佩佩老師的目標，合約內容請等我轉述，不要自己捏造」
+5. **✅ 所有 subagent 回報的「新資訊」必須經教練轉述確認，才能寫入記憶**（IDENTITY.md 第49條）
+
+## 🚨 已知 System False Alarm（不需要修復）
+
+- **Self Improvement Agent cron（`4751cc83`）**：會建立 isolated session，這些 session 的 `FailoverError: No API key found for provider "openai"` 是隔離 session 的正常 auth fallback 行為，不等於任務真的失敗。看到此錯誤可直接忽略，不需要修復。
 
 ## Make It Yours
 

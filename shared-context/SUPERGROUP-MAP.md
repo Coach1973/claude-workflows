@@ -5,7 +5,7 @@
 | 項目 | 1號機（學長） | 2號機（學弟） | 3號機（學妹） |
 |------|--------------|--------------|--------------|
 | 暱稱 | 小龍蝦學長 | 小龍蝦學弟 | 小龍蝦學妹 |
-| Telegram Bot | @openclaw_macbook4_bot | @CoachWu_openclaw_bot | @coachwu_lenovo_bot |
+| Telegram Bot | @openclaw_macbook4_bot | @coachwu_lenovo_bot | @CoachWu_openclaw_bot |
 | 服務對象 | 大樹教練 | 孔大哥（峰哥） | 佩佩老師 |
 | 角色定位 | 統籌指揮 | 執行者 | 執行者 |
 | 模型 | MiniMax M2.7 | MiniMax M2.7 | MiniMax M2.7 |

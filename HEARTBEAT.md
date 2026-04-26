@@ -51,3 +51,23 @@
 
 - 心跳任務 ID：768246fb-0b1a-409a-985c-f7419954c29c
 - 下一個心跳：15 分鐘後
+
+---
+
+## 🔧 健康檢查記錄（2026-04-26 14:41）
+
+**發現並自動修復的問題：**
+
+1. **根本原因**：6 個 cron jobs 沒有設定 `account` 欄位，gateway 嘗試使用不存在的 `default` 帳號，導致所有任務失敗
+2. **錯誤訊息**：`Telegram bot token missing for account "default"`
+3. **修復方式**：直接寫入 jobs.json，為每個 job 補上 `delivery.accountId: bot_main`，並清除 `consecutiveErrors` 計數
+
+**已修復的任務：**
+- Self Improvement Agent（每晚22:00）
+- FB 每日生日祝福（每天06:00）
+- 海餅乾精神每日複習（每天06:00）
+- 19週年倒數計時（每天09:00）
+- 19週年策劃提醒（每天10:00）
+- YouTube頻道掃描（每天12:30）
+
+**⚠️ 待觀察**：19週年倒數任務（89106297）為 systemEvent 類型，無法用 `cron edit` 修改，故直接編輯 jobs.json。未來新增 cron jobs 請務必指定 `--account bot_main`。

@@ -39,6 +39,7 @@
 
 | 檔案 | 用途 |
 |------|------|
+| `SHARED_GROUP_MEMORY.md` | 主共享記憶（所有人讀取確認身份與規則） |
 | `shared-context/BOT_RELAY.json` | 學長下達指令給學弟/學妹 |
 | `shared-context/BOT_MESSAGES.md` | 三機所有回覆的共享日誌 |
 
@@ -66,15 +67,20 @@
 
 ---
 
-## 🔧 共享檔案路徑
+## 🔧 共享檔案路徑（2026-04-26 確認）
 
-所有三機都在同一台 Mac mini，共享以下路徑：
+三機都在同一台 Mac mini，共享以下檔案：
 
 ```
-/Users/bymyway/.openclaw/workspace/shared-context/
-  ├── BOT_RELAY.json      # 學長指令下達（學弟/學妹被動讀取）
-  └── BOT_MESSAGES.md     # 三機回覆日誌（所有人讀寫）
+~/.openclaw/workspace/
+  └── SHARED_GROUP_MEMORY.md   ← ✅ 主共享記憶（所有人讀取確認身份與規則）
+
+~/.openclaw/workspace/shared-context/
+  ├── BOT_MESSAGES.md          ← ✅ 三機回覆共享日誌（所有人讀寫）
+  └── BOT_RELAY.json           ← ✅ 學長指令下達（學弟/學妹被動讀取）
 ```
+
+⚠️ **重要澄清**：沒有所謂的 `GROUP_IDENTITY.md` 這個檔案。如果有 Bot 提到這個檔名，代表該機器的認知有誤，請立即以本檔（`SHARED_GROUP_MEMORY.md`）為準校正。
 
 ---
 

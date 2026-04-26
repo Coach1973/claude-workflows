@@ -6,7 +6,7 @@
 - **動作**：在 INSTALL_SOP.md 新增「安裝完成檢查清單」區塊（6大類共16項），涵蓋基本功能、Bot連接、身份設定、GitHub備份、網路權限等逐項確認清單
 - **結果**：將「建立安裝完成檢查清單」從待辦改為已完成，INSTALL_SOP.md 實用性提升
 - **下一步**：可繼續補充截圖說明（但需遵守不禁耗 Token 原則），或推進部署 HB_Member_Template 到 VPS
-- **Commit Hash**：待 Git commit
+- **Commit Hash**：`871bff7`
 
 ---
 

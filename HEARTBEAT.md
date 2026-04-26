@@ -31,6 +31,9 @@
 | 2026-04-26 13:36 | 🆕 安裝 ClawHub 技能：agent-group + agent-collab<br>📖 研究 agent-collab 三模式框架（Dispatch/Collaborate/Direct Chat）<br>🔗 更新 SUPERGROUP-MAP.md 整合協作框架參考
 
 ---
+| 2026-04-26 13:45 | 🔴 發現系統問題：多個 cron jobs 處於 error 狀態<br>⚠️ 錯誤原因：「Telegram bot token missing for account 'default'」<br>📋 受影響任務：每4小時主動關懷、YouTube 頻道掃描、海餅乾精神每日複習、FB 每日生日祝福、19週年慶策劃提醒、每30分鐘任務健康檢查<br>🔍 根本原因：設定檔default帳號是「bot_main」但cron job可能使用「default」<br>💡 待確認：是否需要將cron jobs的target account改為「bot_main」
+
+---
 
 ## 🚀 目標心跳驅動系統（已啟用）
 

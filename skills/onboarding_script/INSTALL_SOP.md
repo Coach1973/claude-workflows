@@ -226,6 +226,52 @@ A：回 BotFather 輸入 `/mybots`，選擇你的 Bot，點「API Token」。
 
 ---
 
+## 安裝後常見問題排解
+
+### Q1：Telegram Bot 沒有回應
+
+**檢查順序：**
+1. 在 Telegram 確認 Bot 已經 `/start`（傳送 /start 給 Bot）
+2. 回到 OpenClaw 設定，確認 Bot API Token 有正確貼上
+3. 檢查網路是否正常（可以打開瀏覽器測試）
+4. 嘗試重啟 OpenClaw：在終端機輸入 `openclaw gateway restart`
+
+### Q2：OpenClaw 說「找不到指令」
+
+**原因：** 終端機還沒重新開啟，安裝的路徑還沒生效
+**解決：** 按 `Cmd (⌘) + Q` 關閉終端機，然後重新打開終端機再試
+
+### Q3：第一次開啟看到「無法識別開發者」警告
+
+**這是 Mac 的安全機制，不是錯誤！**
+解決方式：
+1. 按住 `Control (⌃)` 鍵不放
+2. 同時點擊 OpenClaw 圖示
+3. 選擇「打開」
+4. 再點一次「打開」確認
+
+### Q4：Bot 有回應但 AI 不回答問題
+
+**檢查順序：**
+1. 確認已經設定 AI API Key（MiniMax / OpenAI / Claude 等）
+2. 在 OpenClaw 設定確認 API Key 有正確輸入
+3. 檢查 API Key 是否還有額度（可以去 provider 網站查）
+4. 看看錯誤訊息說什麼，貼給助教幫你判斷
+
+### Q5：設定檔不見了或亂掉了
+
+**預防：** 建議把設定檔上傳到 GitHub 備份（參考第四階段）
+**救回：** 如果有備份，在終端機執行 `cd ~/.openclaw/workspace && git pull origin main`
+
+### Q6：畫面一直轉圈圈或當機
+
+1. 等 30 秒看看是否還活著（有時候只是在載入）
+2. 如果真的沒反應，按 `Cmd (⌘) + Option (⌥) + Esc` 強制結束 OpenClaw
+3. 重新開啟 OpenClaw
+4. 如果常常當機，嘗試重開 Mac
+
+---
+
 ## 安裝完成檢查清單
 
 拿這張清單逐項確認，全部打勾代表安裝成功！

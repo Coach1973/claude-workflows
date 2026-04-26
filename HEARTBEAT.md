@@ -81,3 +81,12 @@
 - 執行完通報 Telegram（Chat ID: 6124913915）
 - 預估超過 5 萬 Token 先回報教練確認
 - 不要讀大型 memory 檔（會造成 Gemini 空白回應）
+
+---
+
+## 心跳執行（2026-04-27 03:35）
+
+**動作**：檢查 HB.md 優先任務 + 更新 PROMISES.md #20 狀態
+**具體行動**：確認重生SOP（#20）已實際寫入HEARTBEAT.md但PROMISES.md仍標「待執行」，更新為✅完成
+**Commit Hash**：`081a7eb`
+**花費**：極少量 Token（純文字比對+編輯）

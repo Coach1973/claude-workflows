@@ -694,3 +694,119 @@ AI/
   ❌ LuluTechnology: ERROR: [youtube:tab] @LuluTechnology: This channel does not have a videos tab
   ❌ aaron-1215: ERROR: [youtube:tab] @aaron-1215: Unable to download API page: HTTP Error 404: N
   ❌ 綠色火車: ERROR: [youtube:tab] @greentrainTW: Unable to download API page: HTTP Error 404:
+YouTube 2026/04/27
+
+AI/
+• [@inspiredcanvas] August 26, 2020
+  https://www.youtube.com/watch?v=HjlzDjWMXLw
+• [@inspiredcanvas] MVI 3872
+  https://www.youtube.com/watch?v=qp5wq1Z_5bY
+• [@KOCPC] 大疆首款全景空拍機 DJI AVATA 360 開箱：8K 60FPS超高畫質、單鏡/全景一機搞定，價格太超值！
+  https://www.youtube.com/watch?v=gq-tc1duFes
+• [@KOCPC] 別再修龍蝦了！最聰明 Hermes Agent 全平台安裝全攻略，自我學習進化＋長期記憶一次搞定！（免費Api Key 設定、龍蝦轉移技巧、Telegram設定踩坑解決）
+  https://www.youtube.com/watch?v=Gjd9JoiTZds
+• [@panscischool] 10分鐘搞懂  Claude 基礎設定！Project、Skills、Style 又是什麼？讓 AI 成為最強代理人！｜泛科學院
+  https://www.youtube.com/watch?v=5Aha8QOVke4
+• [@panscischool] 最聰明的AI工具？Claude 免費版 5 大神功能：一鍵生成 Excel 分析與 Office 檔案，上班族必看的 AI 省錢工作流！｜泛科學院
+  https://www.youtube.com/watch?v=114H9EWKfzM
+• [@apple-dad] MacBook Neo is surprisingly... Great?
+  https://www.youtube.com/watch?v=yTTdfzZzhKI
+• [@apple-dad] Black iPhone 18 Pro? Mac Neo for $299?
+  https://www.youtube.com/watch?v=GbJxjJzTjts
+• [@rickhau99] 3 款不得不裝的 Windows 應用｜GitHub 千星應用｜垃圾清理｜卸載｜監控
+  https://www.youtube.com/watch?v=m0SVGQACXHY
+• [@rickhau99] Top AI tools you absolutely must have | GitHub starred application | Cross-platform application
+  https://www.youtube.com/watch?v=BAPm1e5z3w0
+• [@MeticsMedia] The Ultimate Beginner’s Guide to Vibe Coding
+  https://www.youtube.com/watch?v=-VuZmoc-Sq8
+• [@MeticsMedia] Hermes Agent: The Ultimate Beginner’s Guide
+  https://www.youtube.com/watch?v=CwPUOVUdApE
+• [@AlanChen] 孙正义疯了！借100亿再押OpenAI，杠杆加到银河系！盘后狂飙15%，英特尔起死回生
+  https://www.youtube.com/watch?v=2WzLeN9bQ4U
+• [@AlanChen] 老车主全被坑了？财报马斯克亲口承认：这几百万辆特斯拉根本跑不了全自动驾驶！
+  https://www.youtube.com/watch?v=oEYj__B82TQ
+• [@PH-WorkFlow] [3分鐘快懂] Markdown：掌握 20% 核心語法，學會與 AI 效率溝通的技能
+  https://www.youtube.com/watch?v=TE1r2mxqK_o
+• [@PH-WorkFlow] IG Carousel AI Workflow: Claude vs Gemini (Free Version) Showdown
+  https://www.youtube.com/watch?v=FU84L7cWlbc
+• [@TuTu] 2026年普通人翻墙的代价到底有多大？不谈政治就没事？中国翻墙者生存困境..
+  https://www.youtube.com/watch?v=UWETFZOihfY
+• [@TuTu] Have you been using it for nothing all these years? Here are 7 amazing MacBook technologies that ...
+  https://www.youtube.com/watch?v=QujGX8ijJJM
+• [@Macro_Alpha_cn] 龙树中论 | 破解2000年的空性误区 | 认知觉醒的底层逻辑
+  https://www.youtube.com/watch?v=HReqKGIDnUA
+• [@Macro_Alpha_cn] 财富剧本论 | 为什么你的余额总是不涨 | 王利杰人生哲学
+  https://www.youtube.com/watch?v=Gy5wZ3RRrzM
+• [@AIPractitioners] Witness the birth of a Unicorn.
+  https://www.youtube.com/watch?v=PObZKk5pk_g
+• [@AIPractitioners] This lab will change the AI  Landscape from probabilistic to deterministic.
+  https://www.youtube.com/watch?v=5Ve_TLsPVp4
+• [@SFReality] Anthropic 惡夢成真！Claude Code 核心架構遭完整外洩！自癒記憶、幽靈模式、KAIROS 守護神，全被對手看光光！
+  https://www.youtube.com/watch?v=cwJh5ikwMk4
+• [@SFReality] 黃仁勳震撼預言：1兆美元還不夠！工程師薪水一半變成AI算力，史詩級軍備競賽開跑！
+  https://www.youtube.com/watch?v=xNZ3hPbEIpk
+• [@mage291] 别再笨拙抠图！NotebookLM 原生重构 PPT，实战提效秘籍
+  https://www.youtube.com/watch?v=KXPjGUkIcz0
+• [@mage291] 别傻傻只用原生版！这7个 Google NotebookLM 隐藏插件，效率暴增10倍
+  https://www.youtube.com/watch?v=DMcfXxPt-tg
+• [@ami.moment] 在南半球，發現了和我一樣愛笑的小動物！😆 西澳旅行日記vlog
+  https://www.youtube.com/watch?v=7M2ORkHRpAc
+• [@ami.moment] How can I use Obsidian + AI for knowledge management and content creation? 🤔
+  https://www.youtube.com/watch?v=hJauYIVE69k
+• [@TackyTechy] AI 替你工作時，如何在效率與安全之間找到平衡？Inclaw 開箱實測
+  https://www.youtube.com/watch?v=H90oZtIp2tQ
+• [@TackyTechy] 「這真的是我寫的？」當 AI 讓自己不像自己…  | HIX.AI 使用心得分享
+  https://www.youtube.com/watch?v=8Ynu1kGa-0Y
+• [@martinz2025] 拆解台積電第一季度利潤暴漲58%的秘密，AI如何將它推上神壇 #台積電 #TSMC #AI晶片 #半導體 #晶圓代工 #先進製程 ｜20260426
+  https://www.youtube.com/watch?v=RdZdTWmghZ4
+• [@martinz2025] 孫正義又要孤注一擲了？400億美元的短期貸款，助力 OpenAI 啟動 IPO？#OpenAI什麼時候上市 #OpenAI上市傳聞 #OpenAI估值 ｜20260411
+  https://www.youtube.com/watch?v=jT1ocEgYt_o
+• [@BizofFame] 蘋果終於承認10年錯誤｜史上最便宜的 MacBook Neo，卻讓 iPad 最尷尬！
+  https://www.youtube.com/watch?v=nYXLM5dvimk
+• [@BizofFame] 沒想到Claude是這樣的故事｜Claude營收如何2年反超老東家，即將登頂全球第一？｜Anthropic 和 Dario Amodei的故事
+  https://www.youtube.com/watch?v=wzxCvd3rWZk
+• [@Petersunreview] Apple 換 CEO 之後，會不會繼續擠牙膏？｜彼得森
+  https://www.youtube.com/watch?v=rZZ8vKgisE4
+• [@Petersunreview] 剛換 Mac？這7個坑等著你｜彼得森
+  https://www.youtube.com/watch?v=lE53aus6meo
+• [@techbang3c] Claude Cowork (2) 專案攻略｜3 種專案建立技巧 + CLAUDE.md 深度實戰，讓 AI 擁有大腦與記憶越用越懂你、不再忘東忘西鬼打牆
+  https://www.youtube.com/watch?v=q1lIaiwkgxY
+• [@techbang3c] Claude Cowork (1) 安裝與 Skill 技能全攻略：名片轉 Excel、下載區自動分類，AI Agent快速上手
+  https://www.youtube.com/watch?v=LDvdcA3robQ
+• [@talkspg] 月薪3萬2，下班兼職1年反而賺250萬！揭密他的斜槓變現術 ft. IG十萬粉創作者 亨利溫 【威翰的商業茶水間】
+  https://www.youtube.com/watch?v=NHny6PlsVvo
+• [@talkspg] 從月薪5000到海外8間房，她如何41歲就財富自由？ ft 小資理財教母 Dr.Selena 楊倩琳 【威翰的商業茶水間】
+  https://www.youtube.com/watch?v=70S74hOxtmY
+• [@AI-Short-Taipei] 花$120買「頂級AI助理」結果像實習生亂搞？Opus 4.7翻車實錄 🤯💸
+  https://www.youtube.com/watch?v=HnncVGYYnRI
+• [@AI-Short-Taipei] 只要$10？這顆「300元破晶片」竟扛住全球網站流量🔥
+  https://www.youtube.com/watch?v=KizRiZm_zLg
+• [@digitalxu] 數碼旭自由獨立部落客之路 - 拍攝剪輯經驗分享
+  https://www.youtube.com/watch?v=ZBGNaNWQNtw
+• [@digitalxu] To achieve dual Dolby on Apple TV, this article has you covered.
+  https://www.youtube.com/watch?v=fQABwriSTZY
+• [@austinchou888] ChatGPT image 2.0 vs Nano Banana 2誰生圖更強？超專業商品海報+精細中文生成｜看完這11種應用再決定用哪個！
+  https://www.youtube.com/watch?v=NMlB6HNFir8
+• [@austinchou888] 超速AI筆記！3小時會議1分鐘快速摘要與逐字稿，自動建立代辦事項！訪談、筆記都適用，還可同步多國語言即時轉譯 feat.傳譯寶AI
+  https://www.youtube.com/watch?v=kqMyxXSugsY
+• [@HarryLee] ChatGPT Image 2.0 王炸更新！現在連設計師都要失業了？
+  https://www.youtube.com/watch?v=ygprvEganOg
+• [@HarryLee] Claude Design 王炸更新！我測完後，設計師真的危險了
+  https://www.youtube.com/watch?v=G9C_70yPJWo
+• [@sensebar] Codex基本功EP02:初學者必裝外掛程式跟技能_打造你的個人 AI 助理，Codex 基礎教學實戰
+  https://www.youtube.com/watch?v=5FM_O66g2Ng
+• [@sensebar] GPTcodeX基本功EP01:十分鐘上手 GPT-CodeX：手把手帶你從安裝到專案初始化_別再買貴森森的 Claude Code 了！GPT-CodeX 才是真正的省錢神器
+  https://www.youtube.com/watch?v=0IKrl7nNIM0
+• [@applefans520] Google 試算表 + 快速記帳捷徑進階玩法 Part 1：增減項目、做圖表、連動年度統計，功能更完整！｜APPLEFANS蘋果迷
+  https://www.youtube.com/watch?v=Ajl8eGY5Ea0
+• [@applefans520] 桌布小天氣進階玩法 Part 1：打造專屬天氣看板！天氣資訊、位置隨你換！桌布美感再進化｜APPLEFANS蘋果迷
+  https://www.youtube.com/watch?v=Aa9uKbtgdYY
+• [@lichangzhanglaile] 零基礎12分鐘搞懂Claude Design 90%功能：一次性學會設計系統、PPT、落地頁！
+  https://www.youtube.com/watch?v=Nm4n7W5ZNLQ
+• [@lichangzhanglaile] Understand all the free features of Claude in one video!
+  https://www.youtube.com/watch?v=25iDiIDwxfk
+
+=== 無法讀取（3 個）===
+  ❌ LuluTechnology: ERROR: [youtube:tab] @LuluTechnology: This channel does not have a videos tab
+  ❌ aaron-1215: ERROR: [youtube:tab] @aaron-1215: Unable to download API page: HTTP Error 404: N
+  ❌ 綠色火車: ERROR: [youtube:tab] @greentrainTW: Unable to download API page: HTTP Error 404:

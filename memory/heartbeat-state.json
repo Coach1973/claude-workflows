@@ -5,8 +5,9 @@
     "weather": null,
     "skills": "2026-04-26T13:36",
     "gitSync": "2026-04-26T13:36",
-    "supergroup": "2026-04-26T13:36"
+    "supergroup": "2026-04-26T13:36",
+    "healthcheck": "2026-04-27T05:00"
   },
-  "lastHeartbeat": "2026-04-26T10:36",
-  "summary": "heartbeat 2026-04-26 13:36 — 安裝 agent-group + agent-collab，更新 SUPERGROUP-MAP，commit: 75ffadd"
+  "lastHeartbeat": "2026-04-27T05:00",
+  "summary": "healthcheck 2026-04-27 13:00 — cron ok, git clean, no ⬜ pending items"
 }

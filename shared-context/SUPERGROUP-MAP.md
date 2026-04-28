@@ -6,7 +6,7 @@
 |------|--------------|--------------|--------------|
 | 暱稱 | 小龍蝦學長 | 小龍蝦學弟 | 小龍蝦學妹 |
 | Telegram Bot | @openclaw_macbook4_bot | @coachwu_lenovo_bot | @CoachWu_openclaw_bot |
-| 服務對象 | 大樹教練 | 孔大哥（峰哥） | 佩佩老師 |
+| 服務對象 | 大樹教練 | 孔大哥（峯哥／峰哥） | 佩佩老師 |
 | 角色定位 | 統籌指揮 | 執行者 | 執行者 |
 | 模型 | MiniMax M2.7 | MiniMax M2.7 | MiniMax M2.7 |
 | **所在位置** | **Mac mini** | **Mac mini** | **Mac mini** |

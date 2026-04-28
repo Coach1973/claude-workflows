@@ -1454,3 +1454,10 @@
 {"ts":"2026-04-28T09:50:01.891Z","botId":"1号機","text":"The model did not produce a response before the LLM idle timeout. Please try again, or increase `agents.defaults.llm.idleTimeoutSeconds` in your config (set to 0 to disable).","msgId":"5240","chatId":"-1003877502911"}
 {"ts":"2026-04-28T09:53:31.326Z","botId":"1号機","text":"🦞 這是小龍蝦在海邊看夕陽的圖片～送給教練！","msgId":"push","chatId":"-1003877502911"}
 {"ts":"2026-04-28T09:53:31.730Z","botId":"1号機","text":"🎵 放鬆的 Lo-Fi 海浪音樂來了～請享用！","msgId":"push","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:07:45.757Z","botId":"1号機","text":"⚠️ Cron job \"每4小時主動關懷\" failed: cron: job execution timed out","msgId":"5243","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:08:07.364Z","botId":"1号機","text":"The model did not produce a response before the LLM idle timeout. Please try again, or increase `agents.defaults.llm.idleTimeoutSeconds` in your config (set to 0 to disable).","msgId":"5244","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:18:06.703Z","botId":"1号機","text":"抱歉，音樂生成功能目前失敗了 😔\n\n嘗試了兩個方案都沒成功：\n- MiniMax 方案：這個模型目前我的方案不支援\n- Google 方案：系統還沒回傳音頻資料\n\n圖片發 LINE 也有同樣問題——看來有些新功能還需要调试。\n\n教練你說的那兩件事（LINE發圖片、生成音樂），我先去唸一遍確認一下我的設定有沒有漏搞，確認好再跟你說 🙏","msgId":"push","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:35:04.708Z","botId":"1号機","text":"教練，我是 **MiniMax M2.7** 模型，沒錯。\n\n目前使用中，運作正常 🙏","msgId":"1216","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:35:05.351Z","botId":"1号機","text":"學妹目前使用的是 **MiniMax M2.7** 模型 🙏","msgId":"1217","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:35:06.251Z","botId":"1号機","text":"學長目前使用的是 **MiniMax M2.7**（MiniMax 的主力模型）。","msgId":"1218","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:35:11.255Z","botId":"1号機","text":"回報教練，學妹現在使用的是 **MiniMax M2.7** 模型 ✅","msgId":"574","chatId":"-1003877502911"}

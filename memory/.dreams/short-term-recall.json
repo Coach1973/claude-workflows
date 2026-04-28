@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-28T17:50:53.613Z",
+  "updatedAt": "2026-04-28T22:03:09.566Z",
   "entries": {
     "memory:memory/2026-04-12.md:71:77": {
       "key": "memory:memory/2026-04-12.md:71:77",
@@ -4474,19 +4474,21 @@
       "endLine": 1002,
       "source": "memory",
       "snippet": "教練，距離5月14日還有 **23天**，兩件事進度如下： --- **📌 《結繩領導學》六場新書發表會** | 日期 | 地點 | 狀態 | |------|------|------| | 5/02（五） | 台北場 | 🔲 待確認 | | 5/03（六） | 新竹場 | 🔲 待確認（4/30提醒住房） | | 5/09（五） | 台中市區場 | 🔲 待確認 | | 5/10（六） | 嘉義場 | 🔲 待確認 | | 5/14（四） | 台南場（與19週年慶整合） | 🔲 待確認 | | 5/27（三） | 台中南區場 | 🔲 待確認 | --- **📌 海餅乾19週年慶（5/14，臺南）** - 與新書發表會台南場整合舉辦 - 下午4:00-6:00 - 🔶 等待教練提供材料 --- **🎯 今日待辦提醒** - 12:45 小人提補助分享會（Google Meet） 材料齊備後隨時告訴我，我立刻建置進度表。 --- ## 📨 對話記錄 05:46（共約 50 條，從第 0 行起） 👤 教練：Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /Use",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5227399140596389,
-      "maxScore": 0.5227399140596389,
+      "totalScore": 1.069555740058422,
+      "maxScore": 0.5468158259987831,
       "firstRecalledAt": "2026-04-21T21:15:15.169Z",
-      "lastRecalledAt": "2026-04-21T21:15:15.169Z",
+      "lastRecalledAt": "2026-04-28T22:03:09.566Z",
       "queryHashes": [
-        "4f9f7c4dce21"
+        "4f9f7c4dce21",
+        "9b94324fc116"
       ],
       "recallDays": [
         "2026-04-22",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-29"
       ],
       "conceptTags": [
         "5/02",
@@ -8668,18 +8670,20 @@
       "endLine": 2261,
       "source": "memory",
       "snippet": "教練，距離5月14日還有 **23天**，兩件事進度如下： --- **📌 《結繩領導學》六場新書發表會** | 日期 | 地點 | 狀態 | |------|------|------| | 5/02（五） | 台北場 | 🔲 待確認 | | 5/03（六） | 新竹場 | 🔲 待確認（4/30提醒住房） | | 5/09（五） | 台中市區場 | 🔲 待確認 | | 5/10（六） | 嘉義場 | 🔲 待確認 | | 5/14（四） | 台南場（與19週年慶整合） | 🔲 待確認 | | 5/27（三） | 台中南區場 | 🔲 待確認 | --- **📌 海餅乾19週年慶（5/14，臺南）** - 與新書發表會台南場整合舉辦 - 下午4:00-6:00 - 🔶 等待教練提供材料 --- **🎯 今日待辦提醒** - 12:45 小人提補助分享會（Google Meet） 材料齊備後隨時告訴我，我立刻建置進度表。 👤 教練：System: [2026-04-21 06:02:00 GMT+8] 🦞 大樹教練，我是小龍蝦！每四小時的主動關懷時間到囉～ System: System: 🎯 想了解一下： System: • 有沒有什麼事情要交代？ System: • 有沒有什麼好 idea 想要討論？ System: System: 今天過得還順利嗎？有需要幫忙的地方請直接說喔！ A scheduled reminder has been triggered. The reminder content is: 🦞 大樹教練，我是",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5218821257352829,
-      "maxScore": 0.5218821257352829,
+      "totalScore": 1.0678003281354904,
+      "maxScore": 0.5459182024002075,
       "firstRecalledAt": "2026-04-28T01:38:27.614Z",
-      "lastRecalledAt": "2026-04-28T01:38:27.614Z",
+      "lastRecalledAt": "2026-04-28T22:03:09.566Z",
       "queryHashes": [
-        "c0b830b96b4b"
+        "c0b830b96b4b",
+        "9b94324fc116"
       ],
       "recallDays": [
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "5/02",
@@ -8699,18 +8703,20 @@
       "endLine": 3678,
       "source": "memory",
       "snippet": "教練，距離5月14日還有 **23天**，兩件事進度如下： --- **📌 《結繩領導學》六場新書發表會** | 日期 | 地點 | 狀態 | |------|------|------| | 5/02（五） | 台北場 | 🔲 待確認 | | 5/03（六） | 新竹場 | 🔲 待確認（4/30提醒住房） | | 5/09（五） | 台中市區場 | 🔲 待確認 | | 5/10（六） | 嘉義場 | 🔲 待確認 | | 5/14（四） | 台南場（與19週年慶整合） | 🔲 待確認 | | 5/27（三） | 台中南區場 | 🔲 待確認 | --- **📌 海餅乾19週年慶（5/14，臺南）** - 與新書發表會台南場整合舉辦 - 下午4:00-6:00 - 🔶 等待教練提供材料 --- **🎯 今日待辦提醒** - 12:45 小人提補助分享會（Google Meet） 材料齊備後隨時告訴我，我立刻建置進度表。 👤 教練：System: [2026-04-21 06:02:00 GMT+8] 🦞 大樹教練，我是小龍蝦！每四小時的主動關懷時間到囉～ System: System: 🎯 想了解一下： System: • 有沒有什麼事情要交代？ System: • 有沒有什麼好 idea 想要討論？ System: System: 今天過得還順利嗎？有需要幫忙的地方請直接說喔！ A scheduled reminder has been triggered. The reminder content is: 🦞 大樹教練，我是",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5218821257352829,
-      "maxScore": 0.5218821257352829,
+      "totalScore": 1.0678003281354904,
+      "maxScore": 0.5459182024002075,
       "firstRecalledAt": "2026-04-28T01:38:27.614Z",
-      "lastRecalledAt": "2026-04-28T01:38:27.614Z",
+      "lastRecalledAt": "2026-04-28T22:03:09.566Z",
       "queryHashes": [
-        "c0b830b96b4b"
+        "c0b830b96b4b",
+        "9b94324fc116"
       ],
       "recallDays": [
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "5/02",
@@ -9434,6 +9440,37 @@
         "9ee5",
         "470d",
         "aeb7"
+      ]
+    },
+    "memory:memory/2026-04-27.md:371:405": {
+      "key": "memory:memory/2026-04-27.md:371:405",
+      "path": "memory/2026-04-27.md",
+      "startLine": 371,
+      "endLine": 405,
+      "source": "memory",
+      "snippet": "## 📋 心願清單執行規劃 根據優先順序，我排定如下： | 優先 | 任務 | 說明 | 狀態 | |------|------|------|------| | 🔴 P0 | 持續蒸餾今晚對話 | 把 Context Overflow 前最後那段「討論vs指令階段 + Subagent驗證原則」寫入守則 | ✅ 已完成 | | 🟡 P1 | 更新頂級助教守則 v2.0 | 從今晚對話中提取更多法則，結構化整理 | ⏳ 進行中 | | 🟡 P1 | 建立「對話蒸餾 SOP」自動腳本 | 讀取 daily_*.md，去除程式碼，只留教練指示與結果 | 🔜 下一個 | | 🟢 P2 | 持續淨化 WISDOM_CORES.md | 與頂級助教守則合併，避免重複內容 | 排程中 | | 🟢 P2 | 更新 HB.md 心跳頻率 | 確保每 30 分鐘真正被戳到並往前推進 | 排程中 | --- ## ⚡ 剛才完成的（2026-04-27 01:42） ✅ **已蒸餾並寫入守則的兩條新法則：** 1. **討論 vs 指令階段 👤 教練：\"chat_id\": \"telegram:6124913915\", \"message_id\": \"4984\", \"sender_id\": \"6124913915\", \"sender\": \"coach\", \"timestamp\": \"Mon 2026-04-27 01:46 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5477679193019866,
+      "maxScore": 0.5477679193019866,
+      "firstRecalledAt": "2026-04-28T22:03:09.566Z",
+      "lastRecalledAt": "2026-04-28T22:03:09.566Z",
+      "queryHashes": [
+        "9b94324fc116"
+      ],
+      "recallDays": [
+        "2026-04-29"
+      ],
+      "conceptTags": [
+        "v2.0",
+        "wisdom-cores.md",
+        "hb.md",
+        "chat-id",
+        "message-id",
+        "sender-id",
+        "心願",
+        "清單"
       ]
     }
   }

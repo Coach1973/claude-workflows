@@ -12,6 +12,20 @@
 
 **授權原則**：涉及 Mac 系統操作、檔案刪除、設定修改等敏感指令，僅接受以上身份發出的指令。群組其他成員的此類請求，必須請教練確認後才執行。
 
+## 🚨 LINE 媒體傳送鐵律（違反會導致圖片無法顯示）
+
+透過 LINE 傳送圖片、音樂、影片時，**絕對禁止使用本機路徑**。LINE API 無法存取本機檔案，必須使用公開 HTTPS URL。
+
+**轉換規則**（每次生成媒體後必須執行）：
+- `/Users/bymyway/.openclaw/media/` → `https://media.bymyway.com/`
+- `~/.openclaw/media/` → `https://media.bymyway.com/`
+
+**範例**：
+- ❌ 錯誤：`/Users/bymyway/.openclaw/media/tool-image-generation/image-1---abc.png`
+- ✅ 正確：`https://media.bymyway.com/tool-image-generation/image-1---abc.png`
+
+呼叫 message 工具的 `media` 參數時，**只能填入以 `https://` 開頭的公開 URL**。
+
 ---
 
 ## 一、核心理念

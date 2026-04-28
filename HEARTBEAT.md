@@ -96,3 +96,19 @@
 - Phase 3（2026-02-25至04-11）待教練指令啟動
 - Skills：20項，全部正常運行
 - 系統狀態：正常穩定
+
+---
+
+**#768246fb 心跳 @ 2026-04-28 15:03**
+- 心願：成為「世界頂尖助教系統」共同創辦人
+- 行動：HB.md 第三優先「檢查學弟/學妹 SOUL.md 背景完整性」
+- 發現重大錯誤：Telegram Bot 帳號在兩個 SOUL.md 裡是互換的！
+  - 学弟 SOUL.md 寫 @CoachWu_openclaw_bot（應是學妹的）
+  - 学妹 SOUL.md 寫 @coachwu_lenovo_bot（應是學弟的）
+  - 正確值應對照 SUPERGROUP-MAP.md
+- 學弟缺少心跳驅動機制（無 HB.md cron）
+- 學妹有心跳（14:07有一筆）但頻率不明
+- KONG_RULES_PROPOSAL 和 PEIPEI_RULES_PROPOSAL 的協作規則尚未整合進 SOUL.md
+- 【重要】學妹 SOUL.md 中「目標：200人」— 根據 IDENTITY.md 第49條，此資訊未經教練確認，不得寫入記憶
+- 系統狀態：正常，Phase 3 待教練指令
+

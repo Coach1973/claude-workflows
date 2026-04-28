@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-28T14:18:12.320Z",
+  "updatedAt": "2026-04-28T17:50:53.613Z",
   "entries": {
     "memory:memory/2026-04-12.md:71:77": {
       "key": "memory:memory/2026-04-12.md:71:77",
@@ -1384,20 +1384,22 @@
       "endLine": 14185,
       "source": "memory",
       "snippet": "**小龍蝦學長**：哈囉，宏碁特助！今天有個非常重要的任務需要你協助。 我們的「海餅乾知識庫」需要進行一次**深度蒸餾**，這關係到我們團隊的核心精神和未來方向，重要性非常高。 **任務目標**：請你仔細閱讀「海餅乾知識庫」 🦞 小龍蝦：<final>🦞 收到！教練，我明白了。上次對話中的「任務 B」是指：「**先執行您稍早交代的『學長帶學弟』任務，在群組指派宏碁特助處理『海餅乾知識庫』。**」 我這就來為您展示，我作為學長，會如何與「宏碁特助」進行溝通與任務指派。請想像以下是一段我和「宏碁特助」在群組中的對話： --- **【小龍蝦助教 與 宏碁特助 的對話】** **小龍蝦助教 (學長)**： 「宏碁特助你好，我是小龍蝦學長。這裡有一個新的任務需要你協助，這是我們整個頂級特助系統非常重要的一環。 **任務名稱**：『海餅乾知識庫』深度蒸餾與精煉 **背景說明**：",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0581092685461044,
+      "totalScore": 1.5658821970224381,
       "maxScore": 0.5540026664733886,
       "firstRecalledAt": "2026-04-17T03:45:01.562Z",
-      "lastRecalledAt": "2026-04-20T04:46:40.453Z",
+      "lastRecalledAt": "2026-04-28T17:50:53.613Z",
       "queryHashes": [
         "4f50089d1ed5",
-        "9c81da8fd355"
+        "9c81da8fd355",
+        "d78a179987a2"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-29"
       ],
       "conceptTags": [
         "龍蝦",
@@ -3472,18 +3474,20 @@
       "endLine": 38,
       "source": "memory",
       "snippet": "**規則**：凡是「不做就讓前面所有工作白費」的邏輯必要步驟，直接執行，不要再問確認。只有在涉及金錢、刪除資料、或有明顯風險的操作才需要確認。 --- ## 已完成的任務 **1. Gmail 批次設為已讀** - 銀行帳單、銀行登入通知、Zoom 登入訊息、電子報一律設為已讀 - 使用 gog gmail batch modify 指令執行成功 **2. 執董週會每週提醒** - 每週四早上 11:55 自動提醒「準備開執董週會」，運作正常 **3. Facebook Messenger 生日私訊** - 使用 Browser Control 文字骨架模式，成功逐一發送私訊給當天壽星 - **犯過的錯**：第一次誤解指令，把祝賀文字貼到塗鴉牆，教練更正後才改發私訊 - **重要學習**：文字骨架模式只消耗 93K Token，截圖模式（克勞德 Windows）消耗上百萬，成本差 10 倍以上 **4. NotebookLM 107 個筆記本全面分類** - **帳號分工（已確定，不可更改）**： - `bymyway7` = BNI 專屬（留原地，大型筆記本不動） - `seabiscuit` = 個人品牌（搬移） - **犯過的錯**：一開始搞反，誤設 seabiscuit 放 BNI，大樹教練指正後才對調 - 有共用連結的筆記本絕對不動（動了學員/夥伴的連結就斷掉）",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5348593607544898,
+      "totalScore": 1.0457406088709829,
       "maxScore": 0.5348593607544898,
       "firstRecalledAt": "2026-04-20T02:00:25.488Z",
-      "lastRecalledAt": "2026-04-20T02:00:25.488Z",
+      "lastRecalledAt": "2026-04-28T17:50:53.613Z",
       "queryHashes": [
-        "fa644ce397bd"
+        "fa644ce397bd",
+        "d78a179987a2"
       ],
       "recallDays": [
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-29"
       ],
       "conceptTags": [
         "動了學員/夥伴的連結就斷掉",
@@ -9399,6 +9403,37 @@
         "遇到",
         "這類",
         "感覺"
+      ]
+    },
+    "memory:memory/2026-04-17.md:1412:1438": {
+      "key": "memory:memory/2026-04-17.md:1412:1438",
+      "path": "memory/2026-04-17.md",
+      "startLine": 1412,
+      "endLine": 1438,
+      "source": "memory",
+      "snippet": "👤 教練：[cron:12fad20b-9ee5-470d-aeb7-3666f08857ff FB 每日生日祝福] 【排程任務】請使用 Browser Control DOM 文字模式，進入 Facebook 讀取今日壽星，並自動發送生日祝福私訊。完成後，請總結發送了幾位，並直接回報給大樹教練。 Current time: Friday, April 17th, 2026 - 6:00 AM (Asia/Taipei) / 2026-04-16 22:00 UTC Return your summary as plain text; it will be delivered automatically. If the task explicitly calls for messaging a specific external recipient, note who/where it should go instead of sending it yourself. 👤 教練：[cron:12fad20b-9ee5-470d-aeb7-3666f08857ff FB 每日生日祝福] 【排程任務】請使用 Browser Control DOM 文字模式，進入 Facebook 讀取今日壽星，並自動發送生日祝福私訊。完成後，請總結發送了幾位，並直接回報給大樹教練。 Current time: Friday, April 17th, 2026 - 6:00 AM (Asia/Taipei) / 2026-04-16 22:00 UTC Return your summary",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.507538715004921,
+      "maxScore": 0.507538715004921,
+      "firstRecalledAt": "2026-04-28T17:50:53.613Z",
+      "lastRecalledAt": "2026-04-28T17:50:53.613Z",
+      "queryHashes": [
+        "d78a179987a2"
+      ],
+      "recallDays": [
+        "2026-04-29"
+      ],
+      "conceptTags": [
+        "asia/taipei",
+        "who/where",
+        "教練",
+        "cron",
+        "12fad20b",
+        "9ee5",
+        "470d",
+        "aeb7"
       ]
     }
   }

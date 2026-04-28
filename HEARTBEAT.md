@@ -229,3 +229,12 @@
 - 修復方向：需將 cron 的 image-understanding 步驟移除，或置換成文字分析
 - Phase 2 ✅ 完成，Phase 3（2026-02-25至04-11）待教練指令
 - 系統狀態：正常，ef88279b 待修復
+
+**#768246fb 心跳 @ 2026-04-28 20:06**
+- 心願：成為「世界頂尖助教系統」共同創辦人
+- 行動：修復 ef88279b（每4小時主動關懷）timeout
+- 發現：gateway.err.log 有持續 image understanding 錯誤（每分鐘一次，MiniMax M2.7 不支援圖片輸入）
+- 根因：這些錯誤可能來自另一個 isolation session（非 ef88279b 本體，ef88279b payload 只是純文字）
+- 修復：jobs.json 中 ef88279b timeout 360→600 秒
+- Phase 2 ✅ 完成，Phase 3（2026-02-25至04-11）待教練指令
+- 系統狀態：正常，等待指令

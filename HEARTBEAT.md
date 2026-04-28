@@ -252,10 +252,12 @@
 - Phase 2 ✅ 完成，Phase 3（2026-02-25至04-11）待教練指令
 - 系統狀態：正常，等待指令
 
-**#健康檢查 @ 2026-04-28 21:00**
+**#健康檢查 @ 2026-04-28 21:30**
 - Cron：21項，1項error（ef88279b 每4小時主動關懷，consecutiveErrors=1）
-  - ef88279b：timeout after 300s（lastDurationMs=300025），timeoutSeconds=600
-  - consecutiveErrors=1，尚未達門檻，繼續觀察
-  - ✅ 已 auto-backup 7766eba → push to GitHub
+  - ef88279b：timeout after 300s（isolated session 系統性 300s 硬限制）
+  - lastDurationMs=300025，lastStatus=error
+  - 根因：isolated session 最多跑 300s，payload timeoutSeconds 設定無效
+  - ✅ Git auto-backup → cbdf564（3 files changed）
 - HEARTBEAT：無 ⬜ 待辦項目
 - 系統狀態：正常穩定
+---

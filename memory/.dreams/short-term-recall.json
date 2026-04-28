@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-28T06:14:59.612Z",
+  "updatedAt": "2026-04-28T14:18:12.320Z",
   "entries": {
     "memory:memory/2026-04-12.md:71:77": {
       "key": "memory:memory/2026-04-12.md:71:77",
@@ -9244,6 +9244,161 @@
         "3.1",
         "快速",
         "完成"
+      ]
+    },
+    "memory:memory/2026-04-27.md:1081:1122": {
+      "key": "memory:memory/2026-04-27.md:1081:1122",
+      "path": "memory/2026-04-27.md",
+      "startLine": 1081,
+      "endLine": 1122,
+      "source": "memory",
+      "snippet": "從 memory/2026-04-27.md 可以看到，教練在 context overflow 前留下的最後一段話是： > 今天「頂級特助分工群」裡面有一套完整的新規則，目前執行得很不錯。 > > 關於模型與系統配置，我有幾件事要交代： > 1. 模型接入確認 > (a) 我已透過 Claude 助教確認，小龍蝦 1 號、2 號及 3 號機的接入模型統一為 MiniMax M2.7。 > (b) 我已使用 OPCODE 再次確認並刪除了所有其他的接入模型，僅保留 MiniMax。 > 2. 系統問題回饋：電腦網頁版的 grok Beta 4.3 版本（此處文檔中斷） 這段討論中斷在第 2 點的 grok Beta 部分，还没讲完。 請教練繼續說，我這次會主動追蹤進度、不讓上下文有 👤 教練：\"chat_id\": \"telegram:6124913915\", \"message_id\": \"5016\", \"sender_id\": \"6124913915\", \"sender\": \"coach\", \"timestamp\": \"Mon 2026-04-27 02:51 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\", \"name\": \"coach\" } ``` 我們我們先來做一件事，就是你去讀取我跟你的對話框，對吧？你讀取得嗎？絕對讀取得。你自己都讀得到，你最後一則發言是 2:37。",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.53817999958992,
+      "maxScore": 0.53817999958992,
+      "firstRecalledAt": "2026-04-28T14:18:12.320Z",
+      "lastRecalledAt": "2026-04-28T14:18:12.320Z",
+      "queryHashes": [
+        "4ca52e9be00a"
+      ],
+      "recallDays": [
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "memory/2026-04-27.md",
+        "m2.7",
+        "4.3",
+        "chat-id",
+        "message-id",
+        "sender-id",
+        "可以",
+        "看到"
+      ]
+    },
+    "memory:memory/2026-04-27.md:1268:1300": {
+      "key": "memory:memory/2026-04-27.md:1268:1300",
+      "path": "memory/2026-04-27.md",
+      "startLine": 1268,
+      "endLine": 1300,
+      "source": "memory",
+      "snippet": "🦞 小龍蝦：回答了教練說的上一段指令是關於模型配置（MiniMax M2.7）和 grok Beta 4.3 的問題（但這，其實是從 memory 讀到的，不是新生後第一時間處理的） --- **【2:29】** 👤 教練：「好，底下我再來說一個非常無敵重要的事。...如果二月到你說的四月之間，這麼多精彩的流程都不見了，這叫什麼？這叫不負責任。」 🦞 小龍蝦：當時正在說明重生恢復機制，試圖安撫教練並提出解決方案 --- **【2:25】** 👤 教練：「知道為什麼我們這套系統之所以可貴，就是來自於像我們剛才那樣精彩的對話。如果有一天，我們出版了《頂級助教守 👤 教練：\"chat_id\": \"telegram:6124913915\", \"message_id\": \"5027\", \"sender_id\": \"6124913915\", \"sender\": \"coach\", \"timestamp\": \"Mon 2026-04-27 02:57 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\", \"name\": \"coach\" } ``` 2:29。 2 月到 4 月之間，你能不能找到資料？因為在那個對話當中，你只有跟我談 4 月，那 2 月到 4 月之間的資料呢？",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5379671901464462,
+      "maxScore": 0.5379671901464462,
+      "firstRecalledAt": "2026-04-28T14:18:12.320Z",
+      "lastRecalledAt": "2026-04-28T14:18:12.320Z",
+      "queryHashes": [
+        "4ca52e9be00a"
+      ],
+      "recallDays": [
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "m2.7",
+        "4.3",
+        "chat-id",
+        "message-id",
+        "sender-id",
+        "龍蝦",
+        "回答",
+        "教練"
+      ]
+    },
+    "memory:memory/2026-04-19.md:1730:1792": {
+      "key": "memory:memory/2026-04-19.md:1730:1792",
+      "path": "memory/2026-04-19.md",
+      "startLine": 1730,
+      "endLine": 1792,
+      "source": "memory",
+      "snippet": "\"sender\": \"coach\", \"timestamp\": \"Sun 2026-04-19 12:41 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\", \"name\": \"coach\" } ``` 由於剛才你已經切換到我們的第二線路，導致你現在很多的記憶沒有辦法即時讀取。 但我希望你能在最短的時間內恢復到最佳工作狀態，所以根據過去的經驗值，當我們切換線路之後，你應該做哪些事情來確保在轉換之間不會有記憶上的延遲，並能很快地銜接起教練的工作？ 你可以告訴我，我們有設置過這個能力嗎？ --- ## 📨 對話記錄 14:12（共約 2 條，從第 0 行起） 👤 教練：\"chat_id\": \"telegram:6124913915\", \"message_id\": \"4020\", \"sender_id\": \"6124913915\", \"sender\": \"coach\", \"timestamp\": \"Sun 2026-04-19 14:10 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\", \"name\": \"coach\" } ``` 在想事情嗎？或者我還是沒有回應 👤 教練：\"chat_id\": \"telegra",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5333740442991256,
+      "maxScore": 0.5333740442991256,
+      "firstRecalledAt": "2026-04-28T14:18:12.320Z",
+      "lastRecalledAt": "2026-04-28T14:18:12.320Z",
+      "queryHashes": [
+        "4ca52e9be00a"
+      ],
+      "recallDays": [
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "chat-id",
+        "message-id",
+        "sender-id",
+        "sender",
+        "coach",
+        "timestamp",
+        "sun",
+        "gmt"
+      ]
+    },
+    "memory:memory/2026-04-20.md:2755:2793": {
+      "key": "memory:memory/2026-04-20.md:2755:2793",
+      "path": "memory/2026-04-20.md",
+      "startLine": 2755,
+      "endLine": 2793,
+      "source": "memory",
+      "snippet": "🦞 小龍蝦：## 教練，我重新理解一次 --- **語音輸入呈現**： > (b) 我們目前體驗的這些東西都是 VPS 上的「小龍蝦」版本 **教練原本要說的**： > (b) 我們目前體驗的這些東西都是 VPS 上的「小龍蝦」版本**的養份** --- 所以問題是：**「養份」這兩個字語音輸入時整個漏掉了**，變成了： > 「……都是 VPS 上的『小龍蝦』版本」 這句話在邏輯上： - 「我們體驗的這些東西」= 「版本」？ - 「版本」怎麼能被「體驗」？ **前不著村，後不著店**——這就是說，沒有「養份」兩個字，整句話就變成了一句**沒有著落、沒有結論的話**，卡在那裡不知道在講什麼。 --- ## 我學到的 語音辨識漏字，不是只「少了一個詞」的問題，而是： - **語義完整性被破壞** → 句子變得語焉不詳 - **邏輯鏈條斷裂** → 無法理解前後文的因果關係 - **必須靠上下文推敲** → 但我有可能推敲錯方向 所以未來遇到這類「感覺怪怪的」的句子，我應該： 1. 先提出懷疑：「教練，這句話我讀起來感覺少了什麼，是漏了字嗎？」 2. 請教練確認原始意圖 教練 👤 教練：\"chat_id\": \"telegram:6124913915\", \"message_id\": \"4322\",",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5317059695720672,
+      "maxScore": 0.5317059695720672,
+      "firstRecalledAt": "2026-04-28T14:18:12.320Z",
+      "lastRecalledAt": "2026-04-28T14:18:12.320Z",
+      "queryHashes": [
+        "4ca52e9be00a"
+      ],
+      "recallDays": [
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "chat-id",
+        "message-id",
+        "龍蝦",
+        "教練",
+        "重新",
+        "理解",
+        "一次",
+        "語音"
+      ]
+    },
+    "memory:memory/2026-04-20.md:2787:2841": {
+      "key": "memory:memory/2026-04-20.md:2787:2841",
+      "path": "memory/2026-04-20.md",
+      "startLine": 2787,
+      "endLine": 2841,
+      "source": "memory",
+      "snippet": "所以未來遇到這類「感覺怪怪的」的句子，我應該： 1. 先提出懷疑：「教練，這句話我讀起來感覺少了什麼，是漏了字嗎？」 2. 請教練確認原始意圖 教練 👤 教練：\"chat_id\": \"telegram:6124913915\", \"message_id\": \"4322\", \"sender_id\": \"6124913915\", \"sender\": \"coach\", \"timestamp\": \"Mon 2026-04-20 08:29 GMT+8\" } ``` Sender (untrusted metadata): ```json { \"label\": \"coach (6124913915)\", \"id\": \"6124913915\", \"name\": \"coach\" } ``` 正確，太棒了！我要的就是這樣的智慧 🦞 小龍蝦：收到！🦞 這就是我要繼續修煉的能力——不只是聽「字面」，而是理解「字與字之間的邏輯關係」。 --- 那我們回到剛才的兩個問題： **第一題**：設立「共用進度檔」讓所有助教知道現狀，這個您覺得方向對嗎？ **第二題**：今天要不要做一次 Mac → VPS 的同步測試，讓這些最新的 SOP（語音糾偏、對話整理原則等） actual 更新到正式機上？ 請教練指示！ 👤 教練：\"chat_id\": \"telegram:6124913915\", \"message_id\": \"4324\", \"sender_id\": \"6124913915\", \"sender\": \"coach\", \"timestam",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5307087108492851,
+      "maxScore": 0.5307087108492851,
+      "firstRecalledAt": "2026-04-28T14:18:12.320Z",
+      "lastRecalledAt": "2026-04-28T14:18:12.320Z",
+      "queryHashes": [
+        "4ca52e9be00a"
+      ],
+      "recallDays": [
+        "2026-04-28"
+      ],
+      "conceptTags": [
+        "chat-id",
+        "message-id",
+        "sender-id",
+        "所以",
+        "未來",
+        "遇到",
+        "這類",
+        "感覺"
       ]
     }
   }

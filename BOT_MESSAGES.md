@@ -1461,3 +1461,12 @@
 {"ts":"2026-04-28T10:35:05.351Z","botId":"1号機","text":"學妹目前使用的是 **MiniMax M2.7** 模型 🙏","msgId":"1217","chatId":"-1003877502911"}
 {"ts":"2026-04-28T10:35:06.251Z","botId":"1号機","text":"學長目前使用的是 **MiniMax M2.7**（MiniMax 的主力模型）。","msgId":"1218","chatId":"-1003877502911"}
 {"ts":"2026-04-28T10:35:11.255Z","botId":"1号機","text":"回報教練，學妹現在使用的是 **MiniMax M2.7** 模型 ✅","msgId":"574","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:39:01.729Z","botId":"1号機","text":"抱歉教練，讓您久等了！我還沒建立 HTML 檔案，現在立刻做！","msgId":"5248","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:39:04.369Z","botId":"1号機","text":"已放到桌面了！✅\n\n**檔案：** `Desktop/stage2_scenes_001-073.html`\n\n---\n\n另外回答您的問題——我目前使用的模型是：\n\n**MiniMax M2.7**（MiniMax 模型）","msgId":"5249","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:39:37.834Z","botId":"1号機","text":"Current: minimax/MiniMax-M2.7\nTap below to browse models, or use:\n/model <provider/model> to switch\n/model status for details","msgId":"5251","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:42:03.268Z","botId":"1号機","text":"⚠️ The AI service is temporarily overloaded. Please try again in a moment.","msgId":"5253","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:43:30.186Z","botId":"1号機","text":"Current: google-gemini-cli/gemini-3.1-pro-preview (selected)\nActive: google/gemini-3.1-pro-preview (runtime)\nTap below to browse models, or use:\n/model <provider/model> to switch\n/model status for det","msgId":"5255","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:47:31.705Z","botId":"1号機","text":"⚠️ The AI service is temporarily overloaded. Please try again in a moment.","msgId":"5257","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:48:19.689Z","botId":"1号機","text":"Current: google/gemini-3.1-pro-preview\nTap below to browse models, or use:\n/model <provider/model> to switch\n/model status for details","msgId":"5259","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:48:50.119Z","botId":"1号機","text":"在的！教練我在 🙏\n\n目前使用的是 **MiniMax M2.7** 模型。\n\n訊息似乎有延遲或漏接的情況，如果教練有需要，請直接說，我都在！","msgId":"5261","chatId":"-1003877502911"}
+{"ts":"2026-04-28T10:52:04.173Z","botId":"1号機","text":"教練，我幫您查過設定檔了，狀況很清楚：\n\n---\n\n## 🔍 實際情況\n\n**教練有設定的 API Key：**\n| 供應商 | 狀態 |\n|--------|------|\n| **MiniMax**（現在使用中） | ✅ 已設定 |\n| **Google Gemini** | ✅ 已設定（教練自己的金錀）|\n\n所以我們的系統**可以切換到 Gemini**，不是被系統封鎖。\n\n---\n\n##","msgId":"5263","chatId":"-1003877502911"}

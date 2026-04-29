@@ -368,3 +368,32 @@ LINE 的設計就是要有人 @我，我才會收到那則訊息。
 第一步：直接啟用 Dream
 
 ---
+
+## 蒸餾記錄 2026-04-29 16:00（過去 2 小時）
+
+> Sessions: 1 個 | 教練發言: 37 條
+
+- 你現在是 OpenClaw 2026.4.26 版本的 Dreaming 修正專家，我的小龍蝦目前狀態是：
+- 版本：2026.4.26
+- Gemini 向量搜尋：ready
+- 索引：乾淨（Dirty: no）
+- Dreaming：仍然 off
+
+官方最新文件指出，2026.4.x 版本 config 有時會解析失敗，因此請先用最可靠的 CLI 指令方式修正：
+
+第一步：直接啟用 Dream
+- 目前已經連線成功，但我請他自我介紹時，他一樣出現語音，並且出現了一個問題——還是那個 API Key 的問題，我發給你看。⚠️ Missing API key for the selected provider on the gateway. Configure provider auth, then try again.
+- ✅ 最正確、最穩的做法（2026.4 最新版）
+在 VPS 安裝完成後（或在你的安裝模板裡），把 ~/.openclaw/openclaw.json 設定成以下內容（或在現有檔案裡新增/修改這個區塊）：
+JSON{
+  "messages": {
+    "tts": {
+      "auto": "off",
+      "enabled": false
+    }
+  }
+}
+
+"auto"
+
+---

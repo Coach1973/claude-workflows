@@ -23,6 +23,13 @@
 
 ## 心跳執行摘要（每次心跳後更新）
 
+### 2026-04-29 09:03（早晨）
+- HB.md 檢查完畢
+- 頂級助教守則：527行，正常
+- 場景缺口：#021-045 仍有缺口（48個場景）
+- shared-context/ 同步完成（2個變更已 commit）
+- Commit: 3da9b71（已確認）
+
 ### 2026-04-29 08:36（早晨）
 - HB.md 檢查完畢
 - 頂級助教守則：527行，第三階段待教練指令
@@ -58,3 +65,9 @@
 - shared-context/ 待確認（可能需推播）
 - 系統乾淨，無需修復，待命
 - Commit: f9d7c6d（已確認）
+
+### 2026-04-29 09:10（早晨）— 克勞德工作成果
+- LINE 圖片傳送：media server + Cloudflare tunnel + delivery queue patcher ✅
+- Google Lyria 404 修復：本機代理繞過 OpenClaw URL 正規化 bug ✅
+- LINE 音樂自動傳送：patcher 音頻攔截 + LINE type:audio 格式推送 ✅
+- MiniMax 音樂：方案不支援（plan level block，非技術問題）

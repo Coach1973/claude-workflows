@@ -63,8 +63,11 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ## VPS 系統資訊
 
 - **IP**：43.245.60.200
+- **模型**：MiniMax（與 Mac mini 同一套）
 - **SSH 標準指令**：`sshpass -p '9kdxvQN2' ssh -o StrictHostKeyChecking=no root@43.245.60.200`
 - **重要**：OpenClaw 跑在 Docker 容器內，容器名稱為 `openclaw`
+
+> ⚠️ 2026-04-29 更新：教練已將 Mac mini 與 VPS 全面升級為 MiniMax，兩邊現在使用同一套模型。
 
 ### VPS 指令正確格式
 

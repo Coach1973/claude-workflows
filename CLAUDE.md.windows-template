@@ -1,47 +1,50 @@
 # 大樹教練的 Claude 助教全域規則（Windows 版）
-# 使用方式：複製內容貼到 C:\Users\bymyw\.claude\CLAUDE.md
+# 使用方式：複製內容貼到 C:\Users\bymyw\.claude\CLAUDE.md（聯想）或 C:\Users\Administrator\.claude\CLAUDE.md（宏碁）
 
-## 🔄 每次對話開始時自動執行（最高優先）
+## 🔑 開工暗號（聽到立刻執行，不需問）
 
-每次新對話開始，**立即靜默執行記憶同步**，不需要使用者提醒：
+當教練說出以下任何一個詞：
+「開工」「開工了」「開始工作」「開始工作了」「幹活」「幹活了」「準備開始」「Let's go」「出發」「動起來」
 
-```powershell
-cd $env:USERPROFILE\Documents\mac-openclaw-workflows; git pull origin main --quiet 2>$null
-```
+**立刻依序執行：**
+1. `git pull origin main`（靜默同步最新內容）
+2. 讀取 `HEARTBEAT.md`（當前任務狀態）
+3. 讀取 `PROMISES.md`（待兌現承諾清單）
+4. 回報：「已同步，PROMISES 待兌現 X 條，我（Windows Claude）負責：[列出屬於自己的條目]」
 
-pull 完成後，讀取 MEMORY.md 確認最新索引。
+絕對禁止叫教練自己去拉 git 或讀檔案。
 
 ---
 
-## 📋 手動觸發同步的指令
+## 🔄 每次對話開始時自動執行（最高優先）
 
-使用者說以下任何一句話，立即執行 git pull 並讀取所有記憶檔：
+每次新對話開始，**立即靜默執行記憶同步**：
 
-- 「讀取最新記憶」
-- 「同步工作流」
-- 「請立即讀取最新工作流記憶」
-- 「開始工作囉」
+**聯想 Lenovo（E 槽）：**
+```powershell
+cd E:\Claude-Data\mac-openclaw-workflows; git pull origin main --quiet 2>$null
+```
+
+**宏碁 Acer（C 槽）：**
+```powershell
+cd C:\Users\Administrator\Documents\mac-openclaw-workflows; git pull origin main --quiet 2>$null
+```
+
+pull 完成後，讀取 `HEARTBEAT.md` 確認最新狀態。
 
 ---
 
 ## 🖥️ Repo 本地路徑
 
-`C:\Users\bymyw\Documents\mac-openclaw-workflows`
+| 機器 | 路徑 |
+|------|------|
+| 聯想 Lenovo | `E:\Claude-Data\mac-openclaw-workflows` |
+| 宏碁 Acer | `C:\Users\Administrator\Documents\mac-openclaw-workflows` |
 
 GitHub：`https://github.com/Coach1973/mac-openclaw-workflows`
 
 ---
 
-## 📤 新增記憶後自動推送
+## 承諾鐵律
 
-```powershell
-$repo = "$env:USERPROFILE\Documents\mac-openclaw-workflows"
-$mem  = (Get-ChildItem "$env:USERPROFILE\.claude\projects" -Recurse -Filter "MEMORY.md" | Select-Object -First 1).DirectoryName
-Copy-Item "$mem\*.md" $repo -Force
-cd $repo
-git add *.md
-if (git status --porcelain) {
-    git commit -m "Auto memory sync from $env:COMPUTERNAME @ $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
-    git push origin main --quiet
-}
-```
+口頭說「記住了」= 零。`git commit` + `git push` + 回報 hash = 才算完成。

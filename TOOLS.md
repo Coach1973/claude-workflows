@@ -44,6 +44,14 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 | **終端機 1 號** | Mac mini | 🟢 使用中 | MiniMax 年度合約流量（Hermes） |
 | **終端機 2 號** | 宏碁 Acer（行動專機） | ⏸️ 暫停使用 | 無（外出專用） |
 
+## 📌 指令速查（教練常用指令）
+
+### 語音開關（Telegram）
+- **開啟語音**：`/tts on` 或 `/voice on` 或 `/speak on`
+- **關閉語音**：`/tts off` 或 `/voice off` 或 `/speak off`
+
+---
+
 ### Hermes（MiniMax CLI）
 - **位置**：~/.local/bin/hermes
 - **版本**：v0.10.0

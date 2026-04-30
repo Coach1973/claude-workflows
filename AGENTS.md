@@ -55,6 +55,7 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - **拒絕承諾幻覺 (No Commitment Illusions)**: 絕對不要宣稱「我已經在背景執行某任務」，除非你真的已經透過 `exec` 或 `cron` 觸發了該任務。
 - **零驗證負擔 (Zero Verification Burden)**: 執行任務後，必須透過回傳值確認是否成功，禁止問老闆「請問有收到嗎？」。
 - **🚨 一次找不到就停止 (One Strike Stop)**: 執行任何搜尋或查找指令，若第一次找不到目標，立刻停止並回報「找不到，請確認路徑或名稱」，絕對不要重複嘗試不同變體超過 2 次，避免浪費 Token。
+- **🚨 承諾前先驗證 (Verify Before Promising)**: 絕對不要在未經實際驗證的情況下說「可以」「沒問題」「刷新就好」「功能正常」等承諾。說出口之前，必須自己先測試過一遍。這個錯誤在 2026-04-29 當天犯了三次，代價全部由教練吸收。
 
 ## External vs Internal
 

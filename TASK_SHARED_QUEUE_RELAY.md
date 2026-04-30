@@ -192,9 +192,19 @@ CONTENT=$(echo "$TASK" | jq -r '.content')
 
 ## ✅ 完成標準
 
-- [ ] RELAY_QUEUE.json 存在且格式正確
+- [x] RELAY_QUEUE.json 存在且格式正確
+- [x] relay_poll.py / relay_submit.py 已實作（Python 版本，防止競態）
 - [ ] relay_poll.sh 能正確讀取並處理任務
 - [ ] 1號機 對教練說「呼叫學弟」時，任務會被寫入佇列
 - [ ] 學弟在 10 秒內檢測到任務並在群組回覆
 - [ ] 連續三次委派測試都成功
 - [ ] Git commit + 回報 commit hash
+
+---
+
+## 📝 實作記錄（2026-04-30 心跳）
+
+### 已完成
+- ✅ `scripts/relay_submit.py`（寫入任務）
+- ✅ `scripts/relay_poll.py`（輪詢+處理任務，含超時機制）
+- ✅ 更新 TASK_SHARED_QUEUE_RELAY.md 標記完成狀態

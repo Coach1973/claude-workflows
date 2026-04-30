@@ -66,6 +66,7 @@
 - 2026-04-30 15:32：系統正常✅ 頂級助教守則 v2.1 完整（1133行，R01-R15全蒸餾）。場景缺口#021-045仍待修補（需大型記憶檔，Gemini 不支援直接讀取，需透過 DAILY_DIGEST 繞路）。學弟/學妹 SOUL.md 完整。心跳正常。
 - 2026-04-30 14:35：系統正常✅ Skills 稽核完成（20個技能全有 SKILL.md）。頂級助教守則.md 1133行（v2.1），R06已確認完整蒸餾（#018, #021, #033）。守則蒸餾已全數完成（R01-R15 ✅）。Commit de0c40a。心跳正常。
 
+- 2026-04-30 19:03：心跳例行。完成Relay系統最後一步——學弟/學妹的cron jobs已啟用（relay-poll每10秒輪詢）。kong/peipei的openclaw.json已更新，新增`.cron.jobs[0]`指向relay_poll.py。scripts/relay_submit.py及relay_poll.py均已就緒。三機Relay系統實作完成。心跳正常。
 - 2026-04-30 17:35：心跳例行檢查。系統正常✅。實作三機 Relay 系統核心腳本：
   - `relay_submit.py`：1號機寫入任務到佇列
   - `relay_poll.py`：學弟/學妹輪詢+處理任務（含60秒超時機制）

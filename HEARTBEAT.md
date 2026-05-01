@@ -33,3 +33,4 @@
 | 2026-05-01 14:03 | 心跳-小前進 | ✅ Gateway 200 OK；HB.md 已廢止（歸 DAILY_DIGEST），心跳指引依 DAILY_DIGEST 執行 |
 | 2026-05-01 15:03 | 心跳-小前進 | ✅ Gateway 200 OK；架構重構已完成（三機 cron 就緒）；催款/權利金/開發票三事需教練提供資料才能推進 |
 | 2026-05-01 15:33 | 心跳-小前進 | ✅ Gateway 200 OK；HB.md 不存在（已廢止）；所有待辦均需教練提供資料，暫無可獨立推進項目 |
+| 2026-05-01（下午，Claude對話）| 大腦工程+VPS同步準備 | ✅ CORE_RULES v2.4（R02語音糾偏通用升級）；VPS_SOUL.md+VPS_CORE_RULES.md建立；TASK_VPS_BRAIN_SYNC.md交接終端機；VPS_MASTER_GUIDE.md建立。終端機待執行：git push + SSH同步 + Gateway重啟。分工確立：Claude=設計，終端機=執行 |

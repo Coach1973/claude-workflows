@@ -1,0 +1,358 @@
+{
+  "agents": {
+    "list": [
+      {
+        "id": "main",
+        "workspace": "~/.openclaw/workspace",
+        "model": "moonshot/kimi-k2.6"
+      },
+      {
+        "id": "kong",
+        "workspace": "~/.openclaw/agents/kong",
+        "model": "minimax/MiniMax-M2.7"
+      },
+      {
+        "id": "peipei",
+        "workspace": "~/.openclaw/agents/peipei",
+        "model": "minimax/MiniMax-M2.7"
+      }
+    ],
+    "defaults": {
+      "startupContext": {
+        "enabled": true,
+        "applyOn": [
+          "new",
+          "reset"
+        ],
+        "dailyMemoryDays": 7,
+        "maxFileChars": 5000,
+        "maxTotalChars": 25000
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 25000,
+          "forceFlushTranscriptBytes": "1mb"
+        }
+      },
+      "memorySearch": {
+        "enabled": true,
+        "sources": [
+          "memory"
+        ],
+        "provider": "gemini",
+        "store": {
+          "vector": {
+            "enabled": true
+          }
+        }
+      },
+      "llm": {
+        "idleTimeoutSeconds": 300
+      }
+    }
+  },
+  "channels": {
+    "line": {
+      "enabled": true,
+      "channelAccessToken": "nmB7+t+MXR38yNkf95GdwZrZs2mlh5S9qz9GvsbBiI4N4/GeIx7v9aQZ31B+1pXCCT47LGgsd1uoiFVmnwwtmXdSQl9j/ZlnjlRPGkREPAptuYzxc2tDUHsTmCWP1iw6JHcPqmnFvaxwVRYdboP8KAdB04t89/1O/w1cDnyilFU=",
+      "channelSecret": "61cd4f1212b0135f69b84044e9cfa46d",
+      "dmPolicy": "pairing",
+      "groupPolicy": "open",
+      "webhookPath": "/line/webhook"
+    },
+    "telegram": {
+      "enabled": true,
+      "defaultAccount": "bot_main",
+      "accounts": {
+        "bot_main": {
+          "botToken": "8758843664:AAE4W-hGh2mPxNt89b2donZ0Q--YZ9uwdsA",
+          "groupPolicy": "open",
+          "groups": {
+            "-1003877502911": {
+              "requireMention": false
+            }
+          }
+        },
+        "bot_kong": {
+          "botToken": "8555923043:AAEOoI2ZWIyKW69Z32IMaM0sYajG6D9HkeQ",
+          "groupPolicy": "open",
+          "groups": {
+            "-1003877502911": {
+              "requireMention": false
+            },
+            "-5083547625": {
+              "requireMention": false
+            }
+          }
+        },
+        "bot_peipei": {
+          "botToken": "8705446823:AAHDA0wvjdxXsaB3yX3PRiEkG_wO2N-BWa8",
+          "groupPolicy": "open",
+          "groups": {
+            "-1003877502911": {
+              "requireMention": false
+            },
+            "-5115910257": {
+              "requireMention": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "line"
+      }
+    },
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "telegram",
+        "accountId": "bot_main",
+        "peer": {
+          "kind": "group",
+          "id": "-1003877502911"
+        }
+      }
+    },
+    {
+      "agentId": "kong",
+      "match": {
+        "channel": "telegram",
+        "accountId": "bot_kong",
+        "peer": {
+          "kind": "group",
+          "id": "-1003877502911"
+        }
+      }
+    },
+    {
+      "agentId": "peipei",
+      "match": {
+        "channel": "telegram",
+        "accountId": "bot_peipei",
+        "peer": {
+          "kind": "group",
+          "id": "-1003877502911"
+        }
+      }
+    },
+    {
+      "agentId": "kong",
+      "match": {
+        "channel": "telegram",
+        "accountId": "bot_kong"
+      }
+    },
+    {
+      "agentId": "peipei",
+      "match": {
+        "channel": "telegram",
+        "accountId": "bot_peipei"
+      }
+    }
+  ],
+  "tools": {
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "main",
+        "kong",
+        "peipei"
+      ]
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "fd9928d58f419937cf56ea1ab10c0830fbded6e64714a047"
+    }
+  },
+  "hooks": {
+    "internal": {
+      "entries": {
+        "group-identity": {
+          "enabled": true,
+          "path": "~/.openclaw/hooks/group-identity/handler.js"
+        },
+        "bot-relay": {
+          "enabled": true,
+          "path": "~/.openclaw/hooks/bot-relay/handler.js"
+        },
+        "bot-relay-inbound": {
+          "enabled": true,
+          "path": "~/.openclaw/hooks/bot-relay-inbound/handler.js"
+        },
+        "client-memory": {
+          "enabled": true,
+          "path": "~/.openclaw/hooks/client-memory/handler.js"
+        },
+        "self-improvement": {
+          "enabled": true,
+          "path": "~/.openclaw/hooks/self-improvement/handler.js"
+        },
+        "context-overflow-guard": {
+          "enabled": true,
+          "path": "~/.openclaw/hooks/context-overflow-guard/handler.js"
+        }
+      }
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.4.15",
+    "lastTouchedAt": "2026-04-28T10:19:42.344Z"
+  },
+  "models": {
+    "mode": "replace",
+    "providers": {
+      "google": {
+        "api": "google-generative-ai",
+        "models": [
+          {
+            "id": "gemini-3.1-pro-preview",
+            "name": "Gemini 3.1 Pro Preview",
+            "input": [
+              "text",
+              "image"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 8192
+          },
+          {
+            "id": "gemini-2.5-pro",
+            "name": "Gemini 2.5 Pro",
+            "input": [
+              "text",
+              "image"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 8192
+          },
+          {
+            "id": "gemini-2.0-flash",
+            "name": "Gemini 2.0 Flash",
+            "input": [
+              "text",
+              "image"
+            ],
+            "contextWindow": 1048576,
+            "maxTokens": 8192
+          }
+        ],
+        "baseUrl": "http://127.0.0.1:18793"
+      },
+      "minimax": {
+        "baseUrl": "https://api.minimax.io/anthropic",
+        "api": "anthropic-messages",
+        "authHeader": true,
+        "models": [
+          {
+            "id": "MiniMax-M2.7",
+            "name": "MiniMax M2.7",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cacheRead": 0.06,
+              "cacheWrite": 0.375
+            },
+            "contextWindow": 204800,
+            "maxTokens": 131072
+          }
+        ]
+      },
+      "moonshot": {
+        "baseUrl": "https://api.moonshot.ai/v1",
+        "api": "openai-responses",
+        "authHeader": true,
+        "models": [
+          {
+            "id": "kimi-k2.6",
+            "name": "Kimi K2.6",
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.5,
+              "output": 2.0
+            },
+            "contextWindow": 204800,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "minimax": {
+        "enabled": true
+      },
+      "active-memory": {
+        "enabled": true
+      },
+      "memory-core": {
+        "config": {
+          "dreaming": {
+            "enabled": true,
+            "frequency": "daily",
+            "timezone": "Asia/Taipei",
+            "verboseLogging": false,
+            "storage": {
+              "mode": "both",
+              "separateReports": true
+            },
+            "phases": {
+              "light": {
+                "enabled": true,
+                "lookbackDays": 7,
+                "limit": 50,
+                "dedupeSimilarity": 0.85
+              },
+              "deep": {
+                "enabled": true,
+                "limit": 30,
+                "minScore": 0.6,
+                "minRecallCount": 2,
+                "minUniqueQueries": 1,
+                "recencyHalfLifeDays": 14,
+                "maxAgeDays": 60
+              },
+              "rem": {
+                "enabled": true,
+                "lookbackDays": 14,
+                "limit": 20,
+                "minPatternStrength": 0.5
+              }
+            }
+          }
+        }
+      },
+      "google": {
+        "enabled": true
+      }
+    }
+  },
+  "messages": {
+    "tts": {
+      "enabled": false
+    },
+    "groupChat": {
+      "mentionPatterns": [
+        "蝦",
+        "助教",
+        "小幫手",
+        "海餅乾"
+      ]
+    }
+  }
+}

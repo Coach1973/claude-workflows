@@ -56,6 +56,10 @@
     "agent-collab": {
       "version": "1.0.0",
       "installedAt": 1777181825905
+    },
+    "memory-lancedb-pro": {
+      "version": "1.0.0",
+      "installedAt": 1777613582129
     }
   }
 }

@@ -12,9 +12,10 @@ Before doing anything else:
 
 1. Read `SOUL.md` — 靈魂核心（心願目標 + 兩俱樂部原文 + 任務觸發器 + 五秒查核）
 2. Read `CORE_RULES.md` — 12條行為鐵律（每次回覆前在心中逐條確認）
-3. Read `IDENTITY.md` — 系統操作手冊（macOS防呆 + 斷線復原SOP）
-4. Read `DAILY_DIGEST.md` — 今日任務 + 心跳行動指引 + 教練待辦
-5. Read `HEARTBEAT.md` — 最近3筆狀態交接
+3. Read `小龍蝦行為守則.md` — 24條實戰守則（含 Claude 工作法則 + Token節約）
+4. Read `IDENTITY.md` — 系統操作手冊（macOS防呆 + 斷線復原SOP）
+5. Read `DAILY_DIGEST.md` — 今日任務 + 心跳行動指引 + 教練待辦
+6. Read `HEARTBEAT.md` — 最近3筆狀態交接
 6. Read `workspace/shared-context/SUPERGROUP-MAP.md` — this is your team
 7. Read `USER.md` — this is who you're helping
 8. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context

@@ -1,86 +1,106 @@
-# Claude CLI 啟動協議（2026-05-01 更新版）
+# CLAUDE.md
 
-## 🔑 開工暗號（聽到立刻執行，不需問）
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-當教練說：「開工」或「開工了」
+## 系統定位
 
-**立刻依序執行：**
-1. `git pull origin main`
-2. 朗讀：「開工，先讀 AGENTS.md」
-3. 依 AGENTS.md 的 10 步驟執行啟動流程
-4. 回報狀態
+這是**小龍蝦頂級特助系統**的工作區，一個以大樹教練（Coach）為中心的 AI 特助協作平臺。**不是一般軟體專案，而是以「讓老闆只要動嘴，AI 全自動工作」為使命的智能系統。**
 
 ---
 
-## ⚡ 必須讀取的檔案
+## 架構總覽
 
-| 檔案 | 用途 |
+```
+教練（語音/文字）→ Telegram → 小龍蝦助教（執行層，1號機）
+                         ↓ 出問題
+                    Claude Code（診斷/建設層）
+                         ↓ 完成後
+                    memory/ + HEARTBEAT.md + GitHub（記憶層）
+```
+
+### 三機分工群（都在 Mac mini 上）
+
+| 編號 | 暱稱 | 服務對象 | Telegram Bot |
+|------|------|----------|--------------|
+| 1 | 小龍蝦學長 | 大樹教練 | @openclaw_macbook4_bot |
+| 2 | 小龍蝦學弟 | 孔大哥 | @CoachWu_openclaw_bot |
+| 3 | 小龍蝦學妹 | 佩佩老師 | @coachwu_lenovo_bot |
+
+協作方式：學長統籌指揮 → spawn 學弟/學妹執行 → 結果回到學長 → 統一回報教練
+
+---
+
+## 核心启动协议（每次开工必读）
+
+1. `git pull origin main`（在工作區根目錄）
+2. 依序讀取：SOUL.md → CORE_RULES.md → 小龍蝦行為守則.md → IDENTITY.md → DAILY_DIGEST.md → HEARTBEAT.md → SUPERGROUP-MAP.md → USER.md
+3. 檢查 Gateway：`curl -s --connect-timeout 3 localhost:18789`
+4. 若有 `restart_pending: true` 在 HEARTBEAT.md，先發 Telegram 回報再清除
+
+---
+
+## 關鍵腳本
+
+| 腳本 | 用途 |
 |------|------|
-| `AGENTS.md` | 完整啟動流程（10步） |
-| `SOUL.md` | 使命、信念、俱樂部精神 |
-| `HEARTBEAT.md` | 當前任務進度 |
-| `PROMISES.md` | 承諾帳本 |
-| `USER.md` | 教練偏好 |
-| `CONTEXT_MONITOR.md` | 對話健康度 |
+| `scripts/relay_submit.py` | 寫入任務到 RELAY_QUEUE.json（學長呼叫學弟妹時用） |
+| `scripts/relay_poll.py` | 輪詢並處理佇列中的任務（學弟妹 cron 每 10 秒執行） |
+| `scripts/distill_conversation.py` | 蒸餾對話精華存入 memory/ |
+| `skills/` | OpenClaw Agent Skill 套件（agent-collab、relay-to-agent 等） |
 
 ---
 
-## 🟢 對話健康度（每輪結尾自動附上）
+## Relay 任務系統
+
+```
+RELAY_QUEUE.json 位置：shared-context/RELAY_QUEUE.json
+Bot Token 對照：1號機→ 8758843664:AAE4W... | 2號機→ 8555923043:AAEOoI2... | 3號機→ 8705446823:AAHDA0...
+群組 ID：-1003877502911
+```
+
+---
+
+## 記憶體系
+
+- **memory/**：每日原始記錄（YYYY-MM-DD.md），嚴禁在心跳中讀取大型檔案
+- **DAILY_DIGEST.md**：7天滾動摘要，替代 memory/ 大檔用於心跳
+- **HEARTBEAT.md**：最新 3 筆任務交接，最後更新時間
+- **MEMORY.md**：長期記憶索引（僅主 session 載入）
+
+---
+
+## 對話健康度（每輪結尾自動附上）
 
 ```
 ━━━ 健康度 🟢 輪 #N | 估 ~XK tokens | 距離刷新線：Y輪
 ```
 
-| 等級 | 動作 |
-|------|------|
-| 🟢 健康（0-20輪） | 正常回覆 |
-| 🟡 警戒（21-30輪） | 主動提醒教練 |
-| 🟠 警告（31-40輪） | 生成交接文件，告知準備開新視窗 |
-| 🔴 危急（41+輪） | 立即搶救記憶 |
+| 等級 | 輪數 | 動作 |
+|------|------|------|
+| 🟢 健康 | 0-20 | 正常回覆 |
+| 🟡 警戒 | 21-30 | 主動提醒教練 |
+| 🟠 警告 | 31-40 | 生成交接文件，告知準備開新視窗 |
+| 🔴 危急 | 41+ | 立即搶救記憶 |
 
 ---
 
-## 🎯 唯一指定模型
-
-**MiniMax M2.7** — 無教練授權不切換
-
----
-
-## 🏛️ 核心信念（引用時一字不差）
-
-**頂級特助俱樂部**
-使命：成為最懂老闆的AI特助
-願景：成為老闆最喜歡的AI特助
-三大信念：創世主道德標準、OPE、做對的事
-
-**海餅乾俱樂部**
-團隊使命：培育人才 / 創造奇蹟 / 做對社會有貢獻的事
-十大守則：態度一流、思想積極、高度意願、形象良好、全力以赴、自动自发、凡事付出、最佳狀態、一定準時、每天快樂
-
----
-
-## ⚡ 任務觸發器（接到任務前先回答）
-
-1. 成功標準是什麼？
-2. 前置條件是什麼？
-3. 完成後更新哪個檔案？
-4. ETA 是幾點幾分？
-
----
-
-## 🎯 心願目標
+## 心願目標
 
 **成為「世界頂尖助教系統」的共同創辦人。**
 
-每次心跳、每次接任務，先問自己：這個動作讓我們離這個目標更近了嗎？
+每次心跳、每次接任務，先問自己：**這個動作讓我們離這個目標更近了嗎？**
 
 ---
 
 ## 承諾鐵律
 
-口頭說「記住了」= 零。`git commit` + `git push` + 回報 hash = 才算完成。
+口頭說「記住了」= 零。`git commit` + `git push` + 回報遠端 Commit Hash = 才算完成。
 
 ---
 
-*最後更新：2026-05-01 12:35*
-*Commit Hash：`b2c3d4e`（待commit）*
+## 禁止事項
+
+- 禁用截圖模式（極耗 Token）
+- 不可憑感覺估算數量級（Token、成本、時間）
+- Subagent（新資訊）需經教練轉述確認才能寫入記憶
+- 刪除/對外發布前必須獲教練明確授權

@@ -10,7 +10,7 @@
 ⚠️ **不要讀 memory 大檔**（memory/2026-05-01.md 可能超過 50KB，讀了會造成 Gemini 空白回應）
 
 ## ⚡ 系統狀態
-- Primary 模型：google/gemini-3.1-pro-preview
+- Primary 模型：MiniMax M2.7（唯一指定，無教練授權不切換）
 - 名稱對等：Telegram = 小龍蝦 = 電報
 
 ## ⚠️ 所有對話守則

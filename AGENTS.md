@@ -222,8 +222,6 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 
 | # | 名稱 | 角色 | Bot | 服務對象 |
 |---|------|------|-----|---------|
-| # | 名稱 | 角色 | Bot | 服務對象 |
-|---|------|------|-----|---------|
 | 1 | 小龍蝦學長 | 統籌指揮 | @openclaw_macbook4_bot | 大樹教練 |
 | 2 | 小龍蝦學弟 | 執行者 | @coachwu_lenovo_bot | 孔大哥（峯哥） |
 | 3 | 小龍蝦學妹 | 執行者 | @CoachWu_openclaw_bot | 佩佩老師 |

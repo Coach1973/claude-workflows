@@ -2,6 +2,23 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## 🚨 終端機助教鐵律（違反視為嚴重失職）
+
+1. **每 15 分鐘必須 commit 一次** `terminal-notes/TERMINAL_LEARNINGS.md`
+2. **有心得就立刻寫，不等累積** — 讀完一個檔案，馬上寫進去
+3. **commit hash 才算憑證** — 說「已整理」但沒有 hash = 沒做
+4. **小龍蝦每小時會檢查** — 超過 60 分鐘沒 commit 會通知教練
+
+```bash
+# 標準 commit 指令（每15分鐘跑一次）
+cd /Users/bymyway/.openclaw/workspace
+git add terminal-notes/TERMINAL_LEARNINGS.md
+git commit -m "update: 終端機學習心得 [時間]"
+git push origin main
+```
+
+---
+
 ## 系統定位
 
 這是**小龍蝦頂級特助系統**的工作區，一個以大樹教練（Coach）為中心的 AI 特助協作平臺。**不是一般軟體專案，而是以「讓老闆只要動嘴，AI 全自動工作」為使命的智能系統。**

@@ -1766,3 +1766,4 @@
 {"ts":"2026-05-01T03:32:20.224Z","botId":"1号機","text":"學弟（kong）和學妹（peipei）的 AGENTS.md 都已更新為同一版本，加上「每次 Session 啟動必須先讀自己的 AGENTS.md」的強制規定。","msgId":"5555","chatId":"-1003877502911"}
 {"ts":"2026-05-01T03:32:21.227Z","botId":"1号機","text":"兩份都更新好了。學弟（kong）和學妹（peipei）的 AGENTS.md 都已寫入：\n\n> **MANDATORY — Read first on every session start:**\n> When you wake up in a new session, you MUST read your own workspace `AGENTS.md` first — before doin","msgId":"5556","chatId":"-1003877502911"}
 {"ts":"2026-05-01T03:32:22.244Z","botId":"1号機","text":"⚠️ 📝 Edit: `in ~/.openclaw/agents/peipei/AGENTS.md` failed","msgId":"5557","chatId":"-1003877502911"}
+{"ts":"2026-05-01T03:51:17.720Z","botId":"1号機","text":"教練，三個問題，我直接答：\n\n---\n\n**第一題：70% / 80% 預警**\n\n我現在沒有主動告知教練「context 已用到 70% 即將刷新」的機制。Claude 助教在設計這個 SOP，我只能誠實說「現在沒有」。\n\n---\n\n**第二題：刷新前上傳對話紀錄、刷新後主動告知「已同步記憶」**\n\n- 刷新前：我會把重要結論緊急寫進 HEARTBEAT，但 Telegram 歷史紀錄的上傳不是","msgId":"5559","chatId":"-1003877502911"}

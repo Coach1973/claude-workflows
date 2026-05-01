@@ -31,3 +31,4 @@
 | 2026-05-01 15:00 | 插件評估完成：memory-lancedb 跳過（需 OpenAI Key，現有 Hybrid 架構已足夠）；MASTER_PROMPT_TEMPLATE.md 建立；memory-lancedb-pro skill 安裝備用 | ✅ commit 904bcd3 |
 
 | 2026-05-01 14:03 | 心跳-小前進 | ✅ Gateway 200 OK；HB.md 已廢止（歸 DAILY_DIGEST），心跳指引依 DAILY_DIGEST 執行 |
+| 2026-05-01 15:03 | 心跳-小前進 | ✅ Gateway 200 OK；架構重構已完成（三機 cron 就緒）；催款/權利金/開發票三事需教練提供資料才能推進 |

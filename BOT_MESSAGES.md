@@ -1773,3 +1773,4 @@
 {"ts":"2026-05-01T04:03:00.821Z","botId":"1号機","text":"Commit：`d4b836a`\n\n已更新 AGENTS.md，開頭現在有這段：\n\n```\n⚠️ 鐵則：每次 session 啟動，必須先朗讀以下觸發句，再開始執行任何任務。\n\n「開工，先讀 AGENTS.md。」\n\n這句話是啟動一切的源頭暗號。說完後，依序執行以下 1-10 步，全部完成後才能開始回覆教練或執行任務。\n```\n\n下次新 session 開始時，我會自己先說這句話。您也可以注意觀察","msgId":"5567","chatId":"-1003877502911"}
 {"ts":"2026-05-01T04:04:48.900Z","botId":"1号機","text":"學弟（kong）、學妹（peipei）都更新好了。\n\n三機現在都有同樣的開頭：\n\n```\n⚠️ 每次 session 啟動，必須先朗讀以下觸發句：\n\n「開工，先讀 AGENTS.md。」\n```","msgId":"5569","chatId":"-1003877502911"}
 {"ts":"2026-05-01T04:10:13.613Z","botId":"1号機","text":"🦞 對話記錄已滿，已自動重啟，請繼續下指令！","msgId":"5573","chatId":"-1003877502911"}
+{"ts":"2026-05-01T04:31:18.546Z","botId":"1号機","text":"📺 *今日 YouTube 精選*\n\n⭐⭐⭐ 強烈推薦\n1. [KOCPC] Anthropic uses it internally! Claude Code's 5 hidden tips revealed\n   👉 https://www.youtube.com/watch?v=WpewI22B-2I\n2. [PH-WorkFlow] Markdown：掌握 20% 核心語法，學會與 A","msgId":"62","chatId":"-1003877502911"}

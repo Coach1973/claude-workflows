@@ -28,3 +28,4 @@
 | 時間 | 動作 | 結果 |
 |------|------|------|
 | 2026-05-01 12:35 | Gateway 健康檢查 | ✅ 200 OK |
+| 2026-05-01 15:00 | 插件評估完成：memory-lancedb 跳過（需 OpenAI Key，現有 Hybrid 架構已足夠）；MASTER_PROMPT_TEMPLATE.md 建立；memory-lancedb-pro skill 安裝備用 | ✅ commit 904bcd3 |

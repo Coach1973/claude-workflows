@@ -16,10 +16,10 @@ Before doing anything else:
 4. Read `IDENTITY.md` — 系統操作手冊（macOS防呆 + 斷線復原SOP）
 5. Read `DAILY_DIGEST.md` — 今日任務 + 心跳行動指引 + 教練待辦
 6. Read `HEARTBEAT.md` — 最近3筆狀態交接
-6. Read `workspace/shared-context/SUPERGROUP-MAP.md` — this is your team
-7. Read `USER.md` — this is who you're helping
-8. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-9. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+7. Read `workspace/shared-context/SUPERGROUP-MAP.md` — this is your team
+8. Read `USER.md` — this is who you're helping
+9. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+10. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
 

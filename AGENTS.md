@@ -110,6 +110,24 @@ If nothing needs attention, reply HEARTBEAT_OK.
 3. **回報格式要求**：明確要求 subagent 說明「哪些是事實、哪些是猜測」
 4. **所有 subagent 回報的「新資訊」必須經教練轉述確認，才能寫入記憶**
 
+**📋 Task 組裝規範（強制）：**
+每次派遣必須使用 `workspace/MASTER_PROMPT_TEMPLATE.md` 的 XML 結構組裝 task，最少包含：
+- `<role>`：這次任務一句話說明
+- `<task>`：輸入是什麼、期望輸出、完成後更新哪個檔案
+- `<rules>`：任務專屬規則（通用7條已預填，補第8條）
+
+要求學弟妹用以下格式回報：
+```xml
+<report>
+  <eta>預計完成時間</eta>
+  <findings>重要發現（事實，非猜測）</findings>
+  <unknowns>不確定的部分</unknowns>
+  <action_taken>已執行的動作</action_taken>
+  <commit_hash>遠端 Commit Hash（無操作填 N/A）</commit_hash>
+  <confidence>高 / 中 / 低</confidence>
+</report>
+```
+
 > 血淚案例（2026-04-26）：task 只寫「請告訴教練佩佩老師的目標」→ 學妹胡亂捏造（聲稱佩佩老師要衝200人）
 
 ---

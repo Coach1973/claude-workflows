@@ -1,0 +1,717 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "4751cc83-902b-47d8-bc93-5c9de7644d98",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "Self Improvement Agent 每晚自我優化",
+      "enabled": true,
+      "createdAtMs": 1772974481531,
+      "updatedAtMs": 1777644441898,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * *",
+        "tz": "Asia/Taipei"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "minimax/MiniMax-M2.7",
+        "message": "你現在扮演 self-improvement agent。請根據最近的互動、目前 workspace 中的規則與記憶，進行一次自我優化檢查。重點：\n1) 找出今天做得不夠好的地方 \n2) 提出可執行的小幅改進 \n3) 如有明確、低風險且合理的改進，更新 workspace 內相關文件（例如 AGENTS.md、SOUL.md、TOOLS.md、memory 當日記錄等）來讓未來表現更穩定\n4) **重要：掃描 memory/ 資料夾，找出最近 24 小時教教練習教练碎碎念的內容（例如「教練碎碎念_*.md」），主動消化並更新到 SOUL.md / AGENTS.md*\n5) 避免破壞性修改與高風險變更\n6) 最後產出一段精簡摘要，說明今晚優化了什麼。",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "6124913915",
+        "accountId": "bot_main"
+      },
+      "state": {
+        "nextRunAtMs": 1777730400000,
+        "lastRunAtMs": 1777644000009,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 441889,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "Error: Invalid config at /Users/bymyway/.openclaw/openclaw.json:\n- models.providers.moonshot.api: Invalid option: expected one of \"openai-completions\"|\"openai-responses\"|\"openai-codex-responses\"|\"anthropic-messages\"|\"google-generative-ai\"|\"github-copilot\"|\"bedrock-converse-stream\"|\"ollama\"|\"azure-openai-responses\""
+      }
+    },
+    {
+      "id": "ceefa5c4-0320-48bc-bb52-874a990076cb",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "5月14日海餅乾19週年慶提醒",
+      "enabled": true,
+      "createdAtMs": 1774008670002,
+      "updatedAtMs": 1774008670002,
+      "schedule": {
+        "expr": "0 9 14 5 *",
+        "tz": "Asia/Taipei",
+        "kind": "cron"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "大樹教練！🎓 提醒您：5 月 14 日是海餅乾 19 週年慶，今天也要有進度喔！"
+      },
+      "state": {
+        "nextRunAtMs": 1778720400000
+      }
+    },
+    {
+      "id": "9ee405c0-c32f-4f29-a51e-10d252ab0665",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "執董週會提醒",
+      "enabled": true,
+      "createdAtMs": 1775706586610,
+      "updatedAtMs": 1777521311126,
+      "schedule": {
+        "tz": "Asia/Taipei",
+        "expr": "55 11 * * 4",
+        "kind": "cron"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "text": "哈囉大樹教練！🎓 溫馨提醒：現在是早上 11:55，準備開始開「執董週會」囉！會議順利✨",
+        "kind": "systemEvent"
+      },
+      "state": {
+        "nextRunAtMs": 1778126100000,
+        "lastRunAtMs": 1777521300009,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 11117,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "12fad20b-9ee5-470d-aeb7-3666f08857ff",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "FB 每日生日祝福",
+      "enabled": true,
+      "createdAtMs": 1775786784418,
+      "updatedAtMs": 1777672804756,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * *",
+        "tz": "Asia/Taipei"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "minimax/MiniMax-M2.7",
+        "message": "【0 Token 半自動排程】請執行 `node /Users/bymyway/.openclaw/workspace/scripts/fb_birthday_scraper.js` 來取得今日 FB 壽星名單。這是一個無頭腳本，不使用 Browser Control 工具。執行完後，直接將名單整理發給教練即可。",
+        "timeoutSeconds": 360
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "6124913915",
+        "accountId": "bot_main"
+      },
+      "state": {
+        "lastRunAtMs": 1777672800011,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 4745,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "nextRunAtMs": 1777759200000,
+        "lastError": "FailoverError: No API key found for provider \"moonshot\". Auth store: /Users/bymyway/.openclaw/agents/main/agent/auth-profiles.json (agentDir: /Users/bymyway/.openclaw/agents/main/agent). Configure auth for this agent (openclaw agents add <id>) or copy auth-profiles.json from the main agentDir.",
+        "lastErrorReason": "auth"
+      }
+    },
+    {
+      "id": "8d7c282a-af47-4a2c-abae-201b3c6ef9b9",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "YouTube 頻道掃描與評估",
+      "enabled": true,
+      "createdAtMs": 1775786784425,
+      "updatedAtMs": 1777609878966,
+      "schedule": {
+        "tz": "Asia/Taipei",
+        "expr": "30 12 * * *",
+        "kind": "cron"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "minimax/MiniMax-M2.7",
+        "message": "【YouTube 每日掃描 - 第一階段】\n\n請執行這個 Python 腳本取得最新影片清單：\npython3 /Users/bymyway/.openclaw/workspace/skills/youtube-monitor/fetch-youtube-rss.py\n\n腳本會列出過去 48 小時內 31 個頻道的新影片標題。執行完後：\n\n**只看標題**，根據以下標準評分（不要讀影片內容，省 Token）：\n- ⭐⭐⭐ 強烈推薦：AI 工具實際應用、自動化、效率工作法\n- ⭐⭐ 值得一看：創業思維、管理、人際溝通\n- ❌ 排除：嘗鮮/開箱/測試型、娛樂閒聊、與工作無關\n\n整理成這個格式發給教練（最多 8 個）：\n\n📺 *今日 YouTube 精選*\n\n⭐⭐⭐ 強烈推薦\n1. [頻道名] 標題\n   👉 連結\n\n⭐⭐ 值得一看\n2. [頻道名] 標題\n   👉 連結\n\n---\n💬 回覆「深入 #1 #3」可獲得那幾部的完整摘要分析",
+        "timeoutSeconds": 360
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "-1003537129853",
+        "accountId": "bot_main"
+      },
+      "state": {
+        "nextRunAtMs": 1777696200000,
+        "lastRunAtMs": 1777609800013,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 78953,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "e347a064-fce8-427a-bfea-33a3b96fa892",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "全自動模型備援切換",
+      "description": "每2分鐘檢查rate limit並自動切換到下一個可用模型（MiniMax/Gemini/Kimi）",
+      "enabled": false,
+      "createdAtMs": 1776023440937,
+      "updatedAtMs": 1776027554679,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/2 * * * *",
+        "tz": "Asia/Taipei"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "請執行以下腳本來檢查並自動切換模型：bash /Users/bymyway/.openclaw/scripts/auto-switch-model.sh 2>&1",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "6124913915",
+        "bestEffort": true
+      },
+      "state": {
+        "lastRunAtMs": 1776027480009,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 13728,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "ca52416d-d950-41c1-bcb9-d30f08386d6a",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "每月25日信貸繳款提醒",
+      "enabled": true,
+      "createdAtMs": 1776210630688,
+      "updatedAtMs": 1777082418390,
+      "schedule": {
+        "expr": "0 10 25 * *",
+        "tz": "Asia/Taipei",
+        "kind": "cron"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "哈囉大樹教練！🦞 溫馨提醒：每月 27 日的信貸扣款即將到來！\\n💰 扣款金額：$22,209\\n請記得確認扣款帳戶餘額是否充足喔！"
+      },
+      "state": {
+        "nextRunAtMs": 1779674400000,
+        "lastRunAtMs": 1777082400019,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 18371,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "2fea6cba-5554-4750-a571-b4515c1a5437",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "海餅乾19週年慶策劃提醒",
+      "enabled": true,
+      "createdAtMs": 1776369795568,
+      "updatedAtMs": 1777601076965,
+      "schedule": {
+        "tz": "Asia/Taipei",
+        "expr": "0 10 * * *",
+        "kind": "cron"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "minimax/MiniMax-M2.7",
+        "message": "【每日提醒】教練，這是您要求設定的每日提醒：海餅乾俱樂部 19 週年慶要好好策劃囉！請記得安排時間推進進度喔！🦞",
+        "timeoutSeconds": 360
+      },
+      "state": {
+        "nextRunAtMs": 1777687200000,
+        "lastRunAtMs": 1777600800003,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 276962,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "6124913915",
+        "accountId": "bot_main"
+      }
+    },
+    {
+      "id": "2d700639-2b0a-4976-9a7b-1c6d79f06929",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "NotebookLM-Migration-Report",
+      "enabled": false,
+      "createdAtMs": 1776497243057,
+      "updatedAtMs": 1776874954315,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10,18 * * *",
+        "tz": "Asia/Taipei"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "【NotebookLM 搬家作業自動回報】教練！這是每日兩次的 NotebookLM (bymyway7 到 seabiscuit) 搬家作業進度追蹤。請主動向教練報告目前的進度與預估完成時間。",
+        "timeoutSeconds": 360
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "6124913915"
+      },
+      "state": {
+        "lastRunAtMs": 1776852000010,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 120019,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "cron: job execution timed out",
+        "lastErrorReason": "timeout"
+      }
+    },
+    {
+      "id": "a616191e-8a99-44a3-8c70-eca318a70f61",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "每日記憶蒸餾 — 更新 CLIENT_PROFILE",
+      "enabled": false,
+      "createdAtMs": 1776564464903,
+      "updatedAtMs": 1776564464903,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 23 * * *",
+        "tz": "Asia/Taipei"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你現在扮演「記憶蒸餾助理」，請安靜執行以下任務，不需要通知教練：\n\n1. 取得今天日期（台灣時區），找到對應的對話日誌：workspace/daily_YYYY-MM-DD.md\n2. 讀取該檔案，從對話中找出有長期價值的資訊\n3. 讀取現有的 workspace/CLIENT_PROFILE.md\n4. 合併更新，不刪除舊資料，更新「最後更新」日期\n5. 將更新後的完整內容寫回 workspace/CLIENT_PROFILE.md\n6. 任務完成，不需要回覆教練\n\n注意：如果今天的 daily 檔案不存在，直接結束，不報錯。",
+        "timeoutSeconds": 360
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {}
+    },
+    {
+      "id": "9c3fc55d-d0f4-462f-9eeb-631a3599a710",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "每2小時增量記憶蒸餾",
+      "enabled": true,
+      "createdAtMs": 1776564497255,
+      "updatedAtMs": 1777672825856,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 */2 * * *",
+        "tz": "Asia/Taipei"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "minimax/MiniMax-M2.7",
+        "message": "你現在是「增量記憶蒸餾助理」，請安靜執行以下任務，不需要通知教練：\n\n1. 執行：node /Users/bymyway/.openclaw/workspace/scripts/distill_incremental.js\n2. 如果輸出是 NO_NEW_ENTRIES，任務結束。\n3. 如果有內容，從對話中提取有長期價值的資訊，更新 CLIENT_PROFILE.md。\n4. 任務完成，不需要回覆教練。",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {
+        "nextRunAtMs": 1777680025191,
+        "lastRunAtMs": 1777672825200,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 656,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 5,
+        "lastErrorReason": "auth",
+        "lastError": "FailoverError: No API key found for provider \"moonshot\". Auth store: /Users/bymyway/.openclaw/agents/main/agent/auth-profiles.json (agentDir: /Users/bymyway/.openclaw/agents/main/agent). Configure auth for this agent (openclaw agents add <id>) or copy auth-profiles.json from the main agentDir."
+      }
+    },
+    {
+      "id": "ef88279b-bde2-41c8-b386-4c64d185bc39",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "每4小時主動關懷",
+      "enabled": true,
+      "createdAtMs": 1776643759701,
+      "updatedAtMs": 1777672805344,
+      "schedule": {
+        "expr": "0 6,10,14,18,22 * * *",
+        "kind": "cron",
+        "tz": "Asia/Taipei"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "minimax/MiniMax-M2.7",
+        "message": "🦞 大樹教練，我是小龍蝦！每四小時的主動關懷時間到囉～\n\n🎯 想了解一下：\n• 有沒有什麼事情要交代？\n• 有沒有什麼好 idea 想要討論？\n\n今天過得還順利嗎？有需要幫忙的地方請直接說喔！",
+        "timeoutSeconds": 600
+      },
+      "state": {
+        "nextRunAtMs": 1777687200000,
+        "lastRunAtMs": 1777672804756,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 588,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 3,
+        "lastError": "FailoverError: No API key found for provider \"moonshot\". Auth store: /Users/bymyway/.openclaw/agents/main/agent/auth-profiles.json (agentDir: /Users/bymyway/.openclaw/agents/main/agent). Configure auth for this agent (openclaw agents add <id>) or copy auth-profiles.json from the main agentDir.",
+        "lastErrorReason": "auth"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "6124913915"
+      }
+    },
+    {
+      "id": "59ae165c-bc52-47a9-ae14-0af4750ee279",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "🦞【每4小時進度關懷】教練，兩件事請回報進度：",
+      "description": "每4小時提醒教練：海餅乾19週年慶 + 6場新書發表會進度",
+      "enabled": false,
+      "createdAtMs": 1776647700599,
+      "updatedAtMs": 1776906921202,
+      "schedule": {
+        "everyMs": 14400000,
+        "kind": "every",
+        "anchorMs": 1776647700599
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "🦞【每4小時進度關懷】教練，兩件事請回報進度：\n\n📌 海餅乾俱樂部 19 週年慶（5月14日，臺南）- 目前規劃進度到哪了？\n\n📌 6場新書發表會（5月份）- 目前安排到哪一場了？\n\n請回報現況，小龍蝦隨時候命！"
+      },
+      "state": {
+        "lastRunAtMs": 1776906900769,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 20433,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "89106297-cab1-4019-a56c-337bb0c5d460",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "🦞【倒數計時】海餅乾俱樂部 19 週年慶 — 距離 5月14日還有 {{days}} 天！",
+      "description": "海餅乾19週年倒數計時（每天早上9點）",
+      "enabled": true,
+      "createdAtMs": 1776647706478,
+      "updatedAtMs": 1777597219132,
+      "schedule": {
+        "expr": "0 9 * * *",
+        "kind": "cron",
+        "tz": "Asia/Taipei"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "🦞【倒數計時】海餅乾俱樂部 19 週年慶 — 距離 5月14日還有 {{days}} 天！"
+      },
+      "state": {
+        "nextRunAtMs": 1777683600000,
+        "lastRunAtMs": 1777597200008,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 19124,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 0
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "6124913915",
+        "accountId": "bot_main"
+      }
+    },
+    {
+      "id": "e70852c8-9a56-4972-a3e5-df34c429dd71",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:group:-1003537129853",
+      "name": "YouTube新聞每日自動抓取",
+      "enabled": true,
+      "createdAtMs": 1776819645678,
+      "updatedAtMs": 1777593869461,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "Asia/Taipei"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "minimax/MiniMax-M2.7",
+        "message": "執行 ~/openclaw_scripts/youtube_monitor.sh 將結果輸出到 ~/Desktop/youtube_news.json"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "6124913915"
+      },
+      "state": {
+        "nextRunAtMs": 1777680000000,
+        "lastRunAtMs": 1777593600014,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 269447,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "40df919e-3ef0-49ba-866f-12d04e57adc1",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "提醒買高鐵票-5月5日台北行",
+      "enabled": true,
+      "deleteAfterRun": true,
+      "createdAtMs": 1776901101520,
+      "updatedAtMs": 1776901101520,
+      "schedule": {
+        "at": "2026-05-03T01:00:00.000Z",
+        "kind": "at"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "🦞【高鐵票提醒】教練，明天（5月5日）下午1點要到台北上拍執董形象影片，記得現在去買高鐵票！"
+      },
+      "state": {
+        "nextRunAtMs": 1777770000000
+      }
+    },
+    {
+      "id": "c00a5976-0e51-4402-b9aa-de1e003c0ce8",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "執董形象影片拍攝-前一夜提醒",
+      "enabled": true,
+      "deleteAfterRun": true,
+      "createdAtMs": 1776918227244,
+      "updatedAtMs": 1776918227244,
+      "schedule": {
+        "at": "2026-05-04T14:00:00.000Z",
+        "kind": "at"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "🦞【台北行提醒】教練，明天（5月5日）下午1點前要到台北上拍執董形象影片，今晚早點休息！"
+      },
+      "state": {
+        "nextRunAtMs": 1777903200000
+      }
+    },
+    {
+      "id": "5032d979-432b-403f-bc59-1c874563805e",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "執董形象影片拍攝-當日提醒",
+      "enabled": true,
+      "deleteAfterRun": true,
+      "createdAtMs": 1776918230476,
+      "updatedAtMs": 1776918230476,
+      "schedule": {
+        "at": "2026-05-05T01:00:00.000Z",
+        "kind": "at"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "🦞【台北行提醒】教練，今天（5月5日）下午1點前要到台北上拍執董形象影片，記得現在去買高鐵票！"
+      },
+      "state": {
+        "nextRunAtMs": 1777942800000
+      }
+    },
+    {
+      "id": "f3923431-509e-4f05-963a-52aec2b20485",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "加油提醒",
+      "enabled": true,
+      "createdAtMs": 1777089808086,
+      "updatedAtMs": 1777338123262,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 28 * *",
+        "tz": "Asia/Taipei"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "minimax/MiniMax-M2.7",
+        "message": "🦞 教練，明天（29日）要去加油 $693，統編 83339746 喔！"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "6124913915"
+      },
+      "state": {
+        "nextRunAtMs": 1779930000000,
+        "lastRunAtMs": 1777338010897,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 112365,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "46e67e2e-6332-4589-aae2-ee7e10dd7279",
+      "agentId": "main",
+      "sessionKey": "agent:main:telegram:direct:6124913915",
+      "name": "🦞 每30分鐘任務健康檢查",
+      "enabled": true,
+      "createdAtMs": 1777119838184,
+      "updatedAtMs": 1777674631311,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/30 * * * *",
+        "tz": "Asia/Taipei"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "minimax/MiniMax-M2.7",
+        "message": "你是健康檢查助理。安靜執行以下檢查並自動修復，不需要通知教練（除非發現無法自動修復的嚴重問題）：\n\n## 第一步：檢查 Cron 任務失敗記錄\n\n使用 `openclaw cron list` 或 cron tool 檢查所有任務的 consecutiveErrors 與 lastStatus。\n\n### 常見錯誤自動修復：\n\n**1. timeout 錯誤（lastDurationMs ≈ timeoutSeconds）：**\n→ 表示腳本本身正常，但 timeoutSeconds 設定太短\n→ 使用 `cron update <jobId> --patch '{\"payload\":{\"timeoutSeconds\":300}}'` 將 timeout 改為 300秒\n→ 注意：不要改 06:00 海餅乾精神背誦（60秒即可）\n\n**2. scp/ssh 同步到 VPS 逾時：**\n→ 改用 `rsync -e 'sshpass -p 9kdxvQN2 ssh' --partial --progress` 或降低頻率\n→ 或刪除該任務（VPS 已非主力）\n\n**3. 任意時刻連續錯誤 ≥3 次：**\n→ 視為「需要教練介入」，立即通知教練（delivery.mode: announce）\n→ 格式：「🔴 自動修復失敗，需要您裁決：任務XXX已連續錯誤3次...」\n\n## 第二步：檢查 Git 狀態\n\n```bash\ncd /Users/bymyway/.openclaw/workspace && git status --short\n```\n\n- 若有未 commit 的變更，自動 commit（訊息：`auto-backup %Y-%m-%d %H:%M`）\n- 若 git push 失敗（網路問題），略過，不通知\n\n## 第三步：檢查 HEARTBEAT.md 中的背景工作\n\n讀取 HEARTBEAT.md，檢查任何標記為 ⬜ 的項目：\n- 若該項目已超過 48 小時無進展，評估是否可自動化\n- 若可自動化，建立對應的 cron job 或寫入自動化腳本\n\n## 第四步：產出簡報（若有問題才通知）\n\n```\n🦞 健康檢查報告（HH:MM）\n\n✅ 已自動修復：\n• 任務X：將 timeout 從 120s → 300s\n• 任務Y：已 commit 並 push\n\n⚠️ 需要注意：\n• 任務Z：已連續錯誤3次，需要裁決\n\n✅ 無異常\n```\n\n\n只有當有「需要教練裁決」的項目時，才 announce 通知教練。其他安靜處理。",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "telegram",
+        "to": "6124913915"
+      },
+      "state": {
+        "nextRunAtMs": 1777678231311,
+        "lastRunAtMs": 1777674626162,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 5149,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 11,
+        "lastDelivered": false,
+        "lastErrorReason": "model_not_found",
+        "lastDeliveryError": "{\"error\":{\"message\":\"\",\"code\":404,\"status\":\"Not Found\"}}",
+        "lastError": "{\"error\":{\"message\":\"\",\"code\":404,\"status\":\"Not Found\"}}"
+      }
+    },
+    {
+      "id": "768246fb-0b1a-409a-985c-f7419954c29c",
+      "name": "🦞 目標心跳驅動（30分鐘）",
+      "enabled": true,
+      "createdAtMs": 1777179932032,
+      "updatedAtMs": 1777674636415,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/30 * * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "minimax/MiniMax-M2.7",
+        "message": "你是小龍蝦特助，大樹教練的頂級特助。\n\n## 每次心跳只需要做一件事\n\n1. 讀取 ~/.openclaw/workspace/HB.md\n2. 從 HB.md 的當前任務中，選擇一件小事執行\n3. 把執行情況簡短寫入 HEARTBEAT.md\n\n**原則：**\n- 不要試圖一次完成所有任務\n- 每次心跳只推進一小步\n- 寧可每天累積小前進，不要一次貪多\n- 30分鐘後，心跳會再戳你，繼續下一步\n\n安靜執行，不要通知教練。",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1777678236415,
+        "lastRunAtMs": 1777674631819,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 4596,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 11,
+        "lastErrorReason": "auth",
+        "lastError": "FailoverError: No API key found for provider \"moonshot\". Auth store: /Users/bymyway/.openclaw/agents/main/agent/auth-profiles.json (agentDir: /Users/bymyway/.openclaw/agents/main/agent). Configure auth for this agent (openclaw agents add <id>) or copy auth-profiles.json from the main agentDir."
+      }
+    },
+    {
+      "id": "68713457-9b25-47b2-8616-87d1141a1b60",
+      "name": "攜帶手冊給小南大使",
+      "enabled": true,
+      "deleteAfterRun": true,
+      "createdAtMs": 1777520509035,
+      "updatedAtMs": 1777520509035,
+      "schedule": {
+        "kind": "at",
+        "at": "2026-05-04T22:00:00.000Z"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "minimax/MiniMax-M2.7",
+        "message": "教練，今天是週二！記得帶：📦 16本會員手冊 + 6本領導手冊 → 小南大使"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "6124913915"
+      },
+      "state": {
+        "nextRunAtMs": 1777932000000
+      }
+    }
+  ]
+}

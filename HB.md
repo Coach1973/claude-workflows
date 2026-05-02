@@ -11,3 +11,6 @@
 
 ## 已完成
 - [x] 檢查並更新本機 OpenClaw 版本狀態（`openclaw --version`）→ v2026.4.15 最新
+
+## 進行中
+- [ ] 檢查三個 Bot 的健康狀態（Telegram connection）→ 已執行 status，Gateway 🟢，Update 2026.4.29 可用

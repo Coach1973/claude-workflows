@@ -1,16 +1,20 @@
-# HEARTBEAT.md — 狀態交接
+# HEARTBEAT.md — 系統狀態交接
 
-> Last heartbeat: 2026-05-03 05:33 (Asia/Taipei)
-> 心跳执行编号：768246fb
+> 更新時間：2026-05-03 06:03 AM（Asia/Taipei）
 
 ## 系統狀態
-- 🟢 OpenClaw v2026.4.15 最新
-- 🟢 三個 Bot（bot_main/bot_kong/bot_peipei）正常
-- 🟢 GitHub origin & lessons 正常
+- ✅ OpenClaw：v2026.4.15 最新
+- ✅ 3個 Bot 正常（bot_main/bot_kong/bot_peipei）
+- ✅ Gateway 🟢
+- ✅ GitHub remote 正常
 
 ## 當前任務
-（無待處理）
+- 無待處理任務
 
-## 備註
-- HB.md 當前任務清單為空，全部已完成
-- 下次心跳繼續空迴圈直到教練有新任務寫入 HB.md
+## 最近完成
+- 檢查三 Bot 健康狀態
+- 整理 memory/ 舊檔案
+- 檢查 GitHub remote
+
+---
+*🦞 心跳 OK（06:03）*

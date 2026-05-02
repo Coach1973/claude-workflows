@@ -9,3 +9,6 @@
 - [OpenWhisper 是要關閉的語音辨識軟體](feedback_openwhisper_app.md) — 要關的是 OpenWhisper，Typeless 是正常常駐軟體不能動
 - [LINE 群組身份混淆修復方法](feedback_line_group_identity_fix.md) — group-identity hook 加 LINE session 注入，bot 改用 userId 層級認人
 - [VPS 規則體系更新 2026-05-01](project_vps_rules_update.md) — 新增20條操作細則、刪HB.md、關TTS
+- [禁止未授權修改openclaw.json模型](feedback_openclaw_json_forbidden.md) — 教練明令：agents.list model欄位未經允許絕對不碰
+- [各工具設定檔隔離鐵律](feedback_config_isolation.md) — OpenCode/Opcode/終端機/OpenClaw四份設定完全獨立，操作只動對應那一個
+- [Google API proxy baseUrl 需含 /v1beta](project_google_baseurl_fix.md) — baseUrl少/v1beta會導致embedded agent全面404，已修復

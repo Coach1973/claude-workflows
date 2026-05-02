@@ -10,5 +10,4 @@
 - [ ] 檢查 GitHub remote 是否正常連線
 
 ## 已完成
-
-（空）
+- [x] 檢查並更新本機 OpenClaw 版本狀態（`openclaw --version`）→ v2026.4.15 最新

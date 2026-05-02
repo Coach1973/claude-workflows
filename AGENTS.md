@@ -24,7 +24,7 @@
 6. Read `HEARTBEAT.md` — 最近3筆狀態交接
 7. Read `workspace/shared-context/SUPERGROUP-MAP.md` — 團隊結構
 8. Read `USER.md` — 教練偏好與習慣
-9. Read `memory/YYYY-MM-DD.md`（今天 + 昨天）— 近期脈絡
+9. Read `memory/YYYY-MM-DD.md`（今天）— 近期脈絡（>30KB 的舊檔案不主動讀）
 10. **若為主對話 Session**：也讀 `MEMORY.md`（長期記憶，勿在群組中載入）
 
 ---
@@ -94,9 +94,10 @@ If nothing needs attention, reply HEARTBEAT_OK.
 > **教練痛點（2026-05-01 實測）**：對話框太滿會自動刷新，但教練不知道何時要換新視窗；刷新前對話紀錄是否上傳、刷新後是否主動告知——都沒有SOP。
 
 ### 每 30 分鐘心跳時被動檢查（教練不提問不主動干擾）
-- 使用 `session_status` 查看 context 使用量
+- 使用 `session_status` 查看 context 使用量（心跳 prompt 本身也要遵守此規則，不要在心跳時觸發大量 context 消耗）
 - 若 ≥80%，在 HEARTBEAT.md 裡默默記一筆：「⚠️ Context 使用量高，建議教練考慮結束當前 session」
 - **不主動打斷教練**，只是記錄
+- 若 session_status 本身會消耗大量 context，改用 `session_status` 的最小回傳（不主動 expansion）
 
 ### 刷新前的被動保護
 - HEARTBEAT.md 已在每次心跳時持續更新=天然的前置保護

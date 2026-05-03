@@ -1,42 +1,53 @@
 # 終端機學習心得筆記
 > 每15分鐘更新一次，即時落地，不靠頭腦記憶
 
-## 2026-05-02 20:30
+---
+
+## 2026-05-03 23:35｜第一筆提煉
+
 ### 讀了什麼
-- `openclaw.json`（三機 binding + LINE/Telegram channel 設定）
-- LINE_MASTER_GUIDE.md（LINE 架構：與 Telegram 共用 1號機，Webhook 路由修復記錄）
-- VPS_MASTER_GUIDE.md（VPS SSH 指令速查、架構定位）
+- 靈魂檔案：SOUL.md、IDENTITY.md、USER.md、HEARTBEAT.md
+- CORE_RULES.md（13條，含 R13 交付前自測機制）
+- 小龍蝦行為守則.md（24條）
+- GRAND_MISSION.md（血淚史 + 系統架構）
+- project_top_assistant_blueprint.md（商業模式藍圖）
+- DAILY_DIGEST.md（即時狀態）
 
-### 關鍵發現
-1. LINE 與 Telegram 共用 `agentId: main`，區別只在 `channel: line vs telegram`
-2. LINE webhook 有 bug（路由被移除），已手動修補 `registry-DtTKJfN8.js`
-3. VPS Docker 容器內的 OpenClaw 跟 Mac 版的不是同一套，是獨立的
-4. Bot 身份衝突的根本原因：group-identity hook 只注入「小龍蝦是誰」，沒有注入「群組成員是誰」
+### 對中心目標的理解
 
-### 待辦
-- [ ] 每 15 分鐘更新一次，不靠頭腦
-- [ ] 讀取 daily_2026-04-xx.md（歷史日誌）
-- [ ] 讀取 Telegram / Claude 桌面版對話資料庫
+**頂級特助系統的終極使命：**
+讓沒有任何工程師背景的中小企業老闆，只要用語音說話，就能享受跟頂尖工程師一樣的 AI 自動化工作流程。
+
+**三機協作結構：**
+- 學長（1號機）：唯一對外窗口，統一回報教練
+- 學弟（2號機）/ 學妹（3號機）：透過 sessions_spawn 執行，回傳結果給學長
+
+**商業模式漏斗：**
+免費 VPS 體驗 → 套餐 A/B/AB → 開源回饋 → 智慧共享生態系
+
+**海餅乾俱樂部精神：**
+培育人才、創造奇蹟、做對社會有貢獻的事。十大守則已植入，成為系統最高指導原則。
+
+### 關鍵行為準則（從 R01-R13 提煉）
+1. **引用原文一字不差**：海餅乾守則、頂級特助信念，引用的時候連標點都不能改
+2. **零驗證負擔**：完成後自行確認，不問教練「收到沒」
+3. **交付格式 HTML**：給教練操作介面必須是 HTML，不是 .md
+4. **承諾 hash 憑證**：口頭說完成 = 零，必須 git commit + push + 回報 hash
+5. **ETA 第一句話**：接到任務先說預計完成時間
+6. **交付前自測**：聲稱 DONE 之前必須在當下環境實際驗證一次
+
+### 待持續提煉
+- [ ] 讀取 memory/ 日記（了解教練日常決策模式）
+- [ ] 讀取 BOT_MESSAGES.md（了解 Bot 之間的對話）
+- [ ] 讀取 distilled_claude 最新版（蒸餾過的對話精華）
+- [ ] 持續每15分鐘提煉，不中斷
 
 ---
 
-## 2026-05-01 記錄（補）
-### 讀了什麼
-- SOUL.md / CORE_RULES.md（R01-R12）/ 小龍蝦行為守則.md（24條）/ IDENTITY.md
-- AGENTS.md / DAILY_DIGEST.md / HEARTBEAT.md
-- USER.md / SUPERGROUP-MAP.md
-- LINE_SOUL.md / LINE_CORE_RULES.md
-- VPS_SOUL.md / VPS_CORE_RULES.md
+## 歷史記錄（請勿刪除）
 
-### 關鍵發現
-1. 終端機助教（我）不是小龍蝦，是 Claude 家族的後臺工程師
-2. 桌面版助教 = 決策規劃（流量有限）
-3. 終端機助教（我）= 執行指令（無限制）
-4. 小龍蝦 = Telegram 前線（1/2/3號機）
-5. 三機都在 Mac mini，不是 VPS
-6. 我的觸發方式：自然語言叫我就啟動，不需要暗號
-7. 我的設定檔在 `~/.claude/CLAUDE.md`，跟 workspace 的 CLAUDE.md 完全隔離
+### 2026-05-02 20:30
+（見上方 2026-05-02 20:30 條目）
 
-### 待補寫入
-- 桌面版助教的工作方式（桌面版→貼給終端機→執行→回報）
-- LINE 群組身份問題的完整修復記錄
+### 2026-05-01 記錄（補）
+（見上方 2026-05-01 記錄條目）

@@ -41,8 +41,7 @@
 - 口頭回報問題時會貼 Bot 的回覆截圖/文字，不需要我另外截圖
 - 明確授權時會說「授權給你的，你去刪除好不好」，這等於是直接批准
 - 喜歡用強大模型（如思考型模型）做複雜分析，會把提示詞貼到 OpenCode UI 裡執行
-- 有自費 Kimi API Key（$20/月），希望與 NVIDIA Key 分開計算（NVIDIA 的 Kimi K2 與自費版功能相同，不需要另外付費）
-
+- 有自費 minimax 及 Kimi API Key
 ## 他在意的事
 - 海餅乾俱樂部十大守則（已植入 SOUL.md 與 project_top_assistant_blueprint.md）
 - 偉大任務：讓中小企業主零門檻使用 AI

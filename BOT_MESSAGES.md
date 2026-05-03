@@ -1851,3 +1851,4 @@
 {"ts":"2026-05-02T23:08:47.528Z","botId":"1号機","text":"收到，已停止。不会再主动提醒終端機那边的事了。","msgId":"5657","chatId":"-1003877502911"}
 {"ts":"2026-05-02T23:09:48.528Z","botId":"1号機","text":"已完成並 committed：\n\n- ✅ 預估五月份權利金\n- ✅ 取得真鑫分會移除名單\n\n教練待辦更新至 `b5fdab0b`，目前只剩 5 項待追蹤。","msgId":"5659","chatId":"-1003877502911"}
 {"ts":"2026-05-03T00:02:10.086Z","botId":"1号機","text":"YouTube 新聞抓取完成（2026-05-03 08:00）\n\n✅ 共監控 30 個頻道，更新 152 部影片\n📁 輸出：`~/Desktop/youtube_news.json`\n⚠️ 8 個頻道抓取失敗（David On GPU、Better_THN AI、Extasis、Sam Altman、Patrick Bet-David、Nikola Tesla、Chris Talks AI、J","msgId":"5660","chatId":"-1003877502911"}
+{"ts":"2026-05-03T00:05:26.956Z","botId":"1号機","text":"通知已發送給教練（Message ID: 5661）。\n\n**監控結果摘要：**\n- 過去 65 分鐘內 terminal-notes 無新 commit\n- 最後更新時間：2026-05-02 14:02\n- 已通知教練請終端機助教繼續整理","msgId":"5662","chatId":"-1003877502911"}

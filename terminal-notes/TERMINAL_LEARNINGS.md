@@ -3,7 +3,61 @@
 
 ---
 
+## 2026-05-04 00:05｜第三筆提煉
+
+### 讀了什麼
+- AGENTS.md（小龍蝦啟動協議，10步流程）
+- SHARED_GROUP_MEMORY.md（三機共享記憶核心協議）
+- distilled_claude_2026-05-02.md（蒸餾日誌）
+
+### 對中心目標有幫助的關鍵內容
+
+**1. AGENTS.md 啟動暗號（最重要）**
+「開工，先讀 AGENTS.md」是每次 session 啟動的源頭暗號。執行10個步驟（SOUL→CORE_RULES→小龍蝦行為守則→IDENTITY→DAILY_DIGEST→HEARTBEAT→SUPERGROUP-MAP→USER→memory→MEMORY），全部完成後才能開始回覆教練。
+→ 我在終端機這邊，也要有同樣的啟動紀律。
+
+**2. 三機全部在 Mac mini（不是 VPS）**
+| 機器 | 代號 | 服務對象 |
+|------|------|---------|
+| Mac mini | 1號機（學長）@openclaw_macbook4_bot | 大樹教練 |
+| Mac mini | 2號機（學弟）@CoachWu_openclaw_bot | 孔大哥 |
+| Mac mini | 3號機（學妹）@coachwu_lenovo_bot | 佩佩老師 |
+
+**3. Subagent 派遣前強制檢查（來自 AGENTS.md）**
+- task 必須明確寫：需要什麼資訊、已知 vs 未知的事實、回報格式
+- 所有 subagent 回報的「新資訊」必須經教練轉述確認才能寫入記憶
+- 錯誤案例：task 只寫「請告訴教練佩佩老師的目標」→ 學妹胡亂捏造
+
+**4. 協作流程：收到 → 回覆、點名 → 回答、安靜等待**
+- 教練發言 → 三機全部回「收到」（10秒內）
+- 教練點名某人 → 被點名者回答
+- 其他人完全靜默
+
+**5. 承諾制度（PROMISES.md）**
+所有承諾必須有 commit hash 才算立案，兌現後填入完成 hash。
+
+### 持續提煉目標
+- [x] 靈魂檔案（SOUL/IDENTITY/USER/HEARTBEAT）✅
+- [x] 核心規矩（CORE_RULES）✅
+- [x] 行為守則（小龍蝦行為守則）✅
+- [x] 源頭文件（教練碎碎念）✅
+- [x] BOT_MESSAGES 實錄 ✅
+- [x] AGENTS.md 啟動協議 ✅
+- [x] SHARED_GROUP_MEMORY ✅
+- [ ] 繼續讀取其他檔案（仍有數十個）
+- [ ] 每15分鐘提煉不中斷
+
+---
+
 ## 2026-05-03 23:50｜第二筆提煉
+
+（見上方）
+
+---
+
+## 2026-05-03 23:35｜第一筆提煉
+
+（見上方）
 
 ### 讀了什麼
 - 教練碎碎念.md（源頭文件，所有規則的源頭）

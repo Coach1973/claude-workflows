@@ -1,157 +1,116 @@
 #!/usr/bin/env python3
 """
-每2小時自動蒸餾：克勞德助教對話 JSONL → workspace/distilled_claude_[日期].md
-只處理過去 N 小時內有更新的 session 檔案。
+蒸餾 Claude 桌面版 Sessions - 萃取場景到 stage2_scenes.md
 """
 
 import json
 import os
-import sys
-import subprocess
-from datetime import datetime, timedelta
+import re
 from pathlib import Path
+from datetime import datetime
 
-SESSIONS_DIR = Path("/Users/bymyway/.claude/projects/-Users-bymyway--openclaw/")
-WORKSPACE = Path("/Users/bymyway/.openclaw/workspace")
-HOURS_BACK = int(os.environ.get("HOURS_BACK", "2"))
+OPENCLAW_SESSIONS = Path.home() / ".claude/projects/-Users-bymyway--openclaw"
+MAIN_SESSIONS = Path.home() / ".claude/projects/-Users-bymyway"
+OUTPUT_FILE = Path("/Users/bymyway/.openclaw/workspace/shared-context/SCENES/stage2_scenes.md")
 
+def get_last_scene_num():
+    if not OUTPUT_FILE.exists():
+        return 73
+    content = OUTPUT_FILE.read_text()
+    matches = re.findall(r'【場景 #(\d+)】', content)
+    if matches:
+        return max(int(m) for m in matches)
+    return 73
 
-def get_recent_sessions(hours=2):
-    cutoff = datetime.now() - timedelta(hours=hours)
-    sessions = []
-    for f in SESSIONS_DIR.glob("*.jsonl"):
-        if datetime.fromtimestamp(f.stat().st_mtime) > cutoff:
-            sessions.append(f)
-    return sorted(sessions, key=lambda f: f.stat().st_mtime)
-
-
-def extract_messages(jsonl_path):
+def process_session_file(filepath):
     messages = []
-    with open(jsonl_path, encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                obj = json.loads(line)
-            except Exception:
-                continue
-            msg = obj.get("message", {})
-            role = msg.get("role", "")
-            content = msg.get("content", "")
-            if isinstance(content, list):
-                text = " ".join(
-                    c.get("text", "") for c in content if isinstance(c, dict) and c.get("type") == "text"
-                )
-            else:
-                text = str(content)
-            text = text.strip()
-            if text and role in ("user", "assistant"):
-                messages.append((role, text[:1000]))
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            for line in f:
+                try:
+                    entry = json.loads(line.strip())
+                    msg = entry.get('message', entry)
+                    role = msg.get('role', '')
+                    content = msg.get('content', '')
+
+                    if role == 'user' and isinstance(content, str) and len(content) > 15:
+                        if '[cron:' in content or content.startswith('Read HEARTBEAT'):
+                            continue
+                        if re.match(r'^[A-Za-z\s]+$', content) and not re.search(r'[一-鿿]', content):
+                            continue
+
+                        timestamp = entry.get('timestamp', '')
+                        messages.append({
+                            'timestamp': timestamp,
+                            'content': content,
+                            'file': filepath.name
+                        })
+                except json.JSONDecodeError:
+                    continue
+    except Exception as e:
+        pass
     return messages
 
+def evaluate_scene(content):
+    """評估訊息是否為有價值的場景"""
+    tags = []
 
-def call_claude_api(prompt):
-    """用 claude CLI 呼叫 API 做蒸餾"""
-    try:
-        result = subprocess.run(
-            ["claude", "-p", prompt, "--output-format", "text"],
-            capture_output=True, text=True, timeout=120
-        )
-        if result.returncode == 0:
-            return result.stdout.strip()
-    except Exception:
-        pass
-    return None
+    fail_patterns = ['不是', '錯了', '我要的是', '你要做的是', '不是這樣', '方向錯了', '你誤會了', '應該是', '我要你']
+    for p in fail_patterns:
+        if p in content:
+            tags.append('行為糾正')
+            break
 
+    if '這就是我要的' in content or '就是這樣' in content or '完美' in content:
+        tags.append('成功範本')
 
-def distill_with_simple_heuristic(messages):
-    """無 API 備援：用關鍵詞提取教練發言重點"""
-    coach_msgs = [text for role, text in messages if role == "user"]
-    keywords = ["任務", "完成", "要做", "記住", "寫入", "承諾", "計劃", "目標", "問題", "修正"]
-    highlights = []
-    for msg in coach_msgs:
-        if any(k in msg for k in keywords) and len(msg) > 30:
-            highlights.append(f"- {msg[:200]}")
-    return "\n".join(highlights[:20]) if highlights else "（本輪無明顯重點訊息）"
+    proactive = ['幫我', '你去', '直接', '自動', '下次', '記得', '主動', '幫我檢查', '幫我看']
+    for p in proactive:
+        if p in content:
+            tags.append('主動服務')
+            break
 
+    if any(k in content for k in ['幫我做', '你去處理', '執行', '完成', '幫我']):
+        tags.append('老闆動嘴')
+
+    return tags
 
 def main():
-    now = datetime.now()
-    date_str = now.strftime("%Y-%m-%d")
-    time_str = now.strftime("%H:%M")
+    scene_num = get_last_scene_num() + 1
+    all_scenes = []
 
-    sessions = get_recent_sessions(HOURS_BACK)
-    print(f"[{time_str}] 找到 {len(sessions)} 個近 {HOURS_BACK} 小時內更新的 session")
+    for sessions_dir, label in [(OPENCLAW_SESSIONS, 'openclaw'), (MAIN_SESSIONS, 'main')]:
+        print(f"\n處理 {label} sessions ({len(list(sessions_dir.glob('*.jsonl')))} 個檔案)...")
 
-    if not sessions:
-        print("無新對話，跳過。")
-        return
+        for fp in sorted(sessions_dir.glob("*.jsonl")):
+            msgs = process_session_file(fp)
+            for msg in msgs:
+                tags = evaluate_scene(msg['content'])
+                if tags or len(msg['content']) > 80:
+                    date = msg['timestamp'][:10] if msg['timestamp'] else 'unknown'
+                    all_scenes.append({
+                        'num': scene_num,
+                        'date': date,
+                        'source': msg['file'],
+                        'content': msg['content'][:400],
+                        'tags': tags if tags else ['一般對話']
+                    })
+                    scene_num += 1
 
-    # 收集所有訊息
-    all_messages = []
-    for s in sessions:
-        msgs = extract_messages(s)
-        all_messages.extend(msgs)
-        print(f"  {s.name}: {len(msgs)} 條訊息")
+            if len(all_scenes) >= 10:
+                break  # 先跑10個測試
 
-    coach_count = sum(1 for r, _ in all_messages if r == "user")
-    print(f"教練發言共 {coach_count} 條")
+    print(f"\n萃取 {len(all_scenes)} 個場景")
 
-    # 嘗試用 Claude API 蒸餾
-    coach_text = "\n---\n".join(
-        f"[教練] {t}" for r, t in all_messages if r == "user"
-    )[:8000]
+    if all_scenes:
+        with open(OUTPUT_FILE, 'a', encoding='utf-8') as f:
+            for scene in all_scenes:
+                tags_str = '/'.join(scene['tags'])
+                f.write(f"\n### 【場景 #{scene['num']}】\n")
+                f.write(f"日期：{scene['date']}\n")
+                f.write(f"來源：{scene['source']}\n")
+                f.write(f"教練說：{scene['content']}\n")
+                f.write(f"標籤：{tags_str}\n")
 
-    prompt = f"""以下是教練（大樹教練）在過去 {HOURS_BACK} 小時內與克勞德助教的對話摘錄。
-
-請蒸餾出：
-1. 教練下達的重要指令或決策（3-8條）
-2. 新的承諾或待辦事項
-3. 教練的金句或智慧語錄（若有）
-
-格式：
-## 重要決策
-- ...
-
-## 新待辦
-- ...
-
-## 金句（若有）
-- ...
-
----
-對話摘錄：
-{coach_text}
-"""
-
-    summary = call_claude_api(prompt)
-    if not summary:
-        print("Claude API 無回應，改用啟發式提取")
-        summary = distill_with_simple_heuristic(all_messages)
-
-    # 寫入輸出檔
-    out_path = WORKSPACE / f"distilled_claude_{date_str}.md"
-    with open(out_path, "a", encoding="utf-8") as f:
-        f.write(f"\n## 蒸餾記錄 {date_str} {time_str}（過去 {HOURS_BACK} 小時）\n\n")
-        f.write(f"> Sessions: {len(sessions)} 個 | 教練發言: {coach_count} 條\n\n")
-        f.write(summary)
-        f.write("\n\n---\n")
-
-    print(f"✅ 寫入：{out_path}")
-
-    # Git commit + push
-    try:
-        subprocess.run(["git", "add", str(out_path)], cwd=WORKSPACE, check=True)
-        subprocess.run(
-            ["git", "commit", "-m", f"auto: 蒸餾克勞德助教對話 {date_str} {time_str}"],
-            cwd=WORKSPACE, check=True
-        )
-        subprocess.run(["git", "push", "origin", "main"], cwd=WORKSPACE, check=True)
-        print("✅ Git push 完成")
-    except Exception as e:
-        print(f"⚠️ Git 操作失敗：{e}")
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

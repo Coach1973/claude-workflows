@@ -170,6 +170,34 @@ LINE 傳送圖片/音樂/影片時，絕對禁止本機路徑，必須轉換為�
 
 ---
 
+## 2026-05-04 11:05｜第四十七筆提煉
+
+### 讀了什麼
+- feedback_config_isolation.md（各工具設定檔隔離鐵律）
+
+### 對中心目標有幫助的關鍵內容
+
+**1. 四個工具的設定檔完全獨立**
+
+| 工具 | 設定位置 |
+|------|----------|
+| OpenCode | `~/.config/opencode/opencode.jsonc` |
+| Opcode | Opcode 專屬 SQLite DB |
+| 終端機（Claude CLI）| `~/.claude/settings.json` + `~/.zshrc` |
+| 小龍蝦（OpenClaw）| `~/.openclaw/openclaw.json` |
+
+**2. 血淚教訓**
+
+上次設定 OpenCode 接 Kimi 時，助教誤改了 `~/.openclaw/openclaw.json`，把小龍蝦主力模型換掉，導致所有 Telegram 對話都失敗。
+
+**3. 操作紀律**
+
+接到任何設定任務前，先確認目標工具對應哪個設定檔，只動那一個，不看、不改其他設定檔。
+
+→ 這是「做對的事」——設定不同工具時，一次就做對，而不是事後補救。
+
+---
+
 ## 2026-05-04 10:50｜第四十六筆提煉
 
 ### 讀了什麼

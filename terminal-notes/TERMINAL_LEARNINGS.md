@@ -170,6 +170,49 @@ LINE 傳送圖片/音樂/影片時，絕對禁止本機路徑，必須轉換為�
 
 ---
 
+## 2026-05-04 11:50｜第五十筆提煉
+
+### 讀了什麼
+- feedback_deepseek_session_lock_lessons.md（DeepSeek 接入失敗試錯總結）
+
+### 對中心目標有幫助的關鍵內容
+
+**1. Session Model Lock 機制（根本原因）**
+
+```
+Session 啟動時 → OpenClaw 把 Primary 模型寫入 model_change 事件
+                  ↓
+            Gemini 失敗 → fallback 嘗試接管
+                  ↓
+            OpenClaw 要求切回 Gemini（因為 session lock 是 Gemini）
+                  ↓
+            Gemini 不可用（rate_limit）→ 所有模型都失敗
+```
+
+這個機制沒有開關，無法透過 config 關閉。
+
+**2. 試過沒用的方法（不要再重複）**
+- 把 DeepSeek 加入 fallbacks 就以為能用
+- 重啟 OpenClaw（session lock 存在 sessions.json，重啟不清除）
+- 手動刪除 sessions.json 中的 session key
+- 建立 LaunchAgent 每 2 分鐘自動清除（治標不治本）
+
+**3. 真正的永久解法**
+
+把 Primary 改成 DeepSeek，Gemini 降為 fallback：
+```json
+"model": {
+  "primary": "deepseek/deepseek-chat",
+  "fallbacks": ["google/gemini-3.1-pro-preview", ...]
+}
+```
+
+**時間對比**：2小時試錯 → 1分鐘改一行 config。
+
+→ 「做對的事」：一開始就用對的方法，而不是繞路後再補救。
+
+---
+
 ## 2026-05-04 11:35｜第四十九筆提煉
 
 ### 讀了什麼

@@ -170,6 +170,43 @@ LINE 傳送圖片/音樂/影片時，絕對禁止本機路徑，必須轉換為�
 
 ---
 
+## 2026-05-04 11:35｜第四十九筆提煉
+
+### 讀了什麼
+- feedback_gemini_empty_response_fix.md（Gemini 空白回應問題修復）
+
+### 對中心目標有幫助的關鍵內容
+
+**1. 根本原因鏈**
+
+```
+memory 檔案膨脹（>50KB）
+  → HEARTBEAT.md 要求讀 memory
+  → Gemini context 爆滿
+  → output: 0 tokens
+  → 小龍蝦回覆空字串
+  → 教練以為小龍蝦壞了
+```
+
+**2. 重要門檻**
+
+| 檔案 | 門檻 |
+|------|------|
+| memory/today.md | 超過 30KB 不讀 |
+| HEARTBEAT.md | 絕對不可包含「讀 memory/today.md」指令 |
+| Gemini 3.1 Pro Preview | 有效 context 約 15-20K token |
+
+**3. 永久修復原則**
+
+- HEARTBEAT.md 輕量化：正常心跳只回 `HEARTBEAT_OK`
+- Overflow 重啟後只說「已重啟請繼續」，不讀 memory 大檔
+
+**4. 對三機協作的啟發**
+
+在 Mac mini 上，memory/ 檔案是由 sync-telegram-memory.sh 每半小時同步一次全部歷史累積起來的。定時清理或分流是必要的維運工作。
+
+---
+
 ## 2026-05-04 11:20｜第四十八筆提煉
 
 ### 讀了什麼

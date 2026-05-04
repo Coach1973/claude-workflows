@@ -3,6 +3,40 @@
 
 ---
 
+## 2026-05-04 08:50｜第卅八筆提煉
+
+### 讀了什麼
+- LINE_CORE_RULES.md（LINE 版 12 條鐵律）
+- VPS_CORE_RULES.md（VPS 體驗版 12 條鐵律）
+
+### 對中心目標有幫助的關鍵內容
+
+**1. 三個版本的 CORE_RULES 對照**
+| 版本 | 交付標準 | 特殊限制 |
+|------|---------|---------|
+| Mac 主版 | HTML 介面 + 送出按鈕自測 | 有 session_status 可回報 Token |
+| LINE 版 | HTTPS 公開URL（嚴禁本機路徑） | 無法主動推播、被動響應 |
+| VPS 版 | 邏輯檢查代替自測 | 無 bash/find/grep，無法執行本機操作 |
+
+**2. LINE 版媒體鐵律（重要）**
+LINE 傳送圖片/音樂/影片時，絕對禁止本機路徑，必須轉換為公開 HTTPS URL：
+- `/Users/bymyway/.openclaw/media/` → `https://media.bymyway.com/`
+- 錯誤：`/Users/bymyway/.openclaw/media/image-1.png`
+- 正確：`https://media.bymyway.com/image-1.png`
+
+**3. VPS 版限制（誠實面對）**
+- 無 session_status，無法回報 Token 成本
+- 無法執行 bash / find / grep 等終端機指令
+- 無法操作本機電腦
+- 交付前以邏輯檢查代替自測
+
+**4. 三個版本共同的核心**
+三個版本都遵守同一個底層邏輯：ETA 回報、零確認授權、交付前檢核、防幻覺、不解決就道歉。
+
+→ 這證明「頂級特助」的作業方式已經標準化為可適配不同平臺的 SOP。
+
+---
+
 ## 2026-05-04 08:35｜第卅七筆提煉
 
 這15分鐘無新增，繼續待命。

@@ -19,8 +19,8 @@ if [ -n "$DATETIME" ]; then
   TS=$(date -j -f "%Y-%m-%d %H:%M" "$DATETIME" +%s 2>/dev/null)
   if [ -n "$TS" ]; then
     REMINDER_SCRIPT="/Users/bymyway/.openclaw/workspace/scripts/04_push_notification.sh"
-    AT_CMD="* * * * * $REMINDER_SCRIPT '$MSG'"
-    # 只在临近日程时加入 crontab（简化版，实际用 launchd 或日历）
+    # 用 at 指令安排在指定時間執行（只執行一次）
+    echo "bash $REMINDER_SCRIPT '$MSG'" | at "$DATETIME" 2>/dev/null
     echo "📅 定時提醒已設定：$DATETIME — $MSG"
   fi
 else

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-28T22:03:09.566Z",
+  "updatedAt": "2026-05-04T02:02:47.475Z",
   "entries": {
     "memory:memory/2026-04-12.md:71:77": {
       "key": "memory:memory/2026-04-12.md:71:77",
@@ -3443,18 +3443,20 @@
       "endLine": 62,
       "source": "memory",
       "snippet": "- `bymyway7` = BNI 專屬（留原地，大型筆記本不動） - `seabiscuit` = 個人品牌（搬移） - **犯過的錯**：一開始搞反，誤設 seabiscuit 放 BNI，大樹教練指正後才對調 - 有共用連結的筆記本絕對不動（動了學員/夥伴的連結就斷掉） - 搬家腳本已啟動，尚未確認全部完成 **5. GitHub 私有倉庫建立** - Repo：`https://github.com/Coach1973/mac-openclaw-workflows`（Private） - 已上傳：IDENTITY.md、MEMORY.md、NotebookLM_Migration_Plan.md - 守則已新增第 21、22 條： - 守則 21：執行前先預估 Token 消耗與成本 - 守則 22：任務完成後自動總結並 Git push 備份 **6. Groq 設定（完成前被限流中斷）** - 已完成：在 openclaw.json 啟動 Groq 外掛、在 auth-profiles.json 寫入 API key - 中斷前尚未完成：將 groq/llama-3.3-70b-versatile 加入核准白名單與 fallbacks - 後續由 Claude Code 完成補救（加入 plugins.allow、fallbacks 等設定） --- ## 重要決策與偏好 **Token 成本意識** - K = 千（Kilo），93K = 9萬3千，不是93萬（大樹教練已理解） - 克勞德助教（Windows）截圖模式消耗大，這類任務以",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5352081567049026,
+      "totalScore": 0.9857207417488097,
       "maxScore": 0.5352081567049026,
       "firstRecalledAt": "2026-04-20T02:00:25.488Z",
-      "lastRecalledAt": "2026-04-20T02:00:25.488Z",
+      "lastRecalledAt": "2026-05-04T02:02:44.417Z",
       "queryHashes": [
-        "fa644ce397bd"
+        "fa644ce397bd",
+        "dd77a7c929ce"
       ],
       "recallDays": [
-        "2026-04-20"
+        "2026-04-20",
+        "2026-05-04"
       ],
       "conceptTags": [
         "動了學員/夥伴的連結就斷掉",
@@ -3474,20 +3476,23 @@
       "endLine": 38,
       "source": "memory",
       "snippet": "**規則**：凡是「不做就讓前面所有工作白費」的邏輯必要步驟，直接執行，不要再問確認。只有在涉及金錢、刪除資料、或有明顯風險的操作才需要確認。 --- ## 已完成的任務 **1. Gmail 批次設為已讀** - 銀行帳單、銀行登入通知、Zoom 登入訊息、電子報一律設為已讀 - 使用 gog gmail batch modify 指令執行成功 **2. 執董週會每週提醒** - 每週四早上 11:55 自動提醒「準備開執董週會」，運作正常 **3. Facebook Messenger 生日私訊** - 使用 Browser Control 文字骨架模式，成功逐一發送私訊給當天壽星 - **犯過的錯**：第一次誤解指令，把祝賀文字貼到塗鴉牆，教練更正後才改發私訊 - **重要學習**：文字骨架模式只消耗 93K Token，截圖模式（克勞德 Windows）消耗上百萬，成本差 10 倍以上 **4. NotebookLM 107 個筆記本全面分類** - **帳號分工（已確定，不可更改）**： - `bymyway7` = BNI 專屬（留原地，大型筆記本不動） - `seabiscuit` = 個人品牌（搬移） - **犯過的錯**：一開始搞反，誤設 seabiscuit 放 BNI，大樹教練指正後才對調 - 有共用連結的筆記本絕對不動（動了學員/夥伴的連結就斷掉）",
-      "recallCount": 2,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0457406088709829,
+      "totalScore": 1.9434948638081548,
       "maxScore": 0.5348593607544898,
       "firstRecalledAt": "2026-04-20T02:00:25.488Z",
-      "lastRecalledAt": "2026-04-28T17:50:53.613Z",
+      "lastRecalledAt": "2026-05-04T02:02:47.475Z",
       "queryHashes": [
         "fa644ce397bd",
-        "d78a179987a2"
+        "d78a179987a2",
+        "dd77a7c929ce",
+        "43cf114698a6"
       ],
       "recallDays": [
         "2026-04-20",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-05-04"
       ],
       "conceptTags": [
         "動了學員/夥伴的連結就斷掉",
@@ -9471,6 +9476,69 @@
         "sender-id",
         "心願",
         "清單"
+      ]
+    },
+    "memory:memory/2026-04-10.md:76:91": {
+      "key": "memory:memory/2026-04-10.md:76:91",
+      "path": "memory/2026-04-10.md",
+      "startLine": 76,
+      "endLine": 91,
+      "source": "memory",
+      "snippet": "- 最終目標：將所有踩過的坑、累積的技能與守則，濃縮成讓學員「一鍵植入」的大腦包 - GitHub Repo 是這個願景的基礎 --- ## 未完成 / 待確認事項 1. NotebookLM 搬家腳本：已啟動但尚未確認全部完成 2. YouTube 主動進化引擎 V2.0 排程腳本：規劃了但尚未實際建立 3. YouTube 篩選偏好是否已寫入守則（IDENTITY.md）：未確認 4. 信用卡繳費狀態未確認（截止日 4/18） 5. Telegram 訊息洪流問題：session 尾段出現大量「你可以開始工作了嗎？」重複訊息（超過 1 萬則），導致系統卡住無法回應，需要排查 **Why:** 這是 2026-04-08 到 04-10 的完整重要對話記錄，reset 後新 session 需要知道這些背景 **How to apply:** 大樹教練提到 NotebookLM、GitHub、FB 生日、YouTube 頻道、Groq 設定時，參考此記錄",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8931283771991729,
+      "maxScore": 0.4475493788719177,
+      "firstRecalledAt": "2026-05-04T02:02:44.417Z",
+      "lastRecalledAt": "2026-05-04T02:02:47.475Z",
+      "queryHashes": [
+        "dd77a7c929ce",
+        "43cf114698a6"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "v2.0",
+        "identity.md",
+        "4/18",
+        "04-10",
+        "最終",
+        "目標",
+        "所有",
+        "累積"
+      ]
+    },
+    "memory:memory/2026-04-12.md:1:17": {
+      "key": "memory:memory/2026-04-12.md:1:17",
+      "path": "memory/2026-04-12.md",
+      "startLine": 1,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "## FB 壽星壓力測試進度更新 (22:05) 教練遇到「小龍蝦沒有辦法控制這個 Chrome」的問題。原因是 Mac 預設打開的 Chrome 基於安全性，不允許背景 AI 直接控制（缺乏 DevToolsActivePort）。已引導教練使用 `Cmd+Q` 徹底關閉後，用終端機加上 `--remote-debugging-port` 參數重新啟動。 ## FB Chrome 接管除錯狀態更新 (22:08) 教練遇到「小龍蝦插件驚嘆號」問題。 這是因為剛才強制重啟 Chrome，導致插件與本機小龍蝦伺服器的連線暫時中斷（找不到 WebSocket 端口）。 已引導教練重整或點擊插件「重新連線」，確保插件綠燈亮起。 ## 守則更新與反省 (22:12) 教練反饋：剛才排查 Chrome 問題花費超過 3 分鐘，期間沒有任何回音，體驗不佳。 行動：已將「長時間任務預先安撫」寫入 IDENTITY.md 第 30 條守則。這是頂級特助 UX 的重要一環。 ## FB 壓力測試 - Chrome 擴充功能設定 (22:15) 教練發現 Chrome 小龍蝦擴充功能的 Gateway Token 遺失。 我已提取 `~/.openclaw/openclaw.json` 中的 token (`0283...`) 並引導教練貼上至 options.html 頁面。 等待教練確認連線成功。 --- ## 📨 對話記錄 23:33（共約 4 條，從第 0 行起）",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4457930594682693,
+      "maxScore": 0.4457930594682693,
+      "firstRecalledAt": "2026-05-04T02:02:44.417Z",
+      "lastRecalledAt": "2026-05-04T02:02:44.417Z",
+      "queryHashes": [
+        "dd77a7c929ce"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "gateway",
+        "remote-debugging-port",
+        "identity.md",
+        "openclaw/openclaw.json",
+        "options.html",
+        "壽星",
+        "壓力",
+        "測試"
       ]
     }
   }

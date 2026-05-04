@@ -170,6 +170,48 @@ LINE 傳送圖片/音樂/影片時，絕對禁止本機路徑，必須轉換為�
 
 ---
 
+## 2026-05-04 10:50｜第四十六筆提煉
+
+### 讀了什麼
+- feedback_openclaw_identity_postmortem.md（身份混亂問題血淚後記）
+
+### 對中心目標有幫助的關鍵內容
+
+**1. OpenClaw 啟動順序（AGENTS.md定義）**
+
+```
+SOUL.md → USER.md → memory/YYYY-MM-DD.md → MEMORY.md
+```
+
+**唯一有效的修改位置是 SOUL.md（第一個被讀取的檔案）**
+
+**2. 身份問題的正確解決順序**
+
+```
+1. 讀取 AGENTS.md 確認啟動順序
+2. 修改 SOUL.md（最頂部插入身份鐵律）← 最重要
+3. 清空並重寫 MEMORY.md（第一條寫身份）
+4. 清除所有舊sessions（sessions.json）
+5. 重啟gateway（daemon restart）
+6. 自行驗證，不要叫教練測試
+```
+
+**3. 根因：如果一開始就讀 AGENTS.md，5 分鐘解決**
+
+而不是花了教練整夜的時間。
+
+**4. 永久防範守則**
+
+| 順序 | 守則 |
+|------|------|
+| 第一步 | 任何OpenClaw行為異常調查，先讀AGENTS.md確認啟動順序 |
+| 唯一位置 | 修改機器人固有認知/身份/個性，唯一有效位置是SOUL.md最頂部 |
+| 必須重啟 | 修改SOUL.md/USER.md/MEMORY.md後，必須立刻重啟gateway |
+| 同步清除 | 身份混亂往往伴隨舊session污染，清SOUL.md同時必須清sessions |
+| 自己驗證 | 不要要求教練測試——自己讀BOT_MESSAGES.md驗證 |
+
+---
+
 ## 2026-05-04 10:35｜第四十五筆提煉
 
 ### 讀了什麼

@@ -97,10 +97,7 @@ def main():
                     })
                     scene_num += 1
 
-            if len(all_scenes) >= 10:
-                break  # 先跑10個測試
-
-    print(f"\n萃取 {len(all_scenes)} 個場景")
+            print(f"\n萃取 {len(all_scenes)} 個場景")
 
     if all_scenes:
         with open(OUTPUT_FILE, 'a', encoding='utf-8') as f:

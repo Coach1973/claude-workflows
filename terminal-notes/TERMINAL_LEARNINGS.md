@@ -170,6 +170,37 @@ LINE 傳送圖片/音樂/影片時，絕對禁止本機路徑，必須轉換為�
 
 ---
 
+## 2026-05-04 11:20｜第四十八筆提煉
+
+### 讀了什麼
+- feedback_minimax_auth_format.md（MiniMax auth-profiles 格式鐵律）
+
+### 對中心目標有幫助的關鍵內容
+
+**1. MiniMax auth-profiles 正確格式**
+
+```json
+{
+  "id": "minimax",
+  "provider": "minimax",
+  "vars": { "MINIMAX_API_KEY": "sk-cp-..." }
+}
+```
+
+**必須用 `vars.MINIMAX_API_KEY`，改成 `key` 格式會導致模型完全無回應。**
+
+**2. 操作鐵律**
+
+未來任何修改 auth-profiles.json，只能新增其他 provider，minimax 和 minimax-portal 的 entry 保持原樣不動。
+
+**3. 核心心法**
+
+「如果它能正常運作，就不要動它。」改動working設定的代價往往是崩潰，而不是優化。
+
+→ 再次呼應「做對的事」：一開始就不動對的東西，比事後修補更高效。
+
+---
+
 ## 2026-05-04 11:05｜第四十七筆提煉
 
 ### 讀了什麼

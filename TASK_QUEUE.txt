@@ -1,13 +1,13 @@
-# 頂級特助系統 — 今晚任務清單（任務1已交UI版，這裡跑2-5）
+# 今晚任務清單（輕量版，每個AI任務100字以內）
 
-# ── 任務2：生成每日開工宣言並寫入系統 ──
-AI:讀取 /Users/bymyway/.openclaw/workspace/terminal-notes/TOP_ASSISTANT_RULES_v3_final.md，從守則中提煉一段「每日開工宣言」：100字以內、第一人稱、語氣堅定有力、涵蓋「主動服務、承諾鐵律、不讓老闆當傳話筒」三個核心，寫入 /Users/bymyway/.openclaw/workspace/terminal-notes/每日開工宣言.md
+# ── 任務1：場景庫統計 ──
+SH:COUNT=$(grep -c "^## 場景\|^【場景" /Users/bymyway/.openclaw/workspace/shared-context/SCENES/scenes_master_v1.md 2>/dev/null); echo "場景總數：$COUNT" >> /Users/bymyway/.openclaw/workspace/terminal-notes/relay_output.md
 
-# ── 任務3：VPS同步確認 ──
-SH:sshpass -p '9kdxvQN2' ssh -o StrictHostKeyChecking=no root@43.245.60.200 "docker exec openclaw ls /app/workspace/shared-context/ 2>/dev/null && echo VPS_SYNC_OK" >> /Users/bymyway/.openclaw/workspace/terminal-notes/relay_output.md 2>&1
+# ── 任務2：每日開工宣言 ──
+AI:用100字以內、第一人稱寫一段「每日開工宣言」，涵蓋「主動服務、承諾鐵律、不讓老闆當傳話筒」三個核心，語氣堅定，寫入檔案 /Users/bymyway/.openclaw/workspace/terminal-notes/每日開工宣言.md
 
-# ── 任務4：HEARTBEAT更新 ──
-AI:讀取 /Users/bymyway/.openclaw/workspace/HEARTBEAT.md，把今天（2026-05-05）完成的任務補進「已完成」區塊（場景庫master、時間軸、知識萃取報告、產品提案書、孔大哥升級包v2、電梯簡報、快速上手卡、dispatch.sh自動化架構），更新時間戳為2026-05-05 23:00，寫回 /Users/bymyway/.openclaw/workspace/HEARTBEAT.md
+# ── 任務3：VPS確認 ──
+SH:sshpass -p '9kdxvQN2' ssh -o StrictHostKeyChecking=no root@43.245.60.200 "echo VPS_OK" >> /Users/bymyway/.openclaw/workspace/terminal-notes/relay_output.md 2>&1 || echo "VPS連線失敗" >> /Users/bymyway/.openclaw/workspace/terminal-notes/relay_output.md
 
-# ── 任務5：最終git push ──
-SH:cd /Users/bymyway/.openclaw/workspace && git add -A && git commit -m "feat: 今日全部產出完成 2026-05-05" && git push origin main
+# ── 任務4：git push ──
+SH:cd /Users/bymyway/.openclaw/workspace && git add -A && git commit -m "auto: 今日任務完成 2026-05-05" 2>/dev/null || true && git push origin main

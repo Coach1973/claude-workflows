@@ -15,6 +15,12 @@
 - ⛽ 加油 >693元 + 取得紙本收據
 - 📮 郵局掛號寄加油收據（統編 83339746 / 車號 BAS-5151）
 
+### 🔧 系統進度（2026-05-05 晚）
+- ✅ queue_runner.sh 建立完成，修復 MiniMax API 設定（commit de98c1d6）
+- ✅ R13 血淚教訓：claude --print 未驗證登入狀態，已補修
+- ✅ 設計教訓：queue_runner.sh 應由**終端機**跑，不是小龍蝦
+- 🔄 TASK_QUEUE.txt（5個任務）交終端機執行中，Telegram 通知進度
+
 ### 📋 教練待辦（2026-05-05 21:30 更新）
 > ⚠️ 此區塊只有小龍蝦主 session 能寫，isolated session 和其他助教一律禁止修改
 

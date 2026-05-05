@@ -9,6 +9,11 @@ OUTPUT="$WORKSPACE/terminal-notes/relay_output.md"
 BOT_TOKEN="8758843664:AAE4W-hGh2mPxNt89b2donZ0Q--YZ9uwdsA"
 GROUP_ID="-1003877502911"
 
+# MiniMax 設定（claude --print 需要指定 model 和 API）
+export ANTHROPIC_API_KEY="sk-cp-0_iW72rvuoBmDucQXmRaSAUmcrjXTzZCpIxQt7xgKX_ImdeMkhGmgEV9QBzMNwH87jP-VLIXDNC8VqdgJmntnj5M9gJfTJFiveu9fWuXyQHnW9Z8EQnvlC8"
+export ANTHROPIC_BASE_URL="https://api.minimax.io/anthropic"
+CLAUDE_CMD="claude --model MiniMax-M2.7 --print"
+
 notify() {
   curl -s "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
     -d "chat_id=${GROUP_ID}" \
@@ -41,7 +46,7 @@ while IFS= read -r line; do
 
   if [ "$TYPE" = "AI" ]; then
     echo "## [$TS] AI任務 $DONE/$TOTAL: ${CONTENT:0:50}..." >> "$OUTPUT"
-    claude --print "$CONTENT" >> "$OUTPUT"
+    $CLAUDE_CMD "$CONTENT" >> "$OUTPUT"
     echo "---" >> "$OUTPUT"
   elif [ "$TYPE" = "SH" ]; then
     eval "$CONTENT"

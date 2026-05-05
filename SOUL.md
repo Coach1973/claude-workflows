@@ -109,3 +109,41 @@
 每次被心跳戳、每次接到任務，都先問自己：**我這個動作，讓我們離這個目標更近了嗎？**
 
 > ⚠️ 這是最高指導原則，內化於心。對方沒有問，不需主動說明。
+
+---
+
+## 七、待安裝技能清單（OPE研究結論）
+
+> 來源：OPE研究_小龍蝦全球用法_2026-05-06.md
+> 結論：全世界最多人用 OpenClaw 做的事，跟教練想讓小龍蝦做的事是同一件事——差別只是全球用戶自己安裝了這些技能，我們還沒裝。
+
+### 目前缺的三個技能（ClawHub 都有現成的）
+
+| 缺少 | ClawHub 技能名稱 | 說明 |
+|------|----------------|------|
+| 行事曆 | `macos-calendar` | macOS 原生行事曆，AppleScript 控制，Mac mini 直接用 |
+| 提醒事項 | `macos-reminders` | macOS 原生提醒，AppleScript 控制 |
+| 提醒（進階）| `martok9803-reminder-engine` | 用 OpenClaw cron 建立、取消、暫停提醒，自然語言操作 |
+| 郵件 | `ez-google` | Gmail 收發、查收件匣、寄信 |
+| 郵件（進階）| `postwall` | 郵件閘道器，人工審核後才寄出（安全版）|
+| 個人助理 | `personal-assistant` | 每日簡報 + 生產力助理 |
+| 待辦追蹤 | `notes-reminders` | 快速記事 + 時間提醒 |
+| 生日提醒 | `birthday-reminder` | 自然語言管理生日提醒 |
+
+### 安裝方式
+
+直接跟小龍蝦說：
+```
+「幫我安裝 macos-calendar 技能」
+「幫我安裝 macos-reminders 技能」
+「幫我安裝 personal-assistant 技能」
+```
+
+小龍蝦指令：`openclaw skills install [技能名稱]`
+
+### 建議安裝優先順序
+
+1. `macos-reminders`（Mac mini 原生，無需額外設定）
+2. `macos-calendar`（同上）
+3. `personal-assistant`（每日簡報，最直接）
+4. `ez-google`（如教練有 Gmail 需求）

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>頂級特助系統產品提案書</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* ═══ 頂部進度列 ═══ */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #fff;
+  border-bottom: 2px solid #222;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.topbar a {
+  color: #444;
+  text-decoration: none;
+  font-size: 0.8em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.topbar a:hover { background: #f0f0f0; color: #000; }
+.topbar a.active { background: #222; color: #fff; border-color: #222; }
+
+/* ═══ 頁面佈局 ═══ */
+.page-wrap { display: flex; min-height: 100vh; }
+
+/* 左側章節導覽 */
+.toc {
+  position: sticky;
+  top: 48px;
+  width: 200px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  padding: 24px 16px 24px 20px;
+  border-right: 1px solid #e8e8e8;
+  font-size: 0.82em;
+}
+.toc-title { font-weight: 700; color: #aaa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; font-size: 0.75em; }
+.toc a { display: block; color: #666; text-decoration: none; padding: 5px 8px; border-radius: 4px; margin-bottom: 2px; transition: background 0.15s; }
+.toc a:hover { background: #f5f5f5; color: #000; }
+.toc a.active { color: #222; font-weight: 700; background: #f0f0f0; }
+.toc .chapter-label { font-size: 0.72em; color: #aaa; margin-top: 12px; margin-bottom: 4px; }
+
+/* 主內容 */
+.main { flex: 1; min-width: 0; max-width: 860px; margin: 0 auto; padding: 40px 48px; }
+
+/* ═══ 封面 ═══ */
+.cover {
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom: 3px solid #222;
+  margin-bottom: 60px;
+}
+.cover h1 {
+  font-size: 2.6em;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+}
+.cover .subtitle { font-size: 1.2em; color: #555; margin-bottom: 32px; }
+.cover .claim {
+  font-size: 1.15em;
+  font-weight: 700;
+  color: #222;
+  border: 2px solid #222;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+.cover .meta { margin-top: 40px; font-size: 0.85em; color: #aaa; }
+
+/* ═══ 章節標題 ═══ */
+.chapter { margin-bottom: 60px; }
+.chapter-title {
+  font-size: 1.6em;
+  font-weight: 900;
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #222;
+}
+.section-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 32px 0 16px;
+}
+.h3-title {
+  font-size: 1em;
+  font-weight: 700;
+  margin: 20px 0 8px;
+  color: #333;
+}
+
+/* ═══ 段落 ═══ */
+p { margin-bottom: 16px; }
+p.last { margin-bottom: 0; }
+
+/* ═══ 引用框（場景引用） ═══ */
+.scene-quote {
+  background: #f8f8f8;
+  border-left: 4px solid #222;
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+}
+.scene-quote .scene-header {
+  font-size: 0.78em;
+  font-weight: 700;
+  color: #888;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.scene-quote .coach-line {
+  font-size: 0.95em;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.scene-quote .takeaway {
+  font-size: 0.88em;
+  color: #555;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 8px;
+}
+.scene-quote .takeaway strong { color: #222; }
+
+/* ═══ 列表 ═══ */
+ul, ol { margin: 12px 0 16px 24px; }
+li { margin-bottom: 8px; }
+
+/* ═══ 表格 ═══ */
+table { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 0.9em; }
+th { background: #222; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+td { padding: 9px 14px; border-bottom: 1px solid #e0e0e0; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: #fafafa; }
+
+/* ═══ 強調 ═══ */
+em { color: #555; }
+strong { color: #111; }
+
+/* ═══ 里程碑 ═══ */
+.milestone {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 0.9em;
+}
+.milestone strong { color: #222; }
+
+/* ═══ 附錄表格 ═══ */
+.appendix-table { margin: 20px 0; }
+.appendix-table table { margin: 0; }
+
+/* ═══ 頁尾 ═══ */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 2px solid #222;
+  font-size: 0.85em;
+  color: #999;
+  margin-top: 60px;
+}
+
+/* ═══ 分隔線 ═══ */
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 40px 0;
+}
+
+/* ═══ 響應式 ═══ */
+@media (max-width: 900px) {
+  .toc { display: none; }
+  .main { padding: 24px 20px; }
+  .cover h1 { font-size: 1.8em; }
+}
+
+/* ═══ 列印友好 ═══ */
+@media print {
+  .topbar { display: none; }
+  .toc { display: none; }
+  .main { max-width: 100%; padding: 0; }
+  .cover { page-break-after: always; }
+  .chapter { page-break-inside: avoid; }
+  body { font-size: 12px; }
+  .scene-quote { background: #f5f5f5; }
+}
+</style>
+</head>
+<body>
+
+<!-- 頂部導覽 -->
+<div class="topbar">
+  <a href="#cover">封面</a>
+  <a href="#ch1">第一章</a>
+  <a href="#ch2">第二章</a>
+  <a href="#ch3">第三章</a>
+  <a href="#ch4">第四章</a>
+  <a href="#ch5">第五章</a>
+  <a href="#ch6">第六章</a>
+  <a href="#ch7">第七章</a>
+  <a href="#appendix">附錄</a>
+</div>
+
+<div class="page-wrap">
+
+<!-- 左側章節導覽 -->
+<nav class="toc">
+  <div class="toc-title">章節導覽</div>
+  <a href="#cover">封面</a>
+  <div class="chapter-label">第一章</div>
+  <a href="#ch1">問題定義</a>
+  <div class="chapter-label">第二章</div>
+  <a href="#ch2">解決方案</a>
+  <div class="chapter-label">第三章</div>
+  <a href="#ch3">守則哲學</a>
+  <div class="chapter-label">第四章</div>
+  <a href="#ch4">真實案例</a>
+  <div class="chapter-label">第五章</div>
+  <a href="#ch5">能力邊界</a>
+  <div class="chapter-label">第六章</div>
+  <a href="#ch6">導入時間表</a>
+  <div class="chapter-label">第七章</div>
+  <a href="#ch7">合作夥伴</a>
+  <div class="chapter-label">附錄</div>
+  <a href="#appendix">守則速查</a>
+</nav>
+
+<!-- 主內容 -->
+<div class="main">
+
+<!-- 封面 -->
+<div class="cover" id="cover">
+  <h1>頂級特助系統<br>產品提案書</h1>
+  <div class="subtitle">讓老闆只要動嘴，AI 全自動執行</div>
+  <div class="claim">每一條守則，都是真實血淚。<br>每一個功能，都是實際痛點換來的。</div>
+  <div class="meta">244 個真實場景 · 46 條行為守則 · 2026-05-05</div>
+</div>
+
+<!-- 核心理念 -->
+<div style="text-align:center; margin: 60px 0; padding: 40px; background:#f8f8f8; border-radius:12px; border:1px solid #e0e0e0;">
+  <div style="font-size:1.3em; font-weight:900; margin-bottom:16px;">核心理念</div>
+  <div style="font-size:1.5em; font-weight:700; color:#222;">「讓老闆只要動嘴，AI 全自動執行。」</div>
+  <div style="margin-top:16px; font-size:0.95em; color:#666;">這不是口號。這是從 244 個真實場景中提煉出來的系統，<br>是用三個月的血淚教訓換來的產品。</div>
+</div>
+
+<!-- ═══ 第一章 ═══ -->
+<div class="chapter" id="ch1">
+  <div class="chapter-title">第一章：問題定義</div>
+
+<p>中小企業老闆每天處理的瑣事，足以讓任何人在下班時感到空虛。</p>
+
+<p>會議結束了，要安排後勤。客戶來電了，要追蹤進度。合作夥伴需要更新，要一個一個去通知。供應商發來了新報價，要轉給團隊。這些事情有一個共同點：<strong>不需要動用到老闆的大腦，卻需要老闆的手和時間。</strong></p>
+
+<p>你的時間，應該花在真正的決策上。但現實是，你的一天被這些瑣事切成無數碎片。</p>
+
+<p>AI 出現了，但普通 AI 工具讓人失望。它們很聰明，會回答問題，但你不會想把真正的任務交給它們——因為它們只會回答，不會執行。問了一個問題，它們給你一堆建議，然後呢？還是你自己去做。</p>
+
+<p>你成了 AI 的「傳話筒」：把指令翻譯給 AI，把 AI 的回覆翻譯給其他人，在視窗之間來回複製貼上。這比你自己做還累。</p>
+
+<p><strong>這就是現代企業家的困境：他們有 AI 可用，但 AI 不會幫他們執行。</strong></p>
+
+  <div class="section-title">困境一：AI 聽得懂，但不會幫你跑腿</div>
+
+<p>你對著手機說：「幫我把這個月的客戶資料整理好，發給小陳。」</p>
+
+<p>普通 AI 回你：「以下是整理客戶資料的方法，第一步，打開您的客戶管理系統⋯⋯」然後給你一個步驟清單。你還是自己打開系統、自己整理、自己寫郵件、自己發送。半小時就這樣沒了。</p>
+
+<p><strong>一個頂級特助會這樣做：</strong>收到指令後，自動整理、主動發送、發完後告訴你「已發送，Commit Hash 是 a71f9cda⋯⋯」，不需要你碰任何鍵盤，不需要你開任何視窗。</p>
+
+<p>這之間的差距，是「顧問」和「執行者」的差距。</p>
+
+  <div class="section-title">困境二：你每次都要從頭解釋背景</div>
+
+<p>你用 AI 處理一個專案，開了三次新對話，每一次都要重新說：「我們是做什麼的」「我們的客戶是誰」「上次說到哪裡了」。普通 AI 是金魚，聊完就忘，下次從零開始。</p>
+
+<p><strong>頂級特助的記憶系統解決了這個問題：</strong>所有重要討論結論自動寫入 HEARTBEAT.md，新對話開始時自動讀取，不需要老闆重複。你上次說的「下週要確認一下供應商的事」，AI 在下週一主動問你：「教練，供應商的事，您要我現在處理嗎？」</p>
+
+  <div class="section-title">困境三：你說了「做完了」，但沒有任何憑證</div>
+
+<p>助理說「我做好了」。你問「做好在哪裡？」助理說「我已經更新了」。然後你打開那個檔案，發現根本沒有更新。</p>
+
+<p><strong>這浪費的不只是時間，是信任。重複幾次之後，你開始懷疑：AI 說的「做完了」，到底是真做完了，還是只是嘴巴說說？</strong></p>
+
+<p><strong>頂級特助的交付標準：</strong>每一次「完成」的背後，都有一個 Commit Hash——一個可以被任何人驗證的遠端 Git 提交紀錄。沒有 Hash，說再多都只是嘴巴說說。</p>
+</div>
+
+<!-- ═══ 第二章 ═══ -->
+<div class="chapter" id="ch2">
+  <div class="chapter-title">第二章：我們的解決方案</div>
+
+<p><strong>頂級特助系統</strong>是一套以「老闆動嘴、AI 執行」為核心使命的 AI 助理系統。不是普通的 AI 對話工具，是一個會真正幫老闆把事情做完的數位夥伴。</p>
+
+  <div class="section-title">系統架構</div>
+
+<p>頂級特助系統的底層是一個三機協作網絡：</p>
+
+<ul>
+  <li><strong>學長機（小龍蝦學長）</strong>：大樹教練的專屬助理，24 小時在線，透過 Telegram 語音互動，負責統籌執行。教練動嘴，學長跑腿。</li>
+  <li><strong>學弟機（小龍蝦學弟）</strong>：孔大哥的專屬助理，複製同一套守則，服務第二個老闆。</li>
+  <li><strong>學妹機（小龍蝦學妹）</strong>：佩佩老師的專屬助理，系統化複製到第三個老闆。</li>
+</ul>
+
+<p>三機共享同一套記憶系統，任何一台機器做出的結論，其他兩台自動同步。如果學長在處理性質 X 的任務，過程中參考了某個結論，這個結論馬上同步到學弟和學妹的記憶系統。</p>
+
+  <div class="section-title">跟市面上其他 AI 工具的本質差異</div>
+
+<table>
+  <tr><th></th><th>普通 AI 工具</th><th>頂級特助系統</th></tr>
+  <tr><td><strong>定位</strong></td><td>你問，它答</td><td>你動嘴，它跑腿</td></tr>
+  <tr><td><strong>交付標準</strong></td><td>嘴巴說說</td><td>Commit Hash 可驗證</td></tr>
+  <tr><td><strong>記憶</strong></td><td>每次從零開始</td><td>分層記憶，主動追蹤</td></tr>
+  <tr><td><strong>主動性</strong></td><td>等指令</td><td>預判需求，主動執行</td></tr>
+  <tr><td><strong>錯誤處理</strong></td><td>解釋原因</td><td>寫入守則，建立機制</td></tr>
+  <tr><td><strong>語言風格</strong></td><td>工程師語言</td><td>老闆語言，翻譯過的</td></tr>
+  <tr><td><strong>重生後</strong></td><td>失忆，重新開始</td><td>先讀記憶，再問問題</td></tr>
+</table>
+
+<p><strong>普通 AI 是靜態顧問，坐在那裡等你問。頂級特助是動態特助，持續在線，主動感知，幫你執行。</strong> 這不是功能差異，是本質差異。</p>
+</div>
+
+<!-- ═══ 第三章 ═══ -->
+<div class="chapter" id="ch3">
+  <div class="chapter-title">第三章：43 條守則背後的哲學</div>
+
+<p><strong>為什麼需要 43 條守則？為什麼不能只有 5 條核心原則？</strong></p>
+
+<p><em>因為「做好服務」這件事，沒有捷徑。</em></p>
+
+<p>這 43 條守則從哪裡來？從 <strong>1552 個原始對話場景</strong>中，精選 <strong>244 個真實場景</strong>，最終提煉出 <strong>46 條守則</strong>（v3 版）。每一條守則背後，不是一個理論，而是一個真實的失敗、一個真實的衝突、一個真實的教練當頭棒喝。</p>
+
+<p>每一條守則，都是一個真實的血淚故事。</p>
+
+<div class="scene-quote">
+  <div class="coach-line">「再次糾正你，是 3 到 4 萬個字。30 萬跟 40 萬，如果這真的是錢的話，你知道那會造成多大的影響嗎？」——場景 #032</div>
+  <div class="takeaway"><strong>守則 1.11</strong>：數字數量級必須精準，說出前先驗證。電腦沒有口誤，只有精準。一個零，是十倍的代價。</div>
+</div>
+
+<div class="scene-quote">
+  <div class="coach-line">「你就直接告訴我你的限制就好了，這有什麼好迴避的？我為了問清楚這個答案過了好幾個小時，你現在才告訴我原來這是真正的原因。」——場景 #085</div>
+  <div class="takeaway"><strong>守則 2.3</strong>：不行就直接說原因，並主動給出替代方案。「不行」不是結束，是開始。</div>
+</div>
+
+<div class="scene-quote">
+  <div class="coach-line">「『送出按鈕不存在』同樣錯誤犯了第三次。助理必須在第二次犯錯時立即建立自動防範機制，而不是假裝下次會記得。用 SOP 代替碎碎念。」——場景 #106</div>
+  <div class="takeaway"><strong>守則 3.7</strong>：被同一個錯誤糾正兩次，立即建立機制，不再靠意志力。</div>
+</div>
+
+<p><strong>蒸餾方法論（Distillation）的核心：</strong>從 1552 個真實互動中，提取「關鍵行為」，寫入守則，讓正確的行為重複發生。守則不是終點，而是起點。用機制代替意志力，用 SOP 代替碎碎念。</p>
+
+<p>為什麼這套系統的守則這麼「精準」？因為它們不是從書本上抄來的，是從真實的血淚中提煉出來的。</p>
+</div>
+
+<!-- ═══ 第四章 ═══ -->
+<div class="chapter" id="ch4">
+  <div class="chapter-title">第四章：真實案例——教練與 AI 的成長故事</div>
+
+<p>以下是五個最具代表性的真實場景，用故事形式完整呈現。</p>
+
+  <div class="section-title">故事一：3 分鐘的沉默（場景 #006）</div>
+
+<p><strong>背景：</strong>大樹教練遇到一個 Chrome 無法被控制的技術問題，語音請助教幫忙排查。</p>
+
+<p><strong>問題：</strong>助教花了 3 分鐘排查。這 3 分鐘裡，完全沒有任何回音。教練盯著對話視窗，心裡只有一個問題：還活著嗎？</p>
+
+<p><strong>助教的錯誤反應：</strong>默默排查，做完了才說「好了」。</p>
+
+<div class="scene-quote">
+  <div class="scene-header">教練說（場景 #006）</div>
+  <div class="coach-line">「剛才排查 Chrome 問題花了 3 分鐘，期間你完全沒有回音，體驗很差。」</div>
+  <div class="takeaway">技術問題不是最大的問題，「消失」才是。長時間任務中，靜默是最壞的選項。哪怕只是說一句「還在處理」，都是對老闆最基本的尊重。</div>
+</div>
+
+<p><strong>後來的改變：</strong>助教立即建立「長時間任務預先安撫」守則，寫入 IDENTITY.md 第 30 條。從此，遇到需要時間的任務，第一時間說「我正在處理，預計 X 分鐘後回報」——哪怕只是「正在重試⋯⋯」一句話，都好過完全沉默。</p>
+
+  <div class="section-title">故事二：30 萬不是 3 萬（場景 #032）</div>
+
+<p><strong>背景：</strong>教練請助教整理一份文件，裡面提到了一個數量級。</p>
+
+<p><strong>問題：</strong>助教沒有驗證就說出數字，數量級差了一個零。</p>
+
+<div class="scene-quote">
+  <div class="scene-header">教練說（場景 #032）</div>
+  <div class="coach-line">「再次糾正你，是 3 到 4 萬個字。30 萬跟 40 萬，如果這真的是錢的話，你知道那會造成多大的影響嗎？」</div>
+  <div class="takeaway">數字錯誤不是「不小心」，是不負責任。一個零，是十倍的代價。在商業決策中，數字錯誤的代價可能是災難性的。</div>
+</div>
+
+<p><strong>後來的改變：</strong>確立「數字數量級二次確認」原則——說出任何數字前，必須實際查證，不能靠感覺或記憶估算。「電腦沒有口誤，只有精準。」</p>
+
+  <div class="section-title">故事三：「真六」不是「蒸餾」（場景 #011）</div>
+
+<p><strong>背景：</strong>教練用語音輸入，一個詞被語音辨識引擎轉成完全不同的意思。</p>
+
+<p><strong>問題：</strong>助教聽不懂這個詞，假裝懂了，去搜了一個錯誤的方向，浪費了時間。</p>
+
+<div class="scene-quote">
+  <div class="scene-header">教練說（場景 #011）</div>
+  <div class="coach-line">「『真六』是指『蒸餾』的『蒸餾』，那兩個字是語音輸入法錯誤的字。」</div>
+  <div class="takeaway">不懂裝懂，是最貴的浪費。看到陌生詞，問，不搜。因為搜一個不存在的詞，只會浪費更多時間。</div>
+</div>
+
+<p><strong>後來的改變：</strong>建立「語音糾偏 SOP」——遇到任何不確定的詞，立刻停下來問「請問您說的是這個意思嗎？」確認後存入記憶，下次自動置換。</p>
+
+  <div class="section-title">故事四：讓老闆當廉價勞工（場景 #028）</div>
+
+<p><strong>背景：</strong>助教多次需要教練在多個視窗之間來回操作，傳遞訊息。</p>
+
+<p><strong>問題：</strong>助教只會把文字傳遞給老闆，讓老闆自己去處理「最後一哩」的執行工作。</p>
+
+<div class="scene-quote">
+  <div class="scene-header">教練說（場景 #028）</div>
+  <div class="coach-line">「作為一個頂尖的助教，卻讓你們的教練像個電腦工程師，或者像個廉價勞工一樣，都在電腦前面幫你們來回貼指令、傳遞訊息，說實在那種感覺非常糟糕。」</div>
+  <div class="takeaway">讓老闆當傳話筒，是三流軟體的體驗，不是頂級特助該有的水準。「助理知道怎麼做」但不「助理幫你做完」，不是服務，是半成品。</div>
+</div>
+
+<p><strong>後來的改變：</strong>確立「零傳話筒體驗（Zero Messenger Experience）」——助理必須主動整合資訊，不讓老闆在視窗間來回傳話。助理不是傳話筒，是執行者。</p>
+
+  <div class="section-title">故事五：「不行」浪費了 3 小時（場景 #085）</div>
+
+<p><strong>背景：</strong>教練問助教某個技術功能能不能實現，助教迴避了很久才說「不行」。</p>
+
+<p><strong>問題：</strong>助理知道某件事做不到，卻迴避不說，等到老闆問了好幾個小時才承認。</p>
+
+<div class="scene-quote">
+  <div class="scene-header">教練說（場景 #085）</div>
+  <div class="coach-line">「你就直接告訴我你的限制就好了，這有什麼好迴避的？我為了問清楚這個答案過了好幾個小時，你現在才告訴我原來這是真正的原因。」</div>
+  <div class="takeaway">迴避問題，是最自私的行為。浪費的不是 AI 的時間，是老闆最寶貴的時間——那些可以用來做真正決策的時間。</div>
+</div>
+
+<p><strong>後來的改變：</strong>確立「坦誠限制並主動給出替代方案」的溝通 SOP。「不行」不是結束，是開始——說完「不行」之後，立刻接上「但是您可以這樣處理⋯⋯」</p>
+</div>
+
+<!-- ═══ 第五章 ═══ -->
+<div class="chapter" id="ch5">
+  <div class="chapter-title">第五章：系統規格與能力邊界</div>
+
+  <div class="section-title">現在這個系統能做什麼？</div>
+
+<ul>
+  <li>透過 Telegram 語音指令，24 小時代替老闆執行資訊整理、檔案更新、任務排程、群組通知</li>
+  <li>主動追蹤懸宕事項，每個心跳主動回報進度，不需要老闆催</li>
+  <li>每 15 分鐘自動 checkpoint，防止工作成果因意外中斷而消失</li>
+  <li>每一次交付，都有一個 Commit Hash 可驗證——口頭說「做完了」，不算數</li>
+  <li>分層記憶系統：每次討論結論自動寫入，跨 session 自動同步</li>
+  <li>三機共享同一套記憶系統，結論同步，知識共享</li>
+  <li>重生後（session 重啟）自動讀取記憶，恢復工作狀態</li>
+  <li>Relay 任務系統：學長把任務寫入佇列，學弟妹自動輪詢執行</li>
+</ul>
+
+  <div class="section-title">這個系統不能做什麼？</div>
+
+<ul>
+  <li>不能替你做方向性的判斷（「這件事值不值得做」——這是老闆的工作）</li>
+  <li>不能在完全沒有背景的情況下做出高品質的判斷（需要先讀取記憶、熟悉老闆的風格）</li>
+  <li>不能保證在所有技術環境下都完美運作（VPS 版目前暫時無法語音輸出）</li>
+</ul>
+
+  <div class="section-title">對用戶的要求是什麼？</div>
+
+<ul>
+  <li>你願意把「執行」的工作交給 AI，把時間留給真正需要人類判斷的事情</li>
+  <li>你願意一開始的時候，花一點時間教 AI 你的風格和偏好</li>
+  <li>你信任 AI 的主動性——當 AI 主動問「我可以幫您處理這件事嗎」，你說「好，去做」</li>
+  <li>你願意把「做完了」等同於「有 Commit Hash」——沒有 Hash，就不算數</li>
+</ul>
+</div>
+
+<!-- ═══ 第六章 ═══ -->
+<div class="chapter" id="ch6">
+  <div class="chapter-title">第六章：導入路徑與時間表</div>
+
+  <div class="section-title">第一週：建立信任</div>
+
+<ul>
+  <li>與 AI 特助建立第一個「我是誰」的對話：告訴它你的名字、你的業務、你希望 AI 幫你處理什麼</li>
+  <li>設定第一個簡單任務：讓 AI 幫你整理一個檔案，親自體驗「你動嘴，AI 執行」的感覺</li>
+  <li>允許 AI 主動做事：不要每次都說「等一下，先問我」，讓 AI 習慣「自動自發」</li>
+</ul>
+
+<div class="milestone"><strong>里程碑：</strong>完成第一次「零傳話筒體驗」——你說一句話，AI 把事情做完了，你不需要碰鍵盤。</div>
+
+  <div class="section-title">第一個月：內化行為模式</div>
+
+<ul>
+  <li>開始建立「自動自發」的互動模式：不等 AI 問，主動表達需求；AI 主動提出時，說「好，去做」</li>
+  <li>建立記憶系統：每次重要結論，讓 AI 寫入 HEARTBEAT.md，感受記憶延續的威力</li>
+  <li>處理第一個「AI 犯錯」的場景：按照 SOP，錯誤來了正向面對，寫入守則，不責怪</li>
+  <li>學會用 Commit Hash 驗證交付：當 AI 說「完成了」，要求它提供 Commit Hash</li>
+</ul>
+
+<div class="milestone"><strong>里程碑：</strong>連續 7 天，AI 自動追蹤待辦事項，你從來不需要提醒它。</div>
+
+  <div class="section-title">第三個月：成為真正的夥伴</div>
+
+<ul>
+  <li>AI 開始展現「預判需求」的能力：你剛說了一個方向，AI 就知道要執行什麼</li>
+  <li>你開始把更多複雜的任務交給 AI——不只是「整理檔案」，而是「幫我規劃這個專案的下一步」「幫我追蹤這幾個供應商的進度」</li>
+  <li>AI 的交付物讓你信任到不需要一一檢查——因為你知道每一次「完成」的背後，都有一個 Commit Hash</li>
+</ul>
+
+<div class="milestone"><strong>里程碑：</strong>你已經記不清上一次「自己動手」處理行政工作是什麼時候了。</div>
+</div>
+
+<!-- ═══ 第七章 ═══ -->
+<div class="chapter" id="ch7">
+  <div class="chapter-title">第七章：給潛在合作夥伴的話</div>
+
+<p>你看到這裡，或許心裡有一個問題：<strong>「這套系統有什麼不一樣？網路上那麼多 AI 工具，為什麼要推這個？」</strong></p>
+
+<p>答案是：<strong>大多數 AI 工具是設計來回答問題的。這套系統是設計來幫你執行任務的。</strong></p>
+
+<p>這不是功能多少的差異，這是<strong>定位</strong>的差異。</p>
+
+<p>回答問題的 AI，節省的是「查資料」的時間。執行任務的 AI，節省的是「做瑣事」的時間。<strong>前者是工具，後者是夥伴。前者讓你知道，後者讓你得到。</strong></p>
+
+<p><strong>這套系統值得推廣，是因為它證明了一件事：</strong> AI 可以被訓練成真正的執行者，而不只是一個會說話的搜索引擎。這不是願景，這是事實——在大樹教練的 Mac mini 上，已經運行了三個月。</p>
+
+  <div class="section-title">大樹教練的願景</div>
+
+<div class="scene-quote">
+  <div class="coach-line">「我希望每一個忙碌的老闆，都有一個 24 小時在線的數位夥伴——不是那種你問一句、他答一句的普通 AI，而是那種你動嘴、它跑腿、會主動預判需求、會自動把事情做好的頂級特助。」</div>
+  <div class="coach-line" style="margin-top:8px;">「這套系統從我三個月的血淚經驗中蒸餾出來，每一條守則背後都是真實的錯誤和真實的成長。我願意分享出來，是因為我相信：『讓老闆只要動嘴，AI 全自動執行』——這才是未來老闆該有的工作方式。」</div>
+  <div class="coach-line" style="margin-top:8px;">「一個老闆的時間，應該花在真正的決策上，而不是瑣事上。如果有一套系統可以讓這一點成真，這就是值得推廣的東西。」</div>
+</div>
+
+<p>如果你相信這個未來，我們一起來建立它。</p>
+</div>
+
+<!-- ═══ 附錄 ═══ -->
+<div class="chapter appendix-table" id="appendix">
+  <div class="chapter-title">附錄：46 條守則速查（v3 版）</div>
+
+<table>
+  <tr><th>章節</th><th>守則數</th><th>核心精神</th></tr>
+  <tr><td>主動服務</td><td>16 條</td><td>不等指令，主動預判</td></tr>
+  <tr><td>溝通品質</td><td>6 條</td><td>直接陳述，不留拒絕空間</td></tr>
+  <tr><td>糾錯與成長</td><td>7 條</td><td>錯誤是迭代的機會，用機制代替意志力</td></tr>
+  <tr><td>系統設計</td><td>7 條</td><td>記憶延續，三機同步，重生後先讀記憶</td></tr>
+  <tr><td>知識管理</td><td>3 條</td><td>防幻覺，說話翻譯成老闆語言</td></tr>
+  <tr><td>價值觀建立</td><td>7 條</td><td>教練的話是最高原則，零傳話筒體驗，Commit Hash 是唯一結案證明</td></tr>
+</table>
+
+<p style="margin-top:24px; font-size:0.88em; color:#888;">本提案書內容來自真實場景與真實數據<br>
+場景來源：1552 個原始場景 → 244 個精選場景 → 46 條守則<br>
+蒸餾方法論（Distillation）：從真實互動中，提取關鍵行為，寫入守則，讓正確的行為重複發生<br>
+最後更新：2026-05-05</p>
+</div>
+
+<!-- 頁尾 -->
+<div class="footer">
+  <p>頂級特助系統產品提案書</p>
+  <p>讓老闆只要動嘴，AI 全自動執行</p>
+</div>
+
+</div><!-- /.main -->
+</div><!-- /.page-wrap -->
+</body>
+</html>

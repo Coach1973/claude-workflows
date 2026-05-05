@@ -1,6 +1,6 @@
 # HEARTBEAT.md — 心跳紀錄
 
-> 更新時間：2026-05-05 16:30（桌面版 Claude 交接更新）
+> 更新時間：2026-05-05 17:00（終端機助教完成場景庫合併）
 
 ---
 
@@ -20,7 +20,8 @@
 | Telegram 04-11至05-02 | 67個（#130-#196）| terminal-notes/scenes_歷史萃取_0411至0502.md |
 | Telegram 05-03至05-04 | 11個 | terminal-notes/scenes_新增_2026-05-03至04.md |
 | Telegram 05-01至05-02 | 13個 | terminal-notes/scenes_新增_2026-05-01至02.md |
-| Claude 桌面版 21個session | 萃取中（20/21完成）| terminal-notes/scenes_桌面版對話萃取.md |
+| Claude 桌面版 21個session | ✅ 48個 | terminal-notes/scenes_桌面版對話萃取.md |
+| **所有場景合併** | **✅ 244個** | shared-context/SCENES/scenes_master_v1.md |
 
 ### 守則升級
 - ✅ TOP_ASSISTANT_RULES_v2.md — 35條（完整版）
@@ -42,10 +43,10 @@
 
 ## 🟡 未完成 / 待繼續
 
-1. **桌面版場景萃取**：20/21 session 完成，剩 1 個 session 未處理
-2. **所有場景尚未合併**：4個場景檔案需整合成 master 版
+1. **桌面版場景萃取**：✅ 完成（21/21 session → 48個場景）
+2. **所有場景合併**：✅ 完成 → scenes_master_v1.md（244個）
 3. **relay 自動化架構**：討論了但尚未實作（讓小龍蝦→RELAY_QUEUE→終端機自動收任務）
-4. **HTML v3版**：v3_final.md 有43條，但 HTML 手冊還是 v2（35條），需要更新
+4. **HTML v3版**：由UI版助教負責（不在終端機職責範圍）
 
 ---
 

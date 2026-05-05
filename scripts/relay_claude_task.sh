@@ -13,6 +13,6 @@ if [ -z "$TASK" ]; then
 fi
 
 echo "## [$TIMESTAMP] 任務：$TASK" >> "$OUTPUT"
-claude --print "$TASK" >> "$OUTPUT"
+hermes "$TASK" >> "$OUTPUT"
 echo "---" >> "$OUTPUT"
 echo "✅ 完成：$TASK"

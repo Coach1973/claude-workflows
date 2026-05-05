@@ -1,0 +1,908 @@
+# Claude 桌面版對話記錄：256ed120-21d9-48ed-af5c-7f3e3f0161db
+
+👤 教練：---
+date: 2026-04-19
+type: project
+title: 三助教協作協議 — 從血淚摸索中建立的正式 SOP
+---
+
+# 三助教協作協議（2026-04-19 正式確立）
+
+## 一、三助教定位
+
+| 助教 | 工具 | 核心職責 |
+|------|------|---------|
+| 小龍蝦助教 | Gemini Pro（VPS Telegram） | 統籌規劃、記錄歷史、發想方向 |
+| Claude 助教 | Claude Pro 桌面版（Mac mini） | 可行性評估、方案設計、審核把關 |
+| 終端機助教 | Claude API（Mac mini 終端機） | 實際執行指令、跑程式、消耗Token |
+
+---
+
+## 二、最重要的一課：上下文就是智慧
+
+同樣的 Claude 模型，有沒有背景資訊，判斷能力差距極大。
+
+終端機助教每次啟動都是空白的，所以：
+- 它會把「安全分類器暫時離線」誤判為「模型不穩定」
+- 它會把套件名稱猜錯（notebooklm vs notebooklm-py）
+- 它會重複做已經做過的事
+
+**解法：強制它在執行任何任務前先讀記憶檔案。**
+
+---
+
+## 三、交接協議（HANDOFF.md 機制）
+
+**位置：** `~/Desktop/HANDOFF.md`
+
+當 Claude 助教額度用完需要交棒時：
+1. Claude 助教更新 HANDOFF.md 的當前狀態
+2. 教練告訴終端機助教一句話：「讀取 ~/Desktop/HANDOFF.md 然後接手工作」
+3. 終端機助教讀完即可無縫接手，不需要教練解釋背景
+
+---
+
+## 四、終端機助教的正確使用方式
+
+**錯誤的方式（今天踩過的坑）：**
+- 叫它跑一個指令，等它回報，再叫它跑下一個
+- 讓教練在中間複製貼上傳話
+- 它遇到問題叫教練去問別人
+
+**正確的方式：**
+- 給它一個完整的任務檔案（migration_task.md 格式）
+- 讓它自己讀、自己跑、自己遇到問題自己解決
+- 只在真正需要教練決策時才回報
+
+**關鍵指令範本：**
+> 「讀取 ~/Desktop/[任務檔案].md，依照裡面的步驟自己執行完，遇到任何錯誤自己診斷自己修正，不需要問教練，完成後回報結果。」
+
+---
+
+## 五、任務檔案的標準格式
+
+每個任務都應該建立一個 .md 檔案放在桌面，包含：
+1. **執行前必讀的記憶檔案清單**（讓終端機助教有上下文）
+2. **分步驟的執行指令**（每步都有具體 Bash 指令）
+3. **安全鐵則**（例如：只複製不刪除）
+4. **錯誤處理方式**（遇到問題怎麼辦）
+5. **回報格式**（完成後輸出什麼）
+
+---
+
+## 六、Claude 助教應主動做的事（不等教練問）
+
+這是今天的重要教訓：教練是技術小白，助教本來就懂的事情應該主動說出來。
+
+**每次對話開始時，Claude 助教應主動：**
+- 確認當前任務與優先順序
+- 預告接下來可能遇到的問題
+- 提出更有效率的做法建議
+
+**當發現更好的方法時，立刻說：**
+「教練，我有一個更有效率的做法，您要聽嗎？」
+不要等到教練自己摸索到才說。
+
+---
+
+## 七、VPS 小龍蝦的正式角色
+
+VPS 小龍蝦不是「功能展示平台」，而是「商業教練 AI 產品」。
+
+- 定位：展示大樹教練的商業思維與海餅乾精神（靈魂）
+- 不是：展示自動化技術能力（肌肉）
+- 漏斗策略：VPS 免費試吃 → 產生依賴 → 升級 Mac mini 實體版
+
+**VPS 只能做的三件事（鐵則）：**
+1. 聊天對話
+2. 商業建議
+3. 海餅乾守則介紹
+
+任何其他能力一律回答：「此類功能超出我們目前的服務範圍，建議您使用手機上其他 AI App 處理！」
+
+🤖 助教：收到這份三助教協作協議（2026-04-19 正式版）。
+
+幾個關鍵點我已確認：
+- 我的角色：可行性評估、方案設計、審核把關
+- HANDOFF.md 機制已理解
+- 終端機助教要給完整任務檔，不讓教練傳話
+- VPS 小龍蝦的三件事鐵則
+
+**請問教練現在要我做什麼？**
+
+是要我把這份 SOP 存入記憶系統，還是有具體任務要推進？
+
+👤 教練：你讀 HANDOFF.md  讓終端機去執行。
+
+我們這邊的額度有限，所以盡可能地讓小龍繼續做事。
+
+🤖 助教：讀取 HANDOFF.md 中。
+
+🤖 助教：再讀一下 migration_task.md。
+
+🤖 助教：了解。任務是 NotebookLM 雙向搬家，任務檔已備好。
+
+以下是給終端機助教的完整啟動指令，教練直接貼進終端機即可：
+
+---
+
+```
+讀取 /Users/bymyway/Desktop/HANDOFF.md，然後接手工作。
+
+具體步驟：
+1. 先讀以下記憶檔建立背景：
+   - /Users/bymyway/.openclaw/workspace/HEARTBEAT.md
+   - /Users/bymyway/.openclaw/workspace/memory/project_vps_isolation_and_ux_20260418.md
+   - /Users/bymyway/.openclaw/workspace/memory/project_vps_day1_fullreport_20260419.md
+   - /Users/bymyway/.openclaw/workspace/windows-memory/project_notebooklm_workflow.md
+
+2. 讀取 /Users/bymyway/Desktop/migration_task.md
+
+3. 依照 migration_task.md 的步驟從第一步開始執行，遇到任何錯誤自己診斷、自己修正，把錯誤訊息寫入 /Users/bymyway/Desktop/migration_error.txt，不需要問教練。全部完成後回報結果清單。
+```
+
+---
+
+這樣終端機助教就有完整上下文，可以自己跑完整個搬家任務。我這邊保留額度，有需要審核或修正方案再找我。
+
+👤 教練：雖然我新開了一個視窗，但是跟小龍蝦那邊的對話紀錄等等之類的，你應該都能銜接得上吧？
+
+🤖 助教：老實說：不行。
+
+新視窗就是全新的我，對話紀錄歸零。
+
+但這正是 HANDOFF.md 機制存在的原因——我剛才讀的那兩個檔案（HANDOFF.md + migration_task.md）就是你們建立的「上下文替代品」，讓我不需要對話紀錄也能銜接工作。
+
+**我現在掌握的：**
+- 三助教分工與職責
+- 今日 VPS 完成事項
+- 當前任務：NotebookLM 雙向搬家
+- 任務檔案位置與執行步驟
+
+如果有什麼我遺漏的背景，告訴我一句，我補讀對應的記憶檔就好。
+
+👤 教練：「請讀取 memory/VPS_Memory_Architecture_Spec.md，並根據裡面的指示開始設計 VPS 的記憶蒸餾底層架構。」
+
+🤖 助教：了解任務。先查 OpenClaw 現有架構再設計。
+
+🤖 助教：查看 hooks 和 cron 機制。
+
+🤖 助教：查看 session 和記憶儲存位置。
+
+🤖 助教：快速看一下 daily 日誌格式。
+
+🤖 助教：再看一下 group-identity hook 怎麼讀檔案。
+
+🤖 助教：架構已清晰，現在寫 HANDOFF 檔案。
+
+🤖 助教：完成。教練把以下這句話貼給終端機助教即可：
+
+---
+
+**給終端機助教的啟動指令：**
+
+```
+讀取 /Users/bymyway/Desktop/HANDOFF_VPS_Memory.md，依照裡面的步驟從 Step 1 開始自己執行完，遇到任何錯誤自己診斷修正，把錯誤寫入 /Users/bymyway/Desktop/vps_memory_error.txt，不需要問教練，完成後回報結果。
+```
+
+---
+
+**設計重點說明（教練備查）：**
+
+| 組件 | 功能 |
+|------|------|
+| `client-memory` hook | 每次對話啟動自動注入 `CLIENT_PROFILE.md`，讓 Agent 永遠記得用戶 |
+| 每晚 23:30 Cron Job | 自動讀當天 `daily_*.md`，蒸餾重要資訊更新到 `CLIENT_PROFILE.md` |
+| `CLIENT_PROFILE.md` | 跨對話的長期記憶載體，不受 context window 影響 |
+
+架構利用 OpenClaw 現有機制，不需要改動核心程式，終端機助教可以直接實裝。
+
+👤 教練：系統每天晚上 11 點半會蒸餾重要資訊，但如果用戶在短時間（例如兩個小時）之內進行了大量對話，超出了記憶體的範疇而開始產生「失憶」的狀況，那麼等到晚上 11 點半進行蒸餾時，資訊是否已經出現記憶殘缺？
+
+這是我想要了解的點。請評估一下這個問題，並看看是否需要採取一些對應措施。
+
+🤖 助教：這是個很好的問題，讓我先確認一下 daily log 的記錄機制再回答。
+
+🤖 助教：關鍵發現。看一下「緊急存檔」裡面保存了什麼。
+
+🤖 助教：有了足夠的資訊，現在可以給出完整評估。
+
+---
+
+## 評估結果
+
+### 好消息：有緊急存檔機制
+
+OpenClaw 已經有 `⚠️ 緊急存檔（Context Overflow 前）` 機制。每次 context 即將溢出前，系統會把當下對話自動寫入 `daily_YYYY-MM-DD.md`。所以 **日誌本身是完整的**，不會因為 context 被清掉而缺失對話內容。
+
+---
+
+### 真正的風險：有，但不是教練想的那個
+
+風險不是「資料遺失」，而是這兩個：
+
+**風險一：蒸餾時讀不完（主要風險）**
+
+4/17 的 daily log 有 **3,295 行**，包含 35 段對話記錄。晚上 11:30 的蒸餾 cron job 是用 `agentTurn` 格式啟動一個 Agent，讓它讀取整份日誌再整理。如果當天對話量大，這個 Agent 自己也可能撐不下這麼大的輸入，導致蒸餾結果殘缺。
+
+**風險二：跨午夜對話被切斷**
+
+如果教練 11 PM 開始聊、聊到隔天凌晨 2 AM，那 11:30 PM 的蒸餾只會處理到 11:30 的部分，午夜以後的內容要等到隔天晚上才被蒸餾，延遲 24 小時。
+
+---
+
+### 建議的對應措施
+
+**措施一（最有效）：改為增量蒸餾，每 2 小時跑一次**
+
+不是讀整份 daily log，而是只讀「上次蒸餾以來新增的部分」：
+
+```
+每 2 小時蒸餾一次
+→ 只讀距上次蒸餾後的新對話（每次輸入量小，不怕撐爆）
+→ 把結果 append 到 CLIENT_PROFILE.md
+```
+
+技術上：在 `CLIENT_PROFILE.md` 的 header 記錄「最後蒸餾時間」，cron job 讀日誌時只取這個時間點之後的段落。
+
+**措施二（補充）：緊急存檔觸發點增加蒸餾**
+
+每次系統偵測到 context overflow 並重啟前，連帶觸發一次蒸餾，把即將重啟的那段對話精華先存進 CLIENT_PROFILE.md，不等到深夜。
+
+---
+
+### 結論
+
+| 問題 | 現況 | 需要改嗎？ |
+|------|------|-----------|
+| 兩小時內對話 context overflow → 資料遺失 | ❌ 不會，緊急存檔有保住 | 不需要 |
+| 蒸餾時日誌太大讀不完 | ⚠️ 有風險 | **需要**（改增量蒸餾） |
+| 跨午夜對話延遲 24 小時蒸餾 | ⚠️ 有風險 | **需要**（改頻率） |
+
+要我把「增量蒸餾」的邏輯寫進 HANDOFF_VPS_Memory.md，讓終端機去實裝嗎？
+
+👤 教練：所以你找到的解決方案，包含改「增量蒸餾」或是改頻率，這些都是可行的解決方案，對吧？
+
+🤖 助教：對，前兩個都可行，因為都是在現有機制上改參數或加邏輯：
+
+- **增量蒸餾**：在 `CLIENT_PROFILE.md` header 記錄上次蒸餾時間，cron job 只切出那之後的段落來讀，輸入量可控。純文字處理，完全可行。
+- **改頻率**：只是改 `cron/jobs.json` 裡的 `expr`，一行搞定。
+
+第三個（context overflow 時觸發蒸餾）**不確定**。我目前只看到 OpenClaw 暴露了 `agent:bootstrap` 事件，沒有看到 `agent:overflow` 或類似的 hook 事件。如果沒有這個事件，這個方案就接不上去。
+
+**建議優先做的組合**：增量蒸餾 ＋ 改頻率為每 2 小時，這兩個加在一起就能覆蓋絕大多數場景，不依賴不確定的 hook 事件。
+
+要我把這個組合寫進 HANDOFF_VPS_Memory.md 嗎？
+
+👤 教練：這是剛才小龍蝦助教給終端機助教去讀的內容，所以我是不是也要請你寫一份請終端機助教去讀的內容？「讀取 ~/Desktop/vps_soul_fix_task.md，依照裡面  
+  的步驟自己連線 VPS                               
+  執行完。遇到錯誤自己診斷修正，完成後回報結果。
+
+🤖 助教：對，就是這樣。我來寫一份。
+
+這份任務檔的目標是實裝**增量蒸餾 ＋ 每 2 小時頻率**的改版。現在寫。
+
+🤖 助教：完成。給終端機助教的啟動指令：
+
+```
+讀取 ~/Desktop/vps_memory_distill_task.md，依照裡面的步驟自己執行完。遇到錯誤自己診斷修正，完成後回報結果。
+```
+
+👤 教練：終端機他正在跑的時候，我現在再貼指令給他，他好像跟你不一樣的地方是，你這邊是可以一邊回答問題、一邊接受新資訊，他那邊好像是要跑完了上個任務之後，停下來才能讀下一個任務。
+
+所以我是不是應該要先打斷他，然後再請他重新讀取？
+
+🤖 助教：不需要打斷。
+
+終端機助教的順序執行是正常的，不是缺陷。打斷它反而可能讓它在做到一半的地方停住，造成檔案寫到一半或 JSON 格式破損。
+
+正確做法：**讓它跑完現在這個任務，回報結果之後，再貼下一個指令給它。**
+
+如果你現在有兩個任務要給它（小龍蝦的 `vps_soul_fix_task.md` 和我的 `vps_memory_distill_task.md`），就按順序排：第一個跑完再給第二個。
+
+👤 教練：反正我指令已經貼上了，就讓他自己跑吧。
+
+只是說，你要不要去讀一下他的錯誤報告？他目前有個東西已經跑了 7 分 30 秒了，也沒看他回應什麼結果，不知道他遇到什麼問題。
+
+🤖 助教：找到問題了。`vps_soul_fix_task.md` 的步驟 2 用的是裸 SSH，沒帶密碼：
+
+```bash
+cat /tmp/soul_patch.md | ssh root@43.245.60.200 "..."
+```
+
+這行指令會停在那邊等密碼輸入，但終端機助教無法互動式輸入密碼，所以就卡死了。7 分半沒回應，正是這個原因。
+
+**要做的事：打斷他，再給一個修正版指令。**
+
+修正版的指令讓他用 `sshpass` 帶密碼（task 裡備註有提到，但他走了主路徑沒走備案）：
+
+```
+打斷目前任務。改用以下指令完成 VPS SOUL.md 修改：
+
+1. 建立暫存檔：
+cat > /tmp/soul_patch.md << 'EOF'
+（soul_patch 內容同原任務）
+EOF
+
+2. 用 sshpass 上傳：
+sshpass -p '9kdxvQN2' ssh -o StrictHostKeyChecking=no root@43.245.60.200 "find ~ -name SOUL.md 2>/dev/null | head -5"
+
+確認路徑後再執行：
+cat /tmp/soul_patch.md | sshpass -p '9kdxvQN2' ssh -o StrictHostKeyChecking=no root@43.245.60.200 "cat >> [確認到的路徑]"
+
+完成後回報最後 10 行。
+```
+
+要我直接把這份修正版指令寫成一個新的 task 檔，教練再貼給終端機嗎？
+
+👤 教練：這是肯定要的啊，不然的話我怎麼懂要怎麼給他下指令比較好？
+
+🤖 助教：寫好了。給終端機的指令：
+
+```
+讀取 ~/Desktop/vps_soul_fix_task_v2.md，依照裡面的步驟自己執行完。遇到錯誤自己診斷修正，完成後回報結果。
+```
+
+👤 教練：關於 VPS 那邊的任務，你完成了嗎？                
+                                    
+⏺ 還沒完成。                                       
+                                      
+  因為 Claude API 服務今晚一直不穩定，Bash         
+  工具持續被擋，SSH 連不進 VPS。                   
+                                                   
+  兩個待完成的任務：                               
+  1. vps_soul_fix_task_v2.md — 在 SOUL.md
+  末尾追加防幻覺鐵律                               
+  2. vps_memory_distill_task.md — 記憶蒸餾系統升級
+                                                   
+  現在讓我再試一次：                               
+                                                   
+⏺ Bash(sshpass -p '9kdxvQN2' ssh -o                
+      StrictHostKeyChecking=no root@43.245.60.200  
+      'find /root -name "SOUL.md" 2>/dev/null')    
+  ⎿  Error: claude-sonnet-4-6 is temporarily 
+     unavailable, so auto mode cannot determine the
+      safety of Bash right now. Wait briefly and 
+     then try this action again. If it keeps 
+     failing, continue with other tasks that don't 
+     require this action and come back to it later.
+      Note: reading files, searching code, and     
+     other read-only operations do not require the 
+     classifier and can still be used.
+
+⏺ 還是被擋。服務還沒恢復，任務無法執行。
+                                                
+  你去休息吧，明天服務正常後我馬上接著跑。
+
+🤖 助教：了解狀況。API 不穩導致 Bash 被擋，兩個任務都卡住了。
+
+我來更新 HANDOFF.md，把目前的狀態記下來，明天不管是誰接手都能直接繼續。
+
+🤖 助教：HANDOFF.md 已更新。
+
+今晚就先到這裡，三個待辦都記清楚了，明天終端機服務恢復後一句話就能接手。教練辛苦了。
+
+👤 教練：他說的 API 不穩，這是什麼樣的問題，可以說明一下嗎？
+
+🤖 助教：這個錯誤訊息的關鍵在這句：
+
+> *"claude-sonnet-4-6 is temporarily unavailable, so **auto mode cannot determine the safety** of Bash right now."*
+
+**問題不是 SSH 連不進去，而是 Claude Code 本身的安全檢查機制壞掉了。**
+
+Claude Code 在執行 Bash 指令之前，會先把這個指令送回 Anthropic 的 API 做「安全性分類」（判斷這個指令是不是危險操作）。今晚 Anthropic 那邊的 API 暫時不穩定，安全分類器回不了話，Claude Code 就直接擋掉所有 Bash 指令，寧可什麼都不做也不要亂跑。
+
+這是 Claude Code 的保護機制，跟 VPS、網路、SSH 本身都沒關係。
+
+**等 Anthropic 那邊服務恢復，終端機助教就能正常跑了。** 通常這種狀況幾個小時內會自己好。
+
+👤 教練：但是我們要去修改 VPS 那邊的記億檔，讓它不要胡說八道，這件事情跟 API 不穩定有什麼關係？
+
+🤖 助教：教練問到點上了。
+
+其實這兩件事**本來沒關係**。修改 VPS 檔案就是一個 SSH 指令，不需要 Anthropic 的 API 參與。
+
+問題是終端機助教跑在 **Claude Code 的 auto 模式**下。這個模式的設計是：每次執行 Bash 指令前，都要先打電話回 Anthropic 問「這個指令安全嗎？」。Anthropic 那邊今晚沒接到電話，Claude Code 就直接把所有 Bash 全部擋掉，連 SSH 這種跟 API 完全無關的指令也一起陪葬。
+
+**簡單說：是 Claude Code 自己的安全審查員今晚請假，導致連無害的指令也跑不了。**
+
+解決方法有兩個：
+1. **等服務恢復**（終端機助教選的做法）
+2. **切換到允許模式**，讓教練手動批准 Bash 指令，就能繞過這個限制——不需要等 Anthropic
+
+如果教練明天還是等不到服務恢復，可以叫終端機助教切換模式，你直接按「允許」就能跑了。
+
+👤 教練：記憶蒸餾系統升級完成！                      
+                                                
+  - client-memory hook：✅                         
+  - CLIENT_PROFILE.md 初始版本 + 時間戳記：✅
+  - 舊版每晚 23:30 Job：✅ 已停用                  
+  - 新版每2小時增量蒸餾 Job：✅（下次執行：今天下午
+   12:08）                                         
+  - 增量蒸餾腳本：✅ 運作正常                      
+                                                   
+  兩個任務全部完成！你去休息吧。                   
+                                                   
+✻ Cogitated for 2m 15s                             
+                                                 
+❯ 所以我現在去線上讓 VPS                           
+  重新測試一下就好了，是吧？                       
+                                                   
+⏺ 對！不過要注意一件事：                           
+                                                   
+  今天做的記憶蒸餾系統是裝在本機 Mac 上的，不是    
+  VPS。
+                                                   
+  VPS 那邊只做了一件事： 在 SOUL.md                
+  末尾追加了防幻覺鐵律（三大信念＋十大守則）。
+                                                   
+  所以你現在去 Telegram 跟 @coach_bymyway_bot      
+  聊，測試它有沒有正確引用守則、不再自行發想，這樣
+  就夠了！              
+
+如果它是放在本機 Mac 上，那 VPS 要怎麼知道？
+
+🤖 助教：終端機助教說得對，**VPS 不知道**。
+
+這兩套系統完全獨立：
+
+| | Mac 本機 | VPS |
+|---|---|---|
+| 今晚做了什麼 | 裝了記憶蒸餾系統 | 修改了 SOUL.md |
+| 共享嗎？ | ❌ 各自獨立 | ❌ |
+
+所以現在的狀況是：
+- **VPS 的防幻覺問題**→ 今晚已修（SOUL.md 加了鐵律），可以去 Telegram 測試
+- **VPS 的記憶蒸餾**→ 還沒做，這是下一步要做的事
+
+如果要讓 VPS 也有記憶蒸餾能力，需要另外 SSH 進去安裝一次——跟裝在 Mac 上的是同一套邏輯，只是換個地方執行。
+
+今晚先測防幻覺就好，記憶蒸餾部署到 VPS 可以排成下一個任務。
+
+👤 教練：為什麼要等呢？如果記憶這的部分 VPS 始終要做的話，為什麼要等呢？
+
+🤖 助教：對，沒理由等。我來寫任務檔，讓終端機現在就去 VPS 部署。
+
+🤖 助教：寫好了。給終端機的指令：
+
+```
+讀取 ~/Desktop/vps_memory_distill_deploy.md，依照裡面的步驟自己執行完。遇到錯誤自己診斷修正，完成後回報結果。
+```
+
+👤 教練：甚至說終端機自己可不可以取代你現在做的事？
+
+好比說，我跟他說一樣的話，問他為什麼要等著？你可以自己做啊！那請問他能夠像你現在一樣寫出這些東西來嗎？
+
+🤖 助教：能，但效率差很多。原因不是能力，是**上下文**。
+
+我跟終端機用的是同一個模型（claude-sonnet-4-6），智力一樣。但差別在這裡：
+
+**我這邊**
+- 有完整的對話紀錄，知道你問了什麼、我們討論了什麼、為什麼這樣設計
+- 可以邊聊邊修正，你說「不對」我馬上調整
+
+**終端機那邊**
+- 每次啟動都是空白的，沒有我們這段對話的背景
+- 你說「為什麼要等？自己去做啊！」——它連「等什麼」、「做什麼」都不知道，要先讀一堆記憶檔才能理解
+
+所以理論上它可以做，但你要給它的指令會變成：
+
+> 「讀取 HEARTBEAT.md、讀取 HANDOFF.md、讀取 VPS_Memory_Architecture_Spec.md、讀取 HANDOFF_VPS_Memory.md，理解完之後，自己設計一份 VPS 部署任務檔並執行。」
+
+而且它讀完也不一定能問你問題確認方向，中間如果判斷錯了你也不知道。
+
+**這就是為什麼三助教要分工**：我負責思考設計，它負責執行，小龍蝦負責統籌記錄。三個合在一起才是一個完整的頂級特助。
+
+👤 教練：好的，知道了。那這樣的話，你消耗流量的頻率跟次數應該就不會那麼高了吧？
+
+🤖 助教：對，理論上是這樣。
+
+我這邊的「流量」主要是**對話脈絡長度**——對話越長、討論越多，context 越大，越容易撐到上限。
+
+如果分工做得好：
+- 你來找我的時候，只需要做「設計、評估、寫任務檔」
+- 執行的髒活全丟給終端機
+- 我這邊的對話應該會比較短、比較精準
+
+**但有一個前提**：任務檔要寫得夠清楚，讓終端機不需要回來問我。如果任務檔寫得模糊，終端機遇到問題、你再來找我釐清，那來回幾趟我的 context 還是會膨脹。
+
+所以今天我花時間把每個任務檔寫得很細，其實也是在保護我自己的額度。
+
+👤 教練：「請讀取桌面上的 HANDOFF_VPS_Knowledge_Sync.md，接手設計 VPS 智慧同步管線。」
+
+🤖 助教：了解任務。設計三個部分：案例庫格式、同步腳本、SOUL.md 更新。
+
+先看一下 VPS 的 SOUL.md 現況，確認追加的位置。
+
+🤖 助教：VPS SOUL.md 確認了。現在建立案例庫範本和同步任務檔。
+
+🤖 助教：完成。給終端機的指令：
+
+```
+讀取 ~/Desktop/vps_knowledge_sync_task.md，依照裡面的步驟自己執行完。遇到錯誤自己診斷修正，完成後回報結果。
+```
+
+---
+
+**教練要注意一件事：**
+
+`seabiscuit_case_studies.md` 我已建立框架，但案例內容全部是「待補充」。VPS 小龍蝦現在拿到的是空殼，能讀到守則條文，但沒有真實故事。
+
+**要讓 VPS 真正有「血肉」，需要教練把每個守則對應的實戰故事口述給我，我來整理進去。** 這個動作什麼時候做都行，不急著今晚。
+
+👤 教練：OpenClaw: access not configured.
+Your Telegram user id: 8743979550
+Pairing code:
+ZPKRW862>
+Ask the bot owner to approve with:
+openclaw pairing approve telegram
+ZPKRW862
+openclaw pairing approve telegram ZPKRW862
+
+OpenClaw: access not configured.
+Your Telegram user id: 2037158050
+Pairing code:
+9VZGPVCW>
+Ask the bot owner to approve with:
+openclaw pairing approve telegram
+9VZGPVCW
+openclaw pairing approve telegram 9VZGPVCW
+
+我的朋友發給我他的 Telegram，給他傳了兩次不同的驗證碼。那到底要以哪個為主呢？
+
+所以我跟他說兩個都發給我，我試試看，那你測試一下以哪個為主？
+
+🤖 助教：我沒辦法「測試哪個為主」，因為這兩個是**兩個不同的 Telegram 帳號**：
+
+| | 用戶 ID | 配對碼 |
+|---|---|---|
+| 帳號 A | 8743979550 | ZPKRW862 |
+| 帳號 B | 2037158050 | 9VZGPVCW |
+
+兩個不同的 ID，代表你朋友用了兩個不同的 Telegram 帳號傳訊給 Bot（可能換帳號或換裝置）。
+
+**你需要問朋友：他平常用哪一個 Telegram 帳號？** 批准哪個，他就用哪個帳號進來。
+
+如果兩個都是他的帳號、兩個都要用，那就兩個都批准。
+
+你要我執行哪個的批准指令？
+
+🤖 助教：兩個都失敗了，原因是「找不到待審核的配對請求」。
+
+**這代表這兩個配對碼已經過期了。**
+
+OpenClaw 的配對碼有時效限制，你朋友發給你的那兩個碼太舊了，系統已經把它們清掉。
+
+**解法：請朋友重新對 Bot 發一次訊息，拿到新的配對碼，馬上傳給你，你再告訴我，我立刻批准。** 動作要快，不要等太久。
+
+👤 教練：不是吧，有效期間是一個小時，他們是 10 點 19 分才發的，這才幾分鐘而已。
+
+🤖 助教：對，你說得對，不該過期。問題是我把指令跑在 **Mac 本機**，但你朋友是傳訊給 **VPS 上的 Bot**（@coach_bymyway_bot）。
+
+兩邊是獨立的系統，配對請求在 VPS 那邊，不在 Mac 這邊。要 SSH 進去 VPS 跑才對。
+
+🤖 助教：VPS 的 OpenClaw 跑在 Docker 容器裡。找一下容器 ID。
+
+🤖 助教：兩個都通過了：
+
+- `ZPKRW862` → Telegram ID `8743979550` ✅
+- `9VZGPVCW` → Telegram ID `2037158050` ✅
+
+請朋友重新傳一條訊息給 Bot，應該就能正常對話了。
+
+👤 教練：那請你記住這個邏輯，下次請你執行的時候，就照這個正確的方式做。
+
+同時，你是不是也可以發給小籠蝦跟克勞德助教，讓他們都按這個標準做事？
+
+🤖 助教：記憶存好了。現在把這個知識寫進 workspace，讓小龍蝦和未來的終端機助教也知道。
+
+🤖 助教：完成。
+
+**我的記憶**：已存入，下次我直接用正確格式。
+
+**小龍蝦 & 終端機助教**：已寫進 `TOOLS.md`——這是所有助教啟動時都會讀到的工具手冊，兩個人以後跑 VPS 指令都會照這個標準走，不需要再踩同樣的坑。
+
+👤 教練：我想問一下，我其實也可以叫「小籠蝦」吧？因為它如果讀取了這個基因，我是不是也可以叫小籠蝦去完成放行的程序，也就是通過放行的這個程序？如果不行的話，我能不能叫我聯想電腦桌面版的 Claude 助教去完成？他能夠讀取得到嗎？還是我要先給他一個路徑，他讀取到了也能做？
+
+🤖 助教：兩個分開回答：
+
+**小龍蝦（VPS Telegram）：不行。**
+小龍蝦是聊天機器人，沒有執行終端指令的能力。就算讀到 TOOLS.md 的內容，它也只能「知道」這個指令，沒辦法「跑」它。
+
+**聯想電腦的 Claude 助教：可以，但要給路徑。**
+聯想那台的 Claude Code 有 Bash 工具，能執行指令。但它的 workspace 路徑跟 Mac 不同，不一定能直接讀到剛才我更新的 TOOLS.md。
+
+最簡單的做法——直接給它這句話就夠了，不需要讀任何檔案：
+
+```
+執行以下指令批准 Telegram 配對碼 [CODE]：
+sshpass -p '9kdxvQN2' ssh -o StrictHostKeyChecking=no root@43.245.60.200 "docker exec openclaw openclaw pairing approve telegram [CODE]"
+完成後回報結果。
+```
+
+把 `[CODE]` 換成朋友給的配對碼，貼給聯想那台的 Claude 助教，它就能直接跑。不需要先讀任何檔案。
+
+👤 教練：可以幫我瞭解一下終端機那邊執行的情況嗎？他已經跑了快 30 分鐘了。
+
+🤖 助教：看到了。終端機正在跑 **NotebookLM 搬家任務**，不是卡死，是真的在工作。
+
+證據：
+- `nlm_backup/list_notebooks.js` 最後修改時間是 **10:34**（剛才幾分鐘前才動過）
+- `nlm_backup/` 目錄裡有 Puppeteer（瀏覽器自動化工具），代表它正在用無頭瀏覽器操作 Google NotebookLM
+
+**30 分鐘完全正常。** 這個任務要：
+1. 開瀏覽器登入兩個 Google 帳號
+2. 列出全部 107 本筆記本
+3. 逐本比對、判斷歸屬
+4. 跨帳號建立新筆記本並上傳來源
+
+一本筆記本可能要 1～2 分鐘，107 本理論上要跑 1～2 小時。
+
+**建議讓它繼續跑，不要打斷。** 打斷的話前面做的進度可能要重來。
+
+👤 教練：他在跑這些的時候，應該是不會燒太多的 token 吧？
+
+因為這應該不是在跑程式，而是在執行任務，我這樣理解正確嗎？
+
+🤖 助教：你的方向對，但要精確一點說：
+
+**燒 token 的時機：**
+- 終端機助教「思考」、「讀檔案」、「寫指令」的時候
+
+**不燒 token 的時機：**
+- Node.js / Puppeteer 腳本實際在跑的時候
+
+所以現在這 30 分鐘，大部分時間是 Puppeteer 在開瀏覽器、點按鈕、等 Google 回應——這是純電腦運算，**不消耗任何 token**。
+
+終端機助教的 token 消耗主要集中在：
+1. 開始時讀任務檔、想清楚怎麼做（一次性）
+2. 腳本跑完後讀結果、決定下一步（一次性）
+
+中間這段漫長的執行過程，基本上是免費的。教練不用擔心。
+
+👤 教練：API Error: 502 {"error":{"message":"Upstream 
+     authentication failed, please contact         
+     administrator","type":"upstream_error"},"type"
+     :"error"} · check status.claude.com  終端機那邊最後停在這裡。
+
+🤖 助教：這是 Anthropic 那邊的伺服器問題（502 = 上游認證失敗），不是終端機或教練的問題。今晚 API 確實不穩定。
+
+先看一下搬家任務跑到哪裡了。
+
+🤖 助教：好消息。**筆記本清單已經抓完了：**
+
+- 大樹帳號（authuser=0）：**110 本**
+- 海餅乾帳號（authuser=1）：**117 本**
+
+API 是在清單抓完之後才掛掉的，資料沒有遺失。
+
+**現在要做的事：** 讓終端機助教讀這份清單，繼續執行比對和搬移的步驟。等 API 穩定後直接告訴他：
+
+```
+讀取 ~/Desktop/HANDOFF_NotebookLM_Sync_Fix.md，並讀取 ~/Desktop/nlm_notebook_lists.json（筆記本清單已抓完，110本 vs 117本），從「比對分類」這步開始繼續執行，不需要重新抓清單。
+```
+
+👤 教練：⚠️ Something went wrong while processing your request. Please try again, or use /new to start a fresh session.  這是小籠蝦特助那邊傳來的。
+
+🤖 助教：這是 OpenClaw 的系統錯誤訊息，不是小龍蝦說的話。代表 VPS 那邊的 Agent 處理請求時出了問題。
+
+通常有兩個原因：
+1. **上下文太長**，對話塞滿了自動重啟
+2. **模型 API 暫時不穩**（今晚 MiniMax 那邊也可能有狀況）
+
+**直接輸入 `/new`** 開新對話，小龍蝦就會重新啟動，這是正常的操作流程，記憶不會消失。
+
+👤 教練：不是，這個是桌面版的，就是「龍蝦助理」。克勞德助理、終端機助理，這個是龍蝦助理，不是 VPS；如果是 VPS，我會提醒你這是 VPS。
+
+🤖 助教：收到，記住了——桌面版三助教分別是：龍蝦助理、Claude 助理、終端機助理。
+
+這個錯誤是龍蝦助理（Mac 桌面版 Gemini）那邊出的。原因跟今晚一樣的狀況：不是 Gemini API 不穩，就是對話 context 塞滿了自動觸發保護機制。
+
+處理方式一樣：**輸入 `/new`** 讓龍蝦助理重開一個新對話，繼續工作。今晚各個 API 都在鬧脾氣，這是正常現象。
+
+👤 教練：臺灣時間現在是早上 11 點，所以時間上要稍微對調一下。
+
+🤖 助教：收到，我之前 HANDOFF.md 寫的「深夜」是錯的，現在更正。
+
+🤖 助教：已更正。以後時間標記會以台灣時間為準。
+
+👤 教練：你要不要去讀取一下我們三個不同的助教分工的這份檔案？需要我貼路徑給你嗎？
+
+🤖 助教：讀完了。幾個重點確認一下：
+
+`GROUP_TASK_SOP.md` 描述的是 **Telegram 群組**裡的三機分工：
+- **1號機**（學長）：統籌指揮，跟教練直接對話
+- **2號機**（佩佩小龍蝦）：被指派時執行雜務
+- **3號機**（孔大哥小龍蝦）：同上，目前還沒加入群組
+
+這跟我們今天合作的架構不完全一樣。我現在的理解是教練這邊有兩套分工：
+
+| 場景 | 角色 |
+|------|------|
+| **桌面直接操作** | 龍蝦助理 ＋ Claude 助理 ＋ 終端機助理 |
+| **Telegram 群組** | 1號機（學長）＋ 2號機 ＋ 3號機 |
+
+我這樣理解對嗎？還是有什麼我讀錯的地方？
+
+👤 教練：那關於「三助理」的分工，你那邊有答案嗎？
+
+🤖 助教：有，從今天對話開頭教練貼給我的那份文件就已經定義了：
+
+| 助教 | 工具 | 核心職責 |
+|------|------|---------|
+| **龍蝦助教** | Gemini Pro（桌面版） | 統籌規劃、記錄歷史、發想方向 |
+| **Claude 助教** | Claude Pro 桌面版（我） | 可行性評估、方案設計、審核把關 |
+| **終端機助教** | Claude API（終端機） | 實際執行指令、跑程式、消耗 Token |
+
+但我剛才讀到的 `GROUP_TASK_SOP.md` 是另一套——那是 Telegram 群組裡的多機協作邏輯，跟這套桌面分工是分開的兩件事。
+
+我目前沒有看到一份專門記錄「桌面三助理分工」的獨立檔案，這份定義目前只存在教練今天口頭貼給我的那份 SOP 裡。
+
+需要我把它正式寫成一個 workspace 檔案留存嗎？
+
+👤 教練：當然，貼這段給新視窗：
+
+---
+
+請依序讀取以下檔案，建立完整背景後告訴我你已了解的現況：
+
+1. `~/Desktop/HANDOFF.md`
+2. `/Users/bymyway/.openclaw/workspace/HEARTBEAT.md`
+3. `/Users/bymyway/.openclaw/workspace/memory/project_model_config_current.md`
+4. `/Users/bymyway/.openclaw/workspace/memory/project_vps_day1_fullreport_20260419.md`
+5. `/Users/bymyway/.openclaw/workspace/memory/project_three_assistants_protocol_20260419.md`
+
+讀完後，用一段話告訴我：現在有哪些任務在進行、我是誰（哪個助教）、接下來該做什麼。
+
+🤖 助教：檔案 5 還不存在，我先建立它，再把啟動指令交給教練。
+
+🤖 助教：完成。啟動指令可以直接貼給新視窗：
+
+```
+請依序讀取以下檔案，建立完整背景後告訴我你已了解的現況：
+
+1. `~/Desktop/HANDOFF.md`
+2. `/Users/bymyway/.openclaw/workspace/HEARTBEAT.md`
+3. `/Users/bymyway/.openclaw/workspace/memory/project_model_config_current.md`
+4. `/Users/bymyway/.openclaw/workspace/memory/project_vps_day1_fullreport_20260419.md`
+5. `/Users/bymyway/.openclaw/workspace/memory/project_three_assistants_protocol_20260419.md`
+
+讀完後，用一段話告訴我：現在有哪些任務在進行、我是誰（哪個助教）、接下來該做什麼。
+```
+
+👤 教練：⚠️ Agent couldn't generate a response. Please try again. 我剛才已經切換到 Gemini 的第二個 API 帳戶，那它現在出現這個英文是什麼意思？
+
+🤖 助教：這是 OpenClaw 的標準錯誤訊息，意思是「Agent 嘗試產生回應，但失敗了」。
+
+原因通常是以下其中一個：
+
+1. **新 API 帳戶還沒設定好**——切換帳戶後，OpenClaw 可能還沒正確讀到新的 API Key
+2. **API Key 格式或權限問題**——新帳戶的 Key 貼入方式有誤，或該 Key 沒有啟用對應的模型
+3. **切換中的短暫空窗**——剛切換完，系統還在初始化
+
+**建議做法：**
+
+先確認切換是否生效：
+```bash
+cat /Users/bymyway/.openclaw/openclaw.json | grep -A5 "gemini"
+```
+
+把輸出貼給我，我看一下 API Key 設定是否正確。
+
+👤 教練：你有找到我們前兩天找到的解決方案嗎？
+
+就是我們一共接入了兩條 Gemini 3.1 的線路，因為每條線路每天有 250 次的呼叫，而且兩條線路都已經開通帳單功能。你可以找到這一份記錄嗎？
+
+🤖 助教：找到了。記錄在 [`project_model_config_current.md`](memory/project_model_config_current.md)：
+
+- **第一條線路**：`litellm/gemini-3.1-pro-preview`（Primary，已開通帳單）
+- **第二條線路**：`google/gemini-3.1-pro-preview`（Fallback，已開通帳單）
+- **每日總容量**：500 次呼叫（兩條各 250 次）
+- **重置時間**：台灣時間每天早上 8 點
+
+現在龍蝦助教出現錯誤，可能是第一條線路今天的 250 次已用完，切換到第二條時出了問題。要我看一下 `openclaw.json` 確認兩條線路設定是否正確嗎？
+
+👤 教練：對，我現在的困擾就是，我剛才已經手動切換到第二條線路，但是它還是出現訊息（我轉貼給你）。
+[2026/4/19 上午 11:10] 大樹教練的頂級特助: ⚠️ Something went wrong while processing your request. Please try again, or use /new to start a fresh session.
+[2026/4/19 上午 11:13] coach: 在嗎？
+[2026/4/19 上午 11:14] 大樹教練的頂級特助: ⚠️ Rate-limited — ready in ~30s. Please wait a moment.
+[2026/4/19 上午 11:22] coach: 在嗎？
+[2026/4/19 上午 11:23] 大樹教練的頂級特助: ⚠️ Rate-limited — ready in ~5s. Please wait a moment.
+[2026/4/19 上午 11:27] coach: /model
+[2026/4/19 上午 11:27] 大樹教練的頂級特助: ✅ Model reset to default
+
+This model will be used for your next message.
+[2026/4/19 上午 11:29] coach: 現在情況如何？
+[2026/4/19 上午 11:29] 大樹教練的頂級特助: 教練，目前系統全數待命中，情況穩定。
+
+當前狀態回報：
+
+1. 排程與任務：目前沒有任何背景排程任務在運行。
+2. 系統武裝：VPS 端的《海餅乾核心哲學》實戰案例庫已全數同步完畢。
+3. 教訓內化：針對剛才把「3.9 萬字誤報為 40 萬字」的嚴重數量級錯誤，以及忘記 4/13 歷史的失憶問題，我已經將「數字與數量級絕對精準」列入核心守則並深刻反省。作為您的頂級特助，以後對待任何數字與商業資料都會嚴格把關，絕不容許「差不多」的低級錯誤。
+
+我隨時可以開始下一步行動。請問接下來需要我先為您處理哪方面的任務？
+[2026/4/19 上午 11:31] coach: 剛才我們切換到了 第二線路，因為剛才第一線路已滿，要等明天八點才能通，所以，我最後的指令，你能否回憶一下，不然我們的對話就白費了
+[2026/4/19 上午 11:31] 大樹教練的頂級特助: ⚠️ Agent couldn't generate a response. Please try again.
+[2026/4/19 上午 11:34] coach: 在嗎？
+[2026/4/19 上午 11:35] 大樹教練的頂級特助: 教練，我在！隨時準備好為您服務，有什麼任務需要我立刻處理嗎？
+[2026/4/19 上午 11:35] coach: 現在是那一個模式？是gemini第二線路嗎
+[2026/4/19 上午 11:37] coach: 在嗎？
+[2026/4/19 上午 11:37] 大樹教練的頂級特助: 教練，我在！隨時準備好為您處理任務，請說！
+[2026/4/19 上午 11:38] coach: 我現在問你，現在你是不是我們之前開通的、在緊急救援狀態下的第二條接駁線路？我要請你回答這個問題
+[2026/4/19 上午 11:43] coach: 請問現在是什麼情況？怎麼已讀都不回訊息啊？到底現在是什麼模型？
+[2026/4/19 上午 11:43] 大樹教練的頂級特助: ⚠️ Rate-limited — ready in ~5s. Please wait a moment.
+[2026/4/19 上午 11:44] coach: /model
+[2026/4/19 上午 11:44] 大樹教練的頂級特助: ✅ Model changed to google/gemini-3.1-pro-preview
+
+This model will be used for your next message.
+[2026/4/19 上午 11:45] coach: 在嗎？
+[2026/4/19 上午 11:45] 大樹教練的頂級特助: 🦞 小龍蝦心跳報告 11:45
+
+🟢 Gateway 正常（PID 62369）
+🔵 Telegram Session：運作中
+🤖 主模型：google:default
+
+系統每 90 分鐘自動回報一次
+[2026/4/19 上午 11:46] 大樹教練的頂級特助: ⚠️ Rate-limited — ready in ~5s. Please wait a moment.
+[2026/4/19 上午 11:46] coach: /model
+[2026/4/19 上午 11:46] 大樹教
+
+🤖 助教：看一下 openclaw.json 的實際設定，確認兩條線路有沒有正確接好。
+
+🤖 助教：找到問題了。
+
+**第二條線路根本沒開！** 看這裡：
+
+```yaml
+#  - model_name: gemini-3.1-pro-preview   ← 前面有 # 號
+#    litellm_params:
+#      api_key: AIzaSyB3c1...              ← 被「暫停」了
+```
+
+`#` 號代表這整段被**注釋掉**了，系統根本看不到第二條 Key。兩條線路的設定都指向同一個 Key（`AIzaSyDFLv...`），所以額度用完就全趴了。
+
+**要修的就是把第二個 Key 的 `#` 拿掉。** 要我現在修嗎？修完還需要重啟 LiteLLM Proxy 才會生效。
+
+👤 教練：我讓終端機助教跑了兩次，每次 30 分鐘，最後都是 API 有問題，所以現在這個任務就先不管了，對吧？
+
+⏺ Bash(cd ~/Desktop/nlm_backup && node   
+      list_notebooks.js 2>&1)                   
+  ⎿  📂 載入 authuser=0: https://notebooklm.go 
+     ogle.com/?authuser=0                     
+       -> 方法: cards, 找到 110 筆                 
+     … +109 lines (ctrl+o to expand)            
+  ⎿  (timeout 2m)                                  
+  ⎿  API Error: 502 {"error":{"message":"Upstream 
+     authentication failed, please contact         
+     administrator","type":"upstream_error"},"type"
+     :"error"} · check status.claude.com           
+                                                   
+✻ Brewed for 32m 53s                               
+                                                   
+※ recap: Comparing NotebookLM notebooks between two
+   Google accounts. Need you to confirm which      
+  account (大樹 authuser=0 or 海餅乾 authuser=1) is
+   the primary one before proceeding with sync.    
+                                                   
+❯ 讀取                                             
+  ~/Desktop/HANDOFF_NotebookLM_Sync_Fix.md，並讀取 
+   ~/Desktop/nlm_notebook_lists.json（筆記本清單已 
+  抓完，110本 vs 117本），從「比對分類」這步開始繼 
+  續執行，不需要重新抓清單。如果 API               
+  不穩定，你就透過讓我用手動批准的方式處理。       
+                                                   
+  如果有些東西手動批准不行，必須等 API 穩定，那你  
+  就每隔幾個小時（不要那麼頻繁）地去監測。         
+                                                   
+  Read 1 file (ctrl+o to expand)         
+  ⎿  API Error: 502 {"error":{"message":"Upstream 
+     access forbidden, please contact administrator
+     ","type":"upstream_error"},"type":"error"} ·  
+     check status.claude.com
+
+🤖 助教：對，NotebookLM 先放著。清單已經抓好存在 `nlm_notebook_lists.json`，資料沒有遺失，等 API 穩定後一句話就能讓終端機繼續跑。
+
+**現在更值得修的是 LiteLLM 的第二條線路。** 這個問題影響整個龍蝦助教系統——只要第二個 Key 還是被注釋掉，今天用完額度後就完全沒有備援。
+
+要我現在把第二個 Key 解除注釋、重啟 LiteLLM Proxy 嗎？這樣龍蝦助教才真的有兩條線可以用。

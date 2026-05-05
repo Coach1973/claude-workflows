@@ -60,6 +60,14 @@
     "memory-lancedb-pro": {
       "version": "1.0.0",
       "installedAt": 1777613582129
+    },
+    "apple-reminders": {
+      "version": "1.0.0",
+      "installedAt": 1778001834926
+    },
+    "macos-calendar": {
+      "version": "1.2.0",
+      "installedAt": 1778001849452
     }
   }
 }

@@ -107,3 +107,18 @@ Claude 說：「老闆只要動嘴，AI 全自動完成。」
 | 分析場景庫 | `bash scripts/relay_claude_task.sh "scenes_master_v1.md有多少個場景？分類統計？"` |
 | 翻譯一段文字 | `bash scripts/relay_claude_task.sh "把下一段話翻譯成英文：[文字]"` |
 | 生成代碼 | `bash scripts/relay_claude_task.sh "幫我寫一個Python腳本：[功能描述]"` |
+
+---
+
+## 七、測試記錄
+
+| 日期 | 時間 | 測試指令 | 輸出結果（前50字）| 結論 |
+|------|------|---------|-----------------|------|
+| 2026-05-05 | 17:20 | `relay_claude_task.sh "什麼是頂級特助"` | 老闆只要動嘴，AI 全自動完成。 | ✅ 通（claude） |
+| 2026-05-05 | 17:29 | 直接 `claude --print` | Not logged in（hermes 模式） | ❌ 不通（hermes） |
+| 2026-05-05 | 19:50 | `relay_claude_task.sh 成長時間軸50字` | 教練從懷疑AI能力，進化為建立四助教分工系統... | ✅ 通（claude） |
+
+**最終結論**：
+- `hermes` 是 MiniMax CLI（tmux封裝），不支援直接 `hermes "prompt"` 語法
+- `claude --print "prompt"` 是正確的執行方式（Claude Code CLI）
+- relay_claude_task.sh 已修正為使用 `claude --print`

@@ -34,3 +34,4 @@ Not logged in · Please run /login
 
 （約60字，涵蓋主動服務、承諾鐵律、不讓老闆當傳話筒三核心）
 ---
+VPS_OK

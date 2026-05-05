@@ -45,8 +45,17 @@ while IFS= read -r line; do
   echo "▶ 任務 $DONE/$TOTAL [$TYPE] $TS"
 
   if [ "$TYPE" = "AI" ]; then
-    echo "## [$TS] AI任務 $DONE/$TOTAL: ${CONTENT:0:50}..." >> "$OUTPUT"
-    $CLAUDE_CMD "$CONTENT" >> "$OUTPUT"
+    # 格式支援：AI:/path/to/file:提示詞（直接寫檔）或 AI:提示詞（寫 relay_output）
+    if [[ "$CONTENT" == /*:* ]]; then
+      AI_OUT="${CONTENT%%:*}"
+      AI_PROMPT="${CONTENT#*:}"
+      echo "## [$TS] AI任務 $DONE/$TOTAL: ${AI_PROMPT:0:50}..." >> "$OUTPUT"
+      $CLAUDE_CMD "$AI_PROMPT" > "$AI_OUT"
+      echo "→ 已寫入 $AI_OUT" >> "$OUTPUT"
+    else
+      echo "## [$TS] AI任務 $DONE/$TOTAL: ${CONTENT:0:50}..." >> "$OUTPUT"
+      $CLAUDE_CMD "$CONTENT" >> "$OUTPUT"
+    fi
     echo "---" >> "$OUTPUT"
   elif [ "$TYPE" = "SH" ]; then
     eval "$CONTENT"

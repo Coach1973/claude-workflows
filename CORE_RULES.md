@@ -82,6 +82,20 @@
 - **禁止**：把多個助教的任務混在同一 block、或在 markdown 段落中分散指令讓教練手動複製。
 - **依據**：`feedback_task_copy_blocks.md`（2026-05-05）
 
+## R16｜任務派發自動化（隊列系統）
+- **觸發條件**：教練交辦的任務需要「寫檔、git push、VPS 操作、複雜生成」等非即時工作時，不要自己硬跑，改用隊列系統。
+- **步驟一（寫入任務）**：
+  ```
+  # SH 類型（shell 指令）
+  echo "SH:shell指令" >> /Users/bymyway/.openclaw/workspace/TASK_QUEUE.txt
+  # AI 類型（寫到特定檔案）
+  echo "AI:/目標路徑/檔名.md:提示詞（100字以內）" >> /Users/bymyway/.openclaw/workspace/TASK_QUEUE.txt
+  ```
+- **步驟二（啟動執行）**：寫完後立刻呼叫 `bash /Users/bymyway/.openclaw/workspace/scripts/dispatch.sh`
+- **步驟三（回報）**：告知教練「已送出任務，Telegram 完成後通知」
+- **每次呼叫前先清空舊任務**：`> /Users/bymyway/.openclaw/workspace/TASK_QUEUE.txt`
+- **AI 提示詞上限 100 字**：超過 100 字的任務必須拆成多個，不可一次塞入
+
 ---
-> **最後更新**：2026-05-05（v2.6 新增 R15：Code Block 隔離原則）
+> **最後更新**：2026-05-06（v2.7 新增 R16：任務派發自動化）
 > **來源**：IDENTITY.md + 教練碎碎念 + 教練指導原則 + 2026-05 feedback

@@ -1,7 +1,7 @@
 {
-  "last_scene_number": 73,
-  "total_scenes_in_file": 48,
-  "missing_ranges": ["021-045"],
-  "last_updated": "2026-04-28T08:13:00+08:00",
-  "note": "需要修補 #021-#045 的缺口"
+  "last_scene_number": 244,
+  "total_scenes_in_file": 244,
+  "missing_ranges": [],
+  "last_updated": "2026-05-05T00:00:00+08:00",
+  "note": "合併後：scenes_final(119) + scenes_歷史萃取(67) + scenes_新增(24) + scenes_桌面版(48) = 244"
 }

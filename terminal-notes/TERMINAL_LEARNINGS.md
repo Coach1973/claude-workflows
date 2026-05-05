@@ -1167,3 +1167,66 @@ DREAMS.md 90% 的內容是重複的 "To send an image back..." 樣板，真正�
 
 ### Commit Hash
 `40e77fd2`（任務十、十一、十二 Batch 2 完成）
+
+---
+
+## 2026-05-05 17:00｜第四十三筆提煉（下午場整理）
+
+### 讀了什麼
+- scripts/relay_poll.py（relay 自動化基礎架構）
+- shared-context/RELAY_QUEUE.json（佇列格式）
+- scenes_master_v1.md（場景庫大合併）
+
+### 對中心目標有幫助的關鍵內容
+
+**1. relay 自動化 claude_exec handler 實作**
+
+relay_poll.py 新增了 `handle_claude_exec()` 函數：
+- 任務類型為 `claude_exec` 時，執行 `claude --print "prompt"`
+- 結果寫入 `terminal-notes/relay_output_YYYYMMDD.md`
+- 測試成功（test-001）："讀取HEARTBEAT.md，用一句話告訴我今天完成了什麼" → "今天完成了場景庫大合併"
+
+→ **關鍵價值：教練不用當傳話筒，小龍蝦可直接觸發終端機任務**
+
+**2. 場景庫大合併（244個場景）**
+
+| 來源 | 數量 | 狀態 |
+|------|------|------|
+| scenes_final.md | 119 | ✅ |
+| scenes_歷史萃取 | 67 | ✅ 已移至 archive/ |
+| scenes_新增 | 24 | ✅ 已移至 archive/ |
+| scenes_桌面版 | 48 | ✅ |
+| **合計** | **244** | |
+
+**3. 場景庫品質審查結果**
+
+- 無跳號、無重複（桌C-020 為正常重號，桌面版獨立編號）
+- 商務價值標籤：242/244 有（比率 99%）
+- inventory.json 已更新完整 breakdown
+
+**4. terminal-notes/ 整理**
+
+將已合併的場景分檔移入 `archive/`：
+- scenes_歷史萃取_0411至0502.md
+- scenes_新增_2026-05-01至02.md
+- scenes_新增_2026-05-03至04.md
+
+→ **原則：只移動，不刪除。歸檔是為了保持主場景庫乾淨，不是拋棄歷史。**
+
+### 今日 commits（全部已 push）
+1. `b19bb9d0` — 補完桌面版第21個session場景萃取
+2. `c4b0d232` — 合併所有場景庫 → scenes_master_v1.md
+3. `bb6ccd89` — update: HEARTBEAT.md 更新進度
+4. `cbd08503` — feat: relay自動化基礎架構 claude_exec handler實作完成
+5. `ff18b1c8` — chore: relay測試輸出檔案的追蹤
+6. `f74243d8` — fix: 場景庫品質審查 更新inventory
+
+### 核心認知升級
+
+**relay 自動化讓「教練動嘴，AI 全自動執行」真正落地：**
+- 小龍蝦在 Telegram 收到教練指令
+- 寫入 RELAY_QUEUE.json（type=claude_exec）
+- relay_poll.py 每10秒輪詢，自動執行 claude --print
+- 結果寫入 relay_output_YYYYMMDD.md，小龍蝦讀取後回報教練
+
+→ **教練不需要打開終端機，不需要當傳話筒，閉著眼睛都能完成復雜任務。**

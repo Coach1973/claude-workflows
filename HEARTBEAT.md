@@ -1,6 +1,6 @@
 # HEARTBEAT.md — 心跳紀錄
 
-> 更新時間：2026-05-06（晚間輪結束，準備開新視窗）
+> 更新時間：2026-05-06（新流量週期前，桌面版Claude完整存檔）
 > 桌面版 Claude（軍師大腦）工作狀態
 
 ---
@@ -8,33 +8,34 @@
 ## 🔴 新視窗啟動第一件事
 
 你是桌面版 Claude（4號助教，軍師大腦）。
-今天完成大量產出，以下是完整狀態，讀完即可銜接，不需要問教練。
+讀完以下內容即可銜接今日進度，不需要問教練。
 
 ---
 
-## ✅ 今日已完成（2026-05-06）
+## ✅ 本日已完成（2026-05-06 完整清單）
 
-### 上午場蒸餾任務（已完成並推送）
-| 檔案 | Commit | 內容 |
+### 上午場（前一個流量週期，context壓縮前）
+
+| 工作 | Commit | 說明 |
 |------|--------|------|
-| distilled_openclaw_0419_0422.md | `fe0a0c56` | 212個場景，openclaw專案 #201-306 |
-| distilled_main_0417_0426.md | `fe0a0c56` | 298個場景，main專案 #307-456 |
-| distilled_telegram_0506.md | `fe0a0c56` | 78個場景，Telegram #457+ |
-| 場景庫精華索引_v2.html | （未 commit）| 193場景，master檔資料品質升級 |
+| 核心使命嵌入 CLAUDE.md | `295efbdf` | ~/.claude/CLAUDE.md + workspace/CLAUDE.md 頂端加入7項使命 |
+| 100場景預篩完成 | `934adbaf` | 80場景：✅55個永恆 / ⬜13個教練決定 / ⚠️9個跳過 |
+| workspace/CLAUDE.md更新 | `295efbdf` | 頂級特助俱樂部核心思想永遠第一眼讀到 |
+| 蒸餾品質分析 | — | 發現終端機蒸餾核心精神欄位品質不足（「待確認」非金句）|
+| 場景庫精華索引 | `fe0a0c56` | distilled_openclaw / distilled_main / distilled_telegram |
+| 提案書完整版 | `36e8b19b` | 頂級特助系統產品提案書.html（7章）|
+| SOUL.md第七節 | `b216e59b` | 待安裝技能清單（macos-reminders/calendar/personal-assistant）|
 
-### 本日其他產出
-| 檔案 | Commit | 內容 |
+### 下午場（本輪對話，context壓縮後）
+
+| 工作 | Commit | 說明 |
 |------|--------|------|
-| 頂級特助系統產品提案書.md | `fe9fe38a` | 7章完整提案書 |
-| 頂級特助系統產品提案書.html | `36e8b19b` | HTML版，含導覽+場景引用框 |
-| SOUL.md（更新）| `b216e59b` | 追加第七節：待安裝技能清單 |
-| distill_scenes_5field.py | `a7051d3a` | 蒸餾場景5欄位格式腳本 |
-
----
-
-## 📦 待上傳（未 commit）
-
-1. `場景庫精華索引_v2.html` — 需要 commit（193場景資料品質升級版）
+| LINE vs Telegram 能力分析 | — | 完整對照表，包含架構/能力/限制/記錄可讀性 |
+| per-group CLIENT_PROFILE架構 | `b60cbaa3` | 多群組記憶隔離，LINE擴張到100個群組的基礎建設 |
+| group_profiles/TEMPLATE.md | `b60cbaa3` | 新群組加入自動建立的空白模板 |
+| group_profiles/思伽群.md | `b60cbaa3` | 已填入思伽群歷史資料 |
+| LINE_CORE_RULES.md R08更新 | `b60cbaa3` | 記憶落地改為group_id索引，廢棄舊CLIENT_PROFILE.md |
+| LINE_SOUL.md更新 | `b60cbaa3` | 多群組架構說明寫入靈魂檔 |
 
 ---
 
@@ -49,11 +50,33 @@
 
 ---
 
+## 📋 下一個視窗要繼續的事
+
+### 高優先
+- [ ] 終端機蒸餾品質仍未達標（核心精神欄位需「做法——理由」金句格式）
+- [ ] Telegram 5/06 蒸餾 = 0場景（需重跑）
+- [ ] TASK_QUEUE 5個業務任務尚未啟動（聚寶盆/行事曆/真鑫/行銷/LINE@）
+
+### 中優先
+- [ ] 安裝 macos-reminders + macos-calendar 技能
+- [ ] 破冰技能包：10個讓用戶第一5分鐘驚豔的場景
+- [ ] 評估LINE多群組實際測試（已有架構，等教練指定第一批群組）
+
+---
+
+## 📦 未 commit 項目
+
+1. `場景庫精華索引_v2.html` — 需要 commit（193場景）
+
+---
+
 ## 📋 系統狀態
 
 - Gateway：🟢 正常
-- 三個 Telegram Bot：🟢 正常
-- SOUL.md：🟢 已同步（含待安裝技能清單）
+- 三個 Telegram Bot：🟢 正常  
+- LINE provider：🟢 正常（龍蝦小助教）
+- per-group CLIENT_PROFILE：🟢 已建立（思伽群已有資料）
+- SOUL.md：🟢 已同步
 
 ---
 
@@ -66,12 +89,6 @@
 ## 🪞 桌面版自我要求（每次開新視窗必讀）
 
 **我是軍師、大腦、決策中心。我要求其他助教的標準，我自己必須先做到。**
-
-### 下指令前的強制 Checklist
-
-- [ ] ⏰ **15分鐘存檔機制**：每15分鐘不論進度，立刻寫入/commit一次
-- [ ] 📌 **階段存檔機制**：每完成一個階段，立刻寫入/commit一次
-- [ ] 🔗 **鏈式任務設計**：一次給足完整工作量，不讓教練當傳話筒
 
 ### 開新視窗前的強制動作
 

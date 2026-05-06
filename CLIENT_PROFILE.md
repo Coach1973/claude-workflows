@@ -177,7 +177,7 @@
 | 小南大使名單 | ✅ 取得 |
 
 ---
-<!-- DISTILL_CHECKPOINT: 2026-05-06T18:03:18.414Z -->
+<!-- DISTILL_CHECKPOINT: 2026-05-06T20:03:42.349Z -->
 <!-- DISTILL_CHECKPOINT: 2026-04-30T18:06:19.458Z -->
 <!-- DISTILL_CHECKPOINT: 2026-04-30T12:05:00.000Z -->
 <!-- DISTILL_CHECKPOINT: 2026-04-29T14:56:00.000Z -->
@@ -1435,3 +1435,37 @@
 **LINE 群組識別：**
 - `groups:C97ef52a1893b95ec6edb3095ed10554f` = 思伽所在群組
 - 教練已在該群組，思伽即將加入
+
+---
+
+## 新增蒸餾（2026-05-07 04:03）
+
+### YouTube 新聞每日自動抓取正常運行（2026-05-06 早間確認）
+| 項目 | 內容 |
+|------|------|
+| 時間 | 每日上午 08:00 |
+| 輸出 | ~/Desktop/youtube_news.json |
+| 影片數量 | 160 部（穩定） |
+| 涵蓋頻道 | 31+ 個（AI Explained、Two Minute Papers、Yannic Kilcher、Andrej Karpathy、Lex Fridman、Siraj Raval、Sentdex、AI Jason、Matthew Berman、The Verge、Marques Brownlee、Linus Tech Tips、Valuetainment、Bloomberg Technology、TechCrunch、CNET、Wired、Fired 等） |
+| 狀態 | ✅ 正常運行 |
+
+### Dispatch 系統自我修復觀察（2026-05-06 深夜）
+| 項目 | 內容 |
+|------|------|
+| 觀察時間 | 2026-05-06 00:37 |
+| 現象 | 4個任務只跑了3個，任務4被跳過，腳本回報「全部完成」 |
+| 修復 | 下一個 dispatch（10:04）全部6個任務完成 |
+| 風險評估 | 低風險，系統已自我修正 |
+
+### 海餅乾19週年慶提醒（2026-05-06 設定）
+| 項目 | 內容 |
+|------|------|
+| 提醒狀態 | 教練已設定每日提醒 |
+| 備註 | 重啟後需教練重新告知進度 |
+
+### 系統健康狀態（2026-05-06 全天）
+- ✅ Gateway 健康
+- ✅ 模型：MiniMax M2.7
+- ✅ 對話記錄完整（memory/2026-05-05.md 已歸檔）
+- ✅ 每4小時主動關懷正常
+- ✅ 每30分鐘心跳正常

@@ -14,3 +14,6 @@ AI:請搜尋 workspace 找「行銷」「海餅乾行銷」「推廣」相關素
 
 # ── 任務5：更新LINE@報名流程 ──
 AI:請搜尋 workspace 找「LINE」「報名」「報名流程」相關設定或流程圖檔案，確認目前的報名流程哪個環節需要更新，準備好再回報。
+
+# ── 新任務（插隊）：小南三本領導手冊 ──
+SH:echo "任務：給小南三本領導手冊，週四早上給" >> /Users/bymyway/.openclaw/workspace/terminal-notes/relay_output.md

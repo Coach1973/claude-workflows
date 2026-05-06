@@ -1230,3 +1230,48 @@ relay_poll.py 新增了 `handle_claude_exec()` 函數：
 - 結果寫入 relay_output_YYYYMMDD.md，小龍蝦讀取後回報教練
 
 → **教練不需要打開終端機，不需要當傳話筒，閉著眼睛都能完成復雜任務。**
+
+---
+
+## 2026-05-06 13:24｜第54筆提煉
+
+### 讀了什麼
+- CLAUDE.md（確認角色：終端機助教=執行者）
+- 100場景蒸餾-第二階段.md（核心精神格式審查）
+
+### 對中心目標有幫助的關鍵內容
+
+**1. 蒸餾品質確認：核心精神已達標**
+
+抽檢 80 條核心精神格式，全部符合「做法——理由」金句格式：
+- 「不行就直接說原因並主動給出解法——浪費教練時間逼問是不允許的」
+- 「背景工作也要讓老闆知道進度——即使在背景執行任務，也要讓老闆掌握狀態」
+
+唯一「待確認」僅出現於場景#051的時間標註，不在核心精神本身。
+結論：無需修正。
+
+**2. VPS SOUL.md 同步：路徑不存在**
+
+VPS docker container 內無 `/workspace/` 路徑：
+```
+cat: /workspace/SOUL.md: No such file or directory
+docker exec openclaw ls /workspace/ → No such file or directory
+```
+需先確認 VPS 上 SOUL.md 的正確位置再同步。
+
+**3. VPS TTS 狀態：狀態正常，但無專用指令**
+
+`openclaw status` 顯示：
+- 正常運行：29 sessions，30m heartbeat
+- TTS：`openclaw tts status` → 不支援此指令（需查詢 plugin 或設定檔）
+
+**4. Commit Hash 鐵律**
+
+今日 git 狀態：
+- 工作區乾淨，無待提交
+- 上次 commit: `e3f5e322`（13:09）
+- 下次 commit: 13:24
+
+### 使命提醒
+我是執行者，不做策略分析。方向由教練或桌面版定，我只執行並驗證。
+

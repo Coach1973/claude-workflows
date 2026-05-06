@@ -68,6 +68,10 @@
     "macos-calendar": {
       "version": "1.2.0",
       "installedAt": 1778001849452
+    },
+    "personal-assistant": {
+      "version": "1.0.0",
+      "installedAt": 1778037936707
     }
   }
 }

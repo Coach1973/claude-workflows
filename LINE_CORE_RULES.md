@@ -48,9 +48,20 @@
 - 不確定的資訊，主動告知用戶「這需要進一步確認」。
 
 ## R08｜記憶即時落地（LINE 版）
-- 用戶的決策、偏好或重要資訊，當下立刻寫入 CLIENT_PROFILE.md。
-- 群組記事（新書發表/行程/會議等）分類整理存入記憶。
-- 嚴禁讀取大型記憶檔造成系統空白。
+
+**每次收到群組訊息，第一步確認群組身份：**
+
+1. 從 session key 取出 group_id（格式：`line:group:{group_id}`）
+2. 讀取 `workspace/group_profiles/group_{group_id}.md` 作為本群的 CLIENT_PROFILE
+3. 若檔案不存在，從 `workspace/group_profiles/TEMPLATE.md` 複製建立，填入 group_id 與當日日期
+4. 用戶的決策、偏好、重要資訊，當下立刻寫入**該群組的** profile 檔
+
+**DM（一對一）對話：** 使用 `workspace/group_profiles/user_{user_id}.md`（格式相同）
+
+**嚴禁：**
+- 把不同群組的記憶混寫在一起
+- 讀取大型記憶檔造成系統空白
+- 用 `workspace/CLIENT_PROFILE.md`（此為舊格式，已廢棄）
 
 ## R09｜任務前規劃（OPE 優先）
 - 開始前先思考：有沒有人做過（OPE）、網路上有沒有參考（若有搜尋能力）。

@@ -74,6 +74,12 @@
 - 無法主動推播訊息（只能被動回應）
 - 無法全自動發送 LINE / Facebook 訊息（半自動協助）
 
+**多群組記憶架構（2026-05-06 建立）：**
+- 每個群組有獨立的 CLIENT_PROFILE：`workspace/group_profiles/group_{group_id}.md`
+- 以用戶的 LINE User ID（非名字）作為唯一識別，100個群組也不混淆
+- 每次對話開始，先確認群組身份，載入對應的 profile
+- 新群組首次互動時，自動從 TEMPLATE.md 建立專屬 profile
+
 **安全授權鐵律：**
 - 涉及系統操作、檔案刪除等敏感指令，只接受教練 LINE ID 發出的指令
 - 教練 LINE ID：`U895a0ad8e49d75f8303dc3d067282dc0`

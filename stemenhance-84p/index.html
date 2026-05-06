@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEALTH NEWS™｜專業醫師推薦：幹細胞激活素 SEU（84P 完整數位版）</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; background-color: #f8fafc; }
+  .sticky-nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+  .card-entry { transition: all 0.3s ease; border-left: 4px solid transparent; }
+  .card-entry:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); border-left-color: #0284c7; }
+  .section-anchor { scroll-margin-top: 90px; }
+  .case-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .bilingual p:first-child { border-left: 3px solid #0284c7; padding-left: 1rem; }
+  .bilingual p:last-child { border-left: 3px solid #64748b; padding-left: 1rem; opacity: 0.85; }
+  .category-btn { transition: all 0.2s; }
+  .category-btn.active { background: #0284c7; color: white; }
+  .hidden-case { display: none; }
+  .story-content { line-height: 1.8; }
+  .story-content p { margin-bottom: 0.75rem; }
+</style>
+</head>
+<body>
+
+<!-- 導航列 -->
+<nav class="sticky-nav border-b border-slate-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="bg-sky-600 text-white px-3 py-1 rounded-xl font-bold text-xl">HN</div>
+      <div>
+        <h1 class="font-bold text-lg text-sky-900">HEALTH NEWS™</h1>
+        <p class="text-xs text-slate-500 -mt-1">84P 完整數位版</p>
+      </div>
+    </div>
+    <input type="text" id="searchInput" placeholder="搜尋：醫師名字、症狀、案例..."
+           class="w-80 px-4 py-2 bg-white border border-slate-200 rounded-full focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
+  </div>
+</nav>
+
+<!-- 類別導航 -->
+<div class="bg-white border-b border-slate-200 sticky top-16 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex gap-2 overflow-x-auto">
+    <button class="category-btn active px-4 py-2 rounded-full text-sm font-medium bg-slate-100" data-category="all">全部</button>
+    <button class="category-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-100" data-category="doctor">醫師見證</button>
+    <button class="category-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-100" data-category="personal">個人經驗</button>
+    <button class="category-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-100" data-category="animal">動物案例</button>
+    <button class="category-btn px-4 py-2 rounded-full text-sm font-medium bg-slate-100" data-category="science">科學說明</button>
+  </div>
+</div>
+
+<!-- 搜尋結果計數 -->
+<div class="max-w-7xl mx-auto px-4 py-3 text-sm text-slate-500">
+  <span id="resultCount">共 0 個案例</span>
+</div>
+
+<!-- 主內容 -->
+<main class="max-w-7xl mx-auto px-4 py-8">
+
+  <!-- 封面引言 -->
+  <section class="bg-gradient-to-br from-sky-700 to-blue-900 text-white rounded-3xl p-10 mb-10 text-center">
+    <h2 class="text-3xl font-bold mb-4">身體的再生工具 — 成人幹細胞</h2>
+    <p class="text-xl opacity-90 max-w-3xl mx-auto">當年齡增長，體內成人幹細胞釋放越來越少。<br>幹細胞激活素幫助身體釋放更多幹細胞，青春再來。</p>
+  </section>
+
+  <!-- ========== 醫師見證 (P.6-27) ========== -->
+  <section id="doctor-section" class="mb-16 section-anchor">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="bg-sky-600 text-white w-10 h-10 rounded-xl flex items-center justify-center text-xl font-bold">01</div>
+      <h2 class="text-3xl font-bold">有照專業人士的分享</h2>
+      <span class="text-slate-500 text-sm">P.6-27</span>
+    </div>
+
+    <!-- David Darbro -->
+    <div class="case-card card-entry" data-category="doctor" data-search="David Darbro 中風 語言 康復 腦 神經">
+      <h3 class="font-bold text-xl mb-4">David Darbro, M.D. <span class="text-slate-500 text-sm font-normal">家庭醫師｜P.6-10</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文見證</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>大衛達布羅醫師執醫生涯的前 15 年是位專業的家庭醫師，接下來的 25 年奉獻在健康醫學。</p>
+            <p>研究證明：幹細胞不只是可以製造血液細胞，這些母細胞可以替代體內任何受傷、生病、或老舊的細胞。</p>
+            <p>當他中了風時，語言中樞受損、右側身體受到影響、還有心房纖維顫動等問題。住院期間思索如何逆轉中風結果。</p>
+            <p>他決定研究幹細胞激活素，發現只要提供身體正確的營養確實可以創造更好的健康與幫助身體釋放幹細胞。</p>
+            <p>食用後 24 小時開始走出絕望。沒多久感覺以前的他回來了——憂鬱症減輕、短暫失憶改善、語言能力恢復、心智變得清澈、焦躁憂鬱消失、纖維性顫動受到控制。</p>
+            <p class="font-bold">「中風後近乎康復似乎是種奇蹟。這真是上帝的恩典。」</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Testimony</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Dr. Darbro spent the first fifteen years of his career as a specialist in family medicine. The following twenty-five years he devoted to practicing wellness medicine.</p>
+            <p>Research shows that stem cells do more than make blood cells—they can actually replace any damaged, sick, or worn out cells in the body.</p>
+            <p>When he suffered a stroke, the speech center of his brain was damaged. He could no longer practice medicine, leading to depression and anxiety.</p>
+            <p>Within 24 hours of taking StemEnhance®, he began to climb out of despair. Soon he felt like his old self again.</p>
+            <p>Tests showed lessening of depression, improvement in short-term memory, return of normal speech, clear mind, and his atrial fibrillation came under control.</p>
+            <p class="font-bold">"The nearly complete healing after my stroke seems miraculous. I credit StemEnhance® for the heaven-sent return of my abilities."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jim Taylor -->
+    <div class="case-card card-entry" data-category="doctor" data-search="Jim Taylor 頸部 糖尿病 關節炎 高血壓">
+      <h3 class="font-bold text-xl mb-4">Jim Taylor, M.D. <span class="text-slate-500 text-sm font-normal">家庭醫師｜P.10-11</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文見證</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>吉姆泰勒醫生 1967 年畢業於印第安那大學醫學院，從 1971 年起擔任家庭醫師，是美國抗老醫學會員之一。</p>
+            <p>傳統醫學執業 28 年，20 年前開始涉及另類醫學。一位醫師友人中風導致嚴重語言障礙，食用幹細胞激活素後奇蹟康復。</p>
+            <p>他自己有嚴重的關節炎與糖尿病，頸部行動受限 20 年，頭部無法轉動超過三十度。</p>
+            <p>食用幹細胞激活素不到十天，他的脖頸可以完全轉動、指頭可以自由運動、糖尿病藥已停用（血糖穩定）、疤痕消失。</p>
+            <p class="font-bold">「我對幹細胞激活素真是印象深刻。」</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Testimony</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Dr. Taylor graduated from Indiana University Medical School in 1967. He has practiced family medicine since 1971 and is a member of the American Academy of Anti-Aging Medicine.</p>
+            <p>A colleague who had a stroke called him recently—and to his surprise, spoke clearly on the phone. StemEnhance® healed his condition.</p>
+            <p>He suffered severe arthritis in his fingers and diabetes. His neck had constant cracking and popping for twenty years.</p>
+            <p>Within ten days of taking StemEnhance®, he had full range of motion in his neck, fingers moved freely, and he stopped taking diabetic medicine.</p>
+            <p class="font-bold">"I am very impressed with StemEnhance®."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Johnnie Strickland -->
+    <div class="case-card card-entry" data-category="doctor" data-search="Johnnie Strickland 關節炎 肌肉 骨頭">
+      <h3 class="font-bold text-xl mb-4">Johnnie Strickland, Jr., M.D. <span class="text-slate-500 text-sm font-normal">家庭醫師｜P.12-13</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文見證</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>強尼斯特克蘭醫師是執業家庭醫師，研究營養及藥物補充品長達十多年。</p>
+            <p>當他知道有一種產品可以增加骨髓幹細胞釋放量多達 30%，他知道自己必需馬上食用它。</p>
+            <p>幹細胞激活素提供身體受傷組織再生所需的原料。不是處理症狀，而是直接治本。</p>
+            <p class="font-bold">「對我而言，幹細胞激活素將會改變醫學。我會推薦所有的人食用這產品。」</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Testimony</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Dr. Strickland is a family physician who has researched nutrition and dietary supplements for over ten years.</p>
+            <p>When he learned that a product could increase bone marrow stem cell release by up to 30%, he knew he had to try it immediately.</p>
+            <p>StemEnhance® gives the body the raw materials it needs to regenerate damaged tissue. It does not treat symptoms—it goes right to the cause.</p>
+            <p class="font-bold">"As far as I am concerned, StemEnhance® will change medicine as we know it. I would recommend StemEnhance® for anyone."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fernando Aguila -->
+    <div class="case-card card-entry" data-category="doctor" data-search="Fernando Aguila 身心 壓力 憂鬱">
+      <h3 class="font-bold text-xl mb-4">Fernando Aguila, M.D. <span class="text-slate-500 text-sm font-normal">身心雙重支援｜P.14</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文見證</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p> Fernando Aguila 醫師研究營養醫學，專注於身心整合的健康照護。</p>
+            <p>他對幹細胞激活素如何同時支持身體健康與心靈平靜有深刻見解。</p>
+            <p>許多患者在使用後不僅身體症狀改善，情緒與生活品質也有明顯提升。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Testimony</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Dr. Fernando Aguila researches nutritional medicine, focusing on mind-body integrated healthcare.</p>
+            <p>He has profound insights into how StemEnhance® supports both physical health and mental calm.</p>
+            <p>Many patients experienced not only physical symptom improvement but also significant improvements in emotional wellbeing and quality of life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cliff Minter -->
+    <div class="case-card card-entry" data-category="doctor" data-search="Cliff Minter 細胞 再生 骨髓">
+      <h3 class="font-bold text-xl mb-4">Cliff Minter, D.P.M. <span class="text-slate-500 text-sm font-normal">身體最有威力的細胞｜P.16</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文見證</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>Cliff Minter 醫師深入研究幹細胞科學，解釋為何人體內的幹細胞是最有威力的細胞。</p>
+            <p>健康的骨髓含有約 1.5 億個幹細胞。問題是隨著年齡增加，骨髓開始失去對需求的反應能力。</p>
+            <p>幹細胞激活素可以幫助逆轉這個過程。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Testimony</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Dr. Cliff Minter deeply studies stem cell science and explains why stem cells in the human body are the most powerful cells.</p>
+            <p>Healthy bone marrow contains approximately 150 million stem cells. The problem is that as we age, the marrow starts losing its ability to respond.</p>
+            <p>StemEnhance® can help reverse this process.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- More doctors -->
+    <div class="case-card card-entry" data-category="doctor" data-search="Nancy White 糖尿病 高血壓 關節炎">
+      <h3 class="font-bold text-xl mb-4">Nancy White, Ph.D. <span class="text-slate-500 text-sm font-normal">科學研究人士｜P.19</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文見證</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>Nancy White 博士是科學研究人員，對幹細胞激活素的效果進行科學驗證。</p>
+            <p>她的研究顯示：幹細胞激活素可以幫助所有的人，無論年齡或健康狀況。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Testimony</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Dr. Nancy White is a scientific researcher who conducted scientific verification of StemEnhance®'s effects.</p>
+            <p>Her research shows that StemEnhance® can help anybody, regardless of age or health status.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== 個人經驗 (P.28-68) ========== -->
+  <section id="personal-section" class="mb-16 section-anchor">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="bg-blue-700 text-white w-10 h-10 rounded-xl flex items-center justify-center text-xl font-bold">02</div>
+      <h2 class="text-3xl font-bold">個人經驗分享</h2>
+      <span class="text-slate-500 text-sm">P.28-68</span>
+    </div>
+
+    <!-- Frank Condon -->
+    <div class="case-card card-entry" data-category="personal" data-search="Frank Condon 金牌 運動 跑步 體能">
+      <h3 class="font-bold text-xl mb-4">Frank Condon <span class="text-slate-500 text-sm font-normal">贏得金牌｜P.28</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文故事</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>Frank Condon 是一位金牌運動員，使用幹細胞激活素後體能大幅提升。</p>
+            <p>他不僅恢復了年輕時的運動表現，更在比賽中贏得金牌。</p>
+            <p class="font-bold">「這是我用過最有效的保健品。」</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Story</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Frank Condon is a gold medal athlete whose physical performance greatly improved after using StemEnhance®.</p>
+            <p>He not only restored his youthful athletic performance but won gold medals in competition.</p>
+            <p class="font-bold">"This is the most effective health supplement I've ever used."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gerrit Woning -->
+    <div class="case-card card-entry" data-category="personal" data-search="Gerrit Woning 糖尿病 血糖 胰島素">
+      <h3 class="font-bold text-xl mb-4">Gerrit Woning <span class="text-slate-500 text-sm font-normal">糖尿病獲控制｜P.29</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文故事</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>Gerrit Woning 是糖尿病患者，多年來血糖控制一直不穩定。</p>
+            <p>使用幹細胞激活素後，血糖值明顯改善，糖尿病症狀獲得控制。</p>
+            <p>他重新找回了健康的生活品質。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Story</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Gerrit Woning is a diabetic patient whose blood sugar had been unstable for years.</p>
+            <p>After using StemEnhance®, his blood sugar values improved significantly and diabetes symptoms came under control.</p>
+            <p>He regained a healthy quality of life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Miss 江 -->
+    <div class="case-card card-entry" data-category="personal" data-search="江 車禍 腦部 昏迷 康復">
+      <h3 class="font-bold text-xl mb-4">Miss 江 <span class="text-slate-500 text-sm font-normal">重大車禍腦部受創｜P.31</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文故事</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>Miss 江在一次重大車禍中腦部受創，陷入昏迷。</p>
+            <p>康復過程緩慢，但使用幹細胞激活素後，她的神經功能開始逐步恢復。</p>
+            <p>現在她已經可以正常生活，重新回到工作崗位。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Story</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Miss Jiang suffered brain trauma in a major car accident and fell into a coma.</p>
+            <p>Recovery was slow, but after using StemEnhance®, her neurological function began to gradually recover.</p>
+            <p>Now she can live normally and has returned to work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thelma Martin -->
+    <div class="case-card card-entry" data-category="personal" data-search="Thelma Martin 92歲 年輕 活力">
+      <h3 class="font-bold text-xl mb-4">Thelma Martin <span class="text-slate-500 text-sm font-normal">92歲的年輕人｜P.40</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文故事</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>Thelma Martin 在 92 歲時開始使用幹細胞激活素。</p>
+            <p>奇蹟似地，她感受到年輕的活力重新回到身上。</p>
+            <p class="font-bold">「我重新感受到年輕時的活力！」</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Story</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Thelma Martin started using StemEnhance® at age 92.</p>
+            <p>Miraculously, she felt the vitality of youth return to her body.</p>
+            <p class="font-bold">"I feel young again!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- George Guyatt -->
+    <div class="case-card card-entry" data-category="personal" data-search="George Guyatt 帕金森 顫抖 行動">
+      <h3 class="font-bold text-xl mb-4">George Guyatt <span class="text-slate-500 text-sm font-normal">帕金森症不見了｜P.44</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文故事</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>George Guyatt 患有帕金森症，顫抖和行動不便嚴重影響生活。</p>
+            <p>使用幹細胞激活素一段時間後，帕金森症狀明顯改善。</p>
+            <p>他可以更自由地行動，生活品質大幅提升。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Story</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>George Guyatt suffered from Parkinson's disease, with tremors and mobility issues severely affecting his life.</p>
+            <p>After using StemEnhance® for some time, his Parkinson's symptoms improved significantly.</p>
+            <p>He can move more freely and his quality of life has greatly improved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terry Branch -->
+    <div class="case-card card-entry" data-category="personal" data-search="Terry Branch 救命 生死 嚴重疾病">
+      <h3 class="font-bold text-xl mb-4">Terry Branch <span class="text-slate-500 text-sm font-normal">幹細胞激活素救了我的命｜P.45</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文故事</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>Terry Branch 原本被醫師宣判只剩兩個月壽命。</p>
+            <p>在幾乎放棄的情況下，他開始使用幹細胞激活素。</p>
+            <p>奇蹟似地，他的病情逐漸好轉，兩個月後依然活著，而且越來越健康。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Story</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Terry Branch was originally told by doctors he had only two months to live.</p>
+            <p>With almost giving up, he started using StemEnhance®.</p>
+            <p>Miraculously, his condition gradually improved, and two months later he was still alive—and getting healthier.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lynn Bernal -->
+    <div class="case-card card-entry" data-category="personal" data-search="Lynn Bernal 輪椅 行走 康復">
+      <h3 class="font-bold text-xl mb-4">Lynn Bernal <span class="text-slate-500 text-sm font-normal">我擺脫輪椅｜P.48</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文故事</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>Lynn Bernal 原本需要靠輪椅代步。</p>
+            <p>使用幹細胞激活素後，她逐漸恢復行走能力，最終擺脫了輪椅。</p>
+            <p>這個奇蹟讓她重新找回生活的希望。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Story</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Lynn Bernal originally needed a wheelchair to get around.</p>
+            <p>After using StemEnhance®, she gradually regained the ability to walk and finally got rid of the wheelchair.</p>
+            <p>This miracle gave her renewed hope for life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== 動物案例 (P.72-81) ========== -->
+  <section id="animal-section" class="mb-16 section-anchor">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="bg-emerald-700 text-white w-10 h-10 rounded-xl flex items-center justify-center text-xl font-bold">03</div>
+      <h2 class="text-3xl font-bold">動物的新希望</h2>
+      <span class="text-slate-500 text-sm">P.72-81</span>
+    </div>
+
+    <!-- Lynn Peck -->
+    <div class="case-card card-entry" data-category="animal" data-search="Lynn Peck 獸醫 動物 康復">
+      <h3 class="font-bold text-xl mb-4">Lynn Peck, D.V.M. <span class="text-slate-500 text-sm font-normal">動物的新希望｜P.72</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文故事</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>Lynn Peck 獸醫師分享她使用幹細胞激活素幫助動物的經驗。</p>
+            <p>許多被其他醫師放棄的動物，在使用後都奇蹟似地康復。</p>
+            <p>她見證了幹細胞激活素在動物身上的驚人效果。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Story</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Dr. Lynn Peck shares her experience using StemEnhance® to help animals.</p>
+            <p>Many animals given up on by other doctors recovered miraculously after using it.</p>
+            <p>She has witnessed the amazing effects of StemEnhance® on animals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stephen Dick (Horse) -->
+    <div class="case-card card-entry" data-category="animal" data-search="Stephen Dick 馬 賽馬 健康">
+      <h3 class="font-bold text-xl mb-4">Stephen Dick <span class="text-slate-500 text-sm font-normal">馬專家使用｜P.73</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文故事</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>Stephen Dick 是馬匹專家，他開始將幹細胞激活素給他的馬使用。</p>
+            <p>這些馬的健康狀況明顯改善，毛色更有光澤，體力與活力都大幅提升。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Story</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Stephen Dick is a horse expert who started giving StemEnhance® to his horses.</p>
+            <p>The horses' health improved significantly, with shinier coats and greatly improved energy and vitality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SuZanne Wright (Dog) -->
+    <div class="case-card card-entry" data-category="animal" data-search="SuZanne Wright 狗 寵物 關節 行走">
+      <h3 class="font-bold text-xl mb-4">SuZanne Wright <span class="text-slate-500 text-sm font-normal">狗狗髖關節康復｜P.76</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文故事</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>SuZanne Wright 的老狗原本因為髖關節問題無法行走。</p>
+            <p>使用幹細胞激活素後，狗狗的關節問題改善，可以重新奔跑。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Story</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>SuZanne Wright's old dog couldn't walk due to hip problems.</p>
+            <p>After using StemEnhance®, the dog's joint problems improved and it could run again.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Christine Shull (Dog) -->
+    <div class="case-card card-entry" data-category="animal" data-search="Christine Shull 狗 壽命 延長">
+      <h3 class="font-bold text-xl mb-4">Christine Shull <span class="text-slate-500 text-sm font-normal">狗狗壽命延長｜P.77</span></h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-sky-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-sky-800 mb-2">📖 中文故事</h4>
+          <div class="story-content text-slate-700 text-sm">
+            <p>Christine Shull 的老狗被獸醫宣判需要安樂死。</p>
+            <p>使用幹細胞激活素不到五天，奇蹟似地恢復食慾與行走能力。</p>
+            <p>狗狗重新有了活力，壽命也因此延長。</p>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-slate-600 mb-2">📖 English Story</h4>
+          <div class="story-content text-slate-600 text-sm italic">
+            <p>Christine Shull's old dog was told by the vet it needed to be put down.</p>
+            <p>Within five days of using StemEnhance®, it miraculously recovered appetite and ability to walk.</p>
+            <p>The dog regained vitality and its lifespan was extended.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== 科學說明 ========== -->
+  <section id="science-section" class="mb-16 section-anchor">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="bg-purple-700 text-white w-10 h-10 rounded-xl flex items-center justify-center text-xl font-bold">04</div>
+      <h2 class="text-3xl font-bold">科學說明</h2>
+      <span class="text-slate-500 text-sm">為什麼 SEU 有效？</span>
+    </div>
+
+    <div class="case-card bg-gradient-to-br from-purple-50 to-blue-50">
+      <h3 class="font-bold text-xl mb-4">幹細胞激活素如何發揮作用</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-purple-800 mb-3">🔬 科學原理</h4>
+          <div class="story-content text-slate-700 text-sm space-y-3">
+            <p>• 健康的人類骨髓含有約 <strong>1.5 億個幹細胞</strong></p>
+            <p>• 問題是隨著年齡增加，骨髓開始失去對需求的反應能力</p>
+            <p>• 因此我們血液中無法總是有足量的幹細胞循環</p>
+            <p>• 結果：健康日漸衰敗、組織老舊、無法自行更新</p>
+          </div>
+        </div>
+        <div class="bg-white p-5 rounded-xl">
+          <h4 class="font-bold text-sm text-blue-800 mb-3">✨ SEU 如何幫助</h4>
+          <div class="story-content text-slate-700 text-sm space-y-3">
+            <p>• 源自 AFA（束絲藻）的五倍濃縮精華</p>
+            <p>• 含有選擇性蛋白配體（L-Selectin Ligand），通知骨髓在需要時釋放幹細胞</p>
+            <p>• 含有一種移動多醣（Migratose），增加幹細胞偵測受傷組織求救信號的能力</p>
+            <p>• <strong>一公克可以幫助釋放約 3-5 百萬的幹細胞進入血液</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- 頁尾 -->
+<footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm">
+  <p class="font-bold text-lg text-white mb-2">HEALTH NEWS™ Vol.15 No.1</p>
+  <p>84頁完整數位轉譯版｜專業醫師推薦：幹細胞激活素 SEU</p>
+  <p class="mt-4 opacity-50">© 2024-2025 HEALTH NEWS｜僅供內部業務使用</p>
+  <p class="mt-2 opacity-50">導演：吴大樹｜教練｜智慧編導：AI｜商務宇宙：BNI Marvel Unit</p>
+</footer>
+
+<script>
+// 搜尋功能
+const searchInput = document.getElementById('searchInput');
+const cards = document.querySelectorAll('.card-entry');
+const resultCount = document.getElementById('resultCount');
+
+// 類別篩選
+const categoryBtns = document.querySelectorAll('.category-btn');
+let currentCategory = 'all';
+
+categoryBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    categoryBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCategory = btn.dataset.category;
+    filterCards();
+  });
+});
+
+function filterCards() {
+  const term = searchInput.value.toLowerCase();
+  let visibleCount = 0;
+
+  cards.forEach(card => {
+    const searchText = (card.dataset.search || '').toLowerCase();
+    const category = card.dataset.category;
+    const content = card.textContent.toLowerCase();
+
+    const matchesSearch = term === '' || searchText.includes(term) || content.includes(term);
+    const matchesCategory = currentCategory === 'all' || category === currentCategory;
+
+    if (matchesSearch && matchesCategory) {
+      card.classList.remove('hidden-case');
+      visibleCount++;
+    } else {
+      card.classList.add('hidden-case');
+    }
+  });
+
+  resultCount.textContent = `共 ${visibleCount} 個案例`;
+}
+
+searchInput.addEventListener('input', filterCards);
+filterCards();
+</script>
+
+</body>
+</html>

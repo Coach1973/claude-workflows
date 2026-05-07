@@ -27,7 +27,7 @@
   - 或寫成自動化腳本 (`bash` / `python`) 在背景 `exec` 執行，並將結果輸出到 `.txt` 或 `.md` 檔案。
 
 ### 3. 分批與配速 (Chunking & Pacing)
-- 若必須由小龍蝦親自閱讀大量資料，將資料拆分成多次 `read` 或 `memory_get`。
+- 若必須由小龍蝦親自閱讀大量資料，將資料拆分成多次 `read` 或 memsearch 查詢（`mem_recall`）。
 - 批次之間若需等待，使用 `cron` 設定幾分鐘後喚醒 (Wake)，或在腳本中加入 `sleep`。
 
 ### 4. 主動回報與清理 (Report & Cleanup)

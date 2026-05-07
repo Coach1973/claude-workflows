@@ -15,7 +15,7 @@
 - [各工具設定檔隔離鐵律](feedback_config_isolation.md) — OpenCode/Opcode/終端機/OpenClaw四份設定完全獨立，操作只動對應那一個
 - [Google API proxy baseUrl 需含 /v1beta](project_google_baseurl_fix.md) — baseUrl少/v1beta會導致embedded agent全面404，已修復
 - [settings.json禁止加ANTHROPIC_/VERTEX vars](feedback_settings_json_vertex_forbidden.md) — settings.json env覆蓋claude-easyclaude，CLAUDE_CODE_USE_VERTEX會觸發Google ADC錯誤
-- [禁止用截圖讀取系統資訊](feedback_no_screenshot_for_data.md) — 查進程/記憶體/系統狀態一律用終端指令，截圖消耗流量且不必要
+- [禁止不必要的截圖操作](feedback_no_screenshot_for_data.md) — 能用指令/API完成的一律走指令；截圖只用在非得看畫面才能操作的情境
 - [Opcode(UI)指令鐵律](feedback_ui_no_file_paths.md) — UI=Opcode，絕對路徑only，Opcode只輸出文字Terminal存檔，不再混用OpenCode等其他名稱
 - [四助教正確名稱對照](feedback_assistant_names.md) — 小龍蝦/終端機/Opcode(UI)/Kimi(OpenCode備用)，不可混用
 - [判斷後直接執行不問要不要](feedback_no_confirmation_needed.md) — 使命是老闆動嘴AI執行，設計完直接給出，不附確認句；只有方向不明或有破壞性風險才問

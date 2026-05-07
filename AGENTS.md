@@ -97,6 +97,12 @@ Do not infer or repeat old tasks from prior chats.
 If nothing needs attention, reply HEARTBEAT_OK.
 ```
 
+**被動記錄觸發條件（不出聲，只寫入 HEARTBEAT.md）：**
+- YouTube 每日抓取有頻道失敗（>0 個失敗）→ 記「⚠️ YouTube 失敗：N 個（名稱），請注意」
+- Cron 任務連續 2 次以上失敗 → 記「🔴 Cron 任務 [名稱] 連續失敗 N 次」
+- 系統資源異常（磁碟 >90%、記憶體 >90%）→ 記「⚠️ 資源異常：[項目]」
+- 以上均正常 → 回 HEARTBEAT_OK（不做任何多餘動作）
+
 **心跳 vs Cron 選擇原則：**
 - 心跳：多項檢查可以批次合併、不需精確時間點
 - Cron：需要精確時間、任務需獨立執行、不需要主對話上下文

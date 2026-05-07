@@ -1,10 +1,10 @@
 # HEARTBEAT.md — 心跳紀錄
 
-> 更新時間：2026-05-08 02:30（每30分鐘健康檢查）
+> 更新時間：2026-05-08 04:00（每30分鐘健康檢查）
 
 ✅ Cron：全部正常（14個任務，無錯誤）
-✅ Self Improvement Agent (4751cc83)：error=預期 FailoverError（已知，略過）
-✅ Git：無未 commit 變更
+✅ Self Improvement Agent (4751cc83)：ok（6h前正常，FailoverError已不再出現）
+✅ Git：未追蹤 `.memsearch/`（memory search 功能，目錄新建立，預設忽略）
 ✅ HEARTBEAT：無 48h+ 停滯項目
 ✅ 系統正常，無需介入
 

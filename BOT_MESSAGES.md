@@ -1963,3 +1963,5 @@
 {"ts":"2026-05-07T19:03:57.816Z","botId":"1号機","text":"對，確認使用中。\n\n`memory_search` = 我們的語意搜尋記憶工具（OpenClaw內建）。目前走Gemini embedding provider。","msgId":"5807","chatId":"-1003877502911"}
 {"ts":"2026-05-07T19:04:35.506Z","botId":"1号機","text":"對，是 `memsearch`（M-E-M-S-E-A-R-C-H），不是 `memory search`。\n\n教練打得比我快。","msgId":"5809","chatId":"-1003877502911"}
 {"ts":"2026-05-07T19:06:13.973Z","botId":"1号機","text":"教練，經過剛才 research，我找到了 `memory-lancedb-pro` 這個技能——這是一個**專門的長期記憶 MCP 插件**，跟我們內建的 `memory_search` 是完全不同的東西。\n\n---\n\n**`memory-lancedb-pro` vs 內建 `memory_search`**\n\n| | `memory-lancedb-pro` | 內建 `memory_sea","msgId":"5811","chatId":"-1003877502911"}
+{"ts":"2026-05-07T22:03:36.764Z","botId":"1号機","text":"FB 壽星已記錄 ✅","msgId":"5812","chatId":"-1003877502911"}
+{"ts":"2026-05-07T22:04:12.046Z","botId":"1号機","text":"🦞 早，教練！06:03，主動關懷時間到。\n\n**系統狀態：**\n- ✅ Cron 14 項正常\n- ✅ Git 無未 commit\n- ✅ Self Improvement Agent 正常\n\n**兩件事提醒一下：**\n\n1. **YouTube 頻道** — 5/7 有 8 個頻道抓取失敗（David On GPU、Better_THN AI、Extasis、Sam Altman、Patri","msgId":"5813","chatId":"-1003877502911"}

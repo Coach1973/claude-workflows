@@ -1322,3 +1322,65 @@ docker exec -u root openclaw chown -R node:node /home/node/.openclaw/credentials
 docker run ... -v /root/openclaw/data/credentials:/home/node/.openclaw/credentials ...
 ```
 這樣不管重建幾次，credentials 永遠不會丟。
+
+---
+
+## 🔥 VPS 重大事故根因分析（2026-05-08）
+
+### 一句話結論
+**Docker 容器不是硬碟。裡面的資料不重建就會消失。我們沒有做 volume mount，所以重建時全部歸零。**
+
+### 事故時間軸
+
+| 時間 | 動作 | 後果 |
+|------|------|------|
+| 起點 | 安裝 memsearch | gateway 卡死（版本不相容）|
+| → | docker restart 修 gateway | 沒修好，反而觸發重建 |
+| → | docker 重建新容器 | ❌ 資料全部歸零 |
+| → | 還原 paired.json | 網頁 UI 回來 |
+| → | 忘了還原 allowFrom.json | 12 個 Telegram 用戶全失聯 |
+| → | 忘了還原 auth-profiles.json | API key 格式版本又不同，小龍蝦完全壞掉 |
+
+### 真正的根本原因
+
+VPS 的 Docker 容器從來沒有設定 volume mount。所有資料（API key、用戶授權、設定）全部存在容器內部。容器一重建，全部消失。
+
+這等於每次「修理」都在拆房子。
+
+### 正確的架構（現在還沒做）
+
+```
+/root/openclaw/data/   ← host 永久存在
+        ↕ volume mount
+/home/node/.openclaw/  ← 容器讀寫
+```
+
+做了這個之後：容器怎麼重建、更新、崩潰，資料永遠不會丟。
+
+### auth-profiles.json 格式版本問題（附加教訓）
+
+| 版本 | 格式 | 狀態 |
+|------|------|------|
+| 舊（backup） | `[{vars: {MINIMAX_API_KEY:}}]` | ❌ 新 gateway 認不了 |
+| 新（Mac） | `{version:1, profiles: {minimax:default: {type:api_key, key:}}}` | ✅ 正確 |
+
+備份還原不等於可以用。格式也必須符合當前版本。
+
+### 治本方案（必須做，不做還會再出事）
+
+```bash
+# 完整 volume mount 重建容器（一次到位）
+docker stop openclaw && docker rm openclaw
+docker run -d \
+  --name openclaw \
+  --restart unless-stopped \
+  -p 18789:18789 \
+  -v /root/openclaw/data:/home/node/.openclaw \
+  zilliztech/openclaw:latest
+```
+
+做完之後，不管容器怎麼動，資料永遠在 `/root/openclaw/data/`，不會再因為重建而全部消失。
+
+### 給未來的承諾
+
+VPS 任何操作之前，先問一句：**「這個動作會不會讓容器重建？」** 如果會，先確認 volume mount 已設定，再動手。

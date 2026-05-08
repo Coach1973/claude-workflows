@@ -4,16 +4,13 @@
 > 重啟時間：2026-05-08 23:35
 > 對話記錄已完整存入 memory/2026-05-08.md 並推上 GitHub，零遺漏
 
-🦞 健康檢查報告（00:00）
+🦞 健康檢查報告（00:08）
 
-✅ 已自動修復/驗證：
-• YouTube 頻道掃描：剛手動執行成功（30頻道/152影片/8失敗），error 狀態已消除
-• Git 已自動 commit + push（M .memsearch/memory/2026-05-08.md, M HEARTBEAT.md）
+✅ 無異常 — Git 已自動備份（commit 548725ee）、Cron 正常運作
 
-⚠️ 需注意（無需立即處理）：
-• Self Improvement Agent (4751cc83)：error 狀態為已知 auth fallback 誤報（SOUL.md 已記錄），無法以 cron update 消除，下次正常執行後自動恢復
-
-✅ 無異常
+⚠️ 已知問題（無需處理）：
+- YouTube 頻道掃描（8d7c282a）：error 狀態，14天未執行，上次失敗後從未成功
+- Self Improvement Agent（4751cc83）：error 狀態為已知 auth fallback 誤報
 ---
 
 ## 🔴 重啟後第一件事

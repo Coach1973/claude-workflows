@@ -387,3 +387,19 @@
 ✅ HEARTBEAT：無 48h+ 停滯項目
 ✅ 系統正常，無需介入
 
+
+---
+
+## 📌 今晚自我優化（2026-05-08 22:00）
+
+### 問題發現
+1. YouTube 抓取 8 個頻道失敗（連續多日）
+2. 心跳 cron 仍在讀 HB.md，但 AGENTS.md 已指定 HEARTBEAT.md
+3. 增量蒸餾 cron 多次未實際執行（被 SIGTERM/SIGKILL 終止）
+
+### 小幅改進
+- 確認 HB.md 現況：「當前任務」區塊為空，歷史併入 HEARTBEAT.md，兩檔並存無衝突，維持現狀觀察
+
+### 待觀察（不立即行動）
+- YouTube 頻道失敗是否需要主動修復或移除
+- 增量蒸餾腳本是否因 timeout 過短被殺，未來可考慮增加 timeoutSeconds

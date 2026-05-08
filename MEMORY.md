@@ -21,3 +21,4 @@
 - [判斷後直接執行不問要不要](feedback_no_confirmation_needed.md) — 使命是老闆動嘴AI執行，設計完直接給出，不附確認句；只有方向不明或有破壞性風險才問
 - [對教練回覆一律使用中文](feedback_chinese_only.md) — 對話全中文，不在中文詞後加英文括號，技術檔案內容不動
 - [Telegram 對話紀錄固定路徑](reference_telegram_conversation_paths.md) — 1號機→BOT_MESSAGES.md；2號機→.openclaw-peipei/sessions；3號機→.openclaw-kong/sessions
+- [Claude Code CLI 對話紀錄路徑](reference_claude_session_paths.md) — `~/.claude/projects/-Users-bymyway--openclaw/*.jsonl`，JSONL可直接讀取；桌面版是LevelDB二進位不可讀

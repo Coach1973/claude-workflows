@@ -1,5 +1,10 @@
 # HEARTBEAT 熱上下文（每次心跳必讀）
 
+🦞 健康檢查報告（02:30）
+
+✅ 無異常 — Git 無未 commit 變更、Cron 14項正常、兩項 error 均为 consecutiveErrors=1（未達通知門檻）
+---
+
 > ⚠️ 剛剛因 Context Overflow（對話太長）自動重啟
 > 重啟時間：2026-05-08 23:35
 > 對話記錄已完整存入 memory/2026-05-08.md 並推上 GitHub，零遺漏

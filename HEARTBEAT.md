@@ -2,6 +2,13 @@
 
 ---
 
+> 更新時間：2026-05-08 08:10（YouTube 每日自動抓取）
+
+✅ YouTube 監控完成：30個頻道、152部影片
+⚠️ 失敗8個頻道：Better_THN AI、Extasis、Sam Altman、Patrick Bet-David、Nikola Tesla、Chris Talks AI、Jim AI（已記錄至 log）
+
+---
+
 > 更新時間：2026-05-08 07:30（每30分鐘健康檢查）
 
 🦞 健康檢查報告（07:30）

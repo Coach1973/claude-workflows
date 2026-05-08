@@ -22,3 +22,4 @@ scripts/fb_session_data/
 __pycache__/
 *.pyc
 scripts/fb_session_data/
+.memsearch/

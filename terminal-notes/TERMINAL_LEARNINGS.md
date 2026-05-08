@@ -1275,3 +1275,50 @@ docker exec openclaw ls /workspace/ → No such file or directory
 ### 使命提醒
 我是執行者，不做策略分析。方向由教練或桌面版定，我只執行並驗證。
 
+
+---
+
+## 🚨 血淚教訓：VPS 容器重建必查清單（2026-05-08）
+
+### 事件經過
+Docker 容器重建後，12 個已授權的 Telegram 用戶全部被踢出，所有人看到「OpenClaw: access not configured」，需要重新配對。
+
+### 根本原因
+容器重建時沒有還原 `/home/node/.openclaw/credentials/telegram-default-allowFrom.json`。
+這個檔案存放所有已授權的 Telegram userId 清單，丟失 = 所有用戶失去存取權。
+
+### 數據
+- 受影響用戶：12 人
+- 發現方式：教練親自測試後回報
+- 修復時間：約 2 分鐘（找到原因後）
+- 潛在影響：若真實用戶規模大，所有人同時中斷，教練無法一一處理
+
+### 容器重建必須還原的檔案清單（缺一不可）
+
+| 路徑（host）| 說明 | 丟失後果 |
+|------------|------|---------|
+| `/root/openclaw/data/credentials/telegram-default-allowFrom.json` | Telegram 授權用戶名單 | 所有人需重新配對 |
+| `/root/openclaw/data/credentials/telegram-pairing.json` | 配對狀態 | 配對流程異常 |
+| `/root/openclaw/data/devices/paired.json` | 網頁 UI 裝置配對 | 瀏覽器控制台失效 |
+| `/root/openclaw/data/openclaw.json` | 系統設定（token、plugins、model）| gateway 設定全失 |
+
+### 正確的容器重建流程（下次必須照做）
+
+```bash
+# 步驟 1：備份完整 credentials 目錄（不只 devices）
+docker cp openclaw:/home/node/.openclaw/credentials /tmp/openclaw-credentials-backup/
+
+# 步驟 2：備份完整 data 目錄（或確認 volume mount 已涵蓋）
+# 步驟 3：重建容器
+# 步驟 4：還原
+docker cp /tmp/openclaw-credentials-backup/. openclaw:/home/node/.openclaw/credentials/
+docker exec -u root openclaw chown -R node:node /home/node/.openclaw/credentials/
+# 不需重啟，熱載入即生效
+```
+
+### 治本方案（還沒做，列為待辦）
+把 `/root/openclaw/data/credentials/` 改成 volume mount，讓容器重建時自動保留：
+```bash
+docker run ... -v /root/openclaw/data/credentials:/home/node/.openclaw/credentials ...
+```
+這樣不管重建幾次，credentials 永遠不會丟。

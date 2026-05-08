@@ -1384,3 +1384,10 @@ docker run -d \
 ### 給未來的承諾
 
 VPS 任何操作之前，先問一句：**「這個動作會不會讓容器重建？」** 如果會，先確認 volume mount 已設定，再動手。
+
+## 2026-05-08 memsearch 向量索引修復
+- 問題：VPS memsearch 有 .md 檔案但搜尋無效，因為 Milvus 向量索引沒建立
+- 修復：`uvx --from 'memsearch[onnx]' memsearch index --provider onnx --collection ms_workspace_cddce8bd /home/node/.openclaw/workspace/.memsearch/memory/`
+- uvx 位置：/home/node/.local/bin/uvx（node 用戶下安裝）
+- 集合名稱公式：`bash derive-collection.sh /home/node/.openclaw/workspace` → ms_workspace_cddce8bd
+- 結果：222 chunks 已索引，涵蓋 2026-04-18 至 2026-05-08

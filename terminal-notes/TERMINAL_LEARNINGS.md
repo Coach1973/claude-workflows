@@ -1400,3 +1400,60 @@ VPS 任何操作之前，先問一句：**「這個動作會不會讓容器重�
 - 關鍵：`cp -rn`（n = no clobber）避免覆蓋同名檔案；動手前一定要先備份到 `/tmp/memsearch_backup_時間戳`
 - Gateway 驗證：HTTP 200 才算真的好
 - 備份位置：`/tmp/memsearch_backup_20260508_111151`
+
+---
+
+## 2026-05-08 全日總結：VPS memsearch 升級完整紀錄
+
+### 完成的事
+1. **VPS Docker 映像升級**：從 2026.4.26 → 2026.5.7（修復 gateway stuck at "starting..."）
+2. **memsearch 安裝到 VPS**：從 Mac 直接複製 extension，非 clawhub install
+3. **歷史 session 匯入**：238 個 JSONL → 11 個 .md 檔（2026-04-18 至 2026-05-08）
+4. **Milvus 向量索引建立**：222 chunks，collection `ms_workspace_cddce8bd`
+5. **SOUL.md 新增主動搜尋鐵律**：用戶問歷史必須先呼叫 memory_search，禁止只看 autoRecall
+6. **Mac 學弟（kong）+ 學妹（peipei）同步升級**：memsearch extension + openclaw.json + SOUL.md
+7. **VPS Operation SOP** 建立：防止未來 container rebuild 再次造成資料遺失
+
+---
+
+### 踩的坑（血淚教訓）
+
+#### 坑 1：memsearch extension 目錄結構錯誤
+- **現象**：VPS 小龍蝦說 `memory_search` 工具不存在
+- **根本原因**：複製時產生雙層目錄 `extensions/memsearch/memsearch/`，gateway 找不到 `index.ts`
+- **正確結構**：`extensions/memsearch/index.ts`（index.ts 必須在第一層）
+- **修復**：`cp -r memsearch/memsearch/. memsearch/ && rm -rf memsearch/memsearch`
+- **教訓**：複製 extension 後必須立刻驗證 `ls extensions/memsearch/` 有無 index.ts
+
+#### 坑 2：memsearch 向量索引 collection 名稱不符
+- **現象**：索引了 222 chunks 但 plugin 搜尋不到
+- **根本原因**：`memsearch index` 預設用 `ms_openclaw_default`，plugin 用 `ms_workspace_cddce8bd`
+- **Collection 名稱公式**：`bash derive-collection.sh /home/node/.openclaw/workspace`
+- **修復**：加 `--collection ms_workspace_cddce8bd` 參數重跑 index
+- **教訓**：建索引前先跑 derive-collection.sh 確認名稱
+
+#### 坑 3：長時間任務佔用主對話 token
+- **現象**：memsearch index 跑了 12 分鐘，消耗大量 token，教練在旁等待
+- **正確做法**：5 分鐘以上的任務一律寫指令交給終端機背景執行
+- **教訓**：Claude 助教是大腦，下指令，不是自己執行耗時任務
+
+#### 坑 4：Docker rebuild 不帶 volume 導致資料全失
+- **現象**：rebuild container 時忘記 `-v openclaw_data:/home/node`，所有設定消失
+- **修復**：從 host 備份還原（/root/openclaw/data/）
+- **教訓**：任何 docker run 指令必須包含 `-v openclaw_data:/home/node`，寫入 SOP 強制檢查
+
+#### 坑 5：autoRecall 只注入最近 2 天，不等於「沒有歷史資料」
+- **現象**：VPS 小龍蝦說「4月資料不在」，其實是沒有主動搜尋
+- **設計原理**：autoRecall = 開場注入最近 2 個 .md；memory_search = 搜全部 222 chunks
+- **修復**：SOUL.md 加主動搜尋鐵律
+- **教訓**：「autoRecall 沒顯示」≠「資料不存在」，兩件事不同
+
+---
+
+### Claude 助教自我檢討
+
+- 安裝完 extension 沒驗證目錄結構，讓錯誤躺了數輪對話才被 VPS 小龍蝦揭露
+- 長時間任務沒有第一時間交給終端機，浪費教練時間和 token 配額
+- 對話中途出現雞同鴨講（路徑問題 vs memsearch 問題），沒有及時對焦
+- 教訓：每個安裝步驟完成後必須立即驗證，不能「應該沒問題」就收工
+

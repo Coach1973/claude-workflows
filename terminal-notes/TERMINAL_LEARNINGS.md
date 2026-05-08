@@ -1391,3 +1391,12 @@ VPS 任何操作之前，先問一句：**「這個動作會不會讓容器重�
 - uvx 位置：/home/node/.local/bin/uvx（node 用戶下安裝）
 - 集合名稱公式：`bash derive-collection.sh /home/node/.openclaw/workspace` → ms_workspace_cddce8bd
 - 結果：222 chunks 已索引，涵蓋 2026-04-18 至 2026-05-08
+
+## 2026-05-08 memsearch extension 雙層目錄修復
+
+- 問題：extension 目錄多了一層 `memsearch/memsearch/`，index.ts 被埋住
+- 原因：plugin-runtime-deps 解壓縮時多了一層目錄包
+- 修復：備份 → `cp -rn` 內層到外層 → `rm -rf` 內層 → `chown -R node:node` → 重啟
+- 關鍵：`cp -rn`（n = no clobber）避免覆蓋同名檔案；動手前一定要先備份到 `/tmp/memsearch_backup_時間戳`
+- Gateway 驗證：HTTP 200 才算真的好
+- 備份位置：`/tmp/memsearch_backup_20260508_111151`

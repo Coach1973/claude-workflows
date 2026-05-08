@@ -1457,3 +1457,51 @@ VPS 任何操作之前，先問一句：**「這個動作會不會讓容器重�
 - 對話中途出現雞同鴨講（路徑問題 vs memsearch 問題），沒有及時對焦
 - 教訓：每個安裝步驟完成後必須立即驗證，不能「應該沒問題」就收工
 
+
+---
+
+## 2026-05-08 工作階段總結
+
+### 上午維修
+
+**1. VPS Gateway 無法綁定 18789**
+- 症狀：container 重啟後 gateway 沒 listen port
+- 根因：舊容器有問題，重建容器後正常
+- 修復：重建 container，版本升至 2026.5.7
+
+**2. auth token 還原**
+- 新容器生成新 token → 還原舊 token `openclaw2026`
+- 還原 12 個 Telegram 用戶的 allowFrom 清單
+- 還原 3 個 paired devices
+- 還原 MiniMax API key（auth-profiles.json）
+
+**3. workspace 核心檔案同步（Mac → VPS）**
+- SOUL.md、CORE_RULES.md、IDENTITY.md、小龍蝦行為守則.md、DAILY_DIGEST.md
+- 設定每 15 分鐘自動 pull GitHub 的 cron
+
+**4. GitHub SSH 設定**
+- 容器內產生 ED25519 SSH key（`vps-openclaw-deploy`）
+- 設定 GitHub deploy key
+- `git clone` 完整 repo 到 workspace，解決 0 commits 問題
+
+**5. memsearch 向量索引建立**
+- 路徑：`/home/node/.openclaw/workspace/.memsearch/memory/`
+- 從舊 session 匯入 24 個對話 → 10 個日期檔案（04-18 至 05-08）
+- `uvx --from 'memsearch[onnx]' memsearch index --provider onnx --collection ms_workspace_cddce8bd`
+- 結果：222 chunks 已索引 ✓
+
+**6. memsearch extension 雙層目錄修復**
+- 問題：`extensions/memsearch/memsearch/index.ts`（多了一層）
+- 修復：備份 → `cp -rn` 內層到外層 → `rm -rf` 內層 → 重啟
+- HTTP 200 驗證成功
+
+### 待確認事項
+
+- MiniMax API key `sk-cp-0_iW72rvuoBmDucQXmRaSAUmcrjXTzZCpIxQt7xgKX_ImdeMkhGmgEV9QBzMNwH87jP-VLIXDNC8VqdgJmntnj5M9gJfTJFiveu9fWuXyQHnW9Z8EQnvlC8` 狀態不明（直接 API 測試回 invalid）
+- 可能需要更新 API key
+
+### Commit History（今日）
+
+- `b322e8e0` — fix: VPS memsearch extension 雙層目錄修復
+- `6d205f87` — update: VPS memsearch 向量索引修復心得
+

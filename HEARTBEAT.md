@@ -153,6 +153,21 @@
 
 ---
 
+🦞 健康檢查報告（22:10）
+
+✅ Git 無未 commit 變更
+✅ Cron 正常（14項）
+✅ YouTube 新聞每日抓取（e70852c8）：成功，152部影片更新
+✅ YouTube 頻道掃描（8d7c282a）：成功，30頻道監控中
+✅ 增量記憶蒸餾（9c3fc55d）：NO_NEW_ENTRIES
+
+⚠️ 8 個頻道抓取失敗（David On GPU、Better_THN AI、Extasis、Sam Altman、Patrick Bet-David、Nikola Tesla、Chris Talks AI、Jim AI）：已知問題，無需干預
+⚠️ Self Improvement Agent（4751cc83）：error 為已知 auth fallback 誤報
+
+✅ 無待推進項目（⬜ 全數結清）
+
+---
+
 🦞 健康檢查報告（21:33）
 
 ✅ Git 無未 commit 變更（Cron 正常備份中）

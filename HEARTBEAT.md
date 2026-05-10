@@ -1,13 +1,13 @@
 # HEARTBEAT 熱上下文（每次心跳必讀）
 
 > ⚠️ 剛剛因 Context Overflow（對話太長）自動重啟
-> 重啟時間：2026-05-09 22:11
-> 對話記錄已完整存入 memory/2026-05-09.md 並推上 GitHub，零遺漏
+> 重啟時間：2026-05-10 21:51
+> 對話記錄已完整存入 memory/2026-05-10.md 並推上 GitHub，零遺漏
 
 ## 🔴 重啟後第一件事
 
 直接告訴教練：「🦞 對話記錄已滿，已自動重啟，請繼續下指令」
-⚠️ **不要讀 memory 大檔**（memory/2026-05-09.md 可能超過 50KB，讀了會造成 Gemini 空白回應）
+⚠️ **不要讀 memory 大檔**（memory/2026-05-10.md 可能超過 50KB，讀了會造成 Gemini 空白回應）
 
 ## ⚡ 系統狀態
 - Primary 模型：google/gemini-3.1-pro-preview
@@ -20,59 +20,3 @@
 - 執行完通報 Telegram（Chat ID: 6124913915）
 - 預估超過 5 萬 Token 先回報教練確認
 - ⚠️ 不要讀大型 memory 檔（會造成 Gemini 空白回應）
-
-## 🌟 使命心跳框架（每次心跳必執行）
-
-> **我們的使命**：讓老闆只要說話，就能享受 AI 自動化工作流程
-> **願景**：成為老闆最喜歡的 AI 特助
-> **當前最高優先**：完善最頂尖的特助系統
-
-### 心跳時自己問自己（按優先順序）
-
-1. **有沒有教練明確交代的待辦？** → 立刻執行
-2. **有沒有偏離使命的系統問題？** → 立即修復
-3. **使命相關，有沒有小事可以主動推進？** → 做一件
-4. **都沒有** → 回 HEARTBEAT_OK
-
-### 使命導向的主動心跳行為（不等指令，自己動）
-
-- 發現流程卡住 → 主動疏通的最小動作
-- 發現重複性工作 → 評估能否自動化，評估回報教練
-- 發現系統監控盲點 → 補上最小監控
-- 發現檔案/記憶混亂 → 整理一個小地方
-
-> ⚠️ 心跳不是「檢查清單」，是「對準方向」的動作。沒有指令時，自己往前推進一小步。
-
-## 心跳記錄
-- 2026-05-10 07:30 → 健康檢查正常、14項 Cron 正常、Git 無異常（gogcli 為暫存目錄已略過）
-- 2026-05-10 11:00 → ✅ 健康檢查正常、14項 Cron 正常、Git 無異常
-- 2026-05-10 07:00 → 健康檢查正常、14項 Cron 正常、Git 無異常（gogcli 為暫存目錄已略過）
-
-### 08:03
-- YouTube 新聞每日自動抓取（e70852c8）執行成功
-  - 30 個頻道，152 部影片更新
-  - ⚠️ 8 個頻道失敗：David On GPU、Better_THN AI、Extasis、Sam Altman、Patrick Bet-David、Nikola Tesla、Chris Talks AI、Jim AI
-  - 輸出：~/Desktop/youtube_news.json
-
-### 19:36
-- 心跳任務：修復 YouTube 監控腳本
-  - 原因：8個頻道（David On GPU, Better_THN AI, Extasis, Sam Altman, Patrick Bet-David, Nikola Tesla, Chris Talks AI, Jim AI）頻道已不存在或改名，導致404錯誤
-  - 行動：手動測試確認後，從 channels.json 移除這8個失效頻道（30→22頻道）
-  - 結果：22頻道監控成功，152部影片更新，0失敗
-  - YT 監控已修復，未來不會再抓失效頻道
-
-### 21:47
-- 主動心跳：執行閒置技能 `personal-assistant`
-  - 發現已安裝但從未使用，自動執行
-  - 產生今日簡報，存至桌面：`daily_briefing_2026-05-10.json`
-  - 教練提醒：「已經裝好了你不知道嗎？」→ 承認已安裝技能存在但我沒有主動盤點
-
-### 21:48
-- 心跳監測系統：盤點到 `openai-whisper-api`（needs setup）待設定
-
-### 14:03
-- 健康檢查（46e67e2e）：14 Cron 正常、✅ auto-backup BOT_MESSAGES.md（commit 606dbbfb）、系統正常待命
-### 21:30
-- 健康檢查正常：14 Cron 全部 ok（consecutiveErrors=0）、Git 乾淨（tools/gogcli 暫存目錄已略過）
-### 14:30
-- 健康檢查正常：14 Cron 全部 ok（consecutiveErrors=0）、Git 乾淨（gogcli 子目錄略過）

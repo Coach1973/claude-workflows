@@ -272,7 +272,7 @@
 | 會議護照 | 5本 |
 
 ---
-<!-- DISTILL_CHECKPOINT: 2026-05-10T14:06:31.478Z -->
+<!-- DISTILL_CHECKPOINT: 2026-05-10T18:03:28.962Z -->
 <!-- DISTILL_CHECKPOINT: 2026-05-09T12:04:45.786Z -->
 <!-- DISTILL_CHECKPOINT: 2026-04-29T14:56:00.000Z -->
 # CLIENT PROFILE
@@ -1595,3 +1595,22 @@
 - **衝突**：AGENTS.md 指定心跳讀 HEARTBEAT.md，但部分 cron 任務仍指定讀 HB.md
 - **問題**：OpenClaw 自主發現衝突但未實際修正，持續記錄在蒸餾中
 - **狀態**：已記錄 2 天，仍待修復
+
+### 深夜 cron job 執行狀況（2026-05-11 凌晨新增）
+凌晨 01:04-01:07 系統通知多個 cron job 執行結果：
+- 每月25日信貸繳款提醒：成功（next in 14d）
+- Self Improvement Agent：仍有 error 狀態（lastDurationMs: 900029）
+- 多個 jq 指令執行失敗（parse error：Invalid numeric literal）
+- YouTube新聞每日自動抓取：成功（code 0）
+
+**觀察**：教練的 cron job 在凌晨時段密集執行，Self Improvement Agent 的 timeout/SIGTERM 問題需注意
+
+### 頂級特助深夜值班模式（2026-05-11 確認）
+凌晨 00:04 至 01:30 期間，小龍蝦安靜執行情境：
+- 00:04-00:07：多個 cron job 執行，小龍蝦回報 Self Improvement Agent timeout 已修復
+- 00:32-00:33：YouTube 新聞每日自動抓取完成（code 0）
+- 01:03：教練心跳，小龍蝦檢查後回覆 HEARTBEAT_OK
+- 01:08：cron job 768246fb 觸發，小龍蝦讀取 HB.md，無待處理任務
+- 01:30：每月25日信貸繳款提醒執行成功
+
+**觀察**：小龍蝦在深夜時段保持警戒，針對系統異常即時回應，但不打擾教練

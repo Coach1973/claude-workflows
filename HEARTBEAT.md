@@ -20,3 +20,6 @@
 - 執行完通報 Telegram（Chat ID: 6124913915）
 - 預估超過 5 萬 Token 先回報教練確認
 - ⚠️ 不要讀大型 memory 檔（會造成 Gemini 空白回應）
+
+## 📋 健康檢查已修復項目（2026-05-11 00:00）
+- 4751cc83 Self Improvement Agent：timeout 900s → 1200s（原因：腳本需要多輪對話分析，900s 不夠）

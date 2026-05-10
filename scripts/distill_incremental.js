@@ -4,6 +4,7 @@ const path = require('path');
 const os = require('os');
 
 const WORKSPACE = path.join(os.homedir(), '.openclaw', 'workspace');
+const MEMORY_DIR = path.join(WORKSPACE, 'memory');
 const PROFILE_PATH = path.join(WORKSPACE, 'CLIENT_PROFILE.md');
 
 function getLastDistillTime() {
@@ -30,7 +31,7 @@ function getTodayLogPath() {
   const y = formatted.getFullYear();
   const m = String(formatted.getMonth() + 1).padStart(2, '0');
   const d = String(formatted.getDate()).padStart(2, '0');
-  return path.join(WORKSPACE, `daily_${y}-${m}-${d}.md`);
+  return path.join(MEMORY_DIR, `${y}-${m}-${d}.md`);
 }
 
 function extractNewEntries(logPath, since) {

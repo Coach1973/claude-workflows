@@ -24,3 +24,4 @@ __pycache__/
 scripts/fb_session_data/
 .memsearch/
 .DS_Store
+tools/gogcli

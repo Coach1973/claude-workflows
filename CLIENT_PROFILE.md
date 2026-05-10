@@ -260,7 +260,7 @@
 | 會議護照 | 5本 |
 
 ---
-<!-- DISTILL_CHECKPOINT: 2026-05-10T04:02:59.457Z -->
+<!-- DISTILL_CHECKPOINT: 2026-05-10T06:05:06.231Z -->
 <!-- DISTILL_CHECKPOINT: 2026-05-09T12:04:45.786Z -->
 <!-- DISTILL_CHECKPOINT: 2026-04-29T14:56:00.000Z -->
 # CLIENT PROFILE
@@ -1553,6 +1553,11 @@
 - ✅ 每30分鐘心跳正常
 
 ## 新增蒸餾（2026-05-09 10:06）
+
+### 外部 Prompt Injection 跡證（2026-05-10 下午記錄）
+- **現象**：async 命令輸出中包含 `You are a third-person note-taker...` 的 prompt 文字
+- **脈絡**：教練透過外部系統傳送心跳請求，OpenClaw 回覆 HEARTBEAT_OK
+- **意義**：系統可能存在 prompt injection 或外部觸發異常，需持續觀察
 
 ### Cron 心跳任務長期被忽略問題（2026-05-09 上午記錄）
 | 任務 ID | 名稱 | 被忽略次數 |

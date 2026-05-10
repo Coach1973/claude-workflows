@@ -167,3 +167,29 @@ dispatch 完成後，主動比對 TASK_QUEUE.txt 任務數與實際執行數，�
 - SOUL.md（無新教練精神）
 - AGENTS.md（R16 任務派發已覆蓋今日情境）
 - CORE_RULES（v2.7 已是最新）
+
+## 2026-05-10 今晚自我優化（每晚例行）
+
+### 🔴 重大發現：distill_incremental.js 讀取錯誤目錄
+
+**事件**：增量蒸餾助理（cron 9c3fc55d）過去接連被忽略，今晚發現根本原因——腳本讀取 `workspace/daily_YYYY-MM-DD.md`，但實際記錄存在 `workspace/memory/YYYY-MM-DD.md`。
+
+**差異**：
+- 錯誤路徑：`~/.openclaw/workspace/daily_2026-05-10.md`（不存在的備份檔）
+- 正確路徑：`~/.openclaw/workspace/memory/2026-05-10.md`（真實記錄）
+
+**後果**：過去數十次 cron蒸餾觸發，腳本都找到不存在的檔案，回報「NO_NEW_ENTRIES」，蒸餾形同虛設。
+
+**修復**：已修正 `distill_incremental.js` 的 `getTodayLogPath()` 函式，改為讀取 `memory/` 目錄。
+已 commit push：`710c822c`
+
+**教訓**：cron 任務失敗不能只看 cron status，也要實際執行一次驗證輸出是否合理。
+
+### 🟡 新概念：小金老師（主動啟動原則）
+
+**發現**：小龍蝦在 2026-05-10 的自我學習中領悟「小金老師」概念——不是等教練說「幫我做」，而是系統自己發現「工具閒置」就自己動手。
+
+**意義**：這是「自動自發」的最高體現——不是等指令，而是發現需要就自己動。
+
+**行動**：將此原則融入 SOUL.md 的任務觸發器，提醒自己每個 heartbeat 都是「主動發現」的機會。
+

@@ -54,6 +54,13 @@
   - ⚠️ 8 個頻道失敗：David On GPU、Better_THN AI、Extasis、Sam Altman、Patrick Bet-David、Nikola Tesla、Chris Talks AI、Jim AI
   - 輸出：~/Desktop/youtube_news.json
 
+### 19:36
+- 心跳任務：修復 YouTube 監控腳本
+  - 原因：8個頻道（David On GPU, Better_THN AI, Extasis, Sam Altman, Patrick Bet-David, Nikola Tesla, Chris Talks AI, Jim AI）頻道已不存在或改名，導致404錯誤
+  - 行動：手動測試確認後，從 channels.json 移除這8個失效頻道（30→22頻道）
+  - 結果：22頻道監控成功，152部影片更新，0失敗
+  - YT 監控已修復，未來不會再抓失效頻道
+
 ### 14:03
 - 健康檢查（46e67e2e）：14 Cron 正常、✅ auto-backup BOT_MESSAGES.md（commit 606dbbfb）、系統正常待命
 ### 14:30

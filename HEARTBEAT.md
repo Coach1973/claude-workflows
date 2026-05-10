@@ -24,3 +24,9 @@
 ## 心跳記錄
 - 2026-05-10 07:30 → 健康檢查正常、14項 Cron 正常、Git 無異常（gogcli 為暫存目錄已略過）
 - 2026-05-10 07:00 → 健康檢查正常、14項 Cron 正常、Git 無異常（gogcli 為暫存目錄已略過）
+
+### 08:03
+- YouTube 新聞每日自動抓取（e70852c8）執行成功
+  - 30 個頻道，152 部影片更新
+  - ⚠️ 8 個頻道失敗：David On GPU、Better_THN AI、Extasis、Sam Altman、Patrick Bet-David、Nikola Tesla、Chris Talks AI、Jim AI
+  - 輸出：~/Desktop/youtube_news.json

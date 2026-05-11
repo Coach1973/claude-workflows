@@ -46,4 +46,4 @@
 - 2026-05-11 07:30 → Gateway 🟢，HB 無待處理任務，Git 已同步，系統正常待命
 
 ## 心跳記錄
-- 2026-05-11 09:00 → 健康檢查：ef88279b（每4小時主動關懷）consecutiveErrors: 1，lastError: Agent couldn't generate a response；4751cc83（Self Improvement Agent）consecutiveErrors: 1，lastDurationMs: 900029。均未達需裁決標準（≥3次），Git已同步，HB無待處理任務，系統正常
+- 2026-05-11 10:06 → 健康檢查：Crons 正常，Git 已同步，HB 無待處理。4751cc83 consecutiveErrors:1，尚未達需裁決標準

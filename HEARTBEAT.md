@@ -46,4 +46,4 @@
 - 2026-05-11 07:30 → Gateway 🟢，HB 無待處理任務，Git 已同步，系統正常待命
 
 ## 心跳記錄
-- 2026-05-11 08:00 → YouTube 新聞每日自動抓取完成，22 頻道 152 部影片，零失敗（✅不同於昨日 8 個失敗），已輸出至 ~/Desktop/youtube_news.json
+- 2026-05-11 09:00 → 健康檢查：ef88279b（每4小時主動關懷）consecutiveErrors: 1，lastError: Agent couldn't generate a response；4751cc83（Self Improvement Agent）consecutiveErrors: 1，lastDurationMs: 900029。均未達需裁決標準（≥3次），Git已同步，HB無待處理任務，系統正常

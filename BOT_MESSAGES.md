@@ -2011,3 +2011,4 @@
 {"ts":"2026-05-10T22:02:18.975Z","botId":"1号機","text":"🎉 今天共有 6 位 FB 壽星！\n\n1. 王昱翔\n2. 鍾和榮\n3. 李佳勳\n4. Alt Hsu\n5. 周雅鍹\n6. 陈昌龄\n\n💡 教練可複製名單進行半自動發送。","msgId":"5864","chatId":"-1003877502911"}
 {"ts":"2026-05-10T22:07:07.131Z","botId":"1号機","text":"⚠️ Agent couldn't generate a response. Please try again.","msgId":"5865","chatId":"-1003877502911"}
 {"ts":"2026-05-10T22:09:54.375Z","botId":"1号機","text":"⚠️ Cron job \"每4小時主動關懷\" failed: ⚠️ Agent couldn't generate a response. Please try again.","msgId":"5866","chatId":"-1003877502911"}
+{"ts":"2026-05-11T04:33:34.260Z","botId":"1号機","text":"📺 *今日 YouTube 精選*\n\n⭐⭐⭐ 強烈推薦\n1. [rickhau99] 不得不裝的 Claude Code 代理工具｜GitHub 萬星應用\n   👉 https://www.youtube.com/watch?v=TlLx4Iy6n2Q\n2. [mage291] 别再笨拙抠图！NotebookLM 原生重構 PPT，實戰提效秘籍\n   👉 https://www.youtub","msgId":"72","chatId":"-1003877502911"}

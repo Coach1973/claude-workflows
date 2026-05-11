@@ -56,3 +56,5 @@
 - 2026-05-11 15:30 → 健康檢查：9c3fc55d 增量蒸餾 14:00 & 16:00 連續失敗（consecutiveErrors:2），未達3次門檻，暫緩通知。4751cc83 昨晚22:00超時（consecutiveErrors:2），今晚22:00再看。Git 已同步，HB 無待處理。
 
 - 2026-05-11 18:32 → Gateway 🟢，HB 無待處理任務，系統正常待命
+
+- 2026-05-11 20:00 → 健康檢查：14個Cron任務，13個ok/1個idle（ceefa5c4），4751cc83 error（22h前，consecutiveErrors 1，未達3次門檻）。Git無未commit變更。HB無待處理。系統正常待命

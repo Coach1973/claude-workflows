@@ -94,8 +94,9 @@
 - 小事：已更新時間戳，系統正常運行
 - 零異常，回 HEARTBEAT_OK
 
-## 💓 心跳（06:05）
-- 增量蒸餾：無新條目（NO_NEW_ENTRIES）
-- Cron 正常 / Git 正常 / 磁碟 10%
+## 💓 心跳（06:30）
+- Cron 13個正常（9 ok / 2 idle / 2 running / 0 failures）
+- Git 乾淨（56699aa9）
+- 磁碟：10% / 記憶體正常
 - 小事：已更新時間戳，系統正常運行
 - 零異常，回 HEARTBEAT_OK

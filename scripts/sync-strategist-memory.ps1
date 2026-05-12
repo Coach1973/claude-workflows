@@ -29,7 +29,7 @@ $stamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 "# 軍師記憶最後同步時間`n`n$stamp" | Out-File -FilePath (Join-Path $Dest "LAST_SYNC.md") -Encoding utf8
 
 Set-Location $RepoRoot
-git add windows-memory/ 2>&1 | Out-Null
+git add windows-memory/ | Out-Null
 git diff --staged --quiet
 if ($LASTEXITCODE -eq 1) {
     git commit -m "sync: 軍師記憶同步 $stamp" 2>&1 | Out-Null

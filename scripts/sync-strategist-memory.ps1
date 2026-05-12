@@ -4,6 +4,8 @@
 $ErrorActionPreference = "Stop"
 
 $RepoRoot = "E:\Claude-Data\mac-openclaw-workflows"
+Set-Location $RepoRoot
+git pull --rebase 2>&1 | Out-Null
 $Dest = Join-Path $RepoRoot "windows-memory"
 
 $Sources = @(
@@ -31,7 +33,8 @@ git add windows-memory/ 2>&1 | Out-Null
 git diff --staged --quiet
 if ($LASTEXITCODE -eq 1) {
     git commit -m "sync: 軍師記憶同步 $stamp" 2>&1 | Out-Null
-    Write-Host "已 commit。下次 auto-sync 會 push。"
+    git push 2>&1 | Out-Null
+    Write-Host "已 commit 並 push。"
 } else {
     Write-Host "沒有變動，跳過。"
 }

@@ -79,3 +79,15 @@
 - Cron 14個正常（9 ok / 3 running / 2 idle / 0 failures）
 - Git 乾淨（a97a351a）
 - 零異常，系統正常運行
+
+## ⚠️ 重要補救記錄（04:33）
+- **2026-05-12 08:00 YouTube 每日抓取失敗**：Cron Job e70852c8 觸發但未執行腳本，未生成 youtube_news.json
+  - 原因：當時 heartbeat 直接回 HEARTBEAT_OK，未真正執行 youtube_monitor.sh
+  - 處理：已於 04:33 補執行，22頻道 152部影片，✅ 成功
+  - 輸出檔：~/Desktop/youtube_news.json（已生成）
+- Git 自動備份（9546dec4）
+
+## 💓 心跳（04:32）
+- 系統檢查：Cron 14個正常 / Git備份中（9546dec4） / 磁碟10% / 記憶體充足
+- 小事：補執行 YouTube 每日抓取（昨日 08:00 失敗，04:33 補救成功）
+- 零異常，系統正常運行

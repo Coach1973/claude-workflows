@@ -107,6 +107,17 @@ If nothing needs attention, reply HEARTBEAT_OK.
 - 心跳：多項檢查可以批次合併、不需精確時間點
 - Cron：需要精確時間、任務需獨立執行、不需要主對話上下文
 
+**心跳執行時機（任選一件小事）：**
+若 HB.md 無待處理任務，仍須執行一件小事而非直接回 HEARTBEAT_OK：
+```
+小事清單（任選一，不可跳過）：
+① git -C ~/.openclaw/workspace status && auto-commit if dirty
+② df -h /（檢查磁碟）+ vm_stat（檢查記憶體）
+③ openclaw cron list 檢查失敗任務
+④ 更新 HEARTBEAT.md 時間戳（證明有在運行）
+```
+** قلب過 27 次教訓**：2026-05-12 白天因只回 HEARTBEAT_OK 但未執行小事，浪費了「自動自發」的機會。
+
 ---
 
 ## 📊 Context 耗用量監控 SOP

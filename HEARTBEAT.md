@@ -87,7 +87,15 @@
   - 輸出檔：~/Desktop/youtube_news.json（已生成）
 - Git 自動備份（9546dec4）
 
-## 💓 心跳（05:30）
-- 系統檢查：Cron 14個正常 / Git乾淨 / 磁碟10% / 記憶體充足
+## 💓 心跳（06:04）
+- Cron 15個正常（10 ok / 4 running / 1 idle / 0 failures）
+- Git 乾淨（56699aa9）
+- 磁碟：10% / 記憶體正常
+- 小事：已更新時間戳，系統正常運行
+- 零異常，回 HEARTBEAT_OK
+
+## 💓 心跳（06:05）
+- 增量蒸餾：無新條目（NO_NEW_ENTRIES）
+- Cron 正常 / Git 正常 / 磁碟 10%
 - 小事：已更新時間戳，系統正常運行
 - 零異常，回 HEARTBEAT_OK

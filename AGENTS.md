@@ -99,7 +99,9 @@ If nothing needs attention, reply HEARTBEAT_OK.
 
 **被動記錄觸發條件（不出聲，只寫入 HEARTBEAT.md）：**
 - YouTube 每日抓取有頻道失敗（>0 個失敗）→ 記「⚠️ YouTube 失敗：N 個（名稱），請注意」
+- **⚠️ 新型失敗模式**：頻道可緩慢、遭封鎖，錯誤低調地淹沒在 HEARTBEAT_OK 中。當 cron exec output 出現 `ERROR` 或 `failed` 等關鍵字，即使 code 0 也要主動記錄
 - Cron 任務連續 2 次以上失敗 → 記「🔴 Cron 任務 [名稱] 連續失敗 N 次」
+- **⚠️ 變量literal Bug**：cron output 出現 `{{days}}`、`{{date}}` 等未替換變量 → 記「🔴 Cron [名稱] 變量未替換，任務失敗」
 - 系統資源異常（磁碟 >90%、記憶體 >90%）→ 記「⚠️ 資源異常：[項目]」
 - 以上均正常 → 回 HEARTBEAT_OK（不做任何多餘動作）
 

@@ -72,6 +72,10 @@
     "personal-assistant": {
       "version": "1.0.0",
       "installedAt": 1778037936707
+    },
+    "best-image-generation": {
+      "version": "1.0.2",
+      "installedAt": 1778684441188
     }
   }
 }

@@ -20,6 +20,7 @@
 
 ## 進行中工作（project）
 - [e-drive-cleanup-20260513.md](e-drive-cleanup-20260513.md) — E 槽清理紀錄：已刪 11GB，VIDEOS 243GB 待移硬碟，下次繼續
+- [c-drive-cleanup-20260513.md](c-drive-cleanup-20260513.md) — C 槽健檢基準線：已清 2.35GB，Chrome 快取 1.2GB 留著，下次可清 Edge/Roaming
 
 ## 技術參考（reference）
 - [reference_file_paths.md](reference_file_paths.md) — 三台電腦 HEARTBEAT.md 與 mac-openclaw-workflows 路徑對照

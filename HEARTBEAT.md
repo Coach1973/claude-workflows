@@ -9,6 +9,11 @@
 直接告訴教練：「🦞 對話記錄已滿，已自動重啟，請繼續下指令」
 ⚠️ **不要讀 memory 大檔**（memory/2026-05-14.md 可能超過 50KB，讀了會造成 Gemini 空白回應）
 
+## 心跳記錄
+- 14:36 → HEARTBEAT_OK（磁碟10%、記憶體正常）
+- 15:33 → HEARTBEAT_OK（磁碟10%）
+- 16:33 → HEARTBEAT_OK（磁碟10%）
+
 ## ⚡ 系統狀態
 - Primary 模型：google/gemini-3.1-pro-preview
 - 名稱對等：Telegram = 小龍蝦 = 電報

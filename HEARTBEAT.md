@@ -37,3 +37,10 @@
 - Git乾淨、磁碟10%（107GB可用）、記憶體正常（150943 pages free）
 - 系統正常待命
 - 2026-05-15 01:03 → Git乾淨、Cron 15正常、磁碟10%（106GB可用）、記憶體正常（118559頁free）、HB無待處理任務，系統正常待命
+
+## 02:30 心跳（目標驅動）
+- 🦞 每30分鐘任務健康檢查（cron 46e67e2e）
+- Cron 13項正常：9c3fc55d 增量蒸餾連續錯誤1次（「Agent couldn't generate a response」），lastStatus: error，非 timeout，無需干預，會自動重試
+- Git乾淨（5220c317）
+- 磁碟10%（107GB可用）、記憶體正常（146383 pages free）
+- HB無待處理任務，系統正常待命

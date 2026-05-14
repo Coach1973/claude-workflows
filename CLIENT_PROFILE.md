@@ -272,7 +272,7 @@
 | 會議護照 | 5本 |
 
 ---
-<!-- DISTILL_CHECKPOINT: 2026-05-14T12:04:27.531Z -->
+<!-- DISTILL_CHECKPOINT: 2026-05-14T14:10:19.682Z -->
 
 ### 啟動流程不完整問題持續發生（2026-05-13 下午記錄）
 - **觀察**：OpenClaw 在執行 AGENTS.md 啟動協議時，多次在步驟 1-6（SOUL.md → CORE_RULES.md → 小龍蝦行為守則.md → IDENTITY.md → DAILY_DIGEST.md → HEARTBEAT.md）中途就回覆 HEARTBEAT_OK，導致後續步驟被跳過

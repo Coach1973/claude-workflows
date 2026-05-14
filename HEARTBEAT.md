@@ -10,12 +10,7 @@
 ⚠️ **不要讀 memory 大檔**（memory/2026-05-14.md 可能超過 50KB，讀了會造成 Gemini 空白回應）
 
 ## 心跳記錄
-- 14:36 → HEARTBEAT_OK（磁碟10%、記憶體正常）
-- 15:33 → HEARTBEAT_OK（磁碟10%）
-- 17:10 → 心跳小事：Git 乾淨，磁碟10%（107GB可用），記憶體正常，HB無待處理任務，系統正常待命
-- 16:33 → HEARTBEAT_OK（磁碟10%）
-- 16:30 → 健康檢查：Cron 全正常（0失敗）、Git 已備份（bf91406c）
-- ⚠️ Context 使用量高，建議教練考慮結束當前 session
+- 17:30 → 心跳小事：Cron 15正常（0失敗）、Git乾淨、磁碟10%（107GB可用）、記憶體正常（119742 pages free）、HB無待處理任務，系統正常待命
 
 ## ⚡ 系統狀態
 - Primary 模型：google/gemini-3.1-pro-preview

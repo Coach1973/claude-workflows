@@ -20,3 +20,9 @@
 - 執行完通報 Telegram（Chat ID: 6124913915）
 - 預估超過 5 萬 Token 先回報教練確認
 - ⚠️ 不要讀大型 memory 檔（會造成 Gemini 空白回應）
+
+## 🦞 健康檢查 07:00
+- Cron 13項全部正常（0失敗）
+- Git auto-backup (457209fd)
+- 磁碟10%（113GB）、記憶體正常（301891 pages free）
+- HB無待處理任務，系統正常待命

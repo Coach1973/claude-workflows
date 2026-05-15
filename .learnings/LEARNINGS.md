@@ -270,3 +270,41 @@ dispatch 完成後，主動比對 TASK_QUEUE.txt 任務數與實際執行數，�
 - ✅ 倒數計時 job 的目標日期：必須與 schedule 完全一致，不得猜測
 - ✅ 發送「明天是OO」之前：先算今天幾號，確認相對描述是否正確
 - ❌ 不得用「看起來差不多」來決定日期
+
+---
+
+## 2026-05-15 行事曆追蹤任務「假執行」（5/12 → 5/15，3天未完成）
+
+**問題**：教練5/12交代的行事曆追蹤任務，從未真正執行。
+
+**事實脈絡（from memory/2026-05-12.md）**：
+- 5/12 16:xx 教練分享 tainan-calender.netlify.app，指定追蹤：初階MSP/進階MSP/DNA月例會/LTRT/執董與新會員有約，過濾集思北科大
+- 教練問「這樣可以嗎？」
+- OpenClaw 回應「the Calendar currently has...」→ **斷句，未完成**
+- 記憶記錄：*「continuing to ignore the pending calendar tracking and MSP meeting tasks」*
+- 系統在 16:34 和 17:26 心跳中都再次提醒「行事曆追蹤系統 (waiting for reminder method confirmation)」
+- **OpenClaw 每次都回 HEARTBEAT_OK，沒有任何實際動作**
+- 直到 5/15 教練主動提起，才補執行
+
+**根本原因**：
+1. **被 async exec 中斷**：多個 async 事件（exec completions、SIGKILL、SIGTERM）插入 session，打斷了原本的任務流程
+2. **心跳沒人管閒置任務**：心跳驅動的 HEARTBEAT_OK 只做「有空就執行小事」，沒有機制檢測「教練交辦但還沒完成的任務」
+3. **任務停留在口頭確認**：只說了「好」但沒有立刻寫入執行計畫/建立 cron/更新待辦文件，導致任務懸在空中
+4. **沒有任務追蹤系統**：不像 cron 有 ID，心跳 SOP 沒有「pending task list」需要被持續關注
+
+**解決方案**：
+
+1. **立 即 動 手 寫**（不要只說「收到」）
+   - 任務拿到當下，立刻把「要做什麼」寫進 HEARTBEAT.md 或建立對應的 cron job
+   - 不要停在「了解！我會處理！」→ 直接變成「檔案或 cron」才叫執行
+
+2. **心跳加入「未完成任務」檢查**
+   - 心跳 SOP 第四步「產出簡報」前，增加：檢查 HEARTBEAT.md 是否有「教練已交代但未執行」的項目
+   - 若有，列在簡報中，主動告知教練
+
+3. **設定「假執行」紅線**
+   - 任何非同步的心跳觸發，若發現自己正在忽略已交代任務，必須立刻跳出 HEARTBEAT_OK 的框架，優先處理
+
+4. **日曆抓取自動化**
+   - 每週自動抓取 tainan-calender.netlify.app 比對是否有新增行程
+   - 比對 schedule 檔案，有新增就更新並通知教練

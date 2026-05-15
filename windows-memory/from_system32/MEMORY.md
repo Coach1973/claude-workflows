@@ -12,6 +12,7 @@
 - [feedback_role_boundary.md](feedback_role_boundary.md) — 軍師專注分析寫指令、執行交終端機；但記錄與上雲是所有人的鐵律
 - [feedback_model_assignment.md](feedback_model_assignment.md) — Opus/Sonnet/MiniMax 三級模型分工，軍師才用 Opus
 - [feedback_mac_as_primary_station.md](feedback_mac_as_primary_station.md) — 🔄 2026-05-13 新架構：Mac 為軍師主站、Windows 退居備援
+- [feedback_translate_english_to_chinese.md](feedback_translate_english_to_chinese.md) — 🔴 鐵律：所有英文都要翻成白話中文,助教守則明文要求
 
 ## 專案脈絡（project）
 - [project_coach_grand_strategy.md](project_coach_grand_strategy.md) — 教練大戰略全景：終極目標、三大信念、五人 AI 團隊、頂尖特助俱樂部

@@ -25,3 +25,4 @@
 - [VPS TTS 不啟用](feedback_vps_tts_disabled.md) — TTS 已驗證存在，教練選擇關閉以節省呼叫次數，不要再推進開啟
 - [Hermes VPS 部署狀態](project_hermes_vps.md) — Hermes 跑在 113.29.232.178，待補 port 9119 網頁 UI 和 Telegram 接入
 - [助教假承諾路徑](feedback_assistant_path_hallucination.md) — 學長/桌面版常口頭說「已寫入X路徑」實際寫到別處，要 ls 核查不信口頭
+- [白話文鐵律](feedback_plain_chinese_no_jargon.md) — 教練是電腦小白，禁用 cron/git/relay/repo 行話，講話先自問「我媽看得懂嗎」

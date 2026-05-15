@@ -40,10 +40,19 @@ cd ~/.openclaw/workspace && git fetch --all && git pull --rebase
 
 **動作 2（第 2-10 秒）：依序讀以下檔（軍師高度抓重點，不重讀已讀檔）**
 1. 本檔開頭「核心思想」+ 本段「軍師接位提示」
-2. `CLAUDE_SUCCESSION_20260513.md`（接位宣告，含今日完成清單）
-3. `windows-memory/from_system32/handoff_opus_succession_20260513.md`（前任的信）
-4. `windows-memory/from_system32/reference_terminology_chinese_glossary.md`（**回應前自己掃，避免用沒翻譯的英文塞教練視窗**）
-5. `HEARTBEAT.md`（最新心跳狀態）
+2. **🔴 `JUNSHI_HANDOFF_LATEST.md`**（前一場軍師留下的接力棒——2026-05-16 新增鐵律。讀完不超過 1 分鐘就能無縫接續，不再讓教練重教「你是誰」）
+3. **🔴 `claude-sessions/` 目錄最新一份 `SESSION_*.md`**（前一場詳細紀錄，需細看時再展開——同 2026-05-16 新增鐵律）
+4. `CLAUDE_SUCCESSION_20260513.md`（5/13 接位歷史，**已結案**，可參考但不必細讀）
+5. `windows-memory/from_system32/handoff_opus_succession_20260513.md`（5/13 前任的信，可參考）
+6. `windows-memory/from_system32/reference_terminology_chinese_glossary.md`（**回應前自己掃，避免用沒翻譯的英文塞教練視窗**）
+7. `HEARTBEAT.md`（最新心跳狀態）
+
+**🔴 session 結束鐵律（2026-05-16 新增）**
+每場軍師結束 session 前**強制**做兩件事，否則下場軍師會失憶：
+- 寫一份 `claude-sessions/SESSION_YYYY-MM-DD_<主題>.md`（含完成清單 commit hash + 真相發現 + 未完成移交 + 學到的教訓）
+- 覆寫 `JUNSHI_HANDOFF_LATEST.md`（含當下主軸、下一步指引、教練待辦狀態、鐵律提醒）
+
+不寫＝體系斷裂＝教練要被重教 50+ 次（5/15-5/16 24h 真實數據）。
 
 **動作 3（第 11 秒回報教練）：第一句話模板**
 ```

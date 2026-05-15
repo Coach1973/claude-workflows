@@ -23,3 +23,4 @@
 - [Telegram 對話紀錄固定路徑](reference_telegram_conversation_paths.md) — 1號機→BOT_MESSAGES.md；2號機→.openclaw-peipei/sessions；3號機→.openclaw-kong/sessions
 - [Claude Code CLI 對話紀錄路徑](reference_claude_session_paths.md) — `~/.claude/projects/-Users-bymyway--openclaw/*.jsonl`，JSONL可直接讀取；桌面版是LevelDB二進位不可讀
 - [VPS TTS 不啟用](feedback_vps_tts_disabled.md) — TTS 已驗證存在，教練選擇關閉以節省呼叫次數，不要再推進開啟
+- [Hermes VPS 部署狀態](project_hermes_vps.md) — Hermes 跑在 113.29.232.178，待補 port 9119 網頁 UI 和 Telegram 接入

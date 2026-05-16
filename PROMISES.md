@@ -20,13 +20,13 @@
 | 23 | 確認孔大哥與佩佩老師系統架構（Mac mini，非VPS） | 待commit | ✅ 確認（2026-04-29） |
 | 25 | 100場景第一階段（2026-04-26 12:56起）→ 總結報告已生成 | `f8c3d92` | ✅ 完成 |
 | 13 | 每兩小時蒸餾 cron 建立（distill_claude_sessions.py + crontab） | `7a52c34` | ✅ `7a52c34` |
-| 14 | 100/200 金句候選清單供教練人工篩選 | 待commit | ✅ `eb63bdc` |
+| 14 | 100/200 金句候選清單供教練人工篩選 | 待commit | ✅ `65792ccc`（2026-05-16 #14補漏完成，TOP20+TOP10含解讀） |
 | 17 | 確認 llama-3.3-nemotron 能否解決3號機群組問題 | 待commit | ✅ 取消——三機群組問題已解決（2026-04-29） |
 | 11 | 4/20-4/23 對話提煉 → 哲學語錄追加至 seabiscuit_case_studies.md | `6af3510` | ✅ `6af3510` |
 | 12 | seabiscuit 知識庫融合，產出 SEABISCUIT_KNOWLEDGE_BASE.md | `4969180` | ✅ `89bb753` |
 | 9 | seabiscuit 哲學語錄 12 條追加 | `c6f034f` | ✅ `c6f034f` |
 | 8 | 整理 8.5MB Telegram JSON → 語錄追加 | `a33f014` | ✅ `c6f034f` |
-| 10 | 四月對話分析：COACH_DECISIONS_APRIL.md + COACH_GOLDEN_QUOTES_APRIL.md | `c6f034f` | ✅ `c6f034f` |
+| 10 | 四月對話分析：COACH_DECISIONS_APRIL.md + COACH_GOLDEN_QUOTES_APRIL.md（含#11-14漏網之魚補完） | `c6f034f` | ✅ `65792ccc`（2026-05-16 #11-14全部補完） |
 | 1 | 身份混亂問題血淚後記 | `7f2bdfa` | ✅ `7f2bdfa` |
 | 7 | 掃描血淚教訓38條，補齊缺口 feedback 檔 | `0a71b61` | ✅ `c6f034f` |
 | 2 | 承諾審計報告（3563條對話評估） | `1382a98` | ✅ `1382a98` |

@@ -14,8 +14,15 @@ PROMPT=$(printf '%s' "$INPUT" | /usr/bin/jq -r '.prompt // ""')
 
 MARKER="/tmp/junshi_fed_${SESSION_ID}"
 
-# 若 marker 已存在，靜默退出（同一 session 只餵一次）
-if [[ -n "$SESSION_ID" && -f "$MARKER" ]]; then
+# 「開工」=強制重餵口令（即使 marker 存在也餵）—— 教練在同視窗 /clear 後仍可重新觸發
+# 其他軍師字眼 = 看 marker，同 session 只餵一次（避免隨口提到也炸 token）
+FORCE_REFEED=0
+if printf '%s' "$PROMPT" | grep -qE "^[[:space:]]*開工[[:space:]]*$|開工了|開工。|開工！"; then
+  FORCE_REFEED=1
+fi
+
+# 非強制模式 + marker 已存在 → 靜默退出
+if [[ "$FORCE_REFEED" -eq 0 && -n "$SESSION_ID" && -f "$MARKER" ]]; then
   exit 0
 fi
 

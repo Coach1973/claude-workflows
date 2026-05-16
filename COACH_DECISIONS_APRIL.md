@@ -62,3 +62,112 @@
 | 助理必須主動回報：執行前（打算怎麼做）、執行中（進度）、執行後（結果） | 2026-04-18 | 三段式主動報告為頂級助理標準 |
 | 助理發現自己沒有做到，應第一時間承認並修正 | 2026-04-24 | 不可以假裝沒事 |
 | 教練口語不等於文字，助理有責任還原正確版本 | 2026-04-22 | 口誤就是口誤，不能照錄 |
+
+---
+
+## 十一、漏網之魚（2026-04-20 ~ 04-23 補漏）
+
+> 補漏時間：2026-05-16
+> 依據教練在 4/24 明確提出的待追蹤事項，從 coach_messages_april_FULL.md 還原原始脈絡
+
+### #11 JSON 提煉任務（結構化決策記錄）
+
+> 教練原話（2026-04-22）：「所以你能不能跟我說，你給我一個 JSON 格式輸出，讓我可以直接下載到桌面？」
+
+| 欄位 | 說明 |
+|------|------|
+| `date` | 決策日期（YYYY-MM-DD） |
+| `type` | 架構/人事/流程/工具/人機 |
+| `content` | 教練原話摘要 |
+| `source_line` | 原始對話行號 |
+| `coach_said` | ✅ = 教練親口說出 / ❌ = AI 建議 |
+| `commit_hash` | 若有對應的 commit hash |
+
+```json
+{
+  "decisions": [
+    {
+      "id": "APR-20260422-001",
+      "date": "2026-04-22",
+      "type": "tool",
+      "content": "採用 OPE 原則（Other People's Experience）：先上網搜尋別人經驗，再自己摸索",
+      "source": "教練反覆強調，4/22 多段對話",
+      "coach_said": true,
+      "note": "非從頭造船，站在巨人肩膀上優化"
+    },
+    {
+      "id": "APR-20260422-002",
+      "date": "2026-04-22",
+      "type": "architecture",
+      "content": "廢除所有免費 API Key，只留付費版",
+      "source": "教練明確表示免費版智慧等級不足",
+      "coach_said": true
+    },
+    {
+      "id": "APR-20260422-003",
+      "date": "2026-04-22",
+      "type": "process",
+      "content": "助理發現自己做不到的事，必須直接說做不到",
+      "source": "教練對助理的要求",
+      "coach_said": true
+    },
+    {
+      "id": "APR-20260423-001",
+      "date": "2026-04-23",
+      "type": "architecture",
+      "content": "三個 Bot 加入同一 Telegram 群組（chatId: -1003877502911），共享日誌、互相感知",
+      "source": "教練決定",
+      "coach_said": true
+    },
+    {
+      "id": "APR-20260423-002",
+      "date": "2026-04-23",
+      "type": "knowledge",
+      "content": "助理必須主動提醒對話框即將滿額，建議開新視窗",
+      "source": "教練要求主動式溝通",
+      "coach_said": true
+    },
+    {
+      "id": "APR-20260424-001",
+      "date": "2026-04-24",
+      "type": "process",
+      "content": "複雜背景任務交終端機處理，助理只做判斷與溝通",
+      "source": "教練明確分工：助理分析，終端機執行",
+      "coach_said": true
+    },
+    {
+      "id": "APR-20260424-002",
+      "date": "2026-04-24",
+      "type": "accountability",
+      "content": "所有承諾必須有 Commit Hash 才算立案，沒有 hash = 口說無憑",
+      "source": "教練建立制度",
+      "coach_said": true,
+      "commit": "c6f034f"
+    },
+    {
+      "id": "APR-20260424-003",
+      "date": "2026-04-24",
+      "type": "knowledge",
+      "content": "海餅乾知識庫蒸餾責任歸屬確認：助理親自處理（非終端機）",
+      "source": "教練明確責任窗口",
+      "coach_said": true
+    },
+    {
+      "id": "APR-20260424-004",
+      "date": "2026-04-24",
+      "type": "knowledge",
+      "content": "提煉 100 金句（100字版）和 200 金句（200字版）列入待辦",
+      "source": "教練具體要求",
+      "coach_said": true,
+      "status": "PENDING"
+    }
+  ],
+  "metadata": {
+    "extracted_from": "coach_messages_april_FULL.md",
+    "extraction_date": "2026-05-16",
+    "total_decisions": 9,
+    "coach_initiated": 9,
+    "ai_suggested": 0
+  }
+}
+```

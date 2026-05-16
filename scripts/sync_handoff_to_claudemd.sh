@@ -97,6 +97,24 @@ if [[ "$RC" -eq 0 ]]; then
     echo "- ✅ 同步成功"
     echo "- HANDOFF mtime: $HANDOFF_MTIME"
   } >> "$LOG" 2>/dev/null || true
+
+  # A 段：CLAUDE.md 有實際變動才 commit + push（避免 git noise）
+  cd "$WS" 2>/dev/null || exit 0
+  if ! git diff --quiet CLAUDE.md 2>/dev/null; then
+    PUSH_RESULT="push 失敗（離線或網路問題，commit 已留本機）"
+    if git add CLAUDE.md 2>/dev/null \
+       && git commit -m "auto: 接力棒鏡像同步 $(date '+%Y-%m-%d %H:%M')" >/dev/null 2>&1; then
+      COMMIT_HASH=$(git rev-parse --short HEAD)
+      if git push origin main >/dev/null 2>&1; then
+        PUSH_RESULT="✅ 已推上雲端（commit $COMMIT_HASH）"
+      else
+        PUSH_RESULT="⚠️ commit $COMMIT_HASH 已留本機，但 push 失敗"
+      fi
+    fi
+    {
+      echo "- 雲端同步：$PUSH_RESULT"
+    } >> "$LOG" 2>/dev/null || true
+  fi
 fi
 
 exit $RC

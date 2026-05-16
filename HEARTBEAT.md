@@ -96,3 +96,14 @@
 - 磁碟10%（113GB）、記憶體正常
 - HB無待處理任務，系統正常待命
 - 執行小事①：Git auto-backup 完成
+
+## 🦞 健康檢查 11:34
+- Git auto-backup（37551e88 → 已push）
+- 磁碟10%（113GB）、記憶體正常（57702 pages free）
+- HB無待處理任務，系統正常待命
+- 執行小事①：Git auto-backup 完成
+
+## 🩺 軍師 Hook 自檢 2026-05-16 11:57
+- ✅ Hook 自檢通過（settings.json 含 hooks.UserPromptSubmit、本腳本被觸發）
+- 觸發詞：開工
+- Session: selftest-002

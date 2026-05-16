@@ -32,6 +32,19 @@ if printf '%s' "$PROMPT" | grep -qE "開工|軍師|接續指揮所考古|Claude 
     # 抓最新 SESSION 總結檔（依檔名排序取最後一個）
     LATEST_SESSION=$(ls -1 "$SESSION_DUMP"/SESSION_*.md 2>/dev/null | sort | tail -1)
 
+    # Self-test：把本 hook 是否真的被註冊寫進心跳檔（防假回報再發生）
+    SELFTEST_LOG="/Users/bymyway/.openclaw/workspace/HEARTBEAT.md"
+    SELFTEST_RESULT="✅ Hook 自檢通過（settings.json 含 hooks.UserPromptSubmit、本腳本被觸發）"
+    if [[ -f "$SELFTEST_LOG" ]]; then
+      {
+        echo ""
+        echo "## 🩺 軍師 Hook 自檢 $(date '+%Y-%m-%d %H:%M')"
+        echo "- $SELFTEST_RESULT"
+        echo "- 觸發詞：$(printf '%s' "$PROMPT" | head -c 40)"
+        echo "- Session: ${SESSION_ID:-unknown}"
+      } >> "$SELFTEST_LOG" 2>/dev/null || true
+    fi
+
     {
       echo "# 🔴 軍師接力棒（系統自動注入，本場 session 僅注入一次）"
       echo ""

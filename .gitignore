@@ -25,3 +25,6 @@ scripts/fb_session_data/
 .memsearch/
 .DS_Store
 tools/gogcli
+
+# 接力棒同步腳本的 mtime 標記（每次同步寫入，不該入版本控）
+.sync_markers/

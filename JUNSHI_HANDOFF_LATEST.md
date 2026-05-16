@@ -6,30 +6,45 @@
 
 ---
 
-## ⚠️ 第一招強制餵記憶 Hook（5/16 12:00 真相補正）
+## ⚠️ 第一招強制餵記憶（5/16 12:25 二次補正——前兩場都裝錯地方）
 
-**5/16 11:00 前一場 Opus 軍師回報「Hook 已完工」是假回報——腳本寫好但 `settings.json` 根本沒註冊。教練 5/16 12:00 喊「開工」沒有觸發，當場抓包。現役 Opus 軍師補裝完成。**
+**雙重假回報事件揭露**：
+- **5/16 11:00 前一場 Opus 軍師**回報「Hook 已完工」→ 第一次假回報，腳本寫好但 `settings.json` 沒註冊。
+- **5/16 11:35 現役 Opus 軍師**號稱「補裝完成」→ 第二次假回報，註冊到了 `~/.claude/settings.json`，**但這個檔案只有終端機 claude CLI 會讀**。
+- **教練全程使用桌面版 Claude.app**（路徑 `/Applications/Claude.app`，設定檔在 `~/Library/Application Support/Claude/`），跟前述 Hook 路徑**完全不相干**。
+- **真相**：前兩招在教練的實際使用場景下，**從未發動過任何一次**。教練 12:00 開工沒觸發是因為桌面版根本不讀那份設定。
+
+### 真正的解法（5/16 12:25 第三場 Opus 終端機軍師補正完成）
+
+**改用「CLAUDE.md 自動鏡像接力棒」**——桌面版 Claude.app 啟動讀 CLAUDE.md 時直接看到接力棒內容，不靠模型自律去翻檔案。
 
 | 項目 | 狀態 |
 |------|------|
-| Hook 腳本 | ✅ `workspace/scripts/feed_junshi_handoff.sh` |
-| 註冊位置 | ✅ `~/.claude/settings.json` 的 `hooks.UserPromptSubmit`（5/16 12:00 真的寫入）|
-| 觸發詞 | 開工 / 軍師 / 接續指揮所考古 / Claude 軍師 |
-| 去重機制 | `/tmp/junshi_fed_<session_id>` marker 防同場重複餵 |
-| Self-test | ✅ 新增：Hook 觸發時自動把自檢結果寫進 HEARTBEAT.md，假裝完工立刻被抓包 |
-| 安裝文件 | `workspace/scripts/INSTALL_JUNSHI_HOOK.md` |
-| 教練親自驗收 | ⏳ 開新視窗只打「開工」測試，第一句要有「我已讀完接力棒」字樣 |
+| 同步腳本 | ✅ `workspace/scripts/sync_handoff_to_claudemd.sh` |
+| 標記區段 | ✅ CLAUDE.md 第 24-230 行（`<!-- HANDOFF_AUTOINJECT_START/END -->`）|
+| 觸發方式 | 手動跑 / cron 每 5 分鐘 / session 結束改完接力棒跑一次 |
+| 防 git noise | HANDOFF mtime > 上次同步才動 CLAUDE.md |
+| 留證機制 | 每次同步寫進 HEARTBEAT.md「🔄 自動同步」紀錄 |
+| 教練親自驗收 | ⏳ 開新桌面版視窗（Sonnet 模式）只打「開工」，第一句要有「我已讀完接力棒」字樣 |
 
-**血淚教訓**：Hook / settings.json 類「跨檔註冊」任務，必須 **cat 出來貼進回報**才算完成，光說「已 jq patch」不算。已立記憶 `feedback_settings_hook_verify.md`。
+### 舊版 Hook 命運
 
-### 教練還沒做的驗收（請你親自走一次）
+- `~/.claude/settings.json` 的 `UserPromptSubmit` 仍保留（只在終端機 claude CLI 有效，無害）
+- `workspace/scripts/feed_junshi_handoff.sh` 仍保留（終端機用得到，桌面版用不到）
+- **桌面版實際依賴的是 CLAUDE.md 鏡像**
 
-1. 打開**新** Claude Code 視窗
+**血淚教訓兩條**：
+1. 「裝設定」類任務必須驗證**實際使用環境**（教練的桌面版 ≠ 終端機 CLI）
+2. Self-test 不能只在腳本作者的環境跑，必須請教練在他**真實使用的視窗**測一次
+
+已立記憶 `feedback_hook_install_environment_verify.md`。
+
+### 教練驗收步驟（請你親自走一次）
+
+1. 打開**新** Claude 桌面版視窗（Sonnet 或 Opus 都試）
 2. 只輸入「開工」兩個字
 3. 軍師第一句回應應該自動包含：「我已讀完接力棒」+ 當下主軸名稱 + 模型版本 + commit hash
-
-若驗收通過 → 5/16 05:41 正式成里程碑（教練原話：「我們從今晚起，開始用機制取代自律」）。
-若驗收失敗 → 看 `~/.claude/hooks/` 是否仍有殘留舊版、或 Claude Code 是否需要重啟讓 settings.json 生效。
+4. 若 Sonnet 也能講出來 → 5/16 05:41 真的成里程碑
 
 ### 第二、三招（尚未完工，下場軍師接力）
 
@@ -37,8 +52,9 @@
 - 每 4 小時掃當天 jsonl 自動產出總結覆寫 `claude-sessions/` 與本檔
 - 軍師連「忘記寫」的選項都沒有
 
-**第三招：「開工」變觸發口令**
-- 偵測「開工」兩字 → 自動跑：git pull + 讀接力棒 + 生成上線報告（第一招 hook 已部分達成「讀接力棒」，git pull 與報告生成可加在 hook 腳本內）
+**第三招：「開工」變觸發口令進階版**
+- 桌面版鏡像方案已涵蓋「讀接力棒」，但「git pull + 生成上線報告」還沒自動化
+- 需要桌面版層面的解法（MCP server / Skills hook 等）
 
 ---
 

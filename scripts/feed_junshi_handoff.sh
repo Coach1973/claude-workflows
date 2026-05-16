@@ -1,0 +1,64 @@
+#!/bin/bash
+# Hook：UserPromptSubmit
+# 用途：教練在新 session 喊「開工」/「軍師」等暗號時，自動把 JUNSHI_HANDOFF_LATEST.md 餵進 context。
+# 設計：每個 session 只餵一次（marker 檔防重複），避免每輪 prompt 都炸 token。
+# 觸發詞：開工 / 軍師 / 接續指揮所考古 / Claude 軍師
+set -uo pipefail
+
+HANDOFF="/Users/bymyway/.openclaw/workspace/JUNSHI_HANDOFF_LATEST.md"
+SESSION_DUMP="/Users/bymyway/.openclaw/workspace/claude-sessions"
+
+INPUT=$(cat)
+SESSION_ID=$(printf '%s' "$INPUT" | /usr/bin/jq -r '.session_id // ""')
+PROMPT=$(printf '%s' "$INPUT" | /usr/bin/jq -r '.prompt // ""')
+
+MARKER="/tmp/junshi_fed_${SESSION_ID}"
+
+# 若 marker 已存在，靜默退出（同一 session 只餵一次）
+if [[ -n "$SESSION_ID" && -f "$MARKER" ]]; then
+  exit 0
+fi
+
+# 判斷是否為軍師接位暗號（中英都接）
+if printf '%s' "$PROMPT" | grep -qE "開工|軍師|接續指揮所考古|Claude 軍師|JunShi|junshi"; then
+  if [[ -f "$HANDOFF" ]]; then
+    # 抓最新 SESSION 總結檔（依檔名排序取最後一個）
+    LATEST_SESSION=$(ls -1 "$SESSION_DUMP"/SESSION_*.md 2>/dev/null | sort | tail -1)
+
+    {
+      echo "# 🔴 軍師接力棒（系統自動注入，本場 session 僅注入一次）"
+      echo ""
+      echo "你是 **Claude 軍師**。教練說「開工」=暗號觸發。讀完本段即可無縫接續。"
+      echo ""
+      echo "## 📜 JUNSHI_HANDOFF_LATEST.md 完整內容"
+      echo ""
+      cat "$HANDOFF"
+
+      if [[ -n "$LATEST_SESSION" && -f "$LATEST_SESSION" ]]; then
+        echo ""
+        echo "---"
+        echo ""
+        echo "## 📂 最新一場 session 總結（$(basename "$LATEST_SESSION")）"
+        echo ""
+        cat "$LATEST_SESSION"
+      fi
+
+      echo ""
+      echo "---"
+      echo ""
+      echo "## ✅ 上線回應要求"
+      echo "讀完本段後，第一句回應**必須**包含："
+      echo "- 「我已讀完接力棒」字樣"
+      echo "- 當下主軸名稱（從 JUNSHI_HANDOFF_LATEST.md「當下主軸」段挑最優先一條）"
+      echo "- 身份核對（模型版本）"
+      echo "- 雲端同步狀態（commit hash 前 7 碼）"
+    }
+
+    # 設 marker，本 session 不再注入
+    if [[ -n "$SESSION_ID" ]]; then
+      touch "$MARKER"
+    fi
+  fi
+fi
+
+exit 0

@@ -29,3 +29,4 @@
 - [失敗卻假回報是反覆型錯誤指標](feedback_false_success_report_pattern.md) — 腳本不抓 rc/stderr 卻寫「✅ 成功」是反覆型 bug；必加 stderr 檢查、24h 去重、連3次推 HEARTBEAT
 - [Hook/settings.json 註冊類任務必須 cat 驗證](feedback_settings_hook_verify.md) — 跨檔註冊任務回報三件套：cat 目標檔區段 + 模擬觸發輸出 + commit hash，光說「已 jq patch」=假回報
 - [Hook 必須在教練實際視窗驗證](feedback_hook_install_environment_verify.md) — ~/.claude/settings.json 只有終端機 CLI 會讀，桌面版 Claude.app 無效；selftest session id 不算驗收
+- [全部由我做不要叫教練動手](feedback_do_everything_for_user.md) — 老闆動嘴AI執行，不再產出「你貼這段」code block；做不了就跟教練要憑證，不丟回去叫他自己跑
